@@ -1,9 +1,9 @@
 import fs from "fs";
 import { NextFunction, Request, Response } from "express";
-import { outputDir } from "../app";
 import { convertPdfToPngs } from "../utils/convertPdfToPngs";
 import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
+import path from "path";
 
 export const pdfExtractor = async (
   req: Request,
@@ -17,9 +17,14 @@ export const pdfExtractor = async (
       (error as any).status = 400;
       return next(error);
     }
-    await convertPdfToPngs(pdfPath);
+    console.log("PDF file received");
+
+    const outputDir = path.join("images", Date.now().toString());
+    fs.mkdirSync(outputDir, { recursive: true });
+
+    await convertPdfToPngs(pdfPath,outputDir);
     const files = sortFileswithinOutputDir(outputDir);
-    const pages = await extractDataFromPngs(files);
+    const pages = await extractDataFromPngs(files,outputDir);
 
     // 🧹 Clean outPutDir folder
     fs.unlinkSync(pdfPath);

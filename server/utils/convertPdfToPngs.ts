@@ -1,7 +1,9 @@
 import { execFile } from "child_process";
-import { outputDir } from "./locationFile";
 
-export const convertPdfToPngs = async (pdfPath: string): Promise<void> => {
+export const convertPdfToPngs = async (
+  pdfPath: string,
+  outputDir: string
+): Promise<void> => {
   console.log("Files recieved converting Pdfs to pngs...");
   await new Promise((resolve, reject) => {
     execFile(
@@ -19,10 +21,10 @@ export const convertPdfToPngs = async (pdfPath: string): Promise<void> => {
       ],
       (error, stdout, stderr) => {
         if (error) {
-          console.error("❌ ImageMagick convert error:", stderr);
+          console.error("ImageMagick convert error:", stderr);
           reject(error);
         } else {
-          console.log("✅ PDF converted to PNGs");
+          console.log("PDF converted to PNGs");
           resolve(true);
         }
       }

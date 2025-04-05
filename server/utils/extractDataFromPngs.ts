@@ -1,10 +1,10 @@
 import path from "path";
 import { createWorker } from "tesseract.js";
-import { outputDir } from "./locationFile";
 import sharp from "sharp";
 
 export const extractDataFromPngs = async (
-  files: string[]
+  files: string[],
+  outputDir: string
 ): Promise<{ page: number; text: string }[]> => {
   console.log("Extracting data from PNGs...");
   try {

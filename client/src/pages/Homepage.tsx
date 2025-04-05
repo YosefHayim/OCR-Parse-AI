@@ -8,7 +8,7 @@ const Homepage = () => {
       console.log(data);
     },
     onError: (error) => {
-      console.log(error.data);
+      console.log(error);
     },
   });
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
