@@ -1,5 +1,5 @@
 import path from "path";
-import { createWorker } from "tesseract.js";
+import { createWorker, OEM } from "tesseract.js";
 import sharp from "sharp";
 
 export const extractDataFromPngs = async (
@@ -8,7 +8,13 @@ export const extractDataFromPngs = async (
 ): Promise<{ page: number; text: string }[]> => {
   console.log("Extracting data from PNGs...");
 
-  const worker = await createWorker("ita");
+  const worker = await createWorker(["ita"]);
+
+  await worker.setParameters({
+    tessedit_char_whitelist:
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789€.,:-",
+    preserve_interword_spaces: "1",
+  });
 
   const pages: { page: number; text: string }[] = [];
 
@@ -22,7 +28,7 @@ export const extractDataFromPngs = async (
         .resize({ width: 3420, height: 2214 }) // Ensure consistent A4 resolution
         .grayscale() // Remove color noise
         .normalize() // Normalize brightness and contrast
-        .threshold(150) // Binarize image for better OCR
+        .threshold(50) // Binarize image for better OCR
         .sharpen({ sigma: 1, m1: 1.0, m2: 2.0 }) // Enhance edges and characters
         .toFile(processedPath);
 
@@ -38,6 +44,7 @@ export const extractDataFromPngs = async (
     console.error("Error occurred during OCR:", error);
   } finally {
     await worker.terminate();
+    console.log("Finish extract data from images.");
   }
 
   return pages;

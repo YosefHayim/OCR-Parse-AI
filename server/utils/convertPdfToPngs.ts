@@ -27,21 +27,19 @@ export const convertPdfToPngs = async (
         // Source PDF file path
         pdfPath,
 
+        // "-trim", // Automatically crop whitespace
+
         // Resize to fit within A4 canvas (3420x2214 pixels)
-        "-resize",
-        "3420x2214",
+        // "-resize",
+        // "3420x2214",
 
         // Center the resized content on the canvas
         "-gravity",
         "center",
 
         // Fill background with white if padding is added
-        "-background",
-        "white",
-
-        // Extend image to exact A4 dimensions
-        "-extent",
-        "3420x2214",
+        // "-background",
+        // "white",
 
         // Output PNG file pattern (one per page)
         `${outputDir}/page-%d.png`,
