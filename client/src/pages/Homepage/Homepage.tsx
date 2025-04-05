@@ -49,6 +49,12 @@ const Homepage = () => {
     }
   };
 
+  const handleReset = () => {
+    setData("");
+    setSelectedFile(null);
+    setFileName("");
+  };
+
   useEffect(() => {}, [data]);
 
   return (
@@ -93,17 +99,17 @@ const Homepage = () => {
                   </div>
                   <div className="flex items-center justify-center gap-4">
                     <Button
+                      className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
+                      onClick={handleReset}
+                    >
+                      אפס תוצאות
+                    </Button>
+                    <Button
                       type="button"
                       onClick={handleButtonClick}
                       className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
                     >
                       {selectedFile ? "העלה עכשיו" : "בחר קובץ"}
-                    </Button>
-                    <Button
-                      className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
-                      onClick={() => setData("")}
-                    >
-                      אפס תוצאות
                     </Button>
                   </div>
                 </div>
