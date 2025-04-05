@@ -14,8 +14,8 @@ WORKDIR /app
 # Copy only package files first for better Docker cache
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies including devDependencies
+RUN npm install --include=dev
 
 # Copy rest of the app
 COPY . .
@@ -28,4 +28,4 @@ EXPOSE 3000
 # USER appuser
 
 # Start app
-CMD ["npm", "run", "prod"]
+CMD ["npx", "tsx", "app.ts"]
