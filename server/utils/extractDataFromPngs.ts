@@ -8,7 +8,7 @@ export const extractDataFromPngs = async (
 ): Promise<{ page: number; text: string }[]> => {
   console.log("Extracting data from PNGs...");
   try {
-    const worker = await createWorker("eng");
+    const worker = await createWorker("ita");
 
     let pages: { page: number; text: string }[] = [];
 
@@ -17,20 +17,22 @@ export const extractDataFromPngs = async (
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)
-        .resize({ width: 1600 })
+        .resize({ width: 2500 })
         .grayscale()
         .normalize()
-        .threshold(160)
+        .threshold(150)
+        .sharpen({ sigma: 1, m1: 1.0, m2: 2.0 })
         .toFile(processedPath);
 
       const {
         data: { text },
       } = await worker.recognize(processedPath);
 
-      console.log(`📄 Page ${i + 1} OCR Text:\n`, text.slice(0, 300));
+      console.log(`📄 Page ${i + 1} OCR Text:\n`, text);
       pages.push({ page: i + 1, text });
     }
     await worker.terminate();
+
     return pages;
   } catch (error) {
     console.error("Error occurred durnig OCR:", error);

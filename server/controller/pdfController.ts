@@ -22,13 +22,13 @@ export const pdfExtractor = async (
     const outputDir = path.join("images", Date.now().toString());
     fs.mkdirSync(outputDir, { recursive: true });
 
-    await convertPdfToPngs(pdfPath,outputDir);
+    await convertPdfToPngs(pdfPath, outputDir);
     const files = sortFileswithinOutputDir(outputDir);
-    const pages = await extractDataFromPngs(files,outputDir);
+    const pages = await extractDataFromPngs(files, outputDir);
 
     // 🧹 Clean outPutDir folder
-    fs.unlinkSync(pdfPath);
-    fs.rmSync(outputDir, { recursive: true, force: true });
+    // fs.unlinkSync(pdfPath);
+    // fs.rmSync(outputDir, { recursive: true, force: true });
 
     res.json({ pages });
   } catch (err) {
