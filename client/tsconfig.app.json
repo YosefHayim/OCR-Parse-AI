@@ -29,7 +29,7 @@
   "include": [
     "src",
     "src/pages/Homepage/Homepage.tsx",
-    "src/components/lib",
+    "components/ui/lib",
     "components"
   ]
 }

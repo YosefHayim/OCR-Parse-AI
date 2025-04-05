@@ -1,12 +1,11 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
 import { FaFileUpload } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import Loader from "@/components/Loader/Loader";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
-import { Input } from "@/components/ui/input";
+import Loader from "components/Loader/Loader";
+import Navbar from "components/Navbar/Navbar";
+import Footer from "components/Footer/Footer";
+import { Button } from "components/ui/button";
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
@@ -50,6 +49,7 @@ const Homepage = () => {
                     id="file"
                     name="file"
                     accept=".pdf"
+                    required={true}
                     className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
                   />
                   <div className="pointer-events-none w-full rounded border px-4 py-2 text-center">
