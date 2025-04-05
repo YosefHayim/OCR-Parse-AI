@@ -11,16 +11,20 @@ export const convertPdfToPngs = async (
       [
         "convert",
         "-density",
-        "600", // Higher DPI for better text clarity
-        pdfPath,
+        "300",
+        "-units",
+        "PixelsPerInch",
         "-colorspace",
         "RGB",
-        "-alpha",
-        "remove", // Ensures no transparency issues
+        pdfPath,
         "-resize",
-        "2480x3508", // A4-size aspect ratio at 300 PPI equivalent
-        "-sharpen",
-        "0x1", // Mild sharpening for clearer text
+        "3420x2214",
+        "-gravity",
+        "center",
+        "-background",
+        "white",
+        "-extent",
+        "3420x2214",
         `${outputDir}/page-%d.png`,
       ],
       (error, stdout, stderr) => {
