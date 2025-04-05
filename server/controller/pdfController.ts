@@ -30,7 +30,10 @@ export const pdfExtractor = async (
     fs.unlinkSync(pdfPath);
     fs.rmSync(outputDir, { recursive: true, force: true });
 
-    res.json({ pages });
+    res.json({
+      status: 200,
+      pages,
+    });
   } catch (err) {
     console.error("❌ Error during processing:", err);
     res.status(500).json({ error: "OCR failed" });
