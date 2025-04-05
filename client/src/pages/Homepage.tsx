@@ -1,10 +1,24 @@
+import { useMutation } from "@tanstack/react-query";
+import { postPdfFile } from "../../api/postPdfFile";
+
 const Homepage = () => {
+  const mutatePdfFile = useMutation({
+    mutationFn: postPdfFile,
+    onSuccess: (data) => {
+      console.log(data);
+    },
+    onError: (error) => {
+      console.log(error.data);
+    },
+  });
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const file = formData.get("file") as File;
     const email = formData.get("email") as string;
     console.log(file, email);
+
+    mutatePdfFile.mutate(file);
   };
   return (
     <div>
