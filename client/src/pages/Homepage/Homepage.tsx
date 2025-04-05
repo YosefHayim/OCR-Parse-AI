@@ -39,9 +39,9 @@ const Homepage = () => {
                 accept=".pdf"
                 className="w-full text-center"
               />
-              <button type="submit" className="">
+              <Button type="submit" className="">
                 Select Files
-              </button>
+              </Button>
             </div>
           </div>
         </div>
