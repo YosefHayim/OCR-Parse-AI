@@ -48,7 +48,7 @@ const Homepage = () => {
 
             <div className="rounded-lg border border-dotted bg-gray-200 p-4">
               <div className="flex w-full flex-col items-center justify-center gap-2">
-                <label htmlFor="file">
+                <label htmlFor="file" className="cursor-pointer">
                   <FaFileUpload size={40} color="gray" />
                 </label>
                 <div className="relative w-full">
@@ -57,7 +57,6 @@ const Homepage = () => {
                     id="file"
                     name="file"
                     accept=".pdf"
-                    required={true}
                     className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
                   />
                   <div className="pointer-events-none w-full rounded border px-4 py-2 text-center">
@@ -66,11 +65,8 @@ const Homepage = () => {
                     </span>
                   </div>
                 </div>
-                <Button
-                  type="submit"
-                  className="cursor-pointer rounded-full bg-black hover:bg-gray-500"
-                >
-                  <label htmlFor="file"> Select Files</label>
+                <Button className="cursor-pointer rounded-full bg-black hover:bg-gray-500">
+                  בחר קובץ
                 </Button>
               </div>
             </div>
