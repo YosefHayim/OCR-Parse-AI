@@ -50,8 +50,8 @@ export const extractDataFromPngs = async (
   } catch (error) {
     console.error("Error occurred during OCR:", error);
   } finally {
-    await worker.terminate();
     console.log("Finish extract data from images.");
+    await worker.terminate();
     return pages;
   }
 };

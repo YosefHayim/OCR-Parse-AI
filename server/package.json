@@ -84,7 +84,8 @@
     "wrappy": "^1.0.2"
   },
   "scripts": {
-    "start": "nodemon --exec tsx app.ts"
+    "dev": "nodemon --exec tsx app.ts",
+    "prod": "node --exec tsx app.ts"
   },
   "author": "",
   "license": "ISC",
