@@ -37,7 +37,15 @@ export const extractDataFromPngs = async (
         data: { text },
       } = await worker.recognize(processedPath);
 
-      console.log(`📄 Page ${i + 1} OCR Text:\n`, text.slice(0, 500));
+      // Post-process OCR text to clean up common issues
+      const cleanedText = text
+        .replace(/[^\S\r\n]{2,}/g, " ") // replace multiple spaces with a single space (except newlines)
+        .replace(/€\s?([0-9]+)([.,])([0-9]{2,})/g, "€$1$2$3") // fix euro formatting
+        .replace(/\s([.,])/g, "$1") // remove spaces before punctuation
+        .replace(/([A-Za-z])\s([A-Za-z])/g, "$1$2") // fix single-letter spacing errors like "Netto a pagare"
+        .trim();
+
+      console.log(`📄 Page ${i + 1} OCR Text:\n`, cleanedText);
       pages.push({ page: i + 1, text });
     }
   } catch (error) {
@@ -45,7 +53,6 @@ export const extractDataFromPngs = async (
   } finally {
     await worker.terminate();
     console.log("Finish extract data from images.");
+    return pages;
   }
-
-  return pages;
 };

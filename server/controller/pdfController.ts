@@ -4,6 +4,7 @@ import { convertPdfToPngs } from "../utils/convertPdfToPngs";
 import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
+import { sendAIData } from "../utils/sendAiData";
 
 export const pdfExtractor = async (
   req: Request,
@@ -26,13 +27,15 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
+    const rToUser = await sendAIData(pages);
+
     // Clean outPutDir folder
     fs.unlinkSync(pdfPath);
     fs.rmSync(outputDir, { recursive: true, force: true });
 
     res.json({
       status: 200,
-      pages,
+      info: rToUser,
     });
   } catch (err) {
     console.error("❌ Error during processing:", err);
