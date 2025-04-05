@@ -1,1 +1,0 @@
-# PDF-Extractor-Data-Helping-Mom

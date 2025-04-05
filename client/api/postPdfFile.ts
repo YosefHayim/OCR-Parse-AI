@@ -1,7 +1,7 @@
 import axios from "axios";
 const deployedUrl = import.meta.env.VITE_API_BACKEND_DEPLOYED;
 const localUrl = import.meta.env.VITE_API_BACKEND_LOCAL;
-const isProduction = import.meta.env.VITE_API_BACKEND_LOCAL;
+const isProduction = false;
 
 export const postPdfFile = async (file: File) => {
   if (!file) {
