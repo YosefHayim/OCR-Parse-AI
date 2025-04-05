@@ -21,6 +21,7 @@ const Homepage = () => {
   const [data, setData] = useState<string>("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const copyTextRef = useRef(null);
 
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
@@ -59,9 +60,23 @@ const Homepage = () => {
     setData("");
     setFileName("");
     setSelectedFile(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
 
-  useEffect(() => {}, [data]);
+  const handleCopyText = () => {
+    const textToCopy = copyTextRef.current?.textContent;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      toast("הטקסט הועתק");
+    });
+  };
+
+  useEffect(() => {
+    if (data) {
+      copyTextRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [data]);
 
   return (
     <div>
@@ -104,12 +119,14 @@ const Homepage = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-4">
-                    <Button
-                      className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
-                      onClick={handleReset}
-                    >
-                      אפס תוצאות
-                    </Button>
+                    {data.info && (
+                      <Button
+                        className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
+                        onClick={handleReset}
+                      >
+                        אפס תוצאות
+                      </Button>
+                    )}
                     <Button
                       type="button"
                       onClick={handleButtonClick}
@@ -127,7 +144,10 @@ const Homepage = () => {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger>
-                          <Button className="cursor-pointer bg-white text-black shadow-none hover:bg-black hover:text-white">
+                          <Button
+                            onClick={handleCopyText}
+                            className="cursor-pointer bg-white text-black shadow-none hover:bg-black hover:text-white"
+                          >
                             <FaCopy />
                           </Button>
                         </TooltipTrigger>
@@ -139,6 +159,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div
+                  ref={copyTextRef}
                   className={`${data.info && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
                 >
                   {data.info &&
