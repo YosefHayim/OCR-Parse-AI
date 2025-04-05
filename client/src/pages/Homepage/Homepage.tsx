@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
 import { FaFileUpload } from "react-icons/fa";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
@@ -49,6 +49,8 @@ const Homepage = () => {
     }
   };
 
+  useEffect(() => {}, [data]);
+
   return (
     <div>
       <Navbar />
@@ -89,7 +91,7 @@ const Homepage = () => {
                       className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
                     />
                   </div>
-                  <div className="flex items-center justify-center">
+                  <div className="flex items-center justify-center gap-4">
                     <Button
                       type="button"
                       onClick={handleButtonClick}
@@ -102,7 +104,9 @@ const Homepage = () => {
               </div>
               <div className="flex w-full flex-col gap-2">
                 <h1 className="w-full text-right font-bold">תוצאות</h1>
-                <div className="flex flex-col gap-4 rounded-lg bg-gray-200 p-4">
+                <div
+                  className={`${data.info && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
+                >
                   {data.info &&
                     data.info
                       .split(/\*\*(?:Page|עמוד) \d+:\*\*/g)
