@@ -38,7 +38,6 @@ const Homepage = () => {
     <div className="w-full">
       <Navbar />
       <Toaster position="top-center" />
-
       {isLoading ? (
         <div className="flex w-full items-center justify-center">
           <Loader />

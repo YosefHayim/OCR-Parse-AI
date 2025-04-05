@@ -6,13 +6,15 @@ export const convertPdfToPngs = async (
   outputDir: string
 ): Promise<void> => {
   console.log("Files received, converting PDFs to PNGs...");
+  const whichSystemBeingSet = resolveMagickPath()
+    .replace(/^cmd:\s*'(.+?)'[\n\r]*$/, "$1")
+    .trim();
 
-  const magickPath = resolveMagickPath();
   await new Promise((resolve, reject) => {
     execFile(
-      magickPath,
+      whichSystemBeingSet,
       [
-        "magick",
+        "convert",
 
         // Set input resolution to 300 DPI for better OCR quality
         "-density",

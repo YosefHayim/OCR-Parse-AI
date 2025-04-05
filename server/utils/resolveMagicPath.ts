@@ -7,10 +7,12 @@ export const resolveMagickPath = (): string => {
 
     if (platform === "win32") {
       // Windows uses 'where'
-      return execSync("where magick").toString().split("\n")[0].trim();
+      const windowsLocation = execSync("where magick").toString().trim();
+      return windowsLocation;
     } else {
       // Unix/Mac/Linux uses 'which'
-      return execSync("which magick").toString().trim();
+      const macLocation = execSync("which magick");
+      return macLocation.toString();
     }
   } catch (err) {
     console.error(" Could not resolve 'magick' command.");
