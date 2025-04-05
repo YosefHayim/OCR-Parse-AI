@@ -14,9 +14,7 @@ export const sendAIData = async (data) => {
   console.log("Sending data to AI...");
   const r = await client.responses.create({
     model: "gpt-4o",
-    input: `Returned back as a nicley formatted list of current page , supplier name if exist,total quantities per page, total amount paid per page: ${JSON.stringify(
-      data
-    )}`,
+    input: data,
   });
   console.log("ChatGPT Response: ", r.output_text);
   return r.output_text;

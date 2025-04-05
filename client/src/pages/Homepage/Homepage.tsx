@@ -12,13 +12,15 @@ import { Button } from "@/components/ui/button";
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
   const [fileName, setFileName] = useState<string>("");
+  const [data, setData] = useState<string>("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
-    onSuccess: () => {
-      toast("קבצים בתהליך ניתוח נתונים...");
+    onSuccess: (data) => {
+      setData(data);
+      toast(`${fileName} נמצא בתהליך ניתוח נתונים`);
       setLoading(false);
     },
     onError: (error) => {
@@ -48,60 +50,80 @@ const Homepage = () => {
   };
 
   return (
-    <div className="flex w-full flex-col items-center justify-start gap-4 p-4">
+    <div>
       <Navbar />
-      <Toaster position="top-center" />
-      {isLoading ? (
-        <div className="flex w-full flex-col items-center justify-center gap-4 p-10">
-          <p>...מעבד נתונים</p>
-          <Loader />
-        </div>
-      ) : (
-        <div className="flex w-full flex-col gap-4">
-          <div className="flex w-full flex-col gap-2 bg-white p-4">
-            <div className="w-full text-right">
-              <label htmlFor="file">העלאה קובץ</label>
-            </div>
-            <div className="rounded-lg border border-dotted bg-gray-200 p-4">
-              <div className="flex w-full flex-col items-center justify-center gap-2">
-                <label htmlFor="file" className="cursor-pointer">
-                  <FaFileUpload size={40} color="gray" />
+      <div
+        className="flex w-full flex-col items-center justify-start gap-4 p-4"
+        dir="rtl"
+      >
+        <Toaster position="top-center" />
+        {isLoading ? (
+          <div className="flex w-full flex-col items-center justify-center gap-4 p-10">
+            <p className="font-bold">מעבד נתונים</p>
+            <Loader />
+          </div>
+        ) : (
+          <div className="flex w-full flex-col gap-4">
+            <div className="flex w-full flex-col gap-2 bg-white p-4">
+              <div className="w-full text-right">
+                <label htmlFor="file" className="font-bold">
+                  העלאה קובץ
                 </label>
-                <div className="relative w-full">
-                  <div className="w-full text-center">
-                    {fileName && fileName}
+              </div>
+              <div className="rounded-lg border border-dotted bg-gray-200 p-4">
+                <div className="flex w-full flex-col items-center justify-center gap-2">
+                  <label htmlFor="file" className="cursor-pointer">
+                    <FaFileUpload size={40} color="gray" />
+                  </label>
+                  <div className="relative w-full">
+                    <div className="w-full text-center">
+                      {fileName && fileName}
+                    </div>
+                    <input
+                      type="file"
+                      id="file"
+                      name="file"
+                      accept=".pdf"
+                      ref={fileInputRef}
+                      onChange={handleFileChange}
+                      className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+                    />
                   </div>
-                  <input
-                    type="file"
-                    id="file"
-                    name="file"
-                    accept=".pdf"
-                    ref={fileInputRef}
-                    onChange={handleFileChange}
-                    className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
-                  />
-                </div>
-                <div className="flex items-center justify-center">
-                  <Button
-                    type="button"
-                    onClick={handleButtonClick}
-                    className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
-                  >
-                    {selectedFile ? "העלה עכשיו" : "בחר קובץ"}
-                  </Button>
+                  <div className="flex items-center justify-center">
+                    <Button
+                      type="button"
+                      onClick={handleButtonClick}
+                      className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
+                    >
+                      {selectedFile ? "העלה עכשיו" : "בחר קובץ"}
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex w-full flex-col gap-2">
-              <h1 className="w-full text-right">תוצאות</h1>
-              <div className="flex w-full items-start justify-start rounded-lg bg-gray-200 p-2">
-                <p>placeholder</p>
+              <div className="flex w-full flex-col gap-2">
+                <h1 className="w-full text-right font-bold">תוצאות</h1>
+                <div className="flex flex-col gap-4 rounded-lg bg-gray-200 p-4">
+                  {data.info &&
+                    data.info
+                      .split(/\*\*(?:Page|עמוד) \d+:\*\*/g)
+                      .filter((block) => block.trim() !== "")
+                      .map((block, index) => (
+                        <div key={index}>
+                          <p className="font-bold">עמוד {index + 1}</p>
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: block.replace(/\n/g, "<br/>"),
+                            }}
+                          />
+                        </div>
+                      ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
-      <Footer />
+        )}
+        <Footer />
+      </div>
     </div>
   );
 };

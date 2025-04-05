@@ -27,7 +27,11 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    const rToUser = await sendAIData(pages);
+    const arrangingPagesInfo = await sendAIData(
+      `Returned back as a nicley formatted list of current page , supplier name if exist,total quantities per page, total amount paid per page: ${JSON.stringify(
+        pages
+      )}`
+    );
 
     // Clean outPutDir folder
     fs.unlinkSync(pdfPath);
@@ -35,7 +39,7 @@ export const pdfExtractor = async (
 
     res.json({
       status: 200,
-      info: rToUser,
+      info: arrangingPagesInfo,
     });
   } catch (err) {
     console.error("❌ Error during processing:", err);

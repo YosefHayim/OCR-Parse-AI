@@ -17,7 +17,6 @@ export const postPdfFile = async (file: File) => {
       },
     });
 
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error("Error uploading PDF file:", error.response.data.error);
