@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@types/express": "^5.0.1",
     "accepts": "^2.0.0",

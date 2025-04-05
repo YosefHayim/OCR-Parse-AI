@@ -11,23 +11,27 @@ import { toast } from "sonner";
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
+  const [fileName, setFileName] = useState<string>("");
+
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
-    onSuccess: (data) => {
+    onSuccess: () => {
       toast("קבצים בתהליך ניתוח נתונים...");
       setLoading(false);
     },
     onError: (error) => {
       console.log(error);
       toast("שגיאה בהעלאת הקובץ");
-
       setLoading(false);
     },
   });
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const file = formData.get("file") as File;
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setFileName(file.name.split(".")[0]);
+    setLoading(true);
     mutatePdfFile.mutate(file);
   };
 
@@ -35,17 +39,17 @@ const Homepage = () => {
     <div className="w-full">
       <Navbar />
       <Toaster position="top-center" />
+
       {isLoading ? (
         <div className="flex w-full items-center justify-center">
           <Loader />
         </div>
       ) : (
-        <form className="flex w-full flex-col gap-4" onSubmit={handleSubmit}>
+        <div className="flex w-full flex-col gap-4">
           <div className="flex w-full flex-col gap-2 bg-white p-4">
             <div className="w-full text-right">
               <label htmlFor="file">העלאה קובץ</label>
             </div>
-
             <div className="rounded-lg border border-dotted bg-gray-200 p-4">
               <div className="flex w-full flex-col items-center justify-center gap-2">
                 <label htmlFor="file" className="cursor-pointer">
@@ -58,16 +62,14 @@ const Homepage = () => {
                     name="file"
                     accept=".pdf"
                     className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+                    onChange={handleFileChange}
                   />
                   <div className="pointer-events-none w-full rounded border px-4 py-2 text-center">
                     <span id="fileLabel" className="text-gray-500">
-                      לחץ על האייקון או הכפתור להעלאת קובץ
+                      {fileName ? fileName : "העלאה קובץ"}
                     </span>
                   </div>
                 </div>
-                <Button className="cursor-pointer rounded-full bg-black hover:bg-gray-500">
-                  בחר קובץ
-                </Button>
               </div>
             </div>
             <div className="flex w-full flex-col gap-2">
@@ -77,8 +79,9 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-        </form>
+        </div>
       )}
+
       <Footer />
     </div>
   );
