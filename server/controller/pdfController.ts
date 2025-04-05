@@ -5,13 +5,13 @@ import sharp from "sharp";
 import { createWorker } from "tesseract.js";
 
 export const pdfExtractor = async (req, res) => {
-  const pdfPath = req.file?.path;
-  if (!pdfPath) return res.status(400).json({ error: "No file uploaded" });
-
-  const outputDir = path.join("images", Date.now().toString());
-  fs.mkdirSync(outputDir, { recursive: true });
-
   try {
+    const pdfPath = req.file?.path;
+    if (!pdfPath) return res.status(400).json({ error: "No file uploaded" });
+
+    const outputDir = path.join("images", Date.now().toString());
+    fs.mkdirSync(outputDir, { recursive: true });
+
     // 🖼 Convert PDF to PNGs at high density
     await new Promise((resolve, reject) => {
       exec(
