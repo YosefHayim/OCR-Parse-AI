@@ -1,5 +1,5 @@
 import path from "path";
-import { createWorker, OEM } from "tesseract.js";
+import { createWorker } from "tesseract.js";
 import sharp from "sharp";
 
 export const extractDataFromPngs = async (

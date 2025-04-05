@@ -1,4 +1,5 @@
 import { execFile } from "child_process";
+import { resolveMagickPath } from "./resolveMagicPath";
 
 export const convertPdfToPngs = async (
   pdfPath: string,
@@ -6,11 +7,12 @@ export const convertPdfToPngs = async (
 ): Promise<void> => {
   console.log("Files received, converting PDFs to PNGs...");
 
+  const magickPath = resolveMagickPath();
   await new Promise((resolve, reject) => {
     execFile(
-      "/opt/homebrew/bin/magick",
+      magickPath,
       [
-        "convert",
+        "magick",
 
         // Set input resolution to 300 DPI for better OCR quality
         "-density",

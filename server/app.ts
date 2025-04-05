@@ -15,5 +15,5 @@ app.use("/api", pdfRouter);
 app.use(errorHandler);
 
 app.listen(PORT, () => {
-  console.log(`Server is runnig on port${PORT}`);
+  console.log(`Server is running on port: ${PORT}`);
 });

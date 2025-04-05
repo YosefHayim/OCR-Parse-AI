@@ -5,7 +5,6 @@ import { useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
-import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 
@@ -30,7 +29,7 @@ const Homepage = () => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    setFileName(file.name.split(".")[0]);
+    setFileName(file.name);
     setLoading(true);
     mutatePdfFile.mutate(file);
   };
