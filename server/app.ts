@@ -24,8 +24,7 @@ app.post("/api/extract-pdf", upload.single("pdfFile"), async (req, res) => {
     // 🖼 Convert PDF to PNGs at high density
     await new Promise((resolve, reject) => {
       exec(
-        `/opt/homebrew/bin/convert -density 400 -units PixelsPerInch -colorspace RGB
-"${pdfPath}" "${outputDir}/page-%d.png"`,
+        `/opt/homebrew/bin/magick convert -density 400 -units PixelsPerInch -colorspace RGB "${pdfPath}" "${outputDir}/page-%d.png"`,
         (error, stdout, stderr) => {
           if (error) {
             console.error("❌ ImageMagick convert error:", stderr);
