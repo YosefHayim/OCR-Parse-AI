@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
-import { FaFileUpload } from "react-icons/fa";
+import { FaCopy, FaFileUpload } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
@@ -8,6 +8,12 @@ import Navbar from "@/components/Navbar/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@radix-ui/react-tooltip";
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
@@ -51,8 +57,8 @@ const Homepage = () => {
 
   const handleReset = () => {
     setData("");
-    setSelectedFile(null);
     setFileName("");
+    setSelectedFile(null);
   };
 
   useEffect(() => {}, [data]);
@@ -115,7 +121,23 @@ const Homepage = () => {
                 </div>
               </div>
               <div className="flex w-full flex-col gap-2">
-                <h1 className="w-full text-right font-bold">תוצאות</h1>
+                <div className="flex items-center gap-2">
+                  <h1 className="text-right font-bold">תוצאות</h1>
+                  <div>
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger>
+                          <Button className="cursor-pointer bg-white text-black shadow-none hover:bg-black hover:text-white">
+                            <FaCopy />
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent className="shadow-1xl rounded-lg bg-white p-3 font-bold">
+                          העתק תוצאות
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </div>
+                </div>
                 <div
                   className={`${data.info && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
                 >
