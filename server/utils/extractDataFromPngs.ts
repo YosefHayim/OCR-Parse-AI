@@ -25,11 +25,10 @@ export const extractDataFromPngs = async (
 
       // Preprocess image: resize, grayscale, normalize, threshold, sharpen
       await sharp(originalPath)
-        .resize({ width: 3420, height: 2214 }) // Ensure consistent A4 resolution
         .grayscale() // Remove color noise
         .normalize() // Normalize brightness and contrast
-        .threshold(50) // Binarize image for better OCR
-        .sharpen({ sigma: 1, m1: 1.0, m2: 2.0 }) // Enhance edges and characters
+        .threshold(60) // Binarize image for better OCR
+        .sharpen() // Enhance edges and characters
         .toFile(processedPath);
 
       // Run OCR on the preprocessed image
@@ -37,15 +36,7 @@ export const extractDataFromPngs = async (
         data: { text },
       } = await worker.recognize(processedPath);
 
-      // Post-process OCR text to clean up common issues
-      const cleanedText = text
-        .replace(/[^\S\r\n]{2,}/g, " ") // replace multiple spaces with a single space (except newlines)
-        .replace(/€\s?([0-9]+)([.,])([0-9]{2,})/g, "€$1$2$3") // fix euro formatting
-        .replace(/\s([.,])/g, "$1") // remove spaces before punctuation
-        .replace(/([A-Za-z])\s([A-Za-z])/g, "$1$2") // fix single-letter spacing errors like "Netto a pagare"
-        .trim();
-
-      console.log(`📄 Page ${i + 1} OCR Text:\n`, cleanedText);
+      console.log(`📄 Page ${i + 1} OCR Text:\n`, text);
       pages.push({ page: i + 1, text });
     }
   } catch (error) {
