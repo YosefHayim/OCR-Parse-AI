@@ -1,9 +1,11 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
-import { FaFileUpload, FaTools } from "react-icons/fa";
+import { FaFileUpload } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Loader from "@/components/Loader/Loader";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
@@ -27,13 +29,7 @@ const Homepage = () => {
   };
   return (
     <div className="w-full">
-      <div className="flex w-full items-center justify-between bg-black p-2 text-white">
-        <div className="flex items-center gap-2">
-          <FaTools />
-          MomToolPDF
-        </div>
-      </div>
-
+      <Navbar />
       {isLoading ? (
         <div></div>
       ) : (
@@ -70,6 +66,7 @@ const Homepage = () => {
       <div className="flex w-full items-center justify-center">
         <Loader />
       </div>
+      <Footer />
     </div>
   );
 };
