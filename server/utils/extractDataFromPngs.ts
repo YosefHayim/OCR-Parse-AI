@@ -17,14 +17,16 @@ export const extractDataFromPngs = async (
       const originalPath = path.join(outputDir, files[i]);
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
+      // Preprocess image: resize, grayscale, normalize, threshold, sharpen
       await sharp(originalPath)
-        .resize({ width: 3420, height: 2214 }) // Increased for detail
-        .grayscale()
-        .normalize()
-        .threshold(150) //  Lowered for clarity
-        .sharpen({ sigma: 1, m1: 1.0, m2: 2.0 }) // Added sharpening
+        .resize({ width: 3420, height: 2214 }) // Ensure consistent A4 resolution
+        .grayscale() // Remove color noise
+        .normalize() // Normalize brightness and contrast
+        .threshold(150) // Binarize image for better OCR
+        .sharpen({ sigma: 1, m1: 1.0, m2: 2.0 }) // Enhance edges and characters
         .toFile(processedPath);
 
+      // Run OCR on the preprocessed image
       const {
         data: { text },
       } = await worker.recognize(processedPath);
