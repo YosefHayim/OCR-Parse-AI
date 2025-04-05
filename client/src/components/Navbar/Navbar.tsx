@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className="flex w-full items-center justify-between bg-black p-2 text-white">
       <div className="flex items-center gap-2">
         <FaTools />
-        MomToolPDF
+        <b>MomTool</b>
       </div>
     </div>
   );
