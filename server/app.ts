@@ -3,7 +3,7 @@ import cors from "cors";
 import multer from "multer";
 import fs from "fs";
 import path from "path";
-import { PDFDocument } from "pdf-lib";
+import { exec } from "child_process";
 import sharp from "sharp";
 import { createWorker } from "tesseract.js";
 
@@ -21,40 +21,66 @@ app.post("/api/extract-pdf", upload.single("pdfFile"), async (req, res) => {
   fs.mkdirSync(outputDir, { recursive: true });
 
   try {
-    const pdfBytes = fs.readFileSync(pdfPath);
-    const pdfDoc = await PDFDocument.load(pdfBytes);
-    const pageCount = pdfDoc.getPageCount();
+    // 🖼 Convert PDF to PNGs at high density
+    await new Promise((resolve, reject) => {
+      exec(
+        `/opt/homebrew/bin/convert -density 400 -units PixelsPerInch -colorspace RGB
+"${pdfPath}" "${outputDir}/page-%d.png"`,
+        (error, stdout, stderr) => {
+          if (error) {
+            console.error("❌ ImageMagick convert error:", stderr);
+            reject(error);
+          } else {
+            console.log("✅ PDF converted to PNGs");
+            resolve(true);
+          }
+        }
+      );
+    });
 
-    let extractedText = "";
+    // 🧠 Prepare files list
+    const files = fs
+      .readdirSync(outputDir)
+      .filter((f) => f.endsWith(".png"))
+      .sort(
+        (a, b) =>
+          parseInt(a.match(/\d+/)?.[0] || "0") -
+          parseInt(b.match(/\d+/)?.[0] || "0")
+      );
+
     const worker = await createWorker("eng");
 
-    for (let i = 0; i < pageCount; i++) {
-      const page = pdfDoc.getPages()[i];
-      const { width, height } = page.getSize();
+    let pages: { page: number; text: string }[] = [];
 
-      // Render to PNG using sharp (blank white background placeholder)
-      const pngPath = path.join(outputDir, `page-${i + 1}.png`);
-      const svg = await page.renderToSvg();
-      await sharp(Buffer.from(svg))
-        .resize(Math.floor(width), Math.floor(height))
-        .png()
-        .toFile(pngPath);
+    // 🧼 Preprocess and OCR
+    for (let i = 0; i < files.length; i++) {
+      const originalPath = path.join(outputDir, files[i]);
+      const processedPath = path.join(outputDir, `processed-${i}.png`);
+
+      await sharp(originalPath)
+        .resize({ width: 1600 })
+        .grayscale()
+        .normalize()
+        .threshold(160)
+        .toFile(processedPath);
 
       const {
         data: { text },
-      } = await worker.recognize(pngPath);
-      extractedText += `--- Page ${i + 1} ---\n${text}\n\n`;
+      } = await worker.recognize(processedPath);
+
+      console.log(`📄 Page ${i + 1} OCR Text:\n`, text.slice(0, 300)); // show sample
+      pages.push({ page: i + 1, text });
     }
 
     await worker.terminate();
 
-    // Cleanup
+    // 🧹 Cleanup
     fs.unlinkSync(pdfPath);
     fs.rmSync(outputDir, { recursive: true, force: true });
 
-    res.json({ text: extractedText });
+    res.json({ pages });
   } catch (err) {
-    console.error("OCR error:", err);
+    console.error("❌ Error during processing:", err);
     res.status(500).json({ error: "OCR failed" });
   }
 });
