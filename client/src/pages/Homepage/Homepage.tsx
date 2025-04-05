@@ -1,16 +1,19 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
 import { FaFileUpload } from "react-icons/fa";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
   const [fileName, setFileName] = useState<string>("");
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
@@ -29,17 +32,28 @@ const Homepage = () => {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    setSelectedFile(file);
     setFileName(file.name);
-    setLoading(true);
-    mutatePdfFile.mutate(file);
+  };
+
+  const handleButtonClick = () => {
+    if (!selectedFile) {
+      // No file selected yet – open file dialog
+      fileInputRef.current?.click();
+    } else {
+      // File already selected – start upload
+      setLoading(true);
+      mutatePdfFile.mutate(selectedFile);
+    }
   };
 
   return (
-    <div className="w-full">
+    <div className="flex w-full flex-col items-center justify-start gap-4 p-4">
       <Navbar />
       <Toaster position="top-center" />
       {isLoading ? (
-        <div className="flex w-full items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center gap-4 p-10">
+          <p>...מעבד נתונים</p>
           <Loader />
         </div>
       ) : (
@@ -54,19 +68,27 @@ const Homepage = () => {
                   <FaFileUpload size={40} color="gray" />
                 </label>
                 <div className="relative w-full">
+                  <div className="w-full text-center">
+                    {fileName && fileName}
+                  </div>
                   <input
                     type="file"
                     id="file"
                     name="file"
                     accept=".pdf"
-                    className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+                    ref={fileInputRef}
                     onChange={handleFileChange}
+                    className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
                   />
-                  <div className="pointer-events-none w-full rounded border px-4 py-2 text-center">
-                    <span id="fileLabel" className="text-gray-500">
-                      {fileName ? fileName : "העלאה קובץ"}
-                    </span>
-                  </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Button
+                    type="button"
+                    onClick={handleButtonClick}
+                    className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
+                  >
+                    {selectedFile ? "העלה עכשיו" : "בחר קובץ"}
+                  </Button>
                 </div>
               </div>
             </div>
@@ -79,7 +101,6 @@ const Homepage = () => {
           </div>
         </div>
       )}
-
       <Footer />
     </div>
   );
