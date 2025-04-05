@@ -6,6 +6,7 @@ import { useState } from "react";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
+import { Input } from "@/components/ui/input";
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
@@ -39,22 +40,29 @@ const Homepage = () => {
             <div className="rounded-lg border border-dotted bg-gray-200 p-4">
               <div className="flex w-full flex-col items-center justify-center gap-2">
                 <FaFileUpload size={40} color="gray" />
-                <input
-                  type="file"
-                  id="file"
-                  name="file"
-                  accept=".pdf"
-                  className="w-full border text-center"
-                />
+                <div className="relative w-full">
+                  <input
+                    type="file"
+                    id="file"
+                    name="file"
+                    accept=".pdf"
+                    className="absolute inset-0 z-10 h-full w-full cursor-pointer opacity-0"
+                  />
+                  <div className="pointer-events-none w-full rounded border px-4 py-2 text-center">
+                    <span id="fileLabel" className="text-gray-500">
+                      Drag and drop your PDF files here
+                    </span>
+                  </div>
+                </div>
                 <Button
                   type="submit"
-                  className="rounded-full bg-black hover:bg-gray-500"
+                  className="cursor-pointer rounded-full bg-black hover:bg-gray-500"
                 >
-                  Select Files
+                  <label htmlFor="file"> Select Files</label>
                 </Button>
               </div>
             </div>
-            <div>
+            <div className="flex w-full flex-col gap-2">
               <h1>Results</h1>
               <div className="flex w-full items-start justify-start rounded-lg bg-gray-200 p-2">
                 <p>placeholder</p>
