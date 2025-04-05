@@ -1,16 +1,19 @@
 import path from "path";
 import { createWorker } from "tesseract.js";
-import { outputDir } from "../app";
+import { outputDir } from "./locationFile";
 import sharp from "sharp";
 
-export const extractDataFromPngs = async () => {
+export const extractDataFromPngs = async (
+  files: string[]
+): Promise<{ page: number; text: string }[]> => {
+  console.log("Extracting data from PNGs...");
   try {
     const worker = await createWorker("eng");
 
     let pages: { page: number; text: string }[] = [];
 
-    for (let i = 0; i < outputDir.length; i++) {
-      const originalPath = path.join(outputDir, outputDir[i]);
+    for (let i = 0; i < files.length; i++) {
+      const originalPath = path.join(outputDir, files[i]);
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)

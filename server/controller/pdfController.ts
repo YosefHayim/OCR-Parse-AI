@@ -17,10 +17,9 @@ export const pdfExtractor = async (
       (error as any).status = 400;
       return next(error);
     }
-
-    convertPdfToPngs(pdfPath);
-    sortFileswithinOutputDir(outputDir);
-    const pages = extractDataFromPngs();
+    await convertPdfToPngs(pdfPath);
+    const files = sortFileswithinOutputDir(outputDir);
+    const pages = await extractDataFromPngs(files);
 
     // 🧹 Clean outPutDir folder
     fs.unlinkSync(pdfPath);
