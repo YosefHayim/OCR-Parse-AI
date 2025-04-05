@@ -85,7 +85,7 @@
   },
   "scripts": {
     "dev": "nodemon --exec tsx app.ts",
-    "prod": "node --exec tsx app.ts"
+    "prod": "tsx app.ts"
   },
   "author": "",
   "license": "ISC",
