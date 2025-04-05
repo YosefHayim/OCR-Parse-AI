@@ -1,14 +1,26 @@
 import path from "path";
 import { createWorker } from "tesseract.js";
 import sharp from "sharp";
+import { extractLikelyQuantities } from "./extractLikelyQuantities";
 
 export const extractDataFromPngs = async (
   files: string[],
   outputDir: string
-): Promise<{ page: number; text: string }[]> => {
+): Promise<
+  {
+    page: number;
+    text: string;
+    quantities: {
+      line: string;
+      quantity: number;
+      unitPrice?: number;
+      total?: number;
+    }[];
+  }[]
+> => {
   console.log("Extracting data from PNGs...");
 
-  const worker = await createWorker(["ita"]);
+  const worker = await createWorker(["eng"]);
 
   await worker.setParameters({
     tessedit_char_whitelist:
@@ -44,8 +56,12 @@ export const extractDataFromPngs = async (
         .replace(/([A-Za-z])\s([A-Za-z])/g, "$1$2") // fix single-letter spacing errors like "Netto a pagare"
         .trim();
 
-      console.log(`📄 Page ${i + 1} OCR Text:\n`, cleanedText);
-      pages.push({ page: i + 1, text: cleanedText });
+      const quantities = extractLikelyQuantities(cleanedText);
+
+      console.log(`📄 Page ${i + 1} OCR Text:\n`, text);
+      console.log(`🧾 Quantities on Page ${i + 1}:\n`, quantities);
+
+      pages.push({ page: i + 1, text: cleanedText, quantities });
     }
   } catch (error) {
     console.error("Error occurred during OCR:", error);
