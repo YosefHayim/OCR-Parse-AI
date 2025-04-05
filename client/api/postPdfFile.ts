@@ -1,11 +1,14 @@
 import axios from "axios";
+const deployedUrl = import.meta.env.VITE_API_BACKEND_DEPLOYED;
+const localUrl = import.meta.env.VITE_API_BACKEND_LOCAL;
+const isProduction = import.meta.env.VITE_API_BACKEND_LOCAL;
 
 export const postPdfFile = async (file: File) => {
   if (!file) {
     throw new Error("No file provided");
   }
 
-  const url = "http://localhost:3000/api/extract-pdf";
+  const url = `${isProduction ? deployedUrl : localUrl}/api/extract-pdf`;
 
   const formData = new FormData();
   formData.append("pdfFile", file);
