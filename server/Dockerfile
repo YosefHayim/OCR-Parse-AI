@@ -28,4 +28,4 @@ EXPOSE 3000
 # USER appuser
 
 # Start app
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "prod"]
