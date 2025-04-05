@@ -15,8 +15,6 @@ const Homepage = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const file = formData.get("file") as File;
-    const email = formData.get("email") as string;
-    console.log(file, email);
 
     mutatePdfFile.mutate(file);
   };
