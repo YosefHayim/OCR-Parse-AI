@@ -1,49 +1,57 @@
-export const extractLikelyQuantities = (text: string) => {
-  const lines = text
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean);
+export interface QuantityMatch {
+  line: string;
+  quantity?: number;
+}
 
-  const quantityCandidates: {
-    line: string;
-    quantity: number;
-    unitPrice?: number;
-    total?: number;
-  }[] = [];
+export const extractLikelyQuantities = (text: string): QuantityMatch[] => {
+  const lines = text.split(/\r?\n/).filter((line) => line.trim().length > 0);
+  const results: QuantityMatch[] = [];
 
   for (const line of lines) {
-    // Look for numeric chunks in the line
-    const nums = line.match(/[\d]+([.,]\d{1,2})?/g);
+    const quantity = extractQuantityFromLine(line);
+    results.push({ line, quantity });
+  }
 
-    if (nums && nums.length >= 2) {
-      const numericValues = nums.map((n) => parseFloat(n.replace(",", ".")));
+  return results;
+};
 
-      // Heuristics:
-      // Quantity should be small-ish (1–500), unitPrice reasonable (0.1–100), total higher
-      for (let i = 0; i < numericValues.length - 1; i++) {
-        const q = numericValues[i];
-        const u = numericValues[i + 1];
-        const t = numericValues[i + 2];
+function extractQuantityFromLine(line: string): number | undefined {
+  const patterns = [
+    // 1. Quantity before 'pz' (with or without space)
+    /(\d{1,4})\s*[Pp][Zz]/,
 
-        const isValid =
-          q > 0 &&
-          q < 1000 && // quantity range
-          u > 0 &&
-          u < 100 && // unit price range
-          (!t || t >= q * u - 1); // total should be >= q * unitPrice (with margin)
+    // 2. After 'pz'
+    /[Pp][Zz]\s*(\d{1,4})/,
 
-        if (isValid) {
-          quantityCandidates.push({
-            line,
-            quantity: Math.round(q),
-            unitPrice: u,
-            total: t,
-          });
-          break;
-        }
+    // 3. After 'NR'
+    /[Nn][Rr]\s*(\d{1,4})/,
+
+    // 4. Before 'ND'
+    /(\d{1,4}[,.]\d{2})\s*ND/,
+
+    // 5. Raw number before euro
+    /(?<![A-Za-z])(\d{1,4})\s*€[\d,.]+/,
+
+    // 6. PANTALONE/MAGLIA lines (just use the number before pz)
+    /.*\b(?:PANTALONE|MAGLIA)[\w\s-]*?(\d{1,4})\s*[Pp][Zz]/,
+
+    // 7. Fallback: 3-number lines (quantity, unit price, total)
+    /^.*?(\d{1,4}[,.]\d{2})\s+[\d,.]{1,6}\s+[\d,.]{1,6}/,
+
+    // 8. Number after "N "
+    /[Nn]\s+(\d{1,4})(?![a-zA-Z])/,
+  ];
+
+  for (const regex of patterns) {
+    const match = line.match(regex);
+    if (match) {
+      let raw = match[1].replace(",", ".");
+      const val = parseFloat(raw);
+      if (!isNaN(val)) {
+        return Math.round(val); // treat quantity as integer
       }
     }
   }
 
-  return quantityCandidates;
-};
+  return undefined;
+}
