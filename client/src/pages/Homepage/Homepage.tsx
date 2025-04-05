@@ -1,16 +1,21 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
-import Navbar from "../../Components/Navbar";
-import { FaFileUpload } from "react-icons/fa";
+import { FaFileUpload, FaTools } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import Loader from "@/components/Loader/Loader";
 
 const Homepage = () => {
+  const [isLoading, setLoading] = useState(false);
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
     onSuccess: (data) => {
       console.log(data);
+      setLoading(false);
     },
     onError: (error) => {
       console.log(error);
+      setLoading(false);
     },
   });
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -22,30 +27,49 @@ const Homepage = () => {
   };
   return (
     <div className="w-full">
-      <Navbar />
-      <form
-        className="flex flex-col gap-4 bg-red-400 p-4"
-        onSubmit={handleSubmit}
-      >
-        <div className="flex w-full flex-col gap-2 bg-white p-4">
-          <label htmlFor="file">File Upload</label>
-          <div className="rounded-lg border border-dotted bg-gray-300 p-4">
-            <div className="flex w-full flex-col items-center justify-center gap-2">
-              <FaFileUpload size={40} color="gray" />
-              <input
-                type="file"
-                id="file"
-                name="file"
-                accept=".pdf"
-                className="w-full text-center"
-              />
-              <Button type="submit" className="">
-                Select Files
-              </Button>
+      <div className="flex w-full items-center justify-between bg-black p-2 text-white">
+        <div className="flex items-center gap-2">
+          <FaTools />
+          MomToolPDF
+        </div>
+      </div>
+
+      {isLoading ? (
+        <div></div>
+      ) : (
+        <form className="flex w-full flex-col gap-4" onSubmit={handleSubmit}>
+          <div className="flex w-full flex-col gap-2 bg-white p-4">
+            <label htmlFor="file">File Upload</label>
+            <div className="rounded-lg border border-dotted bg-gray-200 p-4">
+              <div className="flex w-full flex-col items-center justify-center gap-2">
+                <FaFileUpload size={40} color="gray" />
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  accept=".pdf"
+                  className="w-full border text-center"
+                />
+                <Button
+                  type="submit"
+                  className="rounded-full bg-black hover:bg-gray-500"
+                >
+                  Select Files
+                </Button>
+              </div>
+            </div>
+            <div>
+              <h1>Results</h1>
+              <div className="flex w-full items-start justify-start rounded-lg bg-gray-200 p-2">
+                <p>placeholder</p>
+              </div>
             </div>
           </div>
-        </div>
-      </form>
+        </form>
+      )}
+      <div className="flex w-full items-center justify-center">
+        <Loader />
+      </div>
     </div>
   );
 };
