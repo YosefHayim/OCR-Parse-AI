@@ -26,9 +26,9 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    // 🧹 Clean outPutDir folder
-    // fs.unlinkSync(pdfPath);
-    // fs.rmSync(outputDir, { recursive: true, force: true });
+    // Clean outPutDir folder
+    fs.unlinkSync(pdfPath);
+    fs.rmSync(outputDir, { recursive: true, force: true });
 
     res.json({ pages });
   } catch (err) {
