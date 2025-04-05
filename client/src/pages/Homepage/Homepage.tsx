@@ -99,6 +99,12 @@ const Homepage = () => {
                     >
                       {selectedFile ? "העלה עכשיו" : "בחר קובץ"}
                     </Button>
+                    <Button
+                      className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
+                      onClick={() => setData("")}
+                    >
+                      אפס תוצאות
+                    </Button>
                   </div>
                 </div>
               </div>

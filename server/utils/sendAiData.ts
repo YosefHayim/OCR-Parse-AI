@@ -11,6 +11,8 @@ export const sendAIData = async (data) => {
     throw new Error("No data provided to send to AI.");
   }
 
+  console.log("Data has been send to AI: ", data);
+
   console.log("Sending data to AI...");
   const r = await client.responses.create({
     model: "gpt-4o",
