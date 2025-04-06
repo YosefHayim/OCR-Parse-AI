@@ -14,6 +14,7 @@ export const checkPatterns = (line: string) => {
     ": ...",
     "€0,00",
     "€0.00",
+    "inr",
   ];
 
   if (
@@ -25,6 +26,10 @@ export const checkPatterns = (line: string) => {
   }
 
   const patterns = [
+    {
+      name: "__",
+      regex: /\b(?:PZ|p\d{0,3}|\d{1,3})\s+(\d{1,3})\s+\d{1,3},\d{2}/,
+    },
     { name: "leadingQtyInConcatBeforeEuro", regex: /\b(\d{2,3})(?=\d?€)/ },
     { name: "tightPackedQtyPZ", regex: /\b(\d{2,4})\s*[Pp][Zz]\b/ },
     {
