@@ -28,7 +28,7 @@ export const extractDataFromPngs = async (
     preserve_interword_spaces: "1",
   });
 
-  const pages: { page: number; text: string }[] = [];
+  const pages = [];
 
   try {
     for (let i = 0; i < files.length; i++) {
@@ -51,7 +51,7 @@ export const extractDataFromPngs = async (
       const quantities = extractQuantities(text);
 
       const totalQuantity = quantities.reduce((sum, item) => {
-        return sum + item.quantity;
+        return sum + (typeof item.quantity === "number" ? item.quantity : 0);
       }, 0);
 
       logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
@@ -67,7 +67,12 @@ export const extractDataFromPngs = async (
       console.log(`Quantities on Page ${i + 1}:\n`, quantities);
       console.log(`Total Quantity on Page ${i + 1}:`, totalQuantity);
 
-      pages.push({ page: i + 1, text, quantities, totalQuantity });
+      pages.push({
+        page: i + 1,
+        text,
+        quantities,
+        totalQuantity: Number.isNaN(totalQuantity) ? 0 : totalQuantity,
+      });
     }
   } catch (error) {
     console.error("Error occurred during OCR:", error);
