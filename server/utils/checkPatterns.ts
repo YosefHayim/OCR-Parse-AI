@@ -46,7 +46,7 @@ export const checkPatterns = (line: string) => {
     if (match) {
       let raw = match[1].replace(",", ".");
       const val = parseFloat(raw);
-      if (!isNaN(val)) {
+      if (!isNaN(val) && (val < 1900 || val > 2100)) {
         return { quantity: Math.round(val), patternIndex: i };
       }
     }
