@@ -13,6 +13,29 @@ export const checkPatterns = (line) => {
     "PANTALONI",
   ];
 
+  const rejectKeywords = [
+    "totale",
+    "total",
+    "iva",
+    "vat",
+    "pagamento",
+    "riepilogo",
+    "imponibile",
+    "nonimponibile",
+    "amount",
+    "summary",
+    "documento",
+    "€0,00",
+    "€0.00",
+    "totalamount",
+    "due date",
+    "saldo",
+    "bonifico",
+  ];
+
+  const lowerLine = line.toLowerCase();
+  if (rejectKeywords.some((k) => lowerLine.includes(k))) return {};
+
   const patterns = {
     afterLabel: [
       { name: "afterPZ", condition: /[Pp][Zz]\s*(\d{1,4})/ },
@@ -42,7 +65,15 @@ export const checkPatterns = (line) => {
       },
       {
         name: "qtyFollowedByPrices",
-        condition: /\b(\d{1,4})\b\s*(?:€[\d,.]+){1,2}/,
+        condition: (line) => {
+          if (
+            !quantityIndicators.some((q) =>
+              line.toLowerCase().includes(q.toLowerCase())
+            )
+          )
+            return null;
+          return line.match(/\b(\d{1,4})\b\s*(?:€[\d,.]+){1,2}/);
+        },
       },
       {
         name: "letterPrefixQtyBefore2Prices",
@@ -56,6 +87,14 @@ export const checkPatterns = (line) => {
         name: "legacyDecimalLabels",
         condition:
           /(?:\b(?:N\.?|NR|Q\.?T\.?A?\.?|PZ|PEZZI|NR\.?)\s*)(\d{1,4},\d{2})/gi,
+      },
+      {
+        name: "qtyBeforeKnownLabel",
+        condition: /(\d{1,4})(?=\s*(pezzi|pz|PZ|EA))/i,
+      },
+      {
+        name: "qtyKnownLabelBeforeEuro",
+        condition: /(\d{1,4})\s*(pezzi|pz|PZ|EA)\s*[a-zA-Z]*\s*€[\d,.]+/i,
       },
     ],
     spacedNumeric: [
@@ -73,15 +112,15 @@ export const checkPatterns = (line) => {
     ],
   };
 
-  const indicatorMatch = quantityIndicators.some((word) =>
-    line.toLowerCase().includes(word.toLowerCase())
-  );
-
-  if (!indicatorMatch) return {};
-
   for (const category of Object.values(patterns)) {
     for (const { name, condition } of category) {
-      const match = line.match(condition);
+      let match;
+      if (typeof condition === "function") {
+        match = condition(line);
+      } else {
+        match = line.match(condition);
+      }
+
       if (match) {
         const raw = match[1].replace(",", ".");
         const val = parseFloat(raw);
