@@ -18,7 +18,7 @@ export const convertPdfToPngs = async (
 
         // Set input resolution to 300 DPI for better OCR quality
         "-density",
-        "500",
+        "500", // was 300
 
         // Use pixel units for accurate scaling
         "-units",
@@ -30,8 +30,6 @@ export const convertPdfToPngs = async (
 
         // Source PDF file path
         pdfPath,
-
-        "-trim", // Automatically crop whitespace
 
         // Resize to fit within A4 canvas (3420x2214 pixels)
         "-resize",
