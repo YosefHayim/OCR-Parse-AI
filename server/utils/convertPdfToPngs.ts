@@ -39,6 +39,12 @@ export const convertPdfToPngs = async (
         "-gravity",
         "center",
 
+        // Strip transparency for better contrast
+        "-alpha",
+        "remove",
+        "-alpha",
+        "off",
+
         // Fill background with white if padding is added
         "-background",
         "white",
