@@ -5,6 +5,11 @@ export const checkPatterns = (line: string) => {
     "Riepilogo",
     "documento",
     "Nonimp",
+    "Cartadicredito",
+    "Totalamount",
+    "€3,282",
+    "2025",
+    `${new Date().getFullYear()}`,
   ];
 
   if (rejectKeywords.some((keyword) => line.includes(keyword))) {
@@ -39,6 +44,9 @@ export const checkPatterns = (line: string) => {
     // 8. Quantity before unit price and euro (e.g. "125 i €7,50")
     /\b(\d{1,4})\b(?=\s+\w{0,4}?\s*\u20AC[\d,.]+)/,
 
+    // 21. Quantity followed by two euro-style numbers (e.g. "28 12.0 €336.00")
+    /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*€[\d,.]+/,
+
     // 9. Raw number before euro — FINAL fallback (e.g. "25 €9,50")
     /\b(\d{1,4})\b\s*\u20AC[\d,.]+/,
 
@@ -65,6 +73,15 @@ export const checkPatterns = (line: string) => {
 
     // 17. Quantity followed by one or two euro values
     /\b(\d{1,4})\b\s*(?:€[\d,.]+){1,2}/,
+
+    // 18. Number followed by optional letter(s) and euro, ensuring no digit after number (e.g. "180e580 €1.044,00")
+    /\b(\d{2,4})(?!\d)(?=[a-zA-Z]{1,5}\s*€[\d,.]+)/,
+
+    // 19. Quantity followed by two euro values (with or without space between € and numbers)
+    /\b(\d{1,4})\b(?=\s*€[\d,.]+\s*€[\d,.]+)/,
+
+    // 20. Quantity with decimal format (e.g. "150.00") followed by euro values
+    /\b(\d{1,4}[.,]\d{2})\b(?=\s*€[\d,.]+(?:\s*€[\d,.]+)?)/,
   ];
 
   for (let i = 0; i < patterns.length; i++) {
