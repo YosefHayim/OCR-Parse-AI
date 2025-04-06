@@ -17,8 +17,8 @@ export const extractLikelyQuantities = (text: string): QuantityMatch[] => {
 
 function extractQuantityFromLine(line: string): number | undefined {
   const patterns = [
-    // 1. Quantity before 'pz' (with or without space)
-    /(\d{1,4})\s*[Pp][Zz]/,
+    // 1. Quantity with decimal before 'pz' (e.g., "246,00 pz")
+    /(\d{1,4}[,.]\d{2})\s*[Pp][Zz]/,
 
     // 2. After 'pz'
     /[Pp][Zz]\s*(\d{1,4})/,
@@ -40,6 +40,8 @@ function extractQuantityFromLine(line: string): number | undefined {
 
     // 8. Number after "N "
     /[Nn]\s+(\d{1,4})(?![a-zA-Z])/,
+
+    /(?:\b(?:N\.?|NR|Q\.?T\.?A?\.?|PZ|PEZZI|NR\.?)\s*)(\d{1,4},\d{2})/gi,
   ];
 
   for (const regex of patterns) {

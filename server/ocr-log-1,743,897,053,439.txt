@@ -1,4 +1,4 @@
-[2025-04-05T23:49:01.207Z] 📄 Page 1 - Cleaned OCR Text:
+[2025-04-05T23:51:39.782Z] 📄 Page 1 - Cleaned OCR Text:
 DMPRONTOMODADIQIN MEILING-
  Spett.
 streichdesignitd
@@ -22,7 +22,7 @@ NOIMPART.41 1.088,00 0,00 Scadenze: :
 -00x ETT
 Some0ss€1.08600
 sutranco77Egmall.com-Num.REA. POG13767
-[2025-04-05T23:49:01.208Z] 🧾 Page 1 - Extracted Quantities:
+[2025-04-05T23:51:39.783Z] 🧾 Page 1 - Extracted Quantities:
 [
   {
     "line": "DMPRONTOMODADIQIN MEILING-"
@@ -96,7 +96,7 @@ sutranco77Egmall.com-Num.REA. POG13767
     "line": "sutranco77Egmall.com-Num.REA. POG13767"
   }
 ]
-[2025-04-05T23:49:01.976Z] 📄 Page 2 - Cleaned OCR Text:
+[2025-04-05T23:51:40.663Z] 📄 Page 2 - Cleaned OCR Text:
 2
  to SCan a B51, TOSCANA51SR.L-P.L:02596360970.-C.F..02596360970
 fo Viatoscana5159100PRATOEmail: toscanaS1sriGgmaill.com
@@ -119,7 +119,7 @@ Scadenze Nettoapagare
 03-04-2025-€900,00 €900,00
 Modaiitdpagamento ot
 RimessaDiretta :
-[2025-04-05T23:49:01.976Z] 🧾 Page 2 - Extracted Quantities:
+[2025-04-05T23:51:40.664Z] 🧾 Page 2 - Extracted Quantities:
 [
   {
     "line": "2"
@@ -191,7 +191,7 @@ RimessaDiretta :
     "line": "RimessaDiretta :"
   }
 ]
-[2025-04-05T23:49:03.793Z] 📄 Page 3 - Cleaned OCR Text:
+[2025-04-05T23:51:42.476Z] 📄 Page 3 - Cleaned OCR Text:
 - -
 
 Cedenteprestatorefornitore Cesslonariocommittentecliente
@@ -225,7 +225,7 @@ N8A-Operazionenonimpanibie,aisensideifarsletta
 delDPRn633772 a zoo
 lTEEERIEVi REE TE
 cr 2.5249
-[2025-04-05T23:49:03.793Z] 🧾 Page 3 - Extracted Quantities:
+[2025-04-05T23:51:42.476Z] 🧾 Page 3 - Extracted Quantities:
 [
   {
     "line": "- -"
@@ -322,7 +322,7 @@ cr 2.5249
     "line": "cr 2.5249"
   }
 ]
-[2025-04-05T23:49:05.073Z] 📄 Page 4 - Cleaned OCR Text:
+[2025-04-05T23:51:43.763Z] 📄 Page 4 - Cleaned OCR Text:
 .FatturaAccompagnatorian.41del0170472025
 SUNSHINESRLS Spettabile
 : VIAVIADELMOLINUZZO52717,59100PratoPO STRETCHDESIGN
@@ -348,7 +348,7 @@ l
 TrattiamoiVostridatiperfinalitdamministrativee contabili.Specifichemisurediisicurezzasonoosservateper prevenirelaperditadeidati,usi
 ilteciti,0noncorretti,eaccessinonautorizzati.A richiestaforniamoInformativacompletaaisensieper glieffettidicuiallart.13ess. del
 RegolamentoUEn.67972016del27 aprile2016.
-[2025-04-05T23:49:05.074Z] 🧾 Page 4 - Extracted Quantities:
+[2025-04-05T23:51:43.764Z] 🧾 Page 4 - Extracted Quantities:
 [
   {
     "line": ".FatturaAccompagnatorian.41del0170472025"
@@ -426,7 +426,7 @@ RegolamentoUEn.67972016del27 aprile2016.
     "line": "RegolamentoUEn.67972016del27 aprile2016."
   }
 ]
-[2025-04-05T23:49:06.339Z] 📄 Page 5 - Cleaned OCR Text:
+[2025-04-05T23:51:45.034Z] 📄 Page 5 - Cleaned OCR Text:
 HSPE HOPE
  - dizhuyan
 - . VIADELMOLINUZZO8873-59100PRATO PO
@@ -471,7 +471,7 @@ Nr.cold Peso. Aspettoesterioredaiben Dataeorainiziotrasperto
  Scatota
 Pag.1
 1
-[2025-04-05T23:49:06.339Z] 🧾 Page 5 - Extracted Quantities:
+[2025-04-05T23:51:45.034Z] 🧾 Page 5 - Extracted Quantities:
 [
   {
     "line": "HSPE HOPE"
@@ -610,7 +610,7 @@ Pag.1
     "line": "1"
   }
 ]
-[2025-04-05T23:49:09.364Z] 📄 Page 6 - Cleaned OCR Text:
+[2025-04-05T23:51:48.026Z] 📄 Page 6 - Cleaned OCR Text:
 Ty
 A SOLELUNAS.R.L.
 VIATOSCANA657F-59100-PARTOPO
@@ -651,7 +651,7 @@ Ce UU
 DATEANDSIGNATUREOFTHESENDER DATEANDSIGNATURECOURIER DATEANDSIGNATUREOFTHERECIPIENT
 SOLELUNAS.R.L.solelunamodahotmail.com
 .Accompanyinginvoiceno.156,2025of2025-04-03-1f1 tel:390574625359
-[2025-04-05T23:49:09.365Z] 🧾 Page 6 - Extracted Quantities:
+[2025-04-05T23:51:48.026Z] 🧾 Page 6 - Extracted Quantities:
 [
   {
     "line": "Ty"
@@ -777,7 +777,7 @@ SOLELUNAS.R.L.solelunamodahotmail.com
     "line": ".Accompanyinginvoiceno.156,2025of2025-04-03-1f1 tel:390574625359"
   }
 ]
-[2025-04-05T23:49:10.828Z] 📄 Page 7 - Cleaned OCR Text:
+[2025-04-05T23:51:49.501Z] 📄 Page 7 - Cleaned OCR Text:
 - h THEONEDILINLIANCAN
 . VIAGORADELPERO31717-59100-PRATOPO
 i IBAN:IT18G0306921524100000006919
@@ -809,7 +809,7 @@ H Imponibite€1.554,50
 Zz €1.554,50
 THEONEDILINLIANCANlintiancanigmail.com
 Fatturanr.972025del0270472025-171 tel:3272085528-cell:3272085528
-[2025-04-05T23:49:10.829Z] 🧾 Page 7 - Extracted Quantities:
+[2025-04-05T23:51:49.501Z] 🧾 Page 7 - Extracted Quantities:
 [
   {
     "line": "- h THEONEDILINLIANCAN"
@@ -907,7 +907,7 @@ Fatturanr.972025del0270472025-171 tel:3272085528-cell:3272085528
     "line": "Fatturanr.972025del0270472025-171 tel:3272085528-cell:3272085528"
   }
 ]
-[2025-04-05T23:49:13.505Z] 📄 Page 8 - Cleaned OCR Text:
+[2025-04-05T23:51:52.180Z] 📄 Page 8 - Cleaned OCR Text:
 h . .ACCOMPANYINGINVOICE
  a
 MERRYMOONS.R.L. iN 10272025-Date2025-04-03
@@ -941,7 +941,7 @@ viaPollative1197Q3-39100BrasoF2
 LC.FiscP.IVA LEERed
 CEemsnggmaiLoom FEE
 cell,393299735899 W5-H-03pagetd
-[2025-04-05T23:49:13.505Z] 🧾 Page 8 - Extracted Quantities:
+[2025-04-05T23:51:52.180Z] 🧾 Page 8 - Extracted Quantities:
 [
   {
     "line": "h . .ACCOMPANYINGINVOICE"
@@ -1044,7 +1044,7 @@ cell,393299735899 W5-H-03pagetd
     "line": "cell,393299735899 W5-H-03pagetd"
   }
 ]
-[2025-04-05T23:49:14.771Z] 📄 Page 9 - Cleaned OCR Text:
+[2025-04-05T23:51:53.485Z] 📄 Page 9 - Cleaned OCR Text:
 3
 LINASRL oe
 VIATOSCANA712 F attura
@@ -1080,7 +1080,7 @@ CausaledelT. Aspettoesterioredelbenl N.colliT.Art:7 Firmadelvettore
 VENDITAAVistaDlBustallScatolal4Tot:619 ,
 IBAN:IT31Y0538721502000035204556 Firmadeldestinatarlo
 Pagina11
-[2025-04-05T23:49:14.771Z] 🧾 Page 9 - Extracted Quantities:
+[2025-04-05T23:51:53.485Z] 🧾 Page 9 - Extracted Quantities:
 [
   {
     "line": "3"
@@ -1196,7 +1196,7 @@ Pagina11
     "line": "Pagina11"
   }
 ]
-[2025-04-05T23:49:16.680Z] 📄 Page 10 - Cleaned OCR Text:
+[2025-04-05T23:51:55.328Z] 📄 Page 10 - Cleaned OCR Text:
 ERAS ProntoModaMicokdiLinCheng
 . . VIA-GIACOMOLEOPARDI,19-59100PratoPO
 v Tel.3271879680
@@ -1243,7 +1243,7 @@ iy he CiVesditaTiAssegato
 NeoolpeioAepetesexterioredetbend bataoratnktotrasperes
 7 . CeoCartondC EE Ce te
 Pag.1
-[2025-04-05T23:49:16.680Z] 🧾 Page 10 - Extracted Quantities:
+[2025-04-05T23:51:55.329Z] 🧾 Page 10 - Extracted Quantities:
 [
   {
     "line": "ERAS ProntoModaMicokdiLinCheng"
@@ -1391,7 +1391,7 @@ Pag.1
     "line": "Pag.1"
   }
 ]
-[2025-04-05T23:49:18.263Z] 📄 Page 11 - Cleaned OCR Text:
+[2025-04-05T23:51:56.885Z] 📄 Page 11 - Cleaned OCR Text:
 GIANNIPRONTOMODADIRENXIUSHUN R
 VIAPIEMONTE1359100PRATO-ITALY
 C.F.RNEXHN68L24Z210X-P.IVAIT02253690974
@@ -1424,7 +1424,7 @@ CCIAA:617030 .
 viapiemonte1359100PRATOEmail:giannimodaaq.com PEC:renxiushunpec.it g
 IBAN:IT81U0333921500CC0030205061BIC:EXRRITM2 YY 0
 Pag.
-[2025-04-05T23:49:18.263Z] 🧾 Page 11 - Extracted Quantities:
+[2025-04-05T23:51:56.885Z] 🧾 Page 11 - Extracted Quantities:
 [
   {
     "line": "GIANNIPRONTOMODADIRENXIUSHUN R"
@@ -1524,7 +1524,7 @@ Pag.
     "line": "Pag."
   }
 ]
-[2025-04-05T23:49:20.202Z] 📄 Page 12 - Cleaned OCR Text:
+[2025-04-05T23:51:58.775Z] 📄 Page 12 - Cleaned OCR Text:
 o
 D-STYLESRL RE :
 VIAPIEMONTE2i5PO F attu ra
@@ -1567,7 +1567,7 @@ CausaledelT. Aspettoesteriore delbeni N.colliT.Art:14 Firmadelvettore
 VENDITA AViewDBusteDScaomD6vot:tosepz deetinatar
 BAN-IT91C0339921500CC0030205358 SWIFTCODE:EXRRITM2 Firmadeldestinatario
 Pagina171
-[2025-04-05T23:49:20.202Z] 🧾 Page 12 - Extracted Quantities:
+[2025-04-05T23:51:58.775Z] 🧾 Page 12 - Extracted Quantities:
 [
   {
     "line": "o"
@@ -1712,7 +1712,7 @@ Pagina171
     "line": "Pagina171"
   }
 ]
-[2025-04-05T23:49:21.277Z] 📄 Page 13 - Cleaned OCR Text:
+[2025-04-05T23:51:59.837Z] 📄 Page 13 - Cleaned OCR Text:
 2
 EleganceFirenzeS.r.l.
 ViaBasilicata,24
@@ -1740,7 +1740,7 @@ Niog ART.8C.1ab 2.049,70 0,00 Scadenze:
 Ooowp02€204970
 EleganceFirenzeS.r1.- ViaBasilicata,24-59100PRATO PO-p.iva: 02348930971- ct. 02348930871
 Tel.0574622203- elegancefit6gmail.com- Num.REA.PO526698-Capitalesociale 10000.00
-[2025-04-05T23:49:21.277Z] 🧾 Page 13 - Extracted Quantities:
+[2025-04-05T23:51:59.837Z] 🧾 Page 13 - Extracted Quantities:
 [
   {
     "line": "2"
@@ -1827,7 +1827,7 @@ Tel.0574622203- elegancefit6gmail.com- Num.REA.PO526698-Capitalesociale 10000.00
     "line": "Tel.0574622203- elegancefit6gmail.com- Num.REA.PO526698-Capitalesociale 10000.00"
   }
 ]
-[2025-04-05T23:49:22.313Z] 📄 Page 14 - Cleaned OCR Text:
+[2025-04-05T23:52:00.857Z] 📄 Page 14 - Cleaned OCR Text:
 VIAVALDAOSTA62 Fattura
 59100PRATOIT
 Tel.:3273862689
@@ -1855,7 +1855,7 @@ CausaledelT.Aspettoesterioredelbeni N.colliT.Art:2 Firmadelvettore
 VENDITAAVistaDlBustaDScotold3Tot:3
 BAN:IT34Z0103021600000006312243 Firmadeldestinatario
 Pagina171
-[2025-04-05T23:49:22.313Z] 🧾 Page 14 - Extracted Quantities:
+[2025-04-05T23:52:00.857Z] 🧾 Page 14 - Extracted Quantities:
 [
   {
     "line": "VIAVALDAOSTA62 Fattura"
@@ -1942,7 +1942,7 @@ Pagina171
     "line": "Pagina171"
   }
 ]
-[2025-04-05T23:49:23.621Z] 📄 Page 15 - Cleaned OCR Text:
+[2025-04-05T23:52:02.120Z] 📄 Page 15 - Cleaned OCR Text:
 , t
  SILVIAS.R.L.feX
 BXbopd.
@@ -1979,7 +1979,7 @@ Pagamento Scadenze
 Cartadicredito 0270472025€2.850,50
 8 Tot.documento €2,850,50
 MERCEFABBRICATOINITALIA CONTESSUTOEXTRAU.E. Pag.
-[2025-04-05T23:49:23.621Z] 🧾 Page 15 - Extracted Quantities:
+[2025-04-05T23:52:02.120Z] 🧾 Page 15 - Extracted Quantities:
 [
   {
     "line": ", t"
@@ -2102,7 +2102,7 @@ MERCEFABBRICATOINITALIA CONTESSUTOEXTRAU.E. Pag.
     "line": "MERCEFABBRICATOINITALIA CONTESSUTOEXTRAU.E. Pag."
   }
 ]
-[2025-04-05T23:49:25.676Z] 📄 Page 16 - Cleaned OCR Text:
+[2025-04-05T23:52:04.094Z] 📄 Page 16 - Cleaned OCR Text:
 on DEFFASHIONDIDONGZUOQIN
 VIAGORADEL PERO,59720-59100PRATOPO
 P.IVA02501220970,C.F.DNGZQN74T032210X .
@@ -2160,7 +2160,7 @@ Copiadellafatturailcuioriginaledepositato nellareawebfatturee corrispef i
 dellAgenziadelleEntrate. CL I Ce
 3 €2.481,80
 I -bbFFASHIONDIDONG 2u0QiN- n57-FEdel020472025-pagina171
-[2025-04-05T23:49:25.676Z] 🧾 Page 16 - Extracted Quantities:
+[2025-04-05T23:52:04.094Z] 🧾 Page 16 - Extracted Quantities:
 [
   {
     "line": "on DEFFASHIONDIDONGZUOQIN"
@@ -2337,7 +2337,7 @@ I -bbFFASHIONDIDONG 2u0QiN- n57-FEdel020472025-pagina171
     "line": "I -bbFFASHIONDIDONG 2u0QiN- n57-FEdel020472025-pagina171"
   }
 ]
-[2025-04-05T23:49:26.627Z] 📄 Page 17 - Cleaned OCR Text:
+[2025-04-05T23:52:05.030Z] 📄 Page 17 - Cleaned OCR Text:
 . . Fatturan.73del0270472025
 JACOPOQFASHIONDIWUZHENGZHI Spettabile .
 codicedestinatarioW7YVJK9 STRETCH DESIGN LID
@@ -2360,7 +2360,7 @@ BoXof
 TrattiamoVostridatiperfinalitaamministrativeecortabili Specifichemisuredisicurezzasonoosservateperprevenire laperditadeidati,usi
 illeciti,ononcorretti,eaccessinonautorizzati ArichiestaforniamoInformativacompletaai sensiepergiieffettidicuiallart.13ess. del
 RegolamentoUEn.6792016del27 aprile2016.
-[2025-04-05T23:49:26.627Z] 🧾 Page 17 - Extracted Quantities:
+[2025-04-05T23:52:05.030Z] 🧾 Page 17 - Extracted Quantities:
 [
   {
     "line": ". . Fatturan.73del0270472025"
@@ -2428,7 +2428,7 @@ RegolamentoUEn.6792016del27 aprile2016.
     "line": "RegolamentoUEn.6792016del27 aprile2016."
   }
 ]
-[2025-04-05T23:49:27.954Z] 📄 Page 18 - Cleaned OCR Text:
+[2025-04-05T23:52:06.347Z] 📄 Page 18 - Cleaned OCR Text:
 ViAPIEMONTE15-59100PRATOPO
 Tel.4393446604963
 e-mail:cris880115gmail.com
@@ -2452,7 +2452,7 @@ N8b:Nonimp.art.8.c.1lett.bDPR €2,917,50 €0,00EAN ROE Wy es
 Pagamento Scadenze EAS 5 Sa Eee
 Cartadicredito - €2.917,50ETIRRNEERER- REN : he
 Pag.1
-[2025-04-05T23:49:27.954Z] 🧾 Page 18 - Extracted Quantities:
+[2025-04-05T23:52:06.347Z] 🧾 Page 18 - Extracted Quantities:
 [
   {
     "line": "ViAPIEMONTE15-59100PRATOPO"
@@ -2533,7 +2533,7 @@ Pag.1
     "line": "Pag.1"
   }
 ]
-[2025-04-05T23:49:28.554Z] 📄 Page 19 - Cleaned OCR Text:
+[2025-04-05T23:52:06.943Z] 📄 Page 19 - Cleaned OCR Text:
 . CaLIMPORTEXPORTDICHENLINGYONG
 VIABIGOLI,42-59100-PRATOPO
  P.iva06990960483-C.F.CHNLGY84HO97210T-
@@ -2558,7 +2558,7 @@ O-Nonimp.art.8D.P.R,633772 759,00€0,00
  Imponibite€759,00
 €759,00
 Fatturanr,3772025del0210472025-171 CALWPORTEXPORTDICHENLINGYONGchenfingyangGvirgitioit
-[2025-04-05T23:49:28.554Z] 🧾 Page 19 - Extracted Quantities:
+[2025-04-05T23:52:06.943Z] 🧾 Page 19 - Extracted Quantities:
 [
   {
     "line": ". CaLIMPORTEXPORTDICHENLINGYONG"
@@ -2634,7 +2634,7 @@ Fatturanr,3772025del0210472025-171 CALWPORTEXPORTDICHENLINGYONGchenfingyangGvirg
     "line": "Fatturanr,3772025del0210472025-171 CALWPORTEXPORTDICHENLINGYONGchenfingyangGvirgitioit"
   }
 ]
-[2025-04-05T23:49:29.745Z] 📄 Page 20 - Cleaned OCR Text:
+[2025-04-05T23:52:08.123Z] 📄 Page 20 - Cleaned OCR Text:
 ViaPiemonte4i15 Fattu ra
 59100PratoIT :
 Tel.:33858598848 :
@@ -2662,7 +2662,7 @@ CausaledelT., Aspettoesterioredeibeni Fol T.Ar:5 Firmadelvettore
 CSTR
 IBAN:IBANIT7610103021607000002432435 irmadel n :
 Pagina171
-[2025-04-05T23:49:29.745Z] 🧾 Page 20 - Extracted Quantities:
+[2025-04-05T23:52:08.123Z] 🧾 Page 20 - Extracted Quantities:
 [
   {
     "line": "ViaPiemonte4i15 Fattu ra"
@@ -2752,7 +2752,7 @@ Pagina171
     "line": "Pagina171"
   }
 ]
-[2025-04-05T23:49:32.261Z] 📄 Page 21 - Cleaned OCR Text:
+[2025-04-05T23:52:10.565Z] 📄 Page 21 - Cleaned OCR Text:
 IN
 hi r-DESHREAFIO-rrmemmrns .
 o Spett.le
@@ -2804,7 +2804,7 @@ VIAE.BERLINGUER18 011042025
 00054FIUMICINORM-ITALIA
 13683881000
  oT
-[2025-04-05T23:49:32.261Z] 🧾 Page 21 - Extracted Quantities:
+[2025-04-05T23:52:10.566Z] 🧾 Page 21 - Extracted Quantities:
 [
   {
     "line": "IN"
@@ -2973,7 +2973,7 @@ VIAE.BERLINGUER18 011042025
     "line": " oT"
   }
 ]
-[2025-04-05T23:49:33.847Z] 📄 Page 22 - Cleaned OCR Text:
+[2025-04-05T23:52:12.096Z] 📄 Page 22 - Cleaned OCR Text:
 EN
 BLUBLUDiLINXIUBAO
 viapiemonte4i29 F attu ra
@@ -3006,7 +3006,7 @@ CausaledelT. Aspattoesterioredeibenl N.colliT.Art:4 Firmadelvettore
 VENDITAAVistaDBustaDScatolaD4Tot:165I
 BAN:ITB1C0103021500000007427278 Firmadeldestinatario
 Pagina171
-[2025-04-05T23:49:33.847Z] 🧾 Page 22 - Extracted Quantities:
+[2025-04-05T23:52:12.096Z] 🧾 Page 22 - Extracted Quantities:
 [
   {
     "line": "EN"
@@ -3110,7 +3110,7 @@ Pagina171
     "line": "Pagina171"
   }
 ]
-[2025-04-05T23:49:35.257Z] 📄 Page 23 - Cleaned OCR Text:
+[2025-04-05T23:52:13.486Z] 📄 Page 23 - Cleaned OCR Text:
 Toa
 LO h Nn
 GOLDENRIVERPRONTOMODAS.R.L. INVOICE
@@ -3148,7 +3148,7 @@ BICSWIFT:UNCRITM1F46
 VATexemptions:
 €3,972.80-NonImp.Art.8
 2a
-[2025-04-05T23:49:35.258Z] 🧾 Page 23 - Extracted Quantities:
+[2025-04-05T23:52:13.486Z] 🧾 Page 23 - Extracted Quantities:
 [
   {
     "line": "Toa"
@@ -3257,7 +3257,7 @@ VATexemptions:
     "line": "2a"
   }
 ]
-[2025-04-05T23:49:36.663Z] 📄 Page 24 - Cleaned OCR Text:
+[2025-04-05T23:52:14.880Z] 📄 Page 24 - Cleaned OCR Text:
 x
 - N i
 VIATRENTINGALTOADIGE8 Fattur
@@ -3287,7 +3287,7 @@ Incaricatodeltrasporto j Pesclkal atatraspo Tot.dovuto Cel € 1 537.50
 CausaledelT.Aspetto esterioredelbeni N.colliT.Art:1 IFirma delvettore
 SrcosEiHayTBAvTTsoouzraFimadeldosinataro
 A - CT Pagina171
-[2025-04-05T23:49:36.663Z] 🧾 Page 24 - Extracted Quantities:
+[2025-04-05T23:52:14.880Z] 🧾 Page 24 - Extracted Quantities:
 [
   {
     "line": "x"
