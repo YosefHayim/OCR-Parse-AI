@@ -59,14 +59,9 @@ export const extractDataFromPngs = async (
         data: { text },
       } = await worker.recognize(processedPath);
 
-      // Post-process OCR text to clean up common issues
-      const cleanedText = text
-        .replace(/[^\S\r\n]{2,}/g, " ") // replace multiple spaces with a single space (except newlines)
-        .trim();
+      const quantities = extractQuantities(text);
 
-      const quantities = extractQuantities(cleanedText);
-
-      logToFile(`📄 Page ${i + 1} - Cleaned OCR Text:\n${cleanedText}`);
+      logToFile(`📄 Page ${i + 1} - Cleaned OCR Text:\n${text}`);
       logToFile(
         `🧾 Page ${i + 1} - Extracted Quantities:\n${JSON.stringify(
           quantities,
@@ -76,7 +71,7 @@ export const extractDataFromPngs = async (
       );
 
       console.log(`🧾 Quantities on Page ${i + 1}:\n`, quantities);
-      pages.push({ page: i + 1, text: cleanedText, quantities });
+      pages.push({ page: i + 1, text, quantities });
     }
   } catch (error) {
     console.error("Error occurred during OCR:", error);
