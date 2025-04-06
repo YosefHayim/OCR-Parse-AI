@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { createWorker } from "tesseract.js";
 import sharp from "sharp";
-import { extractLikelyQuantities } from "./extractLikelyQuantities";
+import { extractQuantities } from "./extractQuantities";
 
 const logFilePath = path.join(
   process.cwd(),
@@ -64,7 +64,7 @@ export const extractDataFromPngs = async (
         .replace(/[^\S\r\n]{2,}/g, " ") // replace multiple spaces with a single space (except newlines)
         .trim();
 
-      const quantities = extractLikelyQuantities(cleanedText);
+      const quantities = extractQuantities(cleanedText);
 
       logToFile(`📄 Page ${i + 1} - Cleaned OCR Text:\n${cleanedText}`);
       logToFile(

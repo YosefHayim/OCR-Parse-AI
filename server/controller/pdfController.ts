@@ -5,7 +5,7 @@ import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
 import { sendAIData } from "../utils/sendAiData";
-import { extractLikelyQuantities } from "../utils/extractLikelyQuantities";
+import { extractLikelyQuantities } from "../utils/extractQuantities";
 
 export const pdfExtractor = async (
   req: Request,
