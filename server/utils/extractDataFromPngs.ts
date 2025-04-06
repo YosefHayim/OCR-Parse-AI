@@ -6,7 +6,7 @@ import { extractLikelyQuantities } from "./extractLikelyQuantities";
 
 const logFilePath = path.join(
   process.cwd(),
-  `ocr-log-${Date.now().toLocaleString()}.txt`
+  `ocr-log-${new Date().toJSON().slice(0, 10)}.txt`
 );
 
 const logToFile = (message: string) => {
