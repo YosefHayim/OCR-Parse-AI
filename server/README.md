@@ -1,50 +1,6 @@
-Here’s a clean, reorganized version grouped by status so you can clearly see what’s **correct**, what needs a **fix**, and what’s **almost there** or **missing**:
-
----
-
-### ✅ Correct (fully working)
-
-- Page 1 – 156
-- Page 2 – 90
-- Page 3 – 526
-- Page 5 – 270
-- Page 10 – 240
-- Page 12 – 1088
-- Page 14 – 324
-- Page 22 – 165
-- Page 24 – 205
-
----
-
-### 🛠️ Fix (something's off, needs tweaking)
-
-- Page 4 – 246
-- Page 6 – 373
-- Page 7 – 210
-- Page 18 – 360
-- Page 19 – 156
-- Page 20 – 1183
-- Page 23 – 596
-
----
-
-### 🟡 Almost There (partial match, needs refinement)
-
-- Page 9 – 519
-- Page 13 – 311
-- Page 15 – 261
-- Page 17 – 110
-- Page 21 – 319
-
----
-
-### ❌ Not Getting Anything
-
-- Page 8
-- Page 11
-
----
-
-### ⚠️ Got Something, Not Sure (ambiguous)
-
-- Page 16 – got 68, expected 476?
+pages that has specific words that indicates there is quantity and if so look for the next values based on that
+these has been found within the clean ocr scanner these is being gatherd from differnet pdf files i found so we will create firstly matching word within a text than we use relevant pattern by switch case of that:
+glory invoices : Q.ta , pezzi, pz , Quantita , QUANTITAY,rz,EA,QuantitaPrezzoSc,QtaPrezzofSo, .100pz€800 , 180pz , (first numbers appear spacely alone) MAGLIA709VISCOSA 25NYLON5ELASTICO 78 , if (PANTALONI) than we search for same pattern of numbers appear spacley alone , (before n.d it has comma or dots or none both just ge tnumber) 161,00 n.d. , 24067 BLUSA 102pezzi€6.00€612.00 , PANTALONI PZ 200,00 4.80 960,00 NBA , bap MAGLIEDAPONNALS5211 PZ 155,000 7,00 1.085,00325 , 05M magitaunico2221125111y100XCOTONE 139pezzi : €6.50 -€903.50 , 05M magliaunico22211251111005COTONE - :160pezzi€6.20 : €992.00 , 054maglia 2221125116100COTONE 269pezzi L€6.60 €1,775.40 , 05M magia 23211251171100COTONE : 270pexzi €6.90 €1,863.00 , 08TTOP2509825118100XCOTONE -250pezzi i-€6.20€1,550.00, Ll .169pz €10,80 €1.825,20N8a , eno pw 200pz €10,30 €2.060,00NBa , ANX-BO1200 BORS BBAGSALEXMAX Pa 2 29,90 59,80ES08 , AMZ-PO1262.......BORSEBAGSALEXMAX : PZ 1 29,90 29,50ES08, AMZ-BOL700 BORSEBAGSATEXMAX - pz 2 19,80 39,80ES08,251210028Borsaverapellemadeinitaly 6 €26,00 €156,00N8a - ,611210027Borsavarapellemadeinitaly 4 €25,00 €100,00N8a , 854900026iBorsaverapellemadeinitaly 4 €24,00 €96,00NBa ,15641 T.SHIRT100COTONEFODERA100COTONE 46pz€550 €25300N8A, 8869 T-SHIRT1009COTONE959COTONE5ELASTAN 42pz €550 €23100N8A , 23088 GIACCADADONNA899PL11EA-LINING1005PL 8pz €8,00 €64,00N8a , e.g. the 3 is teh quanttiy here ne722 ABITOINCROCICDVPEZZEMANICHE 124 3 21,50 64,50I0B, e.g. 8 is quantity S25-CN720GL CINTURADONNA50PE S0EA MULTICOLORNR 8 18,89 131,84ADS1A ,GI258E1256GESSGILETGESSATOBEIGE Fz 1 2300f-39 22,31Nog1 , GI258E1256GESSGILETGESSATOBEIGE Pz 1 23001-39 22,31NOB,1 (e.g. its 2 here not 2,000) ACY0013998003 ScarfWomanBetge1ight NR 2,000 13.99 27.98, aswell as (after the WR its 2 not 2.000) CFC0019869002 DressWomanvarbeigelight WR 2.000 51,49 102.98 , -25EB236M48S3RSGIACCA236TRATTM48GRAF254CART.53 62043990NR 2,00 59,000 114,46ESC,(here the 2,00 is 2) 25EB97010AZ CAMICIA 970C10110MLCART.10COL.12-- 62069090NR 2,00-29,000 56,26ESC, e.g. here its within the comma (51,48) .Gonna96CO45PL 251,481062,96NI GCUCWHMR or (36,60) Camicia68CO303PA02SER 436,60146,40NI Q773W088, Giacca975CO3EA 261,11122,22NI JDHBJIYOP, e.g. here 3 examples its after first spac e
+1091000T-Shirt 15 274,81
+62024010Giubbotto 2 140,00
+62043290Giacca 7 426,12
