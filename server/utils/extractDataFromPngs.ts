@@ -17,18 +17,7 @@ const logToFile = (message: string) => {
 export const extractDataFromPngs = async (
   files: string[],
   outputDir: string
-): Promise<
-  {
-    page: number;
-    text: string;
-    quantities: {
-      line: string;
-      quantity: number;
-      unitPrice?: number;
-      total?: number;
-    }[];
-  }[]
-> => {
+) => {
   console.log("Extracting data from PNGs...");
 
   const worker = await createWorker(["eng"]);
@@ -61,6 +50,10 @@ export const extractDataFromPngs = async (
 
       const quantities = extractQuantities(text);
 
+      const totalQuantity = quantities.reduce((sum, item) => {
+        return sum + (typeof item.quantity === "number" ? item.quantity : 0);
+      }, 0);
+
       logToFile(`📄 Page ${i + 1} - Cleaned OCR Text:\n${text}`);
       logToFile(
         `🧾 Page ${i + 1} - Extracted Quantities:\n${JSON.stringify(
@@ -71,7 +64,7 @@ export const extractDataFromPngs = async (
       );
 
       console.log(`🧾 Quantities on Page ${i + 1}:\n`, quantities);
-      pages.push({ page: i + 1, text, quantities });
+      pages.push({ page: i + 1, text, quantities, totalQuantity });
     }
   } catch (error) {
     console.error("Error occurred during OCR:", error);

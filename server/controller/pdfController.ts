@@ -5,7 +5,6 @@ import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
 import { sendAIData } from "../utils/sendAiData";
-import { extractLikelyQuantities } from "../utils/extractQuantities";
 
 export const pdfExtractor = async (
   req: Request,
@@ -28,18 +27,18 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    const arrangingPagesInfo = await sendAIData(
-      `Returned back as a nicley formatted list of current page , supplier name if exist,total quantity combined per page, total amount paid per page: ${JSON.stringify(
-        pages
-      )}`
-    );
+    // const arrangingPagesInfo = await sendAIData(
+    //   `Returned back as a nicley formatted list of current page , supplier name if exist,total quantity combined per page, total amount paid per page: ${JSON.stringify(
+    //     pages
+    //   )}`
+    // );
     // Clean outPutDir folder
     fs.unlinkSync(pdfPath);
     fs.rmSync(outputDir, { recursive: true, force: true });
 
     res.json({
       status: 200,
-      info: arrangingPagesInfo,
+      // info: arrangingPagesInfo,
     });
   } catch (err) {
     console.error("Error during processing:", err);
