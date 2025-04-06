@@ -12,10 +12,13 @@ export const checkPatterns = (line: string) => {
     // 3. Before 'ND'
     /(\d{1,4}[,.]\d{2})\s*ND/,
 
-    // 4. Quantity before unit price and euro
-    /\b(\d{1,4})\b\s*€[\d,.]+/,
+    // Quantity before unit price and total price
+    /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*€[\d,.]+/,
 
-    // 5. Quantity followed by optional character + euro
+    // 4. Quantity with optional letter prefix before two prices
+    /\b[A-Z]?\s*(\d{1,4})\b\s*€[\d,.]+\s*€[\d,.]+/,
+
+    // 5. Quantity before unit price and euro
     /\b(\d{1,4})\b(?=\s+\w{0,4}?\s*€[\d,.]+)/,
 
     // 6. Raw number before euro — FINAL fallback
