@@ -48,7 +48,3 @@ Here’s a clean, reorganized version grouped by status so you can clearly see w
 ### ⚠️ Got Something, Not Sure (ambiguous)
 
 - Page 16 – got 68, expected 476?
-
----
-
-Let me know if you want help debugging a specific page batch or writing a fixer function for the "almost there" or "fix" groups.

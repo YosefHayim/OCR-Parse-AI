@@ -1,19 +1,3 @@
-export const extractQuantities = (text: string) => {
-  const lines = text
-    .split(/\r?\n/)
-    .map((line) => line.replace(/[^\S\r\n]{2,}/g, " ").trim()) // Normalize multi-spaces per line
-    .filter((line) => line.length > 0); // Keep only non-empty lines
-
-  const results = [];
-
-  for (const line of lines) {
-    const { quantity, patternName } = checkPatterns(line);
-    results.push({ line, quantity, patternName });
-  }
-
-  return results;
-};
-
 export const checkPatterns = (line: string) => {
   const rejectKeywords = [
     "Totale",
@@ -41,14 +25,8 @@ export const checkPatterns = (line: string) => {
   }
 
   const patterns = [
-    {
-      name: "leadingQtyInConcatBeforeEuro",
-      regex: /\b(\d{2,3})(?=\d?€)/, // match 2–3 digit quantity before an optional digit and euro
-    },
-    {
-      name: "tightPackedQtyPZ",
-      regex: /\b(\d{2,4})\s*[Pp][Zz]\b/,
-    },
+    { name: "leadingQtyInConcatBeforeEuro", regex: /\b(\d{2,3})(?=\d?€)/ },
+    { name: "tightPackedQtyPZ", regex: /\b(\d{2,4})\s*[Pp][Zz]\b/ },
     {
       name: "descriptionFollowedByQtyThenEuro",
       regex: /\b(?:MAGLIA|PANTALONI?|MAGUA)\b\s+(\d{1,3})\s+[iI]?\s*[€\u20AC]/i,
@@ -63,8 +41,6 @@ export const checkPatterns = (line: string) => {
       name: "magliaOrPantaloneWithPz",
       regex: /.*\b(?:PANTALONE|MAGLIA)[\w\s-]*?(\d{1,4})\s*[Pp][Zz]/,
     },
-
-    // Quantity before structured prices
     {
       name: "qtyBeforePriceTotal",
       regex: /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*\u20AC[\d,.]+/,
@@ -77,21 +53,15 @@ export const checkPatterns = (line: string) => {
       name: "qtyEuroTwoValues",
       regex: /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*€[\d,.]+/,
     },
-
-    // Quantity before unit price
     {
       name: "qtyBeforeUnitPrice",
       regex: /\b(\d{1,4})\b(?=\s+\w{0,4}?\s*\u20AC[\d,.]+)/,
     },
-
-    // Keyword-based patterns
     { name: "integerFollowedByPZ", regex: /\b(\d{1,4})\s*[Pp][Zz]\b/ },
     { name: "afterPZ", regex: /[Pp][Zz]\s*(\d{1,4})/ },
     { name: "afterNR", regex: /[Nn][Rr]\s*(\d{1,4})/ },
     { name: "beforeND", regex: /(\d{1,4}[,.]\d{2})\s*ND/ },
     { name: "afterLetterN", regex: /[Nn]\s+(\d{1,4})(?![a-zA-Z])/ },
-
-    // Euro-related lookaheads
     {
       name: "qtyBeforeEuroAlphanum",
       regex: /\b(\d{1,4})\b(?=[^\d\n\r]{1,10}€(?!0|0,00)[\d,.]{3,10})/,
@@ -112,8 +82,6 @@ export const checkPatterns = (line: string) => {
       name: "decimalQtyBeforeEuro",
       regex: /\b(\d{1,4}[.,]\d{2})\b(?=\s*€[\d,.]+(?:\s*€[\d,.]+)?)/,
     },
-
-    // Legacy formats and fallbacks
     {
       name: "legacyDecimalLabels",
       regex:
@@ -124,8 +92,6 @@ export const checkPatterns = (line: string) => {
       regex: /^.*?(\d{1,4}[,.]\d{2})\s+[\d,.]{1,6}\s+[\d,.]{1,6}/,
     },
     { name: "standaloneNumber", regex: /^\s*(\d{1,4})\s*$/ },
-
-    // Raw euro fallbacks — LAST
     {
       name: "nonDigitBeforeEuro",
       regex: /\b\D{0,4}\s*(\d{1,4})\s*\u20AC[\d,.]+/,
@@ -140,16 +106,14 @@ export const checkPatterns = (line: string) => {
   for (const { name, regex } of patterns) {
     const match = line.match(regex);
     if (match) {
-      let raw = match[1].replace(",", ".");
+      const raw = match[1].replace(",", ".");
       const val = parseFloat(raw);
 
       const isLikelyYear = val >= 1900 && val <= 2100;
       const isLikelyDate8Digit = match[0].length === 8;
 
       if (name === "standaloneNumber") {
-        if (val < 10 || val > 999 || isLikelyYear) {
-          continue;
-        }
+        if (val < 10 || val > 999 || isLikelyYear) continue;
       }
 
       if (!isNaN(val) && !isLikelyYear && !isLikelyDate8Digit) {
