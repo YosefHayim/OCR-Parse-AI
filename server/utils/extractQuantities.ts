@@ -9,8 +9,8 @@ export const extractQuantities = (text: string) => {
   const results = [];
 
   for (const line of lines) {
-    const { quantity, patternIndex } = checkPatterns(line);
-    results.push({ line, quantity, patternIndex });
+    const { quantity, patternName } = checkPatterns(line);
+    results.push({ line, quantity, patternName });
   }
 
   return results;

@@ -7,8 +7,8 @@ export const extractQuantities = (text: string) => {
   const results = [];
 
   for (const line of lines) {
-    const { quantity, patternIndex } = checkPatterns(line);
-    results.push({ line, quantity, patternIndex });
+    const { quantity, patternName } = checkPatterns(line);
+    results.push({ line, quantity, patternName });
   }
 
   return results;
@@ -23,84 +23,121 @@ export const checkPatterns = (line: string) => {
     "Nonimp",
     "Cartadicredito",
     "Totalamount",
-    "€3,282",
     `${new Date().getFullYear()}`,
+    "Tot.tva",
+    "Tot,lva",
+    "iva",
+    ": ...",
+    "€0,00",
+    "€0.00",
   ];
 
-  if (rejectKeywords.some((keyword) => line.includes(keyword))) {
+  if (
+    rejectKeywords.some((keyword) =>
+      line.toLowerCase().includes(keyword.toLowerCase())
+    )
+  ) {
     return {};
   }
 
   const patterns = [
-    // 0. Integer followed by PZ (e.g. "205pz")
-    /\b(\d{1,4})\s*[Pp][Zz]\b/,
+    {
+      name: "leadingQtyInConcatBeforeEuro",
+      regex: /\b(\d{2,3})(?=\d?€)/, // match 2–3 digit quantity before an optional digit and euro
+    },
+    {
+      name: "tightPackedQtyPZ",
+      regex: /\b(\d{2,4})\s*[Pp][Zz]\b/,
+    },
+    {
+      name: "descriptionFollowedByQtyThenEuro",
+      regex: /\b(?:MAGLIA|PANTALONI?|MAGUA)\b\s+(\d{1,3})\s+[iI]?\s*[€\u20AC]/i,
+    },
+    { name: "magliaPzThreeDigit", regex: /\b(\d{3})(?:[,.]00)?\s+pz/i },
+    {
+      name: "quantityBeforePriceNCode",
+      regex:
+        /(\d{1,4}[,.]?\d{0,3})[a-z]?\s+[\d,.]{1,6}\s+N\d+[.,]?\d*\s+[\d,.]+/i,
+    },
+    {
+      name: "magliaOrPantaloneWithPz",
+      regex: /.*\b(?:PANTALONE|MAGLIA)[\w\s-]*?(\d{1,4})\s*[Pp][Zz]/,
+    },
 
-    // 1. After 'pz' (e.g. "PZ 25")
-    /[Pp][Zz]\s*(\d{1,4})/,
+    // Quantity before structured prices
+    {
+      name: "qtyBeforePriceTotal",
+      regex: /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*\u20AC[\d,.]+/,
+    },
+    {
+      name: "letterPrefixQtyBefore2Prices",
+      regex: /\b[A-Z]?\s*(\d{1,4})\b\s*\u20AC[\d,.]+\s*\u20AC[\d,.]+/,
+    },
+    {
+      name: "qtyEuroTwoValues",
+      regex: /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*€[\d,.]+/,
+    },
 
-    // 2. After 'NR' (e.g. "NR 10")
-    /[Nn][Rr]\s*(\d{1,4})/,
+    // Quantity before unit price
+    {
+      name: "qtyBeforeUnitPrice",
+      regex: /\b(\d{1,4})\b(?=\s+\w{0,4}?\s*\u20AC[\d,.]+)/,
+    },
 
-    // 3. Before 'ND' (e.g. "5,00 ND")
-    /(\d{1,4}[,.]\d{2})\s*ND/,
+    // Keyword-based patterns
+    { name: "integerFollowedByPZ", regex: /\b(\d{1,4})\s*[Pp][Zz]\b/ },
+    { name: "afterPZ", regex: /[Pp][Zz]\s*(\d{1,4})/ },
+    { name: "afterNR", regex: /[Nn][Rr]\s*(\d{1,4})/ },
+    { name: "beforeND", regex: /(\d{1,4}[,.]\d{2})\s*ND/ },
+    { name: "afterLetterN", regex: /[Nn]\s+(\d{1,4})(?![a-zA-Z])/ },
 
-    // 4. Quantity followed by letters+digits before euro (e.g. "180e580 €1.044,00")
-    /\b(\d{2,4})\b(?=[^\d\n\r]{1,10}€(?!0|0,00)[\d,.]{3,10})/,
+    // Euro-related lookaheads
+    {
+      name: "qtyBeforeEuroAlphanum",
+      regex: /\b(\d{1,4})\b(?=[^\d\n\r]{1,10}€(?!0|0,00)[\d,.]{3,10})/,
+    },
+    {
+      name: "beforeAlphanumEuro",
+      regex: /\b(\d{1,4})(?=[a-zA-Z]+[a-zA-Z0-9]*\s*€[\d,.]+)/,
+    },
+    {
+      name: "numberWithLetterBeforeEuro",
+      regex: /\b(\d{1,4})(?!\d)(?=[a-zA-Z]{1,5}\s*€[\d,.]+)/,
+    },
+    {
+      name: "qtyFollowedByOneOrTwoEuros",
+      regex: /\b(\d{1,4})\b\s*(?:€[\d,.]+){1,2}/,
+    },
+    {
+      name: "decimalQtyBeforeEuro",
+      regex: /\b(\d{1,4}[.,]\d{2})\b(?=\s*€[\d,.]+(?:\s*€[\d,.]+)?)/,
+    },
 
-    // 5. Quantity between non-digit and euro (e.g. "i 90 €6,20")
-    /\b\D{0,4}\s*(\d{1,4})\s*\u20AC[\d,.]+/,
+    // Legacy formats and fallbacks
+    {
+      name: "legacyDecimalLabels",
+      regex:
+        /(?:\b(?:N\.?|NR|Q\.?T\.?A?\.?|PZ|PEZZI|NR\.?)\s*)(\d{1,4},\d{2})/gi,
+    },
+    {
+      name: "threeDecimalsInRow",
+      regex: /^.*?(\d{1,4}[,.]\d{2})\s+[\d,.]{1,6}\s+[\d,.]{1,6}/,
+    },
+    { name: "standaloneNumber", regex: /^\s*(\d{1,4})\s*$/ },
 
-    // 6. Quantity before unit price and total price (e.g. "66 11.0 €72600")
-    /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*\u20AC[\d,.]+/,
-
-    // 7. Quantity with optional letter prefix before two prices (e.g. "L150 €9.00 €1,350.00")
-    /\b[A-Z]?\s*(\d{1,4})\b\s*\u20AC[\d,.]+\s*\u20AC[\d,.]+/,
-
-    // 8. Quantity before unit price and euro (e.g. "125 i €7,50")
-    /\b(\d{1,4})\b(?=\s+\w{0,4}?\s*\u20AC[\d,.]+)/,
-
-    // 21. Quantity followed by two euro-style numbers (e.g. "28 12.0 €336.00")
-    /\b(\d{1,4})\b\s+[\d,.]{1,6}\s*€[\d,.]+/,
-
-    // 9. Raw number before euro — FINAL fallback (e.g. "25 €9,50")
-    /\b(\d{1,4})\b\s*\u20AC[\d,.]+/,
-
-    // 10. PANTALONE / MAGLIA lines with 'pz' (e.g. "MAGLIA ... 30 PZ")
-    /.*\b(?:PANTALONE|MAGLIA)[\w\s-]*?(\d{1,4})\s*[Pp][Zz]/,
-
-    // 11. Fallback: decimal with 2 more numbers (e.g. "15,00 9,99 149,85")
-    /^.*?(\d{1,4}[,.]\d{2})\s+[\d,.]{1,6}\s+[\d,.]{1,6}/,
-
-    // 12. Number after 'N ' (e.g. "N 1027")
-    /[Nn]\s+(\d{1,4})(?![a-zA-Z])/,
-
-    // 13. Legacy labels with decimal (e.g. "Q.T.A. 2,50")
-    /(?:\b(?:N\.?|NR|Q\.?T\.?A?\.?|PZ|PEZZI|NR\.?)\s*)(\d{1,4},\d{2})/gi,
-
-    // 14. Raw number before embedded alphanum + euro (e.g. "180e580 €1.044,00")
-    /\b(\d{2,4})(?=[a-zA-Z]+[a-zA-Z0-9]*\s*€[\d,.]+)/,
-
-    // 15. Standalone numbers (possibly broken quantity lines)
-    /^\s*(\d{1,4})\s*$/,
-
-    // 16. Raw number before single euro
-    /\b(\d{1,4})\b\s*[€\u20AC][\d,.]{2,10}/,
-
-    // 17. Quantity followed by one or two euro values
-    /\b(\d{1,4})\b\s*(?:€[\d,.]+){1,2}/,
-
-    // 18. Number followed by optional letter(s) and euro, ensuring no digit after number (e.g. "180e580 €1.044,00")
-    /\b(\d{2,4})(?!\d)(?=[a-zA-Z]{1,5}\s*€[\d,.]+)/,
-
-    // 19. Quantity followed by two euro values (with or without space between € and numbers)
-    /\b(\d{1,4})\b(?=\s*€[\d,.]+\s*€[\d,.]+)/,
-
-    // 20. Quantity with decimal format (e.g. "150.00") followed by euro values
-    /\b(\d{1,4}[.,]\d{2})\b(?=\s*€[\d,.]+(?:\s*€[\d,.]+)?)/,
+    // Raw euro fallbacks — LAST
+    {
+      name: "nonDigitBeforeEuro",
+      regex: /\b\D{0,4}\s*(\d{1,4})\s*\u20AC[\d,.]+/,
+    },
+    {
+      name: "rawBeforeSingleEuro",
+      regex: /\b(\d{1,4})\b\s*[€\u20AC][\d,.]{2,10}/,
+    },
+    { name: "rawBeforeEuro", regex: /\b(\d{1,4})\b\s*\u20AC[\d,.]+/ },
   ];
 
-  for (let i = 0; i < patterns.length; i++) {
-    const regex = patterns[i];
+  for (const { name, regex } of patterns) {
     const match = line.match(regex);
     if (match) {
       let raw = match[1].replace(",", ".");
@@ -109,15 +146,14 @@ export const checkPatterns = (line: string) => {
       const isLikelyYear = val >= 1900 && val <= 2100;
       const isLikelyDate8Digit = match[0].length === 8;
 
-      // Special filter for pattern 15 (standalone numbers)
-      if (i === 15) {
+      if (name === "standaloneNumber") {
         if (val < 10 || val > 999 || isLikelyYear) {
-          continue; // skip low-confidence or noisy numbers
+          continue;
         }
       }
 
       if (!isNaN(val) && !isLikelyYear && !isLikelyDate8Digit) {
-        return { quantity: Math.round(val), patternIndex: i };
+        return { quantity: Math.round(val), patternName: name };
       }
     }
   }
