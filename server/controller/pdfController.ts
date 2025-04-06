@@ -25,7 +25,7 @@ export const pdfExtractor = async (
 
     await convertPdfToPngs(pdfPath, outputDir);
     const files = sortFileswithinOutputDir(outputDir);
-    const gettingInfoPngsByAI = await sendAIImages(files, outputDir);
+    // const gettingInfoPngsByAI = await sendAIImages(files, outputDir);
     // console.log(gettingInfoPngsByAI);
     const pages = await extractDataFromPngs(files, outputDir);
 
