@@ -4,7 +4,7 @@ import { convertPdfToPngs } from "../utils/convertPdfToPngs";
 import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
-import { sendAIData } from "../utils/sendAiData";
+import { sendAIData, sendAIImages } from "../utils/sendAiData";
 
 export const pdfExtractor = async (
   req: Request,
@@ -25,11 +25,13 @@ export const pdfExtractor = async (
 
     await convertPdfToPngs(pdfPath, outputDir);
     const files = sortFileswithinOutputDir(outputDir);
+    const gettingInfoPngsByAI = await sendAIImages(files, outputDir);
+    // console.log(gettingInfoPngsByAI);
     const pages = await extractDataFromPngs(files, outputDir);
 
     // const arrangingPagesInfo = await sendAIData(
     //   `Returned back as a nicley formatted list of current page , supplier name if exist,total quantity combined per page, total amount paid per page: ${JSON.stringify(
-    //     pages
+    //     gettingInfoPngsByAI
     //   )}`
     // );
     // Clean outPutDir folder
