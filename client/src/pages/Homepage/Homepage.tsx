@@ -95,14 +95,20 @@ const Homepage = () => {
           <div className="flex w-full flex-col gap-4">
             <div className="flex w-full flex-col gap-2 bg-white p-4">
               <div className="w-full text-right">
-                <label htmlFor="file" className="font-bold">
+                <label
+                  htmlFor="file"
+                  className="cursor-pointer rounded-sm p-1 font-bold hover:bg-black hover:text-white"
+                >
                   העלאה קובץ
                 </label>
               </div>
               <div className="rounded-lg border border-dotted bg-gray-200 p-4">
                 <div className="flex w-full flex-col items-center justify-center gap-2">
                   <label htmlFor="file" className="cursor-pointer">
-                    <FaFileUpload size={40} color="gray" />
+                    <FaFileUpload
+                      size={40}
+                      className="rounded-sm p-1 hover:bg-black hover:text-white"
+                    />
                   </label>
                   <div className="relative w-full">
                     <div className="w-full text-center">
