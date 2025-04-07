@@ -1,0 +1,1286 @@
+[2025-04-07T17:20:38.070Z] Page 1 - Cleaned OCR Text:
+EXTERNAL:100sSIUTAJUTE
+INTERNAL:1008COTONECOTTON           j
+HANDLE:100VERAPELLEGENUINELEATHER
+iMADEININDIA
+aMx-BO1202     BORSEBAGSALEXMAX                      pz        1    29,90                 29,90lES08
+EXTERNAL:100IUTA-JUTE
+INTERNAL:100sCOTONECOTION                                       i
+HANDLE:100VERAPELLEGENUINELEATHER
+MADEININDIA
+AMX-BOLTOO           BORSEBAGSALEXMAX                 f      pz        2     19,90                 39,80E808
+EXTERNAL:1008,.COTONECOTTON
+INTERNAL:1008   POLIESTERPOLYESTER
+HANDLE:100VERAPELLEGENIUNELEATHER
+MADEININDIA
+AMZ-BO1703           BORSEBAGSALEXMAX                       PZ     2        15,90                 39,80ES808
+EXTERNAL:60COTONECOTTON
+420kPOLIESTERPOLYESTER
+INTERNAL:100SPOLIESTERPOLYESTER
+HANDLE:100VERAPELLEGENIUNELEATHER
+MADEININDIA
+AMX-BOL1TO4           BORSEBAGSALEXMAX                       PZ        1        29,90               29,90,ES08
+EXTERNAL:.-60COTONECOTTON
+403POLIESTERPOLYESTER                                           l
+INTERNAL:100POLIESTERPOLYESTER
+HANDLE:100VERAPELLEGENIUNELEATHER
+MADEININDIA                                                                 l
+AMX-BO2400           BORSEBAGSALEXMAX                       PZ        1        35,90                35,90ESC8
+TOTALAMOUNT       DISCOUNTTOTALDISCOUNT.   LE       TAXABLE              VATITAX
+
+[2025-04-07T17:20:42.423Z] Page 2 - Cleaned OCR Text:
+80PASLIASTRAW
+INTERNAL:70POLLESTERPOLYESTER
+305-COTONECOTTON
+MADEINCHINA
+AMZ-BO2101       BORSEBAGSALEXMAX       PZ        1        35,90                 35,90ES08
+EXTERNAL:100PAGLIASTRAW
+INvERNAL:70SPOLIESTERPOLYESTER
+303COTONECOTTON.
+MADEINCHINA
+AMX-BO2103          BORSEBAGSALEXMAX                    PZ       2       33,90              67,80E808
+EXTERNAL:100SPAGLIASTRAW              i
+INTERNAL:70F   POLIESTERFOLYESTER
+30COTONECOTTON
+MADEINCHINA
+AMX-BO2104.       BORSEBAGSALEXMAX                       PZ        2        33,90                 67,80ES808
+EXTERNAL:1003PAGLIASTRAW
+INTERNAL:70s POLIESTERPOLYESTER
+308COTONECOTTON                       .
+MADEINCHINA
+AMX-BO2113           BORSE,BAGSALEXMaX                       Pz        2        29,90                 59,80ESO8
+EXTERNAL:100 CARTAPAPER
+INTERNAL:708 DOLIESTERFOLTYESTER
+304COTONECOTTON
+MADEINCHINA
+AMX-B02301           BORSEBAGSALEX MAX                      PZ        3        15,90                 27,79E5808
+EXTERNAL:100 CARTAPRPER
+INTERNAL:1908 POLIESTERPOLYESTER                             j
+TOTALAMOUNT      oDISCOUNTTOTALDISCOUNT         SPESE                TAXABLE              VATITAX
+
+[2025-04-07T17:20:47.052Z] Page 3 - Cleaned OCR Text:
+AMX-BO2603            BORSEBAGSALEXMAa                        ld        ma        inna
+EXTERNAL:504RATTANRATTAN
+504COTONECOTTON
+INTERNAL:100POLIESTERPOLYESTER
+MADEINCHINA
+AMX-BO2606              BORSEBAGSALEXMAX                            PZ          2          21,90                     43,80ESO8
+EXTERNAL:50RATTANRATTAN
+508COTONECOTTON
+INTERNAL:100POLIESTERPOLYESTER
+MADEINCHINA
+AMX-BO2708            BORSEBAGSALEXMAX                        PZ        3        24,90                 74,70ES08
+EXTERNAL:95S POLIURETANOPOLYURETHANE
+5POLIESTERPOLYESTER
+INTERNAL:1004POLIESTERPOLYESTER
+MADEINCHINA.
+AMZ-BO2711         BORSEBAGSALEXMAX                      PZ        3        27,90                83,70ES08
+EXTERNAL:100POLIURETANOPOLYURETHANE j
+MADEINCHINA              l
+AMX-BO2712          BORSEBAGSALEXMAX                      PZ        3        24,90          l      74,70ES08
+BXTERNAL:1008 POLIURETANOPOLYURETHANE                             j
+INTERNAL:100s POLTESTERPOLYESTER
+MADEINCHINA..   -
+mx-B02715          BORSEBAGSALEXMAX                     PZ       2       27,90               55,80E808
+EXTERNAL:80S POLIESTER,POLYESTER                                            .
+208POLTURETANOPOLYURETHANE
+INTERNAL:1008POLIESTERPOLYESTER                               j
+a      oDISCOUNTTOTALDISCOUNT    SPESE                TAXABLE               VATITAX
+
+[2025-04-07T17:20:52.193Z] Page 4 - Cleaned OCR Text:
+EXTERNAL:80SPOLIESTERPOLYESTER
+208 POLIURETANGPOLYURETHANE
+INTERNAL:100POLIESTERPOLYESTER
+MADEINCHINA         -
+lAMK-BO2805.    .BORSEBAGSALEXMAX                       PZ      3    29,90  l              89,70ESO08
+EXTERNAL:100POLTURETANOPOLYURETHANE
+INTERNAL:100SPOLTESTERPOLYESTER
+MADEINCHINA
+AMX-BOZBOS           BORSEBAGSALEXMAX                      PZ     2    29,90                59,80E808
+RXTERNAL:100SPOLTURETANOPOLYURETHANE
+YNTERMAL:1008POLIESTERPOLYESTER
+MADEINCHINA            .
+AMZ-BO2811      BORSEBAGSALEXMAX                    ips3       26,90               s0,70ESOS
+EXTERNAL:100 POLIURETANOPOLYURETHANE
+INTERNAL:LOOY POLIESTERPOLYESTER                                 :            :
+MADEINCHINA                                                     l
+AMX-BO2912           BORSEBAGSALEXMAX                       PZ     3        26,90                80,70E808
+EXTERNAL:1008 POLIURETANGPOLYURETHANE
+INTERNAL:1098 POLIESTERPOLYESTER
+MADEINCHINA.                :                              l
+AMX-BO2813         BORSEBAGSALEXMAX                  PZ      4       27,90           111,60ESO8
+EXTERNAL:80POLIESTERPOLYESTER
+204POLIURETANOPOLYURETHANE
+INTERNAL:100F POLIESTERPOLYESTER
+EINCHINA
+x.502907           BORSEBAGSALEXMAX                      PZ        2        23,90              47,80E803
+:                       THANE                                                                     .
+En Ta      SPESE                TAXABLE              VATITAX
+
+[2025-04-07T17:20:56.633Z] Page 5 - Cleaned OCR Text:
+INTERMAL:100POLLIESTEREPOLYESIREK
+MADEINCHINA
+AME-BO2908     j   BORSEBAGSALEXMAX                 PZ      2      23,90             47,80 wr
+EXTERNAL:303POLIURETANOFOLYURETHANE
+704POLLIESTEREPOLYESTER
+INTERNAL:100POLLIESTEREPOLYESTER
+MADEINCHINA
+AMz-RO401..BORSEBAGSALEXMAX                     PZ       1       23,90          23,90ESO8
+EXTERNAL:100JUTEIUTA
+TwrERNAL:1004POLYESTERPOLTESTERE
+MADEININDIA
+AMX-BO403..     BORSEBAGSALEXMAX                      PZ        1    27,90                27,90ES08
+EXTERNAL:100JUTEIUTA
+INTERNAL:100sPOLYESTERPOLIBSTERE
+MADEININDIA
+AMX-BO600            BORSEBAGSALEXMAX                      PZ     3    29,90                 89,70ES08
+PXTERNAL:100SJUTEIUTA
+TNTERNAL:100SCOTTONCOTONE
+HANDLE:100GENUINE LEATHERVERAPELLE
+MADE.IN.INDIA            o.
+AMX-BO800            BORSEBAGSALEXMAX                       PZ        2        23,90                 47,80ES808
+EXTERNAL:10905 PAPERCARTA                                              :
+INTERNAL:1008 COTTONCOTONE
+MADEININIDIA
+AMX-CA3100           CAPPELLIHATSALEXMAX                   PZ        5         7:90                39,50F808
+100POLIESTEREPOLYESTER
+     7DISOOUNTTOTALDISCOUNT        SPESE              TAXABLE            IVAT1TAX              j
+i
+
+[2025-04-07T17:21:00.969Z] Page 6 - Cleaned OCR Text:
+200sPOLIESTEREPOLYESTER
+MADEINCHINA
+AMX-CA3107          CAPPELLTHATSALEXMAX                   PZ        3        8,90                26,70E808
+100CARTAPAPER
+
+MADEINCHINA
+AMX-CA3109           CAPPELLIHATSALEXMAX                   PZ        9        19,90               179,10ESO8
+
+100RAFFIARAFIA
+
+MADEINCHINA
+AMX-CA3406           CAPPELLIHATSALEXMAX                   PZ        3         8,90                26,70ES08
+
+1008POLTESTEREPOLYESTER-          ,
+
+MADEINCHINA      j                                                                                         j
+AMX-CA3409           CAPPELLTHATSALEXMAX                   PZ        6        8,90      53,40ESO8
+-100CARTAPAPER   j
+MADEINCHINA                                                                             j           j
+AMZ-CT3520     CINTUREBELTSALEXMAX                   PZ     9        5,90                53,10ES08
+
+60POLIESTERE,POLYESTER                                            l
+
+40POLIURETANOPOLYURETHANE
+
+MADEINCHINA       Co    j
+
+IS
+AMX-CT3523.          CINTUREBELTSALEXMAX                   PZ        3         6,90                 20,79ES803
+1008POLIESTEREPOLYESTER
+MADEINCHINA
+NRI:3
+x-ora702 CINTUREBELTSALEXMAX              PZ     2      7,90            15,80BSO3
+60SJUTEIUTA
+404POLYESTERPOLILESTERE
+ME    FDISCOUNTTOTALDISCOUNT     SPESE            TAXABLE           VATI TAX
+I
+
+[2025-04-07T17:21:01.731Z] Page 7 - Cleaned OCR Text:
+EXWORKS                                                                                 .
+FLORENCE
+TOTALAMOUNT                        SDISCOUNTTOTALDISCOUNT        SPESE                                    TAXABLE                                  VATITAX.
+2.080,50NON  IMP.ART.8
+
+[2025-04-07T17:21:08.858Z] Page 8 - Cleaned OCR Text:
+eR Soe SE de
+Codia Em GSRpiOnE.aeIsSEeyanERsoPrpgiah ficeanTolCOME,TRU
+TREE
+251210028Borsaverapellemadeinitaly           €26,00                €156,00N8a
+611210027Borsavarapellemadeinitaly      4           €25,00                 €100,00N8a
+252300030Borsaverapellemadein italy                               :      6          €28,00           €168,00N8a-
+854900026:Borsaverapellemadeinitaly       4            €24,00                    €96,00N8a
+880190025Borsaverapellemadeinitaly                                    j       4       €23,00                    €92,00N8a
+610150020Borsavarapellemadeinitaly                               i      5           €18,00                  €90,00N8a
+860400029 Borsa verapellemadeinitaly                               i      7           €27,00                 €189,00N8a
+992610032:Borsaverapellemadeinitaly       3           €30,00                  €90,00N8a
+252500032Borsaverapellemadeinitaly       5           €30,00                 €150,00N8a
+310230029  Borsa verapetlemadeinitaly                                 j       3           €27,00                   €81,00N8a
+i180290040Borsaverapellemadein italy                                  :       5            €38,00                  €190,00N8a   :
+      I
+j                                                                i          ol.
+                                                                i
+             l                                                                Lo
+i                                                  i        pe
+          :                                                            i
+i           i
+                                                                j       BE
+                                                        N.
+-           j
+               El                                          Cee AAA
+
+[2025-04-07T17:21:14.617Z] Page 9 - Cleaned OCR Text:
+CodicelPec:BBLISREMEGIVAIL.LUV
+Tel..972547360888          i
+CodiceDescrizione.--.--Quantita -Prezzo..Sc.-..-Importo:CIVA.-
+L5511                       T-SHIRT100COTONEFODERA100COTONE                    46pz        €5.50                         €253.00N8IA
+L8869                      T-SHIRT100COTONE95COTONE5YELASTAN               42pz        €5.50                        €231.00N8IA
+L074                     MADEINITALYMAGLIA100COTONE                                  7pz€11.00                          €77.00NBIA
+L9077                     MADEINITALYT-SHIRT784POLIESTERE18                       4pz€22.00                          €88.00N8A
+VISCOSA44ELASTAN1004POLIESTERE
+19127                      T-SHIRT95POLIESTERE5ELASTAN                                8pz        E550                          €44.00NB8IA
+L9129                   MADEINITALYABITO95POLIESTERE54                        6pz€15.00                       €90.00N8IA
+ELASTAN95VISCOSA54ELASTAN
+LC240211                 MADEINCHINAMAGLIA954COTONE54 ELASTAN                3pz        €6.00                         €18.00      N8A
+LD2564                    MADEINITALYPANTALONCINI100COTONE                         7pz€16.00                         €112.00NBIA
+LD2581                    MADEINITALYCAMICIA85LYOCELL154                            6pz€17.50                         €105.00NBJA
+j                                    POLIESTERE1009VISCOSA
+LD2597                   MADEINITALYTOP604POLIESTERE324VISCOSA              11pz€10.00                        €110.00N8JA
+8YELASTAN
+LD2634            j        MADEINITALYCAMICIA854LYOCELL154                            6pz€14.00                          €8400N8IA
+POLIESTERE
+LD2707                     MADEINITALYGIACCA804VISCOSA17HLINO3                  4pz€32.00                          E128.00N8A
+ELASTAN100COTONE100POLIESTERE
+LD2711                    MADEINITALYPANTALONE804VISCOSA174LINO               4pz€16.50                          €66.00N8A
+34ELASTAN974COTONE34ELASTAN
+
+[2025-04-07T17:21:21.495Z] Page 10 - Cleaned OCR Text:
+CodicePec:BBLISHEMGMAIL.COM                                  l
+Tel.:972547360888
+Codice.Descrizione CREE QuantitaPrezzoSc.:-ImportoCIVA :
+L9065                  CAMICIA1009TENCEL          Tpz€20.50                     €2050N8IA
+19073                      CAMICIA50COTONE504POLIESTERE1004                      4pz1900-84               €60.92NBIA
+POLIURETANO1004POLIESTERE
+L9077                      MADEINITALYT-SHIRT784POLIESTERE18                        5pz€22.00                        E110.00NB8IA
+VISCOSA44ELASTAN1004POLIESTERE
+L9087                      MADEINITALYABITO964POLIESTERE4                           7p2€24.00                        E168.00N8A
+ELASTAM
+L9103                     ABITO100COTONE95KCOTONE54ELASTAN                  gpz€14.50                       E116.00N8A
+L9111                      MADEINITALYABITO100VISCOSA                                   6pz€15.50                          E93.00N8A
+L9114                         MADEINITALYTOP100VISCOSA                                            4pz€16.50                              E66.00N8IA
+L9415                        MADEINITALYGONNA1004VISCOSA                                      4pz€15.00                              €60.00NGA
+L9119                ABITO100COTONE                                       6pz€19.00                 E114.00N8A
+L9128                      CARDIGAN954POLIESTERE5ELASTAN                           4pz€850                         €3400N8A
+1.9129                      MADEINITALYABITO95POLIESTERE5                           2pz€15.00                          €3000N8IA
+ELASTAN95YVISCOSA5ELASTAN
+LC240314                VADEINCHINACAMICIA50COTONE507                           4pz€16.00                          €6400NSIA
+POLIESTERE
+LC240315                MADEiNCHINACAMICIA50COTONE50                           apz€17.50                          €70.00NBIA
+POLIESTERE
+LD148                       ABITO100YTENCEL                                                             6pz€2200                          €132.00N8A
+LD136                     MADEINCHINAT-SHIRT50LYOCELL50                            6pz€16.00                          €96.00N8IA
+COTONE
+LD2341                     MADEINITALYGIACCA834POLIESTERE34                         2pz€48.00                           €96.00N8A
+VISCOSA34ELASTAN97COTONE3ELASTAN
+504VISCOSA504POLIESTERE
+LD2343                   MADEINITALYGONNA63NPOLIESTERE34N                        6pz€19.00                        €11400NB8IA
+VISCOSA34ELASTAN979COTONE3HELASTAN
+BARS                   MADEINITALYMAGLIA100COTONE 95YCOTONE               2pz      €16.00-8               €29.44      N8IA
+
+[2025-04-07T17:21:28.676Z] Page 11 - Cleaned OCR Text:
+CodicelPec.BBLISHEMQGMAIL.CON
+Tel.:972547360888                    o
+POLIESTERE54ALTREFIBRE954 COTONE5t
+ELASTAN
+LD2469                   MADEINITALYPANTALONCINI704 COTONE25                   3pz      €16.50      -8N               €45.54      N8IA
+POLIESTERE5ALTREFIBRE
+LD2525                    MADEINITALYCAMICIA98 COTONE2YELASTAN                 4pz      €20.00                           €80.00      N8A
+1004POLIESTERE
+LD2581                   MADEINITALYCAMICIA854LYOCELL154                          7pz€17.50                       €12250N8JA
+POLIESTERE1009VISCOSA
+LD2598                     GIACCA60POLIESTERE32 VISCOSA84                           3pz       €30.50                           €91.50      N8A
+ELASTAN100POLIESTERE
+LD2617                    GONNA100POLIESTERE1 00POLIESTERE                       3pz      €12.50                          €37.50      NSA
+LD2634                  MADEINITALYCAMICIA85Y LYOCELL15N                         8pz      €14.00                      €112.00      N8A
+POLIESTERE
+LD2640                       MADEINITALYT-SHIRT654 VISCOSA29                                12pz         €9.50                            €114.00       N8A
+POLIAMMIDE69ELASTAN
+LD2661                   MADEINITALY PANTALONCINI95 COTONE5                     3pz      €19.00                         €57.00      NEIA
+ELASTAN97COTONE3N ELASTAM
+LD2674                   MADEINITALYGIACCA76N COTONE244                             4pz      €30.50                        €122.00      N8IA
+POLIESTERE100COTONE
+LD2676                    PANTALONE76COTONE 249POLIESTERE1007                 7pz      €24.00                        €168.00      N8A
+COTONE
+LD2709                   MADEINITALYGILET80 VISCOSA17LINO34                   3pz      €16.50                          €49.50      N8BA
+ELASTAN
+LD2711                    MADEINITALY PANTALONE804VISCOSA 17LINO                3pz      €16.50                          €49.50      NEA
+39,ELASTAN979COTONE 34ELASTAN
+LD2722                      MADEINITALYGIACCA 804VISCOSA20                                4pz       €27.50                           €110.00       N8A
+POLIESTERE
+LD2723                   MADEINITALY PANTALONE80VISCOSA 20                      pz      €19.00                          €76.00      NSEIA
+PALIESTERE
+negre           Any     E14150                   €46.00    N8IA
+
+[2025-04-07T17:21:32.664Z] Page 12 - Cleaned OCR Text:
+CodicePec:BBLISHEMQGMAIL.COWN
+Tel.:972547360888
+LD2761                   MADEINITALYCAMICIA100COTONE                                2pz      €19.50                         €3900N8A
+LD2762                     CAMICIA854TENCEL154POLIESTERE1004                        4pz€17.50                           €70.00NSA
+COTONE
+LD2763                    7.SHIRT85TENCEL154POLIESTERE1004                        2pz€16.00                          €32.00N8A
+COTONE
+LD2764                    GONNA354TENCEL15POLIESTERE1004                         2pz€19.00                          €38.00NSA
+COTONE
+LD2765                   MADEINITALYPANTALONE854TENCEL15                        2pz€17.50                          €35.00NSA
+POLIESTERE1009COTONE
+LD2770                    MAGLIA85POLIESTERE154COTONE70                         4pz€12.50                          €5000N8A
+COTONE30YPOLIESTERE
+LD2771                    PANTALONCINI85POLIESTERE15COTONE                    4pz€14.00                         €56.00N8IA
+                             709COTONE30POLIESTERE
+LD2773                   MADEINITALYTOP654POLIESTERE354 COTONE               4pz      €19.00                         €76.00NBA
+LD2780                   MADEINITALYABITO65POLIESTERE 35                         3pz€20.00                         €60.00NB8IA
+COTONE
+
+[2025-04-07T17:21:37.908Z] Page 13 - Cleaned OCR Text:
+23088           GIACCADADONNA89PL115EA-LINING100PL               8pz             €8,00                       €64,00N8a
+24276          GONNADADONNA89PL119EA                                  7pz            €6,00                     €42,00N8a
+23239A        GIACCADADONNA89PL119EA-LINING1009PL            14pz          €12,00                   €168,00N8a
+23043          GIACCADADONNA549CO0O225VI205PL45OF-              12pz           €18,00                    €216,00N8a
+LINING1009PL
+
+22351C        PANTALONEDADONNA549CO022VI207PL40F         12pz          €13,00                   €156,00N8a
+23043          GIACCASTDADONNA1009PL-LINING1009PL                 2pz          €14,00                     €28,00N8a
+23044A        PANTALONEDADONNA1009PL                                   2pz            €0,00                      €0,00N8a
+24131           GIACCADADONNA899PL115EA-LINING1009PL             12pz            €9,00                    €108,00N8a
+23044A        PANTALONEDADONNA89YPL119EA                            15pz            €8,00                    €120,00N8a
+25071           GIACCADADONNAST899PL115EA-LINING1009PL           8pz           €11,00                       €88,00N8a
+25068          PANTALONEDADONNA899PL11EAST                        5pz            €7,00                     €35,00NB8a
+25068          PANTALONEDADONNAUNITO89PL11EA                  3pz            €7,00                    €21,00N8a
+25051           GIACCADADONNAST1009PL-LINING1009PL                 5pz            €0,00                       €0,00N8a
+25073          SHORTDADONNAST1009PL-LINING100YPL                 6pz            €8,00                    €48,00NB8a
+imponibllemposta
+N8a:Nonimp.art.8c.1lett.aDPR63372                 €1.094,00                        €0,00
+
+[2025-04-07T17:21:46.582Z] Page 14 - Cleaned OCR Text:
+RADEON
+ 12206002         4972-54-736000PBL:4972-54-6               :      1209          2870372025       -
+TEONDIZIONDIPAGAMENTO.wocoxiSae TTIITTTTETTEDTTEEBANGADAPPOGGIO:.....  TT
+-    ,                             ARI       CAR
+iconicE ARTICOLO.. PST ESCRIZIONE PETuTIOTONST1Uumavs  TITA.PREZZOUNITARIS iscnlpREZZOTO THR
+PAT2A         PANTALONEnp724                                    PZ        2       27,00                54,00108B,
+              684VISCOSA.19,.54.PL.102 POLTIURETANICA2.5BLASTAM
+ABT22          ABITOINCROCIODVPEZZEMANICHE      PZ        3       21,50                64,50108,
+100COTONE
+A8735         ABITOCONVITACINTURE                              PZ        2       18,50                37,00i08,
+100sCOTONE
+IN1353         MAGLIAM7MCOMRISVOLTOESCOLLO TONDO              PZ       14        6,50                51,00I98,
+30COTONE108ELASTANM
+9562          GILETLUNGOCON1BOTTONEESPACCHI LATERALI        PZ        6       10,50              63,00108,
+100POLYESTERE1003POLYESTERE
+J405          GIACCANJ405                                        PZ        9       36,00               324,00108,
+965.POLYESTERE.d.ELASTAM
+PARIA         PANTALONEPALAZZO                                   PZ       12       23,50I             282,00I08,
+625POLIESTERE.358,.VISCOSA.33 ELASTAM
+ANYP6166       PANTALONEPALAZZOEBLASTICOVITA                      PZ       18        13,00               234,00I08,
+6585.VISCOSA.325,.POLIAMIDE.38 ELASTAM
+1858          MAGLIAMLBASICAKIMONO                            PZ       16        6,50               104,00I08,
+1008COTONE
+JUS2          vyUTaART.MNTUS3                                     PZ        6       24,50               147,00108,
+783POLIESTERE184RAYON48ELASTAN
+NG3D6P         GILETNGL108                                         PZ        6       28,50               171,00108,
+98YCOTONE24ELASTAM    :
+p6248         SHORTSCONPANNELLODV                              PZ        6        8,00     :          48,00108,
+78POLTESTERE.184,VISCOSA.48 ELASTAM
+A86633         ABITOCAMICIACONNODO DAVANTI                      PZ        6       16,00                96,9090TI08,
+100YCOTONE
+6095             Loon                                                    PZ         14,50                   g7,00108,
+003COTONE
+A8755           GE CORTO                                                PZ          8         16,00                 128,00108,
+978.COTONE.34,.ELASTAN
+
+[2025-04-07T17:21:48.685Z] Page 15 - Cleaned OCR Text:
+Tel:o7250  FXXAXXXXX       :
+Tel.:972547360008       :
+0000                CAMICIA          I                               14pz     €8.80                 €123.20N8JB
+0000              VESTITO                                                           3pz€23.00                     €69.00NS8JB
+0000            GONNA                                       6pz€12.50                   €75.00N8JB
+0000                   VESTITOi                                                           6pz€7.50                     €45.00N8JB
+0000                   VESTITO                                                          4pz      €9.50                     €38.00N8JB
+0000            PANTALONE:                                                    3pz€8.50                   €25.50NB8JB
+0000                   VESTITO.                                                           4pz€15.00                     €60.00N8JB
+                    jCONTRIBUTOAMBIENTALECONAIASSOLTOOVEDOVUTO
+j
+
+[2025-04-07T17:21:54.316Z] Page 16 - Cleaned OCR Text:
+ CodicePec:
+Tel.:547360008
+nmr a
+Ea A-Prezzoi-scidmpoitoGIVA,
+124212                    abitodonna1004CO                                                            4pz      €26,00                         €104,00      N8A
+124292            :       tutadonna524CO40PA8BYEA                                          2pz €33,00                          €66,00      N8A
+125043                  magliadonna100CO                                                   2pz      €13,50                       €27,00      NSA
+125069                    magliadonna100CO                                                        4pz      €10,50                          €42.00      N8EA
+219670                    abitodonna98XCO2NEA                                                   2pz      €21,00                          €42,00      N8A
+224419                    magliadonna984CO2 EA                                                  3pz      €2250                          €67,50      N8IA
+240671                    abitodonna100pa                                                           3pz      €29,00                         €87,00      N8A
+240861                     abitodonna654CO35PL                                                   2pz      €21,50                          €43,00      NB8IA
+240862                    abitodonnat1-100cot2-1004pa                                          1pz      €38,50                          €38,50      NEiA
+241072                    abitodonna1090CO                                                           2pz      €29,50                          €59,00      N8A
+241094                    abitodonna85LY15PL                                                  7pz      €22,00                        €154,00      NEIA
+241140                    abitodonna1009CO                                                           2pz      €23,00                          €46,00      N8A
+250011                    abitodonna79co17pl4pa                                            2pz      €32,50                          €65,00      NBA
+250082                    canottadonna1009CO                                                        3pz      €19,50                          €58,50      NSA
+691064                    tutadonna52CO404PA84EA                                          4pz      €21,00                          €84,00      N8IA
+CONTRIBUTOAMBIENTALE CONAIASSOLTOOVEDOVUTO
+
+[2025-04-07T17:21:59.955Z] Page 17 - Cleaned OCR Text:
+CodicelPec: halmshaiQgmall.com
+Tel:547360008
+eS TECTED
+Codice.Deserizione1il T0LolantitalPreszolSe.HimporolCIVA.
+262227                     Abito                                                                                             3pz         €7.50                              €22.50       N8A
+16856721                  Camicia                                                                                3pz        €6.80                           €20.40      N8A
+16870                       Giacca                                                                                      4pz         €7.80                             €31.20       N8A
+17062                      Maglia                                                                                  6pz        €6.00                           €36.00      N8A
+1676713                  Camicia                                 6pz        €6.50                           €39.00N8A
+12381753                 Pantaloni                                                                           2pz        €6.00                          €12.00      NBIA
+1675315                  Camicia                                                                             2pz        €6.00                          €12.00      NEIA
+1676719                    Camicia                                                                                     2pz         €6.00                             €12.00       NSA
+1675376                   Camicia                                                                              3pz        €6.50                          €19.50      NS8JA
+16753110                   Camicia                                                                                         1pz         €6.50                                €6.50       N8aA
+1675313                      Camicia                                                                                             1pz          €6.50                                 €6.50       N8JA
+1702271                      Camicia                                                                                          2pz         €6.00                              €12.00       N8JA
+1588530                  Camicia                                                                                1pz        €6.00                             €6.00      N8A
+16360                     Abito                                                                                  2pz        €7.00                          €14.00      NEaA
+8980570                  Camicia                                                                                 4pz        €7.00                           €28.00       N8IA
+1675379                   Camicia                                                                                2pz        €7.00                           €14.00      N8IA
+89913730                   Abito                                                                                           5pz         €7.00                             E35.00       N8IA
+89913721                  Abito                                                                                      1pz        €7.00                             €7.00       NEA
+8980578                   Camicia                                                                                        6pz         €7.00                              €42.00       NBA
+1678713                   Camicia                                                                                 6pz        €6.50                           €39.00       NEA
+16856                      Camicia                                                                                4pz        €6.00                           €24.00      NB8IA
+89805765                   Camicia                                                                                     2pz         €6.00                            €12.00       NSA
+18856126                Camicia                                                                          3pz        €5.00                         €15.00N8IA
+1657678                   Camicia                                                                               5pz        €7.00                           €35.00      NE8iA
+SATTESTACHELE MERCISONOSTATE LAVORATEINITALIA  MENTRELAMATERIAPRIMA NONEDIORIGINEITALIANA
+
+[2025-04-07T17:22:07.957Z] Page 18 - Cleaned OCR Text:
+CTTTEREEEReoveINUIRE                       CODICEFiSCALE                                           PAG.PAGE
+tt                    CUSTOMERCODE      i
+4072025     3170312025    2295      1L514497817
+PAGAMENTO7PAYMENT                          BANCADAPPOGGIG7BANKDETAL       AGENTE7SALESAGENT
+iii
+Articolo      DescrizionefDescripti on                jColore                 PrezzojiSc.ImportoJ  Iva
+Code                        P                   Color              .tyPriceDise.  Amountver
+S25-CN720GL  CINTURADONNA 50PE50EA           MULTICOLORNR      BI    16,99        131,84AOB1A
+Intrastat:42033000 TU:8Madein Italy
+S25-J804GL     JEANSDONNA 70NCO29TENCEL 1EA     MULTICOLORNR      4     43,99          170,68AO81A
+Intrastat:82048231Xs:7 S:1M:1L:1Made
+inltaly                                              j
+S25-A787GL      ABITODONNA 809PL 209WV1                         MULTICOLOR   NR          1        34,89                33,94 AQ81A
+Intrastat:62044400 TU:1Madein italy                                                 j
+525-J800GL   JEANSDONNA                       MULTICOLORNR     8    29,99       232,72AOB1A
+XS2S2M2L:2Madein Italy
+S25-J706GL   JEANSDONNA999C0O1 EA                MULTICOLOR NR      8     28,99         224,96A0S1A
+ Intrastat:32046231Xs 28:2M:21:2Made
+intaly
+S25-C939GL   CAMICIADONNA609pPL 409V1          MULTICOLORNR    2   23,99       46,54AOB1A
+Intrastat:62064000 TU:2Madein Italy
+S25-A808GL   ABITODONNA90CO 10EA            MULTICOLORNR     2    22,99        44,680A0O81A
+Intrastat:62044200 TU:2MadeinItaly
+S25-J807GL   JEANS.DONNA                     MULTICOLORNR     2    29,99        58,18AD81A
+M:1L:tMadein Italy
+S25-C895GL   CAMICIADONNA789C0O 229SE         MULTICOLORNR    4   22,99       89,20AO81A
+Intrastat:62063000 TU:4Madeinltaly                        l
+S25-J790GL   JEANSDONNA989CO 2NEA             MULTICOLORNR     4    28,99        112,48ADB1A
+Intrastat:62046231Xs:1 S:1M:1L:1Mage
+inItaly                                                            l          oo       E
+  SPESETINCASSSFBPESEBOLreemeEm  RN
+
+[2025-04-07T17:22:12.990Z] Page 19 - Cleaned OCR Text:
+INVUILENUMISER                                              CUSTOMERCODE                                                                            Ss                                            TOP
+4072025      3170372025    2295      11514497817                                                 2
+PAGAMENTOfPAYMENT                                                     BANCADAPPOGGIOBANKDETAIL                           AGENTESALESAGENT
+CEE,    Tel
+825-C838GL    CAMICIADONNA85LYOCELL154PL         MULTICOLORNR       2     25,39     3     50,421AO081A
+Intrastat:62064000TU:2Madeinltaly
+       S25-C950GL    CAMICIADONNA709NY309CQ             MULTICOLORNR       1     22,99    3     22.30ADB1A
+Intrastat:62064000TU:1MadeinItaly
+S25-C800CL    COMPLETODONNA100V                MULTICOLORNR      4    43,99    3    170,68ADB1A
+Intrastat:62042380TU:4Madeinltaly
+825-C956GL    CANMICIADONNA80PL20VI               MULTICOLORNR       2     24,99    3     48,48AOB1A
+Intrastat:62064000TU:2MadeinItaly
+S25-A778GL      ABITODONNA654CO324PL3EA               MULTICOLORNR          2        29,99       3        58,18,A081A
+Intrastat:62044200TU:2Madeinltaly
+S25-C969GL   CAMICIADONNA100C0O               MULTICOLORNR     2    22,99   3    4460AOB1A
+Intrastat:62063000TU:2Madeinitaly                                 j
+   FOT-NONMFONIGILE7AMOUNT
+
+[2025-04-07T17:22:21.466Z] Page 20 - Cleaned OCR Text:
+Oi  ermnemTefteladefREwF                             PZ        1      23,00  -   3N        22,31  N08,
+DBettaglioTagliecXS  XS   SMLXLXXL
+
+GI258E1256GESSGILETGESSATOBEIGE                                 PZ         1       23,00-    35         22,31N08,1
+DettagiioTaghidXSX8   3   MLXL.XXL                                                                              :
+GI25SE1256GESSGILETGESSATOBEIGE                                PZ         1       23.00-    3         22,31NOB,1
+DettaglioTaghaXXSXSS   M   LXLXXL                                                     oo                      i
+GI268E1256GESSGILETGESSATOBEIGE                                PZ         1       2300-    3N         22,31N08,1
+Dettaglio TaglixsSXxX5   S   M   L  XLXXL                                                                              i
+PA25SE1257GESSPANTALONEFULLLENGHTGESSATO BEIGE                  PZ          1       19,20-    39         18,62N08,1
+DottaglioTaglikKXS  X8SMLXAX                         :
+PA25SE1257GESSPANTALONEFULLLENGHTGESSATO BEIGE                 PZ         1       1920-    3         18,62N08,1
+DettaglioTaghiXXSXSSMLXL XXL                             1
+
+1                                                                                              i
+PA25SE1257GESSPANTALONEFULLLENGHTGESSATOBEIGE                 PZ         1       19.20-    3         18,62N08,1i
+DettaglioTagliXXSXSSMLXLXXL                                                                              i
+
+1
+PA25SE1257GESSPANTALONEFULLLENGHTGESSATO BEIGE      PZ            1         19,20-     3            18,62N03,1
+DettaglioTaglidXSXSSMLXLXXL
+
+1                                                                                      :
+GO25SCO102WTIUNGONNAAPALLONCINOVERDE                             PZ         1       13,50-    3N        13,10N08,1j
+       DettaglioTaglieXSXSS   MLXUX
+GO255CO102WTHINGONNAAPALLONCINOVERDE                                    PZ            1         13,50-     39            13,10NDB,1
+DettaglioTaglieXXSXS   S   MLXLXXL                                                                        j
+GIA258CO101WTIUNGIACCADOPPIOPETTOVERDE                                  PZ           1         29,60-     3           28,71N08,1 j
+     DettaglioTagliXXSXS   s   MLXLXXL
+GIA26SCO10tWTIUNGIACCADOPPIOPETTOVERDE                          PZ         1       2860-3         28,71Nog1i
+DettaglioTaglisXXSXSS   M   LXLXXL       i
+PAZ53D7691WANIMPANTALONEANIMALIERBURRO                            PZ         2       20,00-    3Kj        38,80N08,1
+DettaglioTaglikXSXSS   M   LXLXXL                                                                              i
+PA25SD7691WANIMPANTALONEANIMALIERBURRO                               PZ          2        20,00-    3           38,80NO08,1
+DettaglioTagliXSXSSM   L  XLXXL
+
+i
+
+PA258D7691WANIMPANTALONEANIMALIERBURRO                               PZ          2        20,00-    3           38,80NO8,1
+DettaglioTaglieXXSXS   S   MLXLXXL                            i
+
+[2025-04-07T17:22:29.456Z] Page 21 - Cleaned OCR Text:
+GLOVOLIGEIISHOUNSERMUDAGAFFE                                                                     i
+DettoglioTaglkXSXSSMLXLXXL                         pz         2       13501-3         26,19NOB,1
+.                    2                                                                                         1
+BE2SSE1255TIUNBERMUDACAFFE                        j
+DotiaglioTaglkXSXSSMLXLXXL                         PZ         2       13,50-3         26,19Noa.1
+GIA25SE1230TIUNGIACCA        :                                        i
+i   .DettaglioTagheXXs CACrFIOFETTO MAL                      PZ        1      2962,-   3.        28,73No8,1
+     So         1
+3IA25SE1230TIUNGIACCADOPPIOP                                                                                          i
+DotiaglioTagligGx8X8LnETTOMOKA                          pz       29821-3         28,73No81
+1                                                    :
+3025SE1231TIUNGONNAC.PALLONGC                              :
+DottagltoTaglidX3XS8MLWOOXL                         Pz         1       1400-3N         13,68NOB,1
+1                                                                                          :
+SA255FK137WVICHCAMICIAVICHYSKY-                           :
+DottagiloTgeoGRVICYSYo                         PZ         1       15.40-3        14,04NOB,1
+1     :
+AZESFK137WVICHCAMICIAVICHYSKYy                                        Pz                          i                     i
+DettaglioTaghdXSXSSM.LX.LXXL       15.40       I        alba
+
+1
+JA25SFK137WVICHCAMICIAVICHYBEIGE                                             PZ            1               oo       9        :
+PotingloTaglitK8XS8MLXLXXL                                            15,40       99         14:94
+.                                        .
+A25SFK137WVICHCAMICIAVICHYBEIGE                                  PZ         1       15,40-3              NO8,1i
+DettagioTeghXXSXSMLXLXKL          i         RT
+A25SDB43WANIMCAMICIAANIMALIERBURRO                      PZ       1     16,00 -39      15,52N08,1
+DettagiioTaglidXSX8S8MLXLXXiL                                                                             i
+1
+A25SD643WANIMCAMICIAANIMALIERBURRO                             PZ         1       16,00-3         15,52N08.1
+DettaglioTaglisXXSX8SMLXLXXL                                                                             i
+1
+IA25SC096GESSGIACCADOPPIOPETTOGESSATOBIANCONERO              PZ          1       3000-3         20,10NOB1
+DettaglioTagheXXSXSSMLXLXXL                            i
+:                                                                                                 i
+IA25SC096GESSGIACCADOPPIOPETTOGESSATOBIANCONERO              PZ          1       30,00-3         29,10N0B.1.
+DettaglioTaghdXSXSSMLXLXXL                                                                              i
+1                                                                                             i
+MA25SC096GESSGIACCADOPPIOPETTOGESSATOBIANCONERO             PZ         1       3000-3         29,10No81,
+DettaglioTagliXXSX8SMLXLXXL                                                                             i
+1                                                                                          i
+IA258C096GESSGIACCADOPPIOPETTOGESSATOBIANCONERC             PZ         1       30,00-3         29,10NO81
+DettaglioTaghieXXSXSSMLXLXXL                                                                             i
+
+[2025-04-07T17:22:38.116Z] Page 22 - Cleaned OCR Text:
+BE25SCO97GESSBERMUDAGESSATO BIANCONERO                 PZ      1     19580-   3      15,04N08,1
+DettagiioTaghieXS  XS   SM   LXLXXL
+GI255C094GESSGIHETC.GESSATO BIANCONERO                                          PZ               1            1400-      3.               13,58NO8,1
+DettaglioTaglieXXSXSS   M   LXLXXL
+GI26SCO94GESSGILETC.GESSATO BIANCOMERO                           PZ          1        14,001-    3          13,58N08,1
+DettaglioTaglisXXSXS   S   MLXLXXL
+GI258C094GESSGILETC.GESSATO BIANCONERO                         PZ         1       1400-    3         13,58N08,1
+DottaglioTagtikXSXSSMLXLXXL
+                 1
+PAR5SCO95GESSPANTALONEFULL LENGTHGESSATOBIANCONERO             PZ            1        1850-    3N           17,95N08,1
+DettaglioTaglidXSXSSM   n  XLXXL
+PA258C095GESSPANTALONEFULL LENGTHGESSATOBIANCONERO                PZ              1           18,50-      3N              17.95NOB1
+DettaglioTagliedXSXSSMLXLXXL
+1
+PA25SCO095GESS PANTALONEFULLLENGTHGESSATO BIANCONERO                 PZ               1            1850-      3               17.95N08,1
+DettaglioTagligCXs  Xs   SMLXLXXL
+PA25SCO22  TIUNPANTALONEFULLLENGTH NERO                               PZ           1         18,.50j-     3N           17,95NGB,1
+DattaglioTaglieXS  XS   SMLXX                      po
+PA255C022TIUNPANTALONEFULLLENGTHNERO            :                    PZ           2         1850-     3N.          35.89N08,1
+DettaglioTaghXSXS   3   MLXLXXL
+PA25SC0O22TIUNPANTALONEFULL LENGTHNERO                               PZ           1         18,50i-     3N          17,85N08,1 :
+DettaglioTaglisXXSXS8SM   LXLXXL                               i
+1
+BE25SE1255 TIUNBERMUDABEIGE                                          PZ          11       13,50-    3N          13,10N0OB,T
+DettaglioTagliXXSXSSMLXLXXL                                                                                   i
+1                                                                           i           i          H
+BE25SE1255TIUNBERMUDABEIGE                                         PZ          1        13,50-    3Ni        13,10Nos,1
+DettaglioTagliXXSXS   S   MLXLXXL                    i
+TS2558GI10RIGAT-SHIRTFAVOLOSA RIGABIANCONERO                          PZ            4          960-     3            37,25N08A
+DettaglioTaglieUNI                                                                                                                                l
+4           i                   i
+TS265GI10WHRIGAT-SHIRTLEMONRIGA BIANCONERO                                     PZ              2            9,20-      3N               17,85NO8,1
+            DettagdioTaglieUNI                                                                                                                                                                                                                                                   j
+a              2         E
+TS258GI10WRIGAT-SHIRTSUMMERLOVE RIGABIANCOINERO                   PZ          2         9,20  -    3           17,85NO8,1
+DettaglioTaglieUNI
+
+[2025-04-07T17:22:42.971Z] Page 23 - Cleaned OCR Text:
+i
+FACOOSLLGIFLATIUNPANTALONEZAMPAROSE                                                pz                                    i        o
+DettaglioTaglidXSXSSMLXLXXL                                    h       1850      37         17,85Noa.1 j
+i                             q
+GI25SCO86-GESSGILETCONLACCIOGESSATOROSE                                 P                                   Cae                              j
+DottaglioTaghkXSX8SMLXLXXL                          i       13.50       ls         1310NoB
+1                                                                                             :
+GI25SCO88-GESSGILETCONLACCIOGESSATOROSE                p
+DotiaglioTaglekXSXSSMLXLXXL                          ii       13:50       57         13.10No81
+1                                                                                          i
+GI255C086GESSGILETCONLACCIOGESSATOROSE                                    PZ                                     .
+DettagiioTagliXXSXSSMLXLXXL                                    L       13.50       3X         13,10  N81
+1                                                                                      I
+GI25SCO86GESSGILETCONLACCIOGESSATOROSE                      PZ         1       1      39                Nog.t
+DotiaglioTagiXSXS5MLXLXXL                                             3:50       3         o
+5IA255C021GESSGIACCAUNPETTOGESSATOROSE                             pz           1         28.003                     NO8.4I
+DettaglioTaghikXSXSSMLXLXXi                                                 j         27.16
+E255P984TIUNFELPAGOODVIBESROSSO                           pz        2         40F-39               NO81
+DettaglioTaglieUN                                                                           15,          3X         29,88
+2
+E258P984TIUNFELPAGOODVIBESLEMON                     PZ      2     1540-39      29.88N0B,1i
+DettaglioTaglieUN                                                                                                                                                                                                                                                               :
+2                                                 l                        l
+SAM25SBR146RIGA.CAMICIARIGACIPRIA          j                               PZ          3        1480-39          43,07N08,1
+DettaglioTaglieXXSXSSM   n  XiXXL     i
+11
+30255010..B0TUN1BORSAARETEGRANDE.BEIGE                    PZ       2     16,00-3       31,04NOB1
+DettaglioTaglieUN
+2                                                                                                     I
+i
+,
+
+[2025-04-07T17:22:46.775Z] Page 24 - Cleaned OCR Text:
+Mainpart:-Polyester100
+NetWeight:G     189,000
+Madein:        IT
+CFC0019868002       OverallWomanvarbeigelight                  NR               4,900          63,49                  253,96
+                       :-Polyester964-Elastane048
+Net.Weignt:G     675,000
+Madein:        IT
+CFC0019869002       DressWomanvarbeige1ight                    NR               2,000          51,49                  102,98
+--Palyester963-Flastane048
+NetWeight:6G     470,009
+Madein:        IT
+CFC0019941002       PantsWomanBlack                              NR               5,000          39.49                  197,45
+                       :-Polyester954-Elastane054
+NetWeight:G     460,000
+Madein:        IT
+CFC0020014002      PantsWomanvarblack                     NR            4,000        35.99             143,96
+:-Polyester95-Elastane 05
+NetWeight:G     345.000
+Madein:        IT
+CFC0122427003       PulToverWomanBlack                           NR               4,000          27.49                  109,96
+CFC0122427003       PulloverWomanWhiteCream                     NR               3,000          27.49                   82.47
+--Polyester-945x-Elastane054
+NetWeight:G     319.000
+Madein:        IT
+CFC0122471003       OverallWomanPink1ight                       NR               4,000          63,49                  253,96
+Decoration:-Polyesterl00F
+Mainpart:-Polyester903 -Elastane107
+NetWeight:G     514,000
+MadesIr:   IT
+
+[2025-04-07T17:22:51.035Z] Page 25 - Cleaned OCR Text:
+CFC0122879003       JacketWomanBeige1ight                       NR               1.000          55.49                   55,49
+CFC0122879003       JacketWomanPinkTight                        NR               3.000          55.49                  166.47
+Mainpart:-Polyester96z-Elastane047
+NetWeight:G     630.000
+Madein:        IT
+CFC0122936003       PantsWomanWhite                              NR               1.000          43.49                   43.49
+CFC0122936003       PantsWomanBeigelight                        NR               4,000          43,49                  173.96
+CFC0122936003       PantsWomanPinklight                         MR               3.000          43,49                  130,47
+Lining:-Polyesterl00Z
+Mainpart:-Polyester96z-Elastane04X
+NetWeight:6     420.000
+Madein:        IT
+CFC0123899003       DressWomanPink                               NR               4,000          39,49                  157,96
+CFC0123899003       DressWomanYellowlight                       NR               2.000          39,49                   78.98
+Mainpart:-Polyester88X-Elastane128
+NetWeight:G     360,000                                                        :
+Madein         IT
+CFC0124080003       OverallWomanRed                              NR               4,000          41,99                  167,96
+  CFC0124080003       OverallWomanBeigelight                      NR               3.000          41,99                  125.97
+Mainpart:-Polyester-964-Elastane 04X
+NetWeight:G     677.000
+Madein         IT
+CFC0124649003       TopWomanPink1ight                           NR               5,000          25.99                  129,95
+Decoration:-PolyesterlQ0X
+Mainpart:-Polyesterl00Z
+NetWeight:G     120,000
+Madein:        IT
+ACeR1AE00BT       RlnnceWomanIvory                             NR               1,000          29,99                   29,99
+
+[2025-04-07T17:22:56.279Z] Page 26 - Cleaned OCR Text:
+CFC0124774U3      SNorLsFdAnLwollarlwhltfdue                more            RS
+Mainpart:-CottonlO0
+tiet,WHeight:G     130,000
+Madein         IT
+CFC0124777003       BlouseWomanvarchocolat                      NR               4,000          39.49                  157.96
+Mainpart:-Cottonl00X
+NetWeight:G     170,000
+Madein        IT
+l CFC0124795003       TopWomanvarblack                            NR               5.000          31,49                  157,45
+Lining:-Polyester1004                                                                                     i
+Mainpart:-Polyester95-Elastane 052
+NetWeight:G     130,000
+Madein:        IT
+Price1istamount4.431.27
+                        TotalDiscount
+ConaiTaxpaid
+Achidicompetenza
+Oggetto:DICHIARAZIONE DILIBERAESPORTAZIONE
+Consapevolidiassumere ogniconseguenterespons bilitdcon1a presente. dichiariamgchetulto
+i1materialeesportatoconns. documentazione
+Nonvincolataalicenzadiesportazione€g indi:
+Y900-CONVENZIONEDIWASHINGTON
+Nonrientranellelencodeibenlcame  ddregolamentoCEn.750f2013  del2970f72013dal
+Consiglio,         relativo         alla        protezione        di        specie        della
+floraedellafaunaselvatiche  mediantei1controllodelloroC  mercioCONVENZIONE0J
+WASHINGTON-CITES-Y900
+y901-BENTADUPLICEUSO
+Nonrientranellelenco   deibemcomeda   regolamentoUE 1232711delParlamento
+asoreedel1671172014.chemodyficaeaggiorna i1RegolamentoCE42872009chie
+
+[2025-04-07T17:23:03.780Z] Page 27 - Cleaned OCR Text:
+Nonrientranotra1beniprevistidalReg.GE11772008del2870L72008misurerestrittive
+neiconfrontidellaREP.POP.DEM.DellaCoregqNondCorealY920
+
+Y920-COSTADAYORIC
+NonrientranctraibeniprevistidalregolgmenfoCEdn.66872011dell1270772011delconsiglip
+cheimponerestrizionialtaprestazionei3ssistenzapertinenteadattivitdmfilitariin
+CostadAvorioY920
+
+Y920-7IMBAWE
+NonrientranelregolamentoCEMN.3147204delconsigliodel19febbraio2004relativola
+talunemisurerestrittiveneiconfrontidelloZimbaweY920
+
+YG20-SIRIA
+NonrientranelregolemantoUEYn.44242011delconsigliodelBmaggio2011cpncernentle
+misurerestrittiveinconsiderazionedellasituazjoneinSiria.     CYp203
+
+Y920-LIBIA
+NonrientrangnelregolamentoUEYn.20472011delconsigliodel2marzo2011cpncernen
+misurerestrittiveinconsiderazionedellasifluazioneinLibia      Ypz2o
+Y920-REPUBBLICADIGUINEA                                                                 i
+NonrientranonelregolamentoUEn.128472009delconsiglicdel22digembre2009chejistituisde
+determinatemisurerestrittivespecificheneiconfrontidella    RepubblicadiGuinealY920
+Y920-BIRMANIAMYANMAR
+NonrientrancnelregolamentoCEn.74742009del1470872009deconsigliochelprorogae
+intensifica    le    misure    restrittive    nei    confronti    dell     BirmaniaMyanma    ,
+Y920
+
+Y920-UZBEKISTAN
+NonrientranellelencodeibenicomedagegolamentoCEn.15472009delP370272009
+concernentemisurerestrittivenelconfrontiqellUzbekistanY920
+
+Y920-SUDAN
+
+Nonrientranellelencodeibenicomeda jego amentoCEY1354705gel170872005cpncernenti
+misurerestrittiveneiconfrontidelSudan. Y920
+
+[2025-04-07T17:23:14.808Z] Page 28 - Cleaned OCR Text:
+ALATI
+precursoriidroghetralaComunitaeipaesiltergi.
+Nonrientratrabeni-partiappartenentiamezziditrasportoaventijpiudi75anni.
+-MercidiversedaquelleinteressateHaidivietidicuiagliarticoli     sexies
+paragrafo lel septies,paragrafo1,delregblamgntoCEn.765720084YB801
+-Mercidiversedaquelleinteressatedaidiviekidicuiagliarticqgli2.1e2bisparagraf
+1delregolamentoUEn.B83372014Y995
+-MercinonoriginarieonondestinateallezopedpglioblastdiDonetske      LuhangdkY984
+-Mercidiversedaquelleinteressatedajdfivietidicuiallartjicolo3ter,panagrafo1
+deregolamentoUEYn.83372014Y996
+-Mercidiversedaquelledeidivietidjcpiallarticolo3ponies.paragfafo1.de
+regolamentoUEIn.83372014Y821,
+-1divietidicuiallarticolo3nonies,parpgrafo1,delregolamgntoUEn.200147833de
+Consigtiocnonsiapplicanocfr.esenzionidifcuiallarticolo     nonies,parggrafi2
+3.0Y822
+Lamerceriferitaalladocumentazioneinoggpttononrientranellelencodeibenicomed
+regolamentoUEn.133272013GYVEL335
+
+RRENSENELIIEAIEEAEEEEEEIEAAERAAEAAEAATARARIAR KANE,   eee
+wicked            CORYWITHNOLEGAL-FESCALVALIDIITYPURSUANT-TOART.21             Keener
+wht       GFTHEDPR623772,EXCEPTFORTHDSEWHODONOTHOLDAVATNUMBER        Fckokedokk
+KKK        ANDJORNON-RESIDENTSPURSUANTTQPARAGRAPH909ART,1LJ20572017       HRK
+RERIKERAIIIAAAAAIAAAAAAFAAAAAAAAAARARAAZAAA FRRAAEEAEAAAAEAREERARAAAARAARARAREE   Lab
+Thepresentdocumentisissued.onbehalfofTeddys.p.a.. byathirdgart
+THEEXPORTERDECLARESTHATTHEGOODS
+
+AMENTIONEDINTHEINVOICEDONOTHAVE
+
+PREFERENTIALORIGIN
+
+EUR1CERTICATEISSUENOTAUTHORIZED
+
+EURIS
+
+xCnhmiccinnTaxCodes     KR
+
+[2025-04-07T17:23:22.040Z] Page 29 - Cleaned OCR Text:
+j    RIMESSA DIRETTA      -  IT-54-M-0303258020-010000001918  CREDITO EMILIANO SPA- FILIALE VIADANA.
+25EB83K00RS         BLUSA83K41925POISCART.00COL.14ROSA162069090NR        4,00       22,000        3         85,36EBC
+Cart256A5-859LYO             j
+15 PL                          j
+125EB930700NO      CAMICIA930V50217CART.00COL.95NOCE      161091000NR  3,00      32,000       3       93,12E8C
+         Cart.25€82-1009CO                                 Co
+25EB236M4853RSGIACCA236TRATT M48GRAF254CART.53          62043990NR         2,00        59,000          3        114,46jE8C
+COL.14ROSA
+                   Cart.25E53-639PL
+                349VI
+39EA              j              j
+25EB62353AZ        IPANTALONE623CART.53COL.12AZZURRO        62046110NR        3,00       23,000        3        66,93E8SC
+                                              Gart.25€53-639PL                                                                                          j                                                          j
+i                349VI                                  i
+                                  39EA
+25EB23753AZ         GILET237CART.53COL12 AZZURRO      61103010NR        3,00        27,000         3         78,57E8C
+                   :                  Cart.25E53-639PL
+349VI            :
+39EA                                                                                                                                       j
+25EB84T00UN      TUTA84TV40264CART.00 COL.609UNICO        62044990NR       2,00      49,000        3        95,06E8C
+                                   Cart.241X9-959VI
+                         59EA
+SEGUE         i            dimmi
+TO                Composizionesuognicampoanormadilegge883del 26j111973esuccessive
+          Lemercielencatenelpresentedocumento  salvoindicazionicontrarie,sono diorigineItaliana  MadeinItaly
+CALISALEDELTRASPORTO7.ASPETTOESTERIOREDETBENT7:4 COUT.7TiPESQLORDOI:LivoPESONETTOLoitVOLUMERS LEI
+TRASPORTOACURADEL re     ae     FIRMADELCONDUCENTE     TT
+DESCRIZIONEVETTORE         Lo          DATADELRITIRO      TTTTTTHRMAVEITORE
+
+[2025-04-07T17:23:28.735Z] Page 30 - Cleaned OCR Text:
+RIMESSA DIRETTA             i            IT-54-M-0303258020-010000001918CREDITOEMILIANOSPA- FILIALEVIADANA
+125EB97010AZ      CAMICIA970C10110MLCART.10COL.12      62069090NR     2,00     29,000      3      56,26E8C
+AZZURRO                                                           j
+Cart.25E10-909LYO
+ros                           l
+25EB971710BE         GONNA971N50182MLCART.10COL.4BEIGE      62045990NR        2,00       36,000        3        69,84E8C
+oo            Cart.25E10-90LYO                ,
+109PL                                                                                           j
+25EBB3X00AZ         GIACCA83XV80164CART00COL.12AZZURRO    62043990NR.     2,00       46,000        3         89,24E8C
+oo               Cart.25EA2-989CO              :
+mes
+25EB83Z700MA      TOPKIMONO83ZV60277CART.00COL15P     162069090,NR     6,00     39,500f3     229,89E8C
+                              MASTICE
+:                                       Cart.256G2-869LYO
+                     149PL
+25EB83Y00ME      IPANTALONE83YV40268CART00COL22 MENTA62046110NR        6,00        35,000         3        203,70jE8C
+                      Cart.256G1-909VI
+         10PL
+25EB60320PA       PANTALONE603CART.20COL.23PANNA         62046110NR-3,00      39,000      3     113,49E8C
+Cart25E20-809VI
+109PL
+             SEGUE        Cs        j             AAA
+Composizionesuognicampoanormadilegge883del26 1171973esuccessive
+Lemercielencatenelpresente documento,salvo indicazionicontrarie,sonodi origineItaliana  Madein Italy
+GNERLEDexTRASPORTO.7.7.LASPETTOESTERIGREDELRENL3LOOUTGo JRESOLORBOT FTPESONEITO.LtIVORMET
+ay DATADELRITIRO        SOT
+
+[2025-04-07T17:23:34.755Z] Page 31 - Cleaned OCR Text:
+RIMESSADIRETTA         Co          1T-54-M-0303258020-010000001918CREDITOEMILIANOSPA-FILIALEVIADANA             J
+7cobcammicoid4JooesnoneLT            UANTITA.PREZZO.UNITARIO.-SC.8.PREZOTOTALE..CNA,
+25EB04720PA        CAMICIA047CART.20COL.23PANNA               62069090NR       1,00       39,000        3        37,83E8C
+Cart.25E20-909VI
+:               e        107PL                                                     i
+25EB603720PA        PANTALONE603CART.20COL.23PANNA           162046110NR       1,00       39,000        3        37,83EBC
+Gart.25€20-909vI
+109PL.             l                                Co                            j
+125EB603720R0O       PANTALONE603CART.20COL.3ROSSO           162046110NR       1,00      39,000       3     37,83E8C
+         Cart.25E20-90VI
+l                                                    209PL                                E                                                                     l
+25EB04720RO        CAMICIA047CART.20COL.3ROSSO                 162069090NR        1,00f39,000         3         37,83E8C
+Cart25€20-909VI
+105A1                                                                                                l
+25EB603720ML        PANTALONE603CART.20COL.343VERDEMELA62046110 NR        2,00       39,000        3        75,66E8C
+cort.25E20-909vI                                                                         l
+109PL                                                                                                                                                       l
+25EB04720ME        CAMICIA047CART.20COL.22MENTA               62069090NR        2,00       39,000        3        75,66EBC
+Cart25€20-909VI
+109PL
+25EB84V00PA       ABITO84VV70127CART.00COL.23PANNA         62044590NR        2,00       54,000        3       104,76E8C
+       cart.25€82-1009€O
+                   Composizionesuognicampoanormadilegge 883del261171973esuccessive
+Lemercielencatenelpresentedocumento,salvo indicazionicontrarie,sonodiorigineItaliana MadeinItaly
+SEE
+
+[2025-04-07T17:23:39.780Z] Page 32 - Cleaned OCR Text:
+RIMESSADIRETTA                                         IT-54-M-0303258020-010000001918CREDITOEMILIANOSPA-FILIALEVIADANA
+   25EB70D59BE        GONNA70DCART59COL.4BEIGE                   62045990fNR        2,00       32,000        3        62,08ESC
+Cart.25E59-639PL
+349VI
+                             INEA
+25EB167759BE       GIACCA167CART.59COL.4BEIGE                620439901NR      1,00      65,000       3       63,05E8C
+Cart.25E59-639PL                                                                                         ,
+                       349VI
+         IEA
+25EB70DJ59NE.GONNA70DCART59COL.2 NERO                   162045990NR        2,00       32,000        3        62,08E8C
+Cart.25E59-639PL
+399vi
+                                 39EA                 j
+25EB16759NE        GIACCA167CART.59COL.2NERO                   162043990NR        1,00       65,000        3        63,05E8C
+Cart.25E59-639PL
+-            349VI
+                              EI                                                  :
+125EB84E00BE      CAMICIA84EV50224CART.00COL4BEIGE         62069090NR        4,00       45,000         3       174,60E8C
+Gart25E63-756RY                                 ,
+25PA
+            Seve                       Jn      bn
+I                        Composizionesuognicampoanormadilegge883 del261171973esuccessive
+Lemercielencatenelpresentedocumento,salvoindicazionicontrarie,Sono diorigineItalianaMadeinItaly
+ PORTO ToATADELTRASPORTO   i      i
+DESCRIZIONEVETTORE          i       H         DATADELRITIRO       FIRMAVETTORE.
+
+[2025-04-07T17:23:46.042Z] Page 33 - Cleaned OCR Text:
+RIMESSA DIRETTA.                               IT-54-M-0303258020-010000001918CREDITOEMILIANGSPA- FILIALEVIADANA
+25EB83LJ00RS         CAMICIA83L41825GESSATOCART.00 COL.14     62069090NR        4,00       28,000         3       108,64ESC
+ROSA
+j              Cart25EA5-859LYO         :
+159PL      O
+j25EB83S700GI        CAMICIA835V502651CART.00COL.24GIALLO61091000NR       5,00       29,000        3       140,65E8C
+Cart.25EA5-859LYO
+    159PL
+25EB027M2872BECAMICIA027TRATTM28GRAF035 CART.72       62069090NR       2,00       43,000         3       83,42E8C
+                     COL.4BEIGE                                                                       l
+:                             Cart25672-869VI
+149PL
+125EB027M2872B1   CAMICIA027TRATTM28GRAF035CART.72       62069090NR        1,00       43,000        3        41,71E8C
+COL.19BIANCO
+Cart28€72-86VI
+149PI                       i
+   25EB0645CRS     CAMICIA064CART.5CCOL14ROSA              62069090NR      2,00      35,000       3.     67,90E8SC
+j       Cart25E5C-809LY0
+             209PL
+SEGUE                   EE        oo       IN      IB  AAA
+fo       Composizionesuognicampoanormadilegge883 del261171973esuccessive
+Lemercielencatenelpresentedocumento  salvoIndicazionicontrarie,sono diorigineItaliana Madein Italy
+CASALEDELTRASPORTOI...1ASPETTDESTERIOREDELBENE:COMLTTelfo PESGLORDO...0PESONEITOuift,oFIVORIMER:nehs
+EATER  PRO FESS
+
+[2025-04-07T17:23:50.183Z] Page 34 - Cleaned OCR Text:
+RIMESSA DIRETTA                          TT-54-M-0303258020-010000001918  CREDITOEMILIANO SPA -FILIALE VIADANA
+25EB064760PA        CAMICIA064CART.60COL23PANNA               62069090NR       2,00       35,000        3        67,90,E8C
+I         Cart.25660-809LYO
+209PL
+                                NonimponibileIVAaisensideflart.8comma1
+lett.adelDPRn.633del261072esuccessive
+                     -modificheeintegrazionisu dichiarazione
+j         dellacquirente,
+l         l       l         l
+i   Composizionesuognicampoanormadilegge883 dei267111973esuccessive
+        Lemercielencatenelpresentedocumento,salvoindicazioni contrarie,sonodiorigineItaliana MadeinItaly
+CAUSALEDRLTRASPORTCT.ASPETTOESTERIOREDETBENL71GOWI000hoii
+VENDITACARTONE
+   HS         DATADELTRASPORTOFIRMADELCONDUCENTE         FIRMADELDESTINATARIO
+.      i         .  3-2,
+VETTORE IS ASSEGNATO   i  31 03-25       iE         DATADELRITIRC    T7FIRMAVETTORE
+
+[2025-04-07T17:23:56.503Z] Page 35 - Cleaned OCR Text:
+       826DE      31703725         32725                 VENDITA          1
+MAGAZZINDDIUSCITA
+40050FuncdiArgelatcBOCentergross.BL.1l2-Via deiLanaioli33
+CODICEARTICOLO             DESCRIZIONEDEIBENY NATURAEQUALITA    QTA    PREZZO   IMPORTCOWA
+JGonna964CO4PL                               251,48102,96NI      GCUCWHMR
+SkirtHSCode62045200
+Camicia684CO30SPAO2ZEA                        436,60146,40NT      C773W088
+ShirktHSCode62063000
+  Pantaloni5S54CO45YVI                          242,22    84,44NI      PCUMWGM
+E  TrousersPantsHSCode62046239
+O  Abito96SPL4tEA                              2  36,66    73,32NI      AT.OMUFH
+A  DressHSCode62044300
+LAbito604CO37NY03TEA                          438,80   155,20NI      A773W058
+E:  DressHSCode62044200
+5Giacca554CO45EVI                            266,30   132,60NI     JCUTWGM
+OJgacketHSCode62043290                                            ,
+OlT-Shirt944CO64EA                            221,8043,60NI     TBGFNQUS
+D  T-irtHSCode51091000
+7Giacca964PLO4SEA                             540,30201,50NI      J845W017
+-  JacketHSCode62043390
+OlAabitoLO0O0kCo                                 429,20116,80NI     AO041W069
+O   DressHSCode62044200
+.    GClacca964CO44t4PL                             168,50    8,50NI      JDGPWHM
+4JacketHSCode62043290                                              i
+Pantaloni96PLO4EA                         527,70138,50NI     P845W099
+  TrousersPantsHSCode62046318
+AHIito,.100SPL                                 6€32,96197,76NI     ALRZPBHS
+
+[2025-04-07T17:24:02.851Z] Page 36 - Cleaned OCR Text:
+       826DE      31703725         32725                 VENDITA          2
+MAGAZZINGDIUSCITA
+40050FunodiArgelatoBOCentergross.BL.1l2-ViadeiLanaioli33
+CODICEARTICQOLO             DESCRIZIONEDEIBENINATURAEQUALITA    QTA    PREZZO   IMPORTOIVA
+4Gonnal00FCO                                  236,60    73,20NIT      GCVDRAAC
+SkirtHSCode62045200
+BermudaShort1004CO             j            234,90   69,80NI     D212W018
+BermudaShortHSCode62046239                                                 ,
+o   camicia100SPA854TEL1SSPL                       436,60   146,40NI      C945W112
+-  ShirtHSCode62064000                                         j
+O.Giacca,985PLO2SEA4100SPL                       264,80   129,60NI      J648W022
+OJacketHSCode62043390
+LGiacca314LI31SVI264CO12PL                     265,92   131,84NI      JCIEJDG
+  JacketHSCode62043390
+Gcamicia834TEL7PL                            632,96   197,76NI      CFC2WPR
+Og8hirtKSCode62064000
+Olpantaloni524PL454VI34EA                     336,60109,80NI     PDPSWPGC
+2  TrougersPantsHSCode62046318
+7Gonna100YPA95PLOSSEA                        347,70   143,10NI     G945W038
+tZSkirtHSCode62045300
+OlT-Shirt70SCO30PL                          334,07   102,21NI     TBGAYASR
+OT-ghirtHsCode61091000
+,    Pantaloni52k4PL454VI3YEA                     344,07132,21NI      PDPiWPH
+.TrousersPantsHSCode62046318
+camicia60CO408PL                            236,60    73,20NI      CFCCWQZS
+  ShirtHSCode62063000
+T-Shirt1005CO                              1012,90   129,00NI     T262W121
+
+[2025-04-07T17:24:09.160Z] Page 37 - Cleaned OCR Text:
+        8267DE       31703725          32725                    VENDITA            3
+MAGAZZINGDIUSCITA
+40050FunodiArgelatoBOCentergross.BL.l1l2-ViadeiLanaioli33
+CODICEARTICOLO             DESCRIZIONEDEIBENINATURAEQUALITA    QTA    PREZZO   IMPORTOIVA
+-Giacca974CO3kEA                            261,11122,22NI     JDHBJYOP
+JacketHSCode62043290
+Pantaloni9754CO3SEA                          236,66    73,32NI     PDPEJYO
+TrousersPantsHSCode62046239
+o  Pantaloni,.975C0038SEL                          232,90    65,80NI     P041W194
+i  TrousersPantsHSCode62046239
+O.Giacca.975C003S8EA                            251,40102,80NI     J041W052
+a  JacketKSCode62043290
+LiGonna74PL234VIO03tEL                          251,40   102,80NI      G212W039
+E   SKirt.H8.Code.62045300
+O,.pantaloni,74SPL23SVI03SEL                      240,30    80,60NI     P212W160
+OTrousersPantsHSCode62046318
+O   CanottaL00SPL                                 725,55178,85NI      RAUGPBHS
+2  Top
+zPantaloni1004PL                             243,80   87,80NI     P212W179
+ElTrousersPantsHSCode62046318
+O  Pantaloni,885VI12SPL                         236,60   73,20NI     PO41W176
+O   TrousersPantsHSCode62046918
+.    GiaccaLOOSPL974COO3EBA                       243,90    87,80NI      J212W045
+-JacketHSCode62043390
+Giacca883VI12SPL                              251,40   102,80NI      J041W044
+JacketHSCode62043390
+camicia100PA854LY15tPL                      247,70    95,40NI      C945W127
+
+[2025-04-07T17:24:15.772Z] Page 38 - Cleaned OCR Text:
+        826DE       31703725          32725                    VENDITA            4
+MAGAZZINODIUSCITA
+40050FunodiArgelatoBOCentergross.BL.12-ViadeiLanaioli33
+CODICEARTICOLO             DESCRIZIONEDEIBENINATURAEQUALITA    QTA    PREZZO   IMPORTOIVA
+Pantaloni744PL23VI3k4FA                    232,22   64,44NI     PBUBWGV
+TrousersPantsHSCode62046318
+Giacca55kPL33FVI2EA                       271,92   143,84NI     JDBSKFT
+JacketHSCode62043390
+Giubbotto74SPL23SVIO3HEL4100sPL                 270,00   140,00NLI      V212W0O16
+E  JacketHSCode62024010
+O
+a   OPERAZIONENONIMPONIBILEI.V.A.AISENSI
+   DELLART.8PRIMOCOMMADELD.P.R.63372            j
+E:   ESUCCESSIVEMODIFICAZIONI.
+O    MASSANETTA:   54,00   PROVINCIAORIGINE:BRO
+O    MERCEETICHETTATAAMARCHIODIXIE
+O   --MERCEDIQUALITADIORIGINE ITALIANA--
+2   ---       MADEINITALY          ---
+2
+    Inrefertotheobject,wedeclairthat: thepriceofthe.
+Q    invoiceispriceforwholesalefromour pricelist.
+O   Thepriceonthe taglabelisthepricefor retail.
+A    bisensidelllart.13 d.1.19672003Viinformiamoche iVs.datipersonalisononoi trattati
+per1adempimento degliobblighidileggeeper lagestionedeins. rapporticommerciali.
+    Alriguardopotete esercitareidirittiprevisti dagliart.77879710del d.l.medesimoc.
+
+[2025-04-07T17:24:24.885Z] Page 39 - Cleaned OCR Text:
+          826DE        31703725        32725                         VENDITA               5
+MAGAZZINDDIUSCITA
+40050FunodiArgelatoBOCentergross.BL.1l2 -ViadeiLanaioli33
+CODICEARTICOLO                                      DESCRIZIONEDEIBENINATURAEQUALITA           QTA          PREZZO         MPORTOIVA
+nr
+     Dichiarodiriceverelamerceediavereattentamente esaminateedaccettatoleCONDIZIONI
+GENERALIDIVENDITA,edinparticolare, inconformitaalle previgsionidegliarticoli1341
+O   e1342delCodiceCivileItaliano,confermiamodipienamenteconosceree diapprovare
+ ar   specificatamenteleseguenticlausole:2.4 terminidiconsegna,3.4sospensione
+O   delleconsegne,3.6decadenzadal beneficiodeltermine,3.7riservadiproprietd
+a   4decadenza,6.rivendita online,6.2limitazionealla rivenditasusitiditerzi,
+   7modificazioni,8validitdl,9legge applicabile,10foro convenzionale.
+E   Condizionigeneralidivenditae codicidicomposizionesonoconsultabiliallink:
+O   https:wew.dixiefashion.comititgeneral-conditions-of-sale-in-use-by-dixie
+O
+O   Ideclaretohavecarefullyreviewed andagreedtotheGENERAL CONDITIONSOFSALE,in
+2   compliancewiththe provisionsof articles1341and1342oftheItalian CivilCode,we
+e   confirmthatwearefullyawareof andspecificallyapprove thefollowingclauses:
+E   2.4deliveryterms,3.4 suspensionof deliveries,3.6applicationofthe acceleration
+O   clause,3.7reservationof title,4forfeiture,6 onlineresale,6.2 limitation
+   toresaleonthird-partywebsites,7 amendments,8validityl,2 governinglaw,
+p     10competentcourt.
+  Generalconditionsofsaleand diallingcodescanbe foundatthefellowinglink:
+  hetps:jwww.dixiefashion.comititgeneral-conditions-of-sale-in-use-by-dixie
+
+[2025-04-07T17:24:28.273Z] Page 40 - Cleaned OCR Text:
+      826DE     31703725        32725                VENDITA          6
+MAGAZZINGDIUSCITA
+40050FunodiArgelatoBOCentergross.BL.12-Viadei Lanaioli33
+CODICEARTICOLO             DESCRIZIONEDEIBENINATURAEQUALITA   QTA    PREZZO   IMPORTOIVA
+LL
+61091000T-Shirt                      15          274,81
+62024010Giubbotto                     2          140,00
+62043290Giacca                    7         426,12
+62043390Giacca                  15        797,38
+E            62044200Abito                     8         272,00
+O             62044300Abito                      8         271,08
+a            62045200Gonna                    4        176,16
+i          62045300Gonna                    5        245,90
+            62046239Pantaloni                 8        293,36
+5            62046318Pantaloni                19        716,15
+O           62046918Pantaloni                2       73,20
+O            62046990Pantaloni                 2         80,60
+a            62063000Camicia                  6        219,60
+a            62064000Camicia                  16        579,16
+-                                     Cem
+Z
+O                                         124       4744,37
+O
+
+[2025-04-07T17:24:36.658Z] Page 41 - Cleaned OCR Text:
+CodicelPec:HXXXXXXX
+
+Tel.:547360008         j
+09553                  VESTITI100COTONE                                                        4pzE1450-20           €4640NBA
+18066                      PANTALONI959POLIESTERE59ELASTAN                            9pz€1150                         €103.50N8A
+240212                       COMPLETI95Viscosa5Elistan                                                  3pz€16.90                               €50.70NB8A
+24780                      VESTITI95POLIESTERE5ELASTAN                                4pz€17.90                          €7160N8IA
+25050-1                      COMPLETI884Acrilico12Nyton                                               3pz€19.50                             €58.50N8A
+27079                          TOP974Polieatre3Spandax                                                         4pz         E8.50-30H                  €2380NSIA
+28011lss                  COMPLETI95POLIESTERE5ELASTAN                             4pz        €8.90                          €3560N8A
+3103488                  GONNE100POLIESTERE                                                  3pz€1250                          €37.50NSA
+3232                       TOP50COTONE50POLIESTRE                                       4pz€11.50                          €46.00N8SIA
+3711315291          COMPLETI95POLIESTERE5KELASTAN                              4pz€14.90                           E59.60N8A
+3800818002               COMPLETI400POLIESTERE                                                       2pz€2150                               €4300NBA
+3808718026             COMPLETI95POLIESTERE54ELASTAN                             6pz€2390                        €14340NBIA
+4292535                     CAMICIE100POLIESTERE                                                        3pzE12.90-30          €27.09N8IA
+55072                TOP95NPOLIESTERE5ELASTAN                                        11pz€1250                           €137.50N8IA
+5563                        TOP95POLIESTERE54ELASTAN                                      10pz        €8.00                           €80.00N8IA
+5706917061        COMPLETI95POLIESTERE5HELASTAN                                6pz€18.90                           €11340NBIA
+57118                     TUTE1009POLIESTERE                                                    3pz€11.90                         €3570NBJA
+5802117130              COMPLET1009POLIESTERE                                                4pz€13.90                           €5560N8A
+5802917130             COMPLETI954POLIESTERE5ELASTAN                              5pz€16.90                          €84.50N8A
+6927          TOPT1100POLIESTERET21007VISCOSA                               9pz         €6.00                              €5400NSA
+7107                        TOP954POLIESTERE54ELASTAN                                       7pz        €6.50                           €4550NBA
+8508                          TOP100POLIESTERE                                                             4pz         €7.90          €3160NSA
+
+87325                   GIACCHE95NPOLIESTERE5ELASTAN                            4pz€13.90                       €5560NB8IA
+
+9484                       GONNE95COTONE5ELASTAN                                      4pz€1450                          €58.00N8A
+
+9638                          TOPT1100POLIESTERET2100VISCOSA                           12pz         €6.00                              €72.00N8IA
+98141TIN                  GONNE100POLIESTERE                                                       5pz        €6.50                            €3250N8IA
+aa2R                          PANTALONI100POLIESTERE                                                  7pz         €9.50                             €66.50N8A
+
+[2025-04-07T17:24:43.902Z] Page 42 - Cleaned OCR Text:
+LLUUILGIFEL.,.HFAAAAAAA
+Tel:sersecocs
+A0462                  MAGLIERIA1009COTONE                :        al 4pz LC e 5.90 TUS EDIT i NBA NE
+AO693                            MAGLIERIA100COTONE                                                                   1pz          €9.50                                    €950NSA
+FIT100286                  T-SHIRT100COTONE             .                                                   1pz         €8.50                                €8.50N8A
+FIT100659                T-SHIRT100COTONE                                                         2pz€6.50                           €13.00N8A
+FIT100667                 T-SHIRT100COTONE                                                            2pz        €8.00                            €16.00NBA
+FIT100684                T-SHIRT100COTONE                                                         2pz        €8.00                           €16.00NSIA
+FIT100732         T-SHIRT100COTONE                                                      2pz        €8.00                         €16.00N8A
+FIT100884                   T-SHIRT100COTONE                                                                 3pz         E8.00                               €2400N8IA
+FIT100940                  T-SHIRT1009COTONE                                                             2pz        €8.00                             €16.00       NSA
+FIiT1400989-         T-SHIRT100COTONE                                                         2pz        €8.00                           €16.00NSIA
+FIT101012                T-SHIRT100COTONE                                                         2pz        E8.00                           €16.00NB8A
+FIT101017               T-SHIRT100COTONE                                                      2pz        €8.00                         €16.00NB8A
+FIT101020                T-SHIRT100COTONE                                                         2pz        €8.00           €16.00NBIA
+FIT101039                  T-SHIRT1009COTONE                                                               3pz         E8.00                              €2400N8A
+FIT101052            T-SHIRT1009COTONE                                                     2pz       €7.50                         €1500N8A
+FIT101073            T-SHIRT100COTONE                          j                           2pz        €38.00                         €16.00NSIA
+FIT101088               T-SHIRT100COTONE                                                      2pz        E8.00                         E16.00NSA
+FIT101091                T-SHIRT100COTONE                                                       6pz        €7.50                          €4500NBA
+FIT101093               T-SHIRT100COTONE                                                      2pz        €7.50                         €1500NB8A
+FIT101150             T-SHIRT100COTONE                                                       4pz        €7.50                          €30.00NB8A
+FIT101206                 T-SHIRT100COTONE                                                            2pz        €6.50                            €13.00N8A
+FIT30244                   T-SHIRT100COTONE                                                            4pz        €6.50                            €2600NBA
+FITV4080                T-SHIRT100COTONE                                                         2pz        €6.90                           €13.80N8A
+FITV4217                   T-SHIRT100COTONE                                                              2pz         €8.00                             €16.00N8A
+FITV4241                  T-SHIRT100COTONE                                                        2pz        €7.50                           €1500NSA
+FITV4262                 T-SHIRT1009COTONE                                                      2pz        €7.50                          €1500NSIA
+FITV4270                 T-SHIRT100COTONE                     ,                                   2pz        €6.50                           €13.00NSA
+
+[2025-04-07T17:24:49.365Z] Page 43 - Cleaned OCR Text:
+ei                                                                                                                                                                                                                                        i
+
+Tel. 547360008
+FITV4305                 T-SHIRT100COTONE                                                       2pz        €7.50                          €15.00N8A
+FITV4308                 T-SHIRT100COTONE                                                       2pz        €7.50                          €1500NA
+FITV4310                 T-SHIRT100COTONE                                                       2pz        €8.00                          €16.00N8JA
+FITV4314                 T-SHIRT100COTONE                                                       2pz        €8.00                          €16.00      NBA
+FITV4317                 T-SHIRT100COTONE                                                       2pz        €8.00                          €16.00      N8A
+MC93,672                 CAMICIE90LYOCELL10Poliestre                                       4pz        €9.90                           €39.60      N8IA
+MD7287                    MAGLIERIA80COTONE20POLIESTERE                            2pz      €16.90                           €33.80      N8IA
+MD7292                       VESTITI100COTONE                                                               3pz       €21.50                             €64.50N8A
+TS906033.           BASIC100COTONE                                                       13pz        €4.90                         €63.70      NSJA
+TS5010097               T-SHIRT100COTONE                                                       2pz        €6.00                          €12.00      N8EiA
+TS5010098              T-SHIRT100COTONE                                                      2pz        €6.00                         €12.00      N8A
+TS5033534               T-SHIRT100COTONE                                                       4pz        €7.00                          €28.00      N8IA
+TS5033589               T-SHIRT100COTONE                                                      6pz        €7.00                         €4200.N8A
+TV0007033               BASIC100COTONE                                                        41pz        €5.90                         €24190N8IA
+V1069                      PANTALONI100LYOCELL                                                  5pz€13.50                          €67.50N8JA
+V6126                      MAGLIERIA100LYOCELL                                                    5pz        €8.90                           €4450NBIA
+V6147-A                   BLUSE100POLIESTERE                                                     4pz        €7.90                           €31.60N8IA
+WD1925                TUTEMistoCotone                                                                   4pz       €25.50                          €102.00N8A
+
+CONTRIBUTOAMBIENTALECONAIASSOLTOOVEDOVUTO                                                         .
+
+[2025-04-07T17:24:51.888Z] Page 44 - Cleaned OCR Text:
+MAGLIA                                                                         90                €4,9                     €405,00N8b
+CAMICIA                                                                              40                  €5,00                       €200,00N8b
+GIACCA                                              j                                     40                   €6,20                        €248,00N8b
+T-SHIRT                                                                         40          €4,00                     €160,00N8b
+CANOTTA                                                                       35                €3,50                     €122,50N8b
+ABITO                                                                              30         L.L€7,00                      €210,00N8b
+MAGLIA                                                                                         58                    €4,74                          €274,92N8b
+ee           :
+iva                .                                                          Imponibile                           imposta                                a.      j
+N8b:Nonimp.art.8c.1lett.bDPR633772                  €1.620,42                         €0,00                 .
+
+[2025-04-07T17:25:22.103Z] Page 45 - Cleaned OCR Text:
+tr         wifL.WFYLFWIS     oteaaEdeTaRnaReelaamyeTAeLphrpeggmcTETeepdm
+ee, Ethan EEL FETE NRCP Ly    EIA ERE  E 00 fri €449:00 dii
+cobERTeTEeeERLRTEINLTagneRnBael0STrehaEpneEnLalBPadsAyNaeaEeRIRGSEERALU
+e     TTEEETEEaEEOTEATIeeIititeooUEieUtaiiaggAi ERTS Sar FORCE LEI
+Fa    oF        AEA     TITERS pT
+i                   li           Lh     .
+                                          110     €7.00  €770.00
+ESITAZIONE  NENT
+i      SEES        ESRI        en      a
+taEIAOOEIEETOeEESaNTITaESIEEEERAi2IAZI package TUETEESTSkatnStaRett
+.         :    a     i    TOM           WTO NATED funerals    LHe
+-PANTALONE: DA-DONNA::: BSA Lhe hittin fbr hms ERE
+ET              A      LI       ,     fiom HTtoelfgleTenndinnCEnlPLTLAtat SENA     ETE
+EIE,rgaeELeERELmEEanTBSleROEULDaGbeReprr    PRaNyShksn,E    i
+i                    eiesaITTmSNTTleDLEde   OEAIEEOPEDEEDAPTHIEEIPERFaEOOEEINORCnTSNTAOOEIANIOICEWERELPOTETotToRNIBEALTINben  iro      ot      i         FavEici,h      L           .
+enSriRD Cen SEA th Shad
+i        RST CEERI LAO NZ ECT TET
+RCRRRHAREEEREPHECRRA    ERSTE
+                    i
+GIUBBOTTODADONNA                                                                                                                                                                   i
+i
+95.€8.001€440.00
+-        i               -
+TrTTTmRanbRaTmeeeimseLLCFemdirmetmerBAATTAASAAAAba TTARSVMmedympheLAAAdmnonmopBAAR1082       pp                                                                                                                                                                 i
+.       Sana
+.
+a:
+SEITEN eeDLTIEOOOkCCENCS                                                           e
+

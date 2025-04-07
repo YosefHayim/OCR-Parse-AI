@@ -9,9 +9,10 @@ export const extractDataFromPngs = async (
 ) => {
   console.log("Extracting data from PNGs...");
 
-  const worker = await createWorker("eng", 1, {
+  const worker = await createWorker(["eng", "ita", "ita_old", "enm"], 1, {
     legacyCore: true,
     legacyLang: true,
+    langPath: "https://tessdata.projectnaptha.com/4.0.0",
   });
 
   await worker.setParameters({
