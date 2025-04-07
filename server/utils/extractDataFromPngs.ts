@@ -43,12 +43,12 @@ export const extractDataFromPngs = async (
       } = await worker.recognize(processedPath);
 
       const quantitiesFound = extractQuantitiesFromText(text);
-      logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
+      // logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
 
       const isAiValidateQuantity = await sendAIImages(
         files[i],
         outputDir,
-        `Page ${i + 1}: ${JSON.stringify(quantitiesFound)}`
+        `extract the total quantity from the png provide list of quantity found ${quantitiesFound}`
       );
 
       logToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}`);
@@ -57,7 +57,7 @@ export const extractDataFromPngs = async (
 
       pages.push({
         page: i + 1,
-        quantitiesFound,
+        quantitiesFound: JSON.stringify(quantitiesFound),
         AIResponse: isAiValidateQuantity,
       });
     }

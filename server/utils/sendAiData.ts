@@ -43,7 +43,7 @@ export const sendAIImages = async (
           content: [
             {
               type: "text",
-              text: `Return true or false with the quantity I found: ${quantityIFound}, against what you extracted and which one is more accurate`,
+              text: quantityIFound,
             },
             {
               type: "image_url",
