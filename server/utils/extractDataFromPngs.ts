@@ -9,10 +9,9 @@ export const extractDataFromPngs = async (
 ) => {
   console.log("Extracting data from PNGs...");
 
-  const worker = await createWorker(["eng", "ita", "ita_old", "enm"], 1, {
+  const worker = await createWorker("eng", 1, {
     legacyCore: true,
     legacyLang: true,
-    langPath: "https://tessdata.projectnaptha.com/4.0.0",
   });
 
   await worker.setParameters({
@@ -29,7 +28,7 @@ export const extractDataFromPngs = async (
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)
-        .resize({ width: 3840, height: 2240 })
+        // .resize({ width: 3840, height: 2240 })
         .rotate()
         .grayscale()
         .normalize()
