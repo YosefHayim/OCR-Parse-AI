@@ -2,6 +2,8 @@ import path from "path";
 import { createWorker } from "tesseract.js";
 import sharp from "sharp";
 import { logToFile } from "./loggerFile";
+import { extractQuantitiesFromText } from "./extractQuantityFromText";
+import { sendAIImages } from "./sendAiData";
 
 export const extractDataFromPngs = async (
   files: string[],
@@ -40,11 +42,20 @@ export const extractDataFromPngs = async (
         data: { text },
       } = await worker.recognize(processedPath);
 
+      const quantitiesFound = extractQuantitiesFromText(text);
       logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
+
+      const isAiValidateQuantity = await sendAIImages(
+        files[i],
+        outputDir,
+        quantitiesFound
+      );
+
+      console.log("AI Response to matching is: ", isAiValidateQuantity);
 
       pages.push({
         page: i + 1,
-        text,
+        quantitiesFound,
       });
     }
   } catch (error) {

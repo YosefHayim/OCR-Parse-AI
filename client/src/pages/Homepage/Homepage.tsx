@@ -186,7 +186,7 @@ const Homepage = () => {
           </div>
         )}
       </div>
-      <div className={`${data ? "relative" : "absolute bottom-0"} w-full`}>
+      <div className={`${data.info ? "relative" : "absolute bottom-0"} w-full`}>
         <Footer />
       </div>
     </div>

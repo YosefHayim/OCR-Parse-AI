@@ -24,49 +24,41 @@ export const sendAIData = async (data) => {
   return r.output_text;
 };
 
-export const sendAIImages = async (filePaths: string[], baseDir = "") => {
-  if (!Array.isArray(filePaths) || filePaths.length === 0) {
-    throw new Error("No image paths provided");
-  }
-
+export const sendAIImages = async (
+  filePath: string,
+  baseDir = "",
+  quantityIFound
+) => {
   console.log("Sending images to AI");
 
-  const results: string[] = [];
+  const imagePath = path.join(baseDir, filePath);
+  try {
+    const base64Image = fs.readFileSync(imagePath, "base64");
 
-  for (const filename of filePaths) {
-    const imagePath = path.join(baseDir, filename);
-    try {
-      const base64Image = fs.readFileSync(imagePath, "base64");
-
-      const completion = await openai.chat.completions.create({
-        model: "gpt-4o-mini",
-        messages: [
-          {
-            role: "user",
-            content: [
-              {
-                type: "text",
-                text: "Extract all readable text from this invoice image.",
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o",
+      messages: [
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: `Return true or false with the quantity I found: ${quantityIFound}, against what you extracted and which one is more accurate`,
+            },
+            {
+              type: "image_url",
+              image_url: {
+                url: `data:image/png;base64,${base64Image}`,
               },
-              {
-                type: "image_url",
-                image_url: {
-                  url: `data:image/png;base64,${base64Image}`,
-                },
-              },
-            ],
-          },
-        ],
-      });
+            },
+          ],
+        },
+      ],
+    });
 
-      const text = completion.choices[0].message.content;
-      console.log(`✅ Processed ${filename}`);
-      results.push(text || "");
-    } catch (err) {
-      console.error(`❌ Error processing ${filename}:`, err.message);
-      results.push("");
-    }
+    const text = completion.choices[0].message.content;
+    return text;
+  } catch (err) {
+    console.error(` Error processing ${filePath}:`, err.message);
   }
-
-  return results;
 };
