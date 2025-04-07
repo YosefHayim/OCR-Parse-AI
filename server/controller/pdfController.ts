@@ -13,11 +13,13 @@ export const pdfExtractor = async (
 ) => {
   try {
     const pdfPath = req.file?.path;
+
     if (!pdfPath) {
       const error = new Error("No PDF file uploaded");
       (error as any).status = 400;
       return next(error);
     }
+
     console.log("PDF file received", req.file.originalname);
 
     const outputDir = path.join("images", Date.now().toString());

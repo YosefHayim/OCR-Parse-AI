@@ -49,8 +49,8 @@ export const extractDataFromPngs = async (
   } catch (error) {
     console.error("Error during OCR:", error);
   } finally {
-    await worker.terminate();
     console.log("Finished OCR for all pages.");
+    await worker.terminate();
     return pages;
   }
 };
