@@ -18,7 +18,7 @@ export const pdfExtractor = async (
       (error as any).status = 400;
       return next(error);
     }
-    console.log("PDF file received");
+    console.log("PDF file received", req.file.originalname);
 
     const outputDir = path.join("images", Date.now().toString());
     fs.mkdirSync(outputDir, { recursive: true });
@@ -29,11 +29,9 @@ export const pdfExtractor = async (
     // console.log(gettingInfoPngsByAI);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    // const arrangingPagesInfo = await sendAIData(
-    //   `Returned back as a nicley formatted list of current page , supplier name if exist,total quantity combined per page, total amount paid per page: ${JSON.stringify(
-    //     gettingInfoPngsByAI
-    //   )}`
-    // );
+    const arrangingPagesInfo = await sendAIData(
+      `Re order this text and find the quantities. ${JSON.stringify(pages)}`
+    );
     // Clean outPutDir folder
     // fs.unlinkSync(pdfPath);
     // fs.rmSync(outputDir, { recursive: true, force: true });
@@ -41,7 +39,7 @@ export const pdfExtractor = async (
     res.json({
       status: 200,
       pages,
-      // info: arrangingPagesInfo,
+      info: arrangingPagesInfo,
     });
   } catch (err) {
     console.error("Error during processing:", err);

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { createWorker } from "tesseract.js";
 import sharp from "sharp";
-import { extractQuantities } from "./extractQuantities";
+import { parseInvoiceLineItems } from "./parseInvoiceLineItems"; // ✅ new util
 
 const logFilePath = path.join(
   process.cwd(),
@@ -21,11 +21,11 @@ export const extractDataFromPngs = async (
   console.log("Extracting data from PNGs...");
 
   const worker = await createWorker(["eng"]);
-
   await worker.setParameters({
     tessedit_char_whitelist:
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789€.,:-",
     preserve_interword_spaces: "1",
+    tessedit_pageseg_mode: "6",
   });
 
   const pages = [];
@@ -35,50 +35,40 @@ export const extractDataFromPngs = async (
       const originalPath = path.join(outputDir, files[i]);
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
-      // Preprocess image: resize, grayscale, normalize, threshold, sharpen
+      // 🧪 Preprocess image for OCR
       await sharp(originalPath)
-        .grayscale() // Remove color noise
-        .normalize() // Normalize brightness and contrast
-        .threshold(128) // Binarize image for better OCR
-        .sharpen() // Enhance edges and characters
+        .rotate()
+        .grayscale()
+        .normalize()
+        .threshold(128)
+        .sharpen()
         .toFile(processedPath);
 
-      // Run OCR on the preprocessed image
       const {
         data: { text },
       } = await worker.recognize(processedPath);
 
-      // const quantities = extractQuantities(text);
-
-      // const totalQuantity = quantities.reduce((sum, item) => {
-      //   return sum + (typeof item.quantity === "number" ? item.quantity : 0);
-      // }, 0);
+      const lineItems = parseInvoiceLineItems(text);
+      const totalAmount = lineItems.reduce((sum, item) => sum + item.total, 0);
 
       logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
       logToFile(
-        `Page ${i + 1} - Extracted Quantities:\n${JSON.stringify(
-          // quantities,
-          null
-          // 2
-        )}`
+        `Page ${i + 1} - Line Items:\n${JSON.stringify(lineItems, null, 2)}`
       );
-      // logToFile(`Page ${i + 1} - Total Quantity: ${totalQuantity}`);
-
-      // console.log(`Quantities on Page ${i + 1}:\n`, quantities);
-      // console.log(`Total Quantity on Page ${i + 1}:`, totalQuantity);
+      logToFile(`Page ${i + 1} - Total Amount: ${totalAmount.toFixed(2)}`);
 
       pages.push({
         page: i + 1,
         text,
-        // quantities,
-        // totalQuantity: Number.isNaN(totalQuantity) ? 0 : totalQuantity,
+        items: lineItems,
+        totalAmount: Number(totalAmount.toFixed(2)),
       });
     }
   } catch (error) {
-    console.error("Error occurred during OCR:", error);
+    console.error("Error during OCR:", error);
   } finally {
-    console.log("Finish extract data from images.");
     await worker.terminate();
+    console.log("Finished OCR for all pages.");
     return pages;
   }
 };
