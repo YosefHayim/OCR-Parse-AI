@@ -114,3 +114,26 @@ BJ71     CANOTTA                                    PZ       4       9,50       
 221101    PANTALONEJEANS                            PZ       d      14,50            58,00N81
 77CO21PL23EA                                 i      oo            EN
 
+[2025-04-07T16:55:17.830Z] Page 5 - Cleaned OCR Text:
+F.CODARTICOLO:. LEE SRGCORARTICOLOfiloe27ehateTi KXRS HQUANTITAPREZZOUNITARIC:78C.5.
+P0474     PANTALONE                                  PZ       5      12,00      60,00N81
+783PL1B3RY43EA
+220102    CAMICIAJEANS                              PZ       4      15,00            60,00NB1
+683C030.5PL1.53EA
+125104    GONNA                                      pz       6      12,50            75,00N81
+764CO223PL25EA
+825115    PANTALONE                                  PZ       8      12,00            96,00N81
+93CO59PL23FA
+518145    GIUBBOTTO                                   PZ       3      17,00            51,00N81
+958C0O53EA
+518145    GIUBBOTTO                                   PZ       3      17,50            52,50N81
+953C0OS53EA
+818171    PANTALONI                                  PZ      11      12,50           137,50N81
+554C0SEA
+G130      GONNA                                       PZ       6      15,00            90,00N81
+l           784PL183RY4YEA
+814136    PANTALONE                                  PZ       6      11,50            69,00N81
+954CC53EA
+823717    PANTALONI                                  PZ       1       8,75             g,75N81
+988CO2EA
+
