@@ -28,6 +28,7 @@ export const extractDataFromPngs = async (
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)
+        .resize({ width: 3840, height: 2240 })
         .rotate()
         .grayscale()
         .normalize()

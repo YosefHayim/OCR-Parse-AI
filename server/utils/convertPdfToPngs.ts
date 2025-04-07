@@ -5,51 +5,34 @@ export const convertPdfToPngs = async (
   pdfPath: string,
   outputDir: string
 ): Promise<void> => {
-  console.log(
-    "Files received, converting PDFs to high-quality PNGs for OCR..."
-  );
+  console.log("Files received, converting PDFs to PNGs...");
 
-  const magickPath = resolveMagickPath()
+  const whichSystemBeingSet = resolveMagickPath()
     .replace(/^cmd:\s*'(.+?)'[\n\r]*$/, "$1")
     .trim();
 
   await new Promise((resolve, reject) => {
     execFile(
-      magickPath,
+      whichSystemBeingSet,
       [
         "convert",
 
-        // High DPI for sharper text rendering
+        // Set input resolution to 300 DPI for better OCR quality
         "-density",
         "300",
 
-        // Use PixelsPerInch to align with DPI
+        // Use pixel units for accurate scaling
         "-units",
         "PixelsPerInch",
 
-        // Anti-aliasing and rendering quality
-        "-quality",
-        "100",
-
-        // Flatten layers to avoid transparency issues
-        "-flatten",
-
-        // Ensure output is grayscale (OCR works better with mono-tone)
+        // Ensure output is in RGB color space
         "-colorspace",
         "Gray",
 
-        // Remove potential noise
-        "-filter",
-        "Triangle",
-        "-resize",
-        "2480x3508", // Approx A4 at 300 DPI
-        "-unsharp",
-        "0x1", // Sharpen to enhance text clarity
-
-        // Source PDF
+        // Source PDF file path
         pdfPath,
 
-        // Output format with one PNG per page
+        // Output PNG file pattern (one per page)
         `${outputDir}/page-%d.png`,
       ],
       (error, stdout, stderr) => {
@@ -57,7 +40,7 @@ export const convertPdfToPngs = async (
           console.error("ImageMagick convert error:", stderr);
           reject(error);
         } else {
-          console.log("PDF converted to high-res PNGs for OCR");
+          console.log("PDF converted to PNGs");
           resolve(true);
         }
       }
