@@ -26,6 +26,7 @@ const Homepage = () => {
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
     onSuccess: (data) => {
+      console.log(data);
       setData(data);
       toast(`${fileName} נמצא בתהליך ניתוח נתונים`);
       setLoading(false);

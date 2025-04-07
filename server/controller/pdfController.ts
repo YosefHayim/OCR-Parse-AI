@@ -28,6 +28,8 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
+    console.log("Total AI Data found: ", pages);
+
     // Clean outPutDir folder
     fs.unlinkSync(pdfPath);
     fs.rmSync(outputDir, { recursive: true, force: true });

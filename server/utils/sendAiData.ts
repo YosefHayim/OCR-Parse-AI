@@ -29,7 +29,7 @@ export const sendAIImages = async (
   baseDir = "",
   quantityIFound
 ) => {
-  console.log("Sending images to AI");
+  console.log("Sending data to AI");
 
   const imagePath = path.join(baseDir, filePath);
   try {

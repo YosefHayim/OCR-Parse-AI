@@ -57,8 +57,7 @@ export const extractDataFromPngs = async (
 
       pages.push({
         page: i + 1,
-        quantitiesFound: JSON.stringify(quantitiesFound),
-        AIResponse: isAiValidateQuantity,
+        text: isAiValidateQuantity,
       });
     }
   } catch (error) {

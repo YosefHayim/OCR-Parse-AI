@@ -1,0 +1,638 @@
+[2025-04-07T23:15:52.139Z] Page 1 - AI Response:
+The quantities found in the document are:
+
+- PZ 2
+- PZ 1
+- PZ 2
+- PZ 2
+- PZ 1
+- PZ 1
+
+To find the total quantity, add them up:
+
+2 + 1 + 2 + 2 + 1 + 1 = 9
+[2025-04-07T23:16:01.364Z] Page 2 - AI Response:
+The quantities listed in the invoice are:
+
+- 1
+- 2
+- 2
+- 2
+- 3
+
+To find the total quantity, add them together:
+
+1 + 2 + 2 + 2 + 3 = 10
+
+The total quantity is 10.
+[2025-04-07T23:16:08.825Z] Page 3 - AI Response:
+The quantities listed in the document are:
+
+- 2
+- 2
+- 3
+- 3
+- 3
+- 2
+
+Total quantity = 15
+[2025-04-07T23:16:17.033Z] Page 4 - AI Response:
+Here’s the list of quantities extracted from the document:
+
+- 2
+- 3
+- 2
+- 3
+- 3
+- 4
+- 2
+
+Let me know if you need anything else!
+[2025-04-07T23:16:25.533Z] Page 5 - AI Response:
+From the provided list, here are the quantities found:
+
+1. AMX-B02908: 2
+2. AMX-B0401: 1
+3. AMX-B0403: 1
+4. AMX-B0560: 3
+5. AMX-B0980: 2
+6. AMX-CAS100: 5
+
+Total Quantity: 14
+[2025-04-07T23:16:36.180Z] Page 6 - AI Response:
+The quantities listed in the document are as follows:
+
+- 3
+- 3
+- 9
+- 3
+- 6
+- 9
+- 3
+- 2
+
+To find the total quantity, simply add these numbers up:
+
+3 + 3 + 9 + 3 + 6 + 9 + 3 + 2 = 38
+
+The total quantity is 38.
+[2025-04-07T23:16:41.505Z] Page 7 - AI Response:
+The total quantity listed on the document is "2".
+[2025-04-07T23:16:55.747Z] Page 8 - AI Response:
+The quantities found in the list are as follows:
+
+- 6
+- 4
+- 6
+- 4
+- 4
+- 5
+- 7
+- 3
+- 5
+- 3
+- 5
+
+To find the total quantity, add these numbers:
+
+6 + 4 + 6 + 4 + 4 + 5 + 7 + 3 + 5 + 3 + 5 = 52
+
+The total quantity is 52.
+[2025-04-07T23:17:03.895Z] Page 9 - AI Response:
+Here are the quantities found in the list:
+
+- 46 pz
+- 42 pz
+- 7 pz
+- 4 pz
+- 8 pz
+- 6 pz
+- 3 pz
+- 7 pz
+- 6 pz
+- 11 pz
+- 6 pz
+- 4 pz
+- 4 pz
+
+Total quantity: 154 pz
+[2025-04-07T23:17:13.898Z] Page 10 - AI Response:
+The list of quantities found in the image is:
+
+- 1 pz
+- 4 pz
+- 5 pz
+- 7 pz
+- 8 pz
+- 6 pz
+- 4 pz
+- 4 pz
+- 4 pz
+- 6 pz
+- 6 pz
+- 2 pz
+- 2 pz
+- 1 pz
+
+To calculate the total quantity, add them up:
+
+1 + 4 + 5 + 7 + 8 + 6 + 4 + 4 + 4 + 6 + 6 + 2 + 2 + 1 = 60 pz
+
+The total quantity is 60 pz.
+[2025-04-07T23:17:23.080Z] Page 11 - AI Response:
+The quantities found on the invoice are:
+
+- 3 pz
+- 4 pz
+- 7 pz
+- 7 pz
+- 3 pz
+- 3 pz
+- 8 pz
+- 12 pz
+- 3 pz
+- 3 pz
+- 7 pz
+- 4 pz
+- 3 pz
+- 4 pz
+- 4 pz
+- 3 pz
+
+Total quantity: 157 pz
+[2025-04-07T23:17:27.890Z] Page 12 - AI Response:
+The total quantity found is 184 pieces.
+[2025-04-07T23:17:34.248Z] Page 13 - AI Response:
+Here's the list of quantities found in the document:
+
+- 8pz
+- 7pz
+- 14pz
+- 12pz
+- 12pz
+- 2pz
+- 2pz
+- 12pz
+- 15pz
+- 8pz
+- 5pz
+- 3pz
+- 5pz
+- 6pz
+
+Note: "pz" stands for "pezzi," which means "pieces" in Italian.
+[2025-04-07T23:17:42.845Z] Page 14 - AI Response:
+The total quantity found in the list is 120 pieces.
+[2025-04-07T23:17:48.672Z] Page 15 - AI Response:
+The quantities from the list in the image are:
+
+- CAMICIA: 14 pz
+- VESTITO: 3 pz
+- GONNA: 6 pz
+- VESTITO: 6 pz
+- VESTITO: 4 pz
+- PANTALONE: 3 pz
+- VESTITO: 4 pz
+
+Total quantity: 40 pz
+[2025-04-07T23:17:57.040Z] Page 16 - AI Response:
+Here is the list of quantities found in the document:
+
+- 4 pz
+- 2 pz
+- 2 pz
+- 4 pz
+- 2 pz
+- 3 pz
+- 3 pz
+- 2 pz
+- 1 pz
+- 2 pz
+- 7 pz
+- 2 pz
+- 2 pz
+- 3 pz
+- 4 pz
+
+The total quantity is 43 pz.
+[2025-04-07T23:18:03.497Z] Page 17 - AI Response:
+The total quantity listed is **76 pieces** (Tot.: 76 pz).
+[2025-04-07T23:18:10.255Z] Page 18 - AI Response:
+The list of quantities found in the document is as follows:
+
+- 8
+- 4
+- 1
+- 8
+- 8
+- 8
+- 2
+- 4
+- 4
+- 4
+
+The total quantity is 51.
+[2025-04-07T23:18:17.657Z] Page 19 - AI Response:
+The list of quantities found in the document is as follows:
+
+- Quantity for S25-C838GL: 2
+- Quantity for S25-C950GL: 1
+- Quantity for S25-C800CL: 4
+- Quantity for S25-C956CL: 2
+- Quantity for S25-A776GL: 2
+- Quantity for S25-C969GL: 2
+
+These are the quantities listed for each item in the invoice.
+[2025-04-07T23:18:29.024Z] Page 20 - AI Response:
+Here is the list of quantities found:
+
+1. 1
+2. 1
+3. 1
+4. 1
+5. 1
+6. 1
+7. 1
+8. 1
+9. 2
+10. 2
+11. 2
+12. 2
+13. 2
+14. 2
+15. 1
+
+Total quantity: 20
+[2025-04-07T23:18:41.721Z] Page 21 - AI Response:
+Here are the quantities from the list:
+
+1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1.
+
+To get the total quantity, sum them up:
+
+1 + 2 + 2 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 = 24
+
+Total quantity: 24
+[2025-04-07T23:18:53.819Z] Page 22 - AI Response:
+Here is the list of quantities found in the document:
+
+- 1
+- 1
+- 1
+- 1
+- 1
+- 1
+- 1
+- 2
+- 2
+- 2
+- 1
+- 1
+- 1
+- 4
+- 2
+- 2
+- 1
+
+To find the total quantity, sum all these numbers:
+
+1 + 1 + 1 + 1 + 1 + 1 + 1 + 2 + 2 + 2 + 1 + 1 + 1 + 4 + 2 + 2 + 1 = 24
+
+Thus, the total quantity is 24.
+[2025-04-07T23:19:03.123Z] Page 23 - AI Response:
+The list of quantities found on the invoice is:
+
+- 2
+- 1
+- 1
+- 1
+- 1
+- 1
+- 1
+- 2
+- 2
+- 3
+- 2
+
+The total quantity is 17.
+[2025-04-07T23:19:13.927Z] Page 24 - AI Response:
+Here is a list of the quantities found in the document:
+
+1. 1,000
+2. 2,000
+3. 1,000
+4. 4,000
+5. 2,000
+6. 5,000
+7. 4,000
+8. 4,000
+9. 3,000
+10. 4,000
+11. 1,000
+12. 1,000
+13. 2,000
+14. 3,000
+15. 2,000
+16. 4,000
+17. 2,000
+18. 2,000
+19. 3,000
+[2025-04-07T23:19:24.087Z] Page 25 - AI Response:
+The total quantities found in the list are:
+
+- 2,000
+- 1,000
+- 3,000
+- 2,000
+- 2,000
+- 1,000
+- 3,000
+- 1,000
+- 4,000
+- 3,000
+- 4,000
+- 2,000
+- 4,000
+- 3,000
+- 5,000
+- 1,000
+- 1,000
+- 1,000
+- 4,000
+- 2,000
+- 3,000
+- 3,000
+- 2,000
+[2025-04-07T23:19:31.295Z] Page 26 - AI Response:
+Here's a list of quantities found in the image:
+
+1. 5,000
+2. 2,000
+3. 2,000
+4. 4,000
+5. 5,000
+
+Please let me know if you need anything else!
+[2025-04-07T23:19:40.710Z] Page 27 - AI Response:
+From the image, the quantities listed in the "QUANTITY" column are:
+
+1. 1
+2. 1
+3. 1
+4. 3
+5. 10
+6. 51
+7. 40
+8. 25
+9. 12
+10. 12
+11. 10
+12. 15
+13. 8
+14. 10
+
+Total Quantity is the sum of all these numbers: 199.
+[2025-04-07T23:19:48.983Z] Page 28 - AI Response:
+The total quantity found on the document is **123.00**.
+[2025-04-07T23:19:58.672Z] Page 29 - AI Response:
+Here are the quantities found in the document:
+
+- Quantity: 4
+- Quantity: 3
+- Quantity: 2
+- Quantity: 3
+- Quantity: 3
+- Quantity: 2
+
+Total Quantity: 17
+[2025-04-07T23:20:14.766Z] Page 30 - AI Response:
+The quantities listed in the document are:
+
+- 2.00
+- 2.00
+- 2.00
+- 6.00
+- 6.00
+- 3.00
+[2025-04-07T23:20:24.281Z] Page 31 - AI Response:
+Here is the list of quantities found in the document:
+
+1. 1,00
+2. 1,00
+3. 1,00
+4. 1,00
+5. 2,00
+
+These quantities correspond to the entries listed in the document.
+[2025-04-07T23:20:33.979Z] Page 32 - AI Response:
+Here's a list of the quantities found in the document:
+
+1. Quantity: 2.00
+2. Quantity: 1.00
+3. Quantity: 2.00
+4. Quantity: 1.00
+5. Quantity: 4.00
+
+Total Quantity: 10.00
+[2025-04-07T23:20:42.448Z] Page 33 - AI Response:
+The quantities listed in the document are as follows:
+
+- 4.00
+- 5.00
+- 2.00
+- 1.00
+- 2.00
+
+Total Quantity: 14.00
+[2025-04-07T23:20:56.069Z] Page 34 - AI Response:
+The list shows the total quantity as **35,000**.
+[2025-04-07T23:21:04.178Z] Page 35 - AI Response:
+The total quantities listed are:
+
+- 2
+- 4
+- 2
+- 2
+- 4
+- 2
+- 2
+- 5
+- 4
+- 1
+- 5
+- 6
+- 2
+- 2
+
+These are the quantities for each item.
+[2025-04-07T23:21:13.594Z] Page 36 - AI Response:
+Here is the list of quantities found in the document:
+
+- 2
+- 2
+- 4
+- 4
+- 2
+- 2
+- 6
+- 3
+- 3
+- 3
+- 3
+- 3
+- 2
+- 10
+- 4
+
+To find the total quantity, add these numbers up:
+
+2 + 2 + 4 + 4 + 2 + 2 + 6 + 3 + 3 + 3 + 3 + 3 + 2 + 10 + 4 = 51
+
+The total quantity is 51.
+[2025-04-07T23:21:19.911Z] Page 37 - AI Response:
+The total quantity listed on the document is 55.
+[2025-04-07T23:21:27.173Z] Page 38 - AI Response:
+The quantities found in the document are:
+
+- Pantaloni: 2
+- Giacca: 2
+- Giubbotto: 2
+
+The total quantity is the sum of these, which is 6.
+[2025-04-07T23:21:33.441Z] Page 39 - AI Response:
+The total quantity found in the document is 7.
+[2025-04-07T23:21:38.988Z] Page 40 - AI Response:
+The total quantity found in the list is 124.
+[2025-04-07T23:21:49.241Z] Page 41 - AI Response:
+The quantities listed are:
+
+- 4 pz
+- 9 pz
+- 3 pz
+- 4 pz
+- 3 pz
+- 4 pz
+- 4 pz
+- 3 pz
+- 4 pz
+- 2 pz
+- 6 pz
+- 3 pz
+- 11 pz
+- 10 pz
+- 6 pz
+- 3 pz
+- 4 pz
+- 5 pz
+- 9 pz
+- 7 pz
+- 4 pz
+- 4 pz
+- 4 pz
+- 12 pz
+- 5 pz
+- 7 pz
+
+The total quantity is 144 pz.
+[2025-04-07T23:21:58.681Z] Page 42 - AI Response:
+The list of quantities found in the invoice are as follows:
+
+- 4 pz
+- 1 pz
+- 1 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 3 pz
+- 3 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 4 pz
+- 2 pz
+- 4 pz
+- 2 pz
+- 4 pz
+- 2 pz
+- 2 pz
+- 2 pz
+- 2 pz
+
+Total quantity: 59 pz
+[2025-04-07T23:22:06.517Z] Page 43 - AI Response:
+The quantities found in the document are as follows:
+
+1. 2 pz
+2. 2 pz
+3. 2 pz
+4. 2 pz
+5. 2 pz
+6. 4 pz
+7. 2 pz
+8. 3 pz
+9. 13 pz
+10. 2 pz
+11. 2 pz
+12. 4 pz
+13. 6 pz
+14. 41 pz
+15. 5 pz
+16. 5 pz
+17. 4 pz
+18. 4 pz
+
+The total quantity is: 313 pz
+[2025-04-07T23:22:13.654Z] Page 44 - AI Response:
+The list of quantities found in the document are as follows:
+
+- MAGLIA: 90
+- CAMICIA: 40
+- GIACCA: 40
+- T-SHIRT: 40
+- CANOTTA: 35
+- ABITO: 30
+- MAGLIA: 58
+[2025-04-07T23:22:20.108Z] Page 45 - AI Response:
+The quantities found in the invoice are:
+
+- CAMICIA DA DONNA: 88
+- VESTITO DA DONNA: 110
+- PANTALONE DA DONNA: 45
+- GIUBBOTTO DA DONNA: 55
+
+Total Quantity: 298
+[2025-04-07T23:22:28.224Z] Page 46 - AI Response:
+The quantities listed in the document are as follows:
+
+1. 7
+2. 10
+3. 2
+4. 2
+5. 4
+6. 6
+7. 2
+8. 4
+9. 4
+10. 4
+11. 14
+12. 2
+13. 3
+14. 1
+15. 6
+16. 1
+17. 1
+18. 4
+19. 8
+20. 5
+21. 7
+22. 2
+23. 9
+
+Total Quantity: 108
