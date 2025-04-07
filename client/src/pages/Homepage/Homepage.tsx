@@ -125,7 +125,7 @@ const Homepage = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-4">
-                    {data.info && (
+                    {data && (
                       <Button
                         className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
                         onClick={handleReset}
@@ -164,11 +164,11 @@ const Homepage = () => {
                 </div>
                 <div
                   ref={copyTextRef}
-                  className={`${data.info && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
+                  className={`${data && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
                 >
-                  {data.info &&
-                    data.info
-                      .split(/\*\*(?:Page|עמוד) \d+:\*\*/g)
+                  {data &&
+                    data
+                      .split(/\*\*(?:Page|עמוד|png|image|תמונה) \d+:\*\*/g)
                       .filter((block) => block.trim() !== "")
                       .map((block, index) => (
                         <div key={index}>
