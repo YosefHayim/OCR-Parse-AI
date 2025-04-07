@@ -3,7 +3,7 @@ import path from "path";
 
 const logFilePath = path.join(
   process.cwd(),
-  `ocr-log-${new Date().getTime()}.txt`
+  `./logs/ocr-log-${new Date().getTime()}.txt`
 );
 
 export const logToFile = (message: string) => {
