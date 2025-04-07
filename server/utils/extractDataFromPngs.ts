@@ -1,5 +1,5 @@
 import path from "path";
-import { createWorker, PSM } from "tesseract.js";
+import { createWorker } from "tesseract.js";
 import sharp from "sharp";
 import { logToFile } from "./loggerFile";
 
@@ -31,7 +31,7 @@ export const extractDataFromPngs = async (
         .rotate()
         .grayscale()
         .normalize()
-        .threshold(128)
+        .threshold()
         .sharpen()
         .toFile(processedPath);
 

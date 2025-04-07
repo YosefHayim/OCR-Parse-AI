@@ -18,7 +18,7 @@ export const convertPdfToPngs = async (
 
         // Set input resolution to 300 DPI for better OCR quality
         "-density",
-        "300",
+        "200",
 
         // Use pixel units for accurate scaling
         "-units",
