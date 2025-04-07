@@ -4,6 +4,7 @@ import { convertPdfToPngs } from "../utils/convertPdfToPngs";
 import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
+import { sendAIData } from "../utils/sendAiData";
 
 export const pdfExtractor = async (
   req: Request,

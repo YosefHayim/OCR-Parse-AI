@@ -26,14 +26,18 @@ export const sendAIData = async (data) => {
 
 export const sendAIImages = async (
   filePath: string,
-  baseDir = "",
+  baseDir,
   quantityIFound
 ) => {
   console.log("Sending data to AI");
 
   const imagePath = path.join(baseDir, filePath);
+  let base64Image;
+
   try {
-    const base64Image = fs.readFileSync(imagePath, "base64");
+    if (baseDir) {
+      base64Image = fs.readFileSync(imagePath, "base64");
+    }
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o",
