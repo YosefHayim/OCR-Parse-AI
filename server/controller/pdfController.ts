@@ -5,6 +5,7 @@ import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
 import { sendAIData, sendAIImages } from "../utils/sendAiData";
+import { convertPdfToTiffs } from "../utils/convertPdfToTiffs";
 
 export const pdfExtractor = async (
   req: Request,
@@ -25,13 +26,8 @@ export const pdfExtractor = async (
 
     await convertPdfToPngs(pdfPath, outputDir);
     const files = sortFileswithinOutputDir(outputDir);
-    // const gettingInfoPngsByAI = await sendAIImages(files, outputDir);
-    // console.log(gettingInfoPngsByAI);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    const arrangingPagesInfo = await sendAIData(
-      `Re order this text and find the quantities. ${JSON.stringify(pages)}`
-    );
     // Clean outPutDir folder
     // fs.unlinkSync(pdfPath);
     // fs.rmSync(outputDir, { recursive: true, force: true });
@@ -39,7 +35,6 @@ export const pdfExtractor = async (
     res.json({
       status: 200,
       pages,
-      info: arrangingPagesInfo,
     });
   } catch (err) {
     console.error("Error during processing:", err);

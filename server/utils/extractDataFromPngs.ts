@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { createWorker } from "tesseract.js";
 import sharp from "sharp";
-import { parseInvoiceLineItems } from "./parseInvoiceLineItems"; // ✅ new util
 
 const logFilePath = path.join(
   process.cwd(),
@@ -35,7 +34,6 @@ export const extractDataFromPngs = async (
       const originalPath = path.join(outputDir, files[i]);
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
-      // 🧪 Preprocess image for OCR
       await sharp(originalPath)
         .rotate()
         .grayscale()
@@ -48,20 +46,11 @@ export const extractDataFromPngs = async (
         data: { text },
       } = await worker.recognize(processedPath);
 
-      const lineItems = parseInvoiceLineItems(text);
-      const totalAmount = lineItems.reduce((sum, item) => sum + item.total, 0);
-
       logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
-      logToFile(
-        `Page ${i + 1} - Line Items:\n${JSON.stringify(lineItems, null, 2)}`
-      );
-      logToFile(`Page ${i + 1} - Total Amount: ${totalAmount.toFixed(2)}`);
 
       pages.push({
         page: i + 1,
         text,
-        items: lineItems,
-        totalAmount: Number(totalAmount.toFixed(2)),
       });
     }
   } catch (error) {
