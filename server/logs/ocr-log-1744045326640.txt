@@ -1,4 +1,4 @@
-[2025-04-07T16:55:09.702Z] Page 1 - Cleaned OCR Text:
+[2025-04-07T17:02:14.800Z] Page 1 - Cleaned OCR Text:
 FRSnsInRY                                                                          Banca          AblU3UbY-CAB:21524-IntesaSanPaolo-IntesaSanPaolo-FilialePiDatadocumento
 Bonificobancario                                            IBAN:IT17Q0306921524100000002225-BIC:BCGITITMMXXX                   2410312025
    aunnspaaohssomewporoa
@@ -25,7 +25,7 @@ Porto                                Aspettoesterloredelbeni  Firmadeldestinatar
 Vettori
 RagionesGeicleeindirizzo                                                                                                            Dataeoradelritiro                              Firmadelvettore
 
-[2025-04-07T16:55:12.810Z] Page 2 - Cleaned OCR Text:
+[2025-04-07T17:02:17.902Z] Page 2 - Cleaned OCR Text:
 Emr
 CodicesDesatizionewiie.rthQuantitaPrezsowSc.iImporoCIVA
 00000                      MAGLIAICLOTHES90viscosa10nylon                       5pz.€550€2750N8A
@@ -58,7 +58,7 @@ CodicesDesatizionewiie.rthQuantitaPrezsowSc.iImporoCIVA
 00000                     PANTALONVTROUSERS70viscosa309lino                         4pz        €9,50                         €38,00      N8IA
 FaTalatalal                     COAKRITALMMAIIITDICEOCO707vmarerndD307onsalmoes                          fv        FalllnlaTa                         Fadhol-3EaTa      ROTA
 
-[2025-04-07T16:55:14.528Z] Page 3 - Cleaned OCR Text:
+[2025-04-07T17:02:19.482Z] Page 3 - Cleaned OCR Text:
 AWAVVELiarlBwlWArAYAFATYATATAYAY                                                                                                                            1
 Codice..Deserizionewn.,-i5QuantitaPfezioSc.iImporfoCIVA-
 00000                   VESTITIDRESSEST1:100poliestereT2:100rayon                2pz      €15,50                       €31,00     N8IA
@@ -75,7 +75,7 @@ BEY                  WEDONOTACCEPTRETURNSAFTER30DAYSISSUEOFINVOICE
                                                                      LA MERCE NONEDIORIGINE            Co
 PREFERENZIALEITAt14M         EK
 
-[2025-04-07T16:55:16.541Z] Page 4 - Cleaned OCR Text:
+[2025-04-07T17:02:21.377Z] Page 4 - Cleaned OCR Text:
 EWEEEIETNyECE
 esssDirevieeeeeeeen
  Ta
@@ -114,7 +114,7 @@ BJ71     CANOTTA                                    PZ       4       9,50       
 221101    PANTALONEJEANS                            PZ       d      14,50            58,00N81
 77CO21PL23EA                                 i      oo            EN
 
-[2025-04-07T16:55:17.830Z] Page 5 - Cleaned OCR Text:
+[2025-04-07T17:02:22.577Z] Page 5 - Cleaned OCR Text:
 F.CODARTICOLO:. LEE SRGCORARTICOLOfiloe27ehateTi KXRS HQUANTITAPREZZOUNITARIC:78C.5.
 P0474     PANTALONE                                  PZ       5      12,00      60,00N81
 783PL1B3RY43EA

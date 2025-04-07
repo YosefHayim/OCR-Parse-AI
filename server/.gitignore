@@ -1,7 +1,8 @@
 node_modules
 .env
-./images
-./uploads
+images
+uploads
+filesSuccessfullyPassed
 
 # Ignore common image types
 *.png
