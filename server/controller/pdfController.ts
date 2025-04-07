@@ -40,6 +40,7 @@ export const pdfExtractor = async (
 
     res.json({
       status: 200,
+      pages,
       // info: arrangingPagesInfo,
     });
   } catch (err) {

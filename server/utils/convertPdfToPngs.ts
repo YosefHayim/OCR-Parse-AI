@@ -5,7 +5,7 @@ export const convertPdfToPngs = async (
   pdfPath: string,
   outputDir: string
 ): Promise<void> => {
-  console.log("Files received, converting PDFs to PNGs...");
+  console.log("Files received, converting PDFs to OCR-optimized PNGs...");
   const whichSystemBeingSet = resolveMagickPath()
     .replace(/^cmd:\s*'(.+?)'[\n\r]*$/, "$1")
     .trim();
@@ -16,40 +16,41 @@ export const convertPdfToPngs = async (
       [
         "convert",
 
-        // Set input resolution to 300 DPI for better OCR quality
+        // High DPI = better text quality
         "-density",
-        "300",
+        "400",
 
-        // Use pixel units for accurate scaling
+        // Set pixel unit
         "-units",
         "PixelsPerInch",
 
-        // Ensure output is in RGB color space
+        // Convert to grayscale (improves OCR clarity)
         "-colorspace",
-        "RGB",
+        "Gray",
 
-        // Source PDF file path
+        // Remove transparency
+        "-alpha",
+        "remove",
+        "-strip",
+
+        // Enhance contrast and sharpness
+        "-contrast",
+        "-contrast-stretch",
+        "0", // normalize light/dark range
+        "-sharpen",
+        "0x1.0",
+
+        // Background white
+        "-background",
+        "white",
+        "-flatten",
+
+        // Optional: auto-orient in case of rotated scans
+        "-auto-orient",
+
         pdfPath,
 
-        // Resize to fit within A4 canvas (3420x2214 pixels)
-        // "-resize",
-        // "3420x2214",
-
-        // Center the resized content on the canvas
-        "-gravity",
-        "center",
-
-        // Strip transparency for better contrast
-        // "-alpha",
-        // "remove",
-        "-alpha",
-        "off",
-
-        // Fill background with white if padding is added
-        // "-background",
-        // "white",
-
-        // Output PNG file pattern (one per page)
+        // Output
         `${outputDir}/page-%d.png`,
       ],
       (error, stdout, stderr) => {
@@ -57,7 +58,7 @@ export const convertPdfToPngs = async (
           console.error("ImageMagick convert error:", stderr);
           reject(error);
         } else {
-          console.log("PDF converted to PNGs");
+          console.log("PDF successfully converted to OCR-optimized PNGs.");
           resolve(true);
         }
       }

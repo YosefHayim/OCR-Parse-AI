@@ -48,30 +48,30 @@ export const extractDataFromPngs = async (
         data: { text },
       } = await worker.recognize(processedPath);
 
-      const quantities = extractQuantities(text);
+      // const quantities = extractQuantities(text);
 
-      const totalQuantity = quantities.reduce((sum, item) => {
-        return sum + (typeof item.quantity === "number" ? item.quantity : 0);
-      }, 0);
+      // const totalQuantity = quantities.reduce((sum, item) => {
+      //   return sum + (typeof item.quantity === "number" ? item.quantity : 0);
+      // }, 0);
 
       logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
       logToFile(
         `Page ${i + 1} - Extracted Quantities:\n${JSON.stringify(
-          quantities,
-          null,
-          2
+          // quantities,
+          null
+          // 2
         )}`
       );
-      logToFile(`Page ${i + 1} - Total Quantity: ${totalQuantity}`);
+      // logToFile(`Page ${i + 1} - Total Quantity: ${totalQuantity}`);
 
-      console.log(`Quantities on Page ${i + 1}:\n`, quantities);
-      console.log(`Total Quantity on Page ${i + 1}:`, totalQuantity);
+      // console.log(`Quantities on Page ${i + 1}:\n`, quantities);
+      // console.log(`Total Quantity on Page ${i + 1}:`, totalQuantity);
 
       pages.push({
         page: i + 1,
         text,
-        quantities,
-        totalQuantity: Number.isNaN(totalQuantity) ? 0 : totalQuantity,
+        // quantities,
+        // totalQuantity: Number.isNaN(totalQuantity) ? 0 : totalQuantity,
       });
     }
   } catch (error) {
