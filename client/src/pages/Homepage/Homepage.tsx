@@ -88,7 +88,7 @@ const Homepage = () => {
         <Toaster position="top-center" />
         {isLoading ? (
           <div className="flex w-full flex-col items-center justify-center gap-4 p-10">
-            <p className="font-bold">מעבד נתונים</p>
+            <p className="font-bold">מעבד נתונים לקובץ {fileName}</p>
             <Loader />
           </div>
         ) : (
