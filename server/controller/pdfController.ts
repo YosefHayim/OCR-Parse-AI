@@ -26,17 +26,17 @@ export const pdfExtractor = async (
 
     await convertPdfToPngs(pdfPath, outputDir);
     const files = sortFileswithinOutputDir(outputDir);
-    const dataFound = await extractDataFromPngs(files, outputDir);
+    const info = await extractDataFromPngs(files, outputDir);
 
     // Clean outPutDir folder
     fs.unlinkSync(pdfPath);
     fs.rmSync(outputDir, { recursive: true, force: true });
 
-    console.log("Total quantity found on entire PDF: ", dataFound);
+    console.log("Total quantity found on entire PDF: ", info);
 
     res.json({
       status: 200,
-      info: dataFound,
+      info,
     });
   } catch (err) {
     console.error("Error during processing:", err);

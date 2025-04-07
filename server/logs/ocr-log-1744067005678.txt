@@ -1,0 +1,181 @@
+[2025-04-07T23:03:56.615Z] Page 1 - AI Response:
+Here's the list of quantities found in the invoice:
+
+- 119 pezzi
+- 119 pezzi
+- 197 pezzi
+- 198 pezzi
+- 137 pezzi
+- 137 pezzi
+- 192 pezzi
+- 174 pezzi
+- 160 pezzi
+- 155 pezzi
+- 160 pezzi
+- 161 pezzi
+[2025-04-07T23:04:03.492Z] Page 2 - AI Response:
+The quantities listed on the document are as follows:
+
+- 140 pcs
+- 72 pcs
+- 123 pcs
+- 55 pcs
+- 75 pcs
+- 119 pcs
+- 70 pcs
+- 124 pcs
+- 100 pcs
+- 130 pcs
+- 109 pcs
+
+The total quantity is 1117 pcs.
+[2025-04-07T23:04:08.150Z] Page 3 - AI Response:
+The invoice lists two quantities of products:
+
+1. Quantity 1: 204
+2. Quantity 2: 204
+
+Total quantity = 204 + 204 = 408
+[2025-04-07T23:04:13.537Z] Page 4 - AI Response:
+The quantities found in the list are:
+
+- Skirt 100 Cotton: 190
+- Top 70 Viscosa 30 Seta: 120
+[2025-04-07T23:04:19.191Z] Page 5 - AI Response:
+The quantities listed in the document are:
+
+- 90 pezzi
+- 120 pezzi
+- 90 pezzi
+- 180 pezzi
+- 112 pezzi
+
+To calculate the total quantity:
+
+90 + 120 + 90 + 180 + 112 = 592 pezzi
+
+The total quantity is 592 pezzi.
+[2025-04-07T23:04:26.226Z] Page 6 - AI Response:
+The quantities listed in the document are:
+
+- Giacca: 50
+- T-Shirt: 69
+- Maglia: 100
+- T-Shirt: 74
+- Camicia: 49
+- Pantalone: 76
+
+Total Quantity: 418
+[2025-04-07T23:04:33.061Z] Page 7 - AI Response:
+Here are the quantities found in the list:
+
+- 153
+- 181
+- 108
+- 194
+- 60
+- 120
+- 120
+- 102
+- 80
+- 101
+
+The total quantity is 1219.
+[2025-04-07T23:04:39.616Z] Page 8 - AI Response:
+The quantities found in the document are:
+
+- 84
+- 60
+- 60
+- 100
+
+Total Quantity: **304**
+[2025-04-07T23:04:47.956Z] Page 9 - AI Response:
+The total quantity of items listed in the document is as follows:
+
+1. 50 pieces
+2. 100 pieces
+3. 99 pieces
+4. 99 pieces
+5. 30 pieces
+6. 20 pieces
+7. 40 pieces
+8. 20 pieces
+9. 190 pieces
+10. 160 pieces
+11. 20 pieces
+12. 2 pieces
+13. 30 pieces
+
+Total: 860 pieces
+[2025-04-07T23:04:58.081Z] Page 10 - AI Response:
+Here is the list of quantities from the document:
+
+- 78
+- 78
+- 60
+- 72
+- 75
+- 60
+- 59
+- 60
+- 118
+- 50
+
+Let me know if you need anything else!
+[2025-04-07T23:05:03.986Z] Page 11 - AI Response:
+The quantities found in the document are:
+
+- PANTALONI: 240
+- PANTALONI*: 120
+
+The total quantity is 360.
+[2025-04-07T23:05:09.215Z] Page 12 - AI Response:
+The total quantity found in the invoice is 220 pezzi.
+[2025-04-07T23:05:14.224Z] Page 13 - AI Response:
+The quantities found in the document are:
+
+- MAGLIA ART32980: 199,00
+- MAGLIA ART32488: 118,00
+- MAGLIA ART32869: 161,00
+[2025-04-07T23:05:19.039Z] Page 14 - AI Response:
+The quantities listed on the invoice are:
+
+- 245 pezzi
+- 102 pezzi
+- 91 pezzi
+
+Total quantity: 438 pezzi
+[2025-04-07T23:05:30.813Z] Page 15 - AI Response:
+The quantities listed in the document are:
+
+- 61 PZ
+- 79 PZ
+- 197 PZ
+- 88 PZ
+
+To get the total quantity, add them up:
+
+61 + 79 + 197 + 88 = 425 PZ
+
+Total quantity: 425 PZ.
+[2025-04-07T23:05:37.371Z] Page 16 - AI Response:
+Based on the provided image, the quantities (Quantità) are as follows:
+
+- MAGLIE: 200
+- PANTALONI: 200
+- PANTALONI: 120
+- MAGLIE: 120
+- ABITI: 200
+
+Total Quantity: 200 + 200 + 120 + 120 + 200 = 840
+[2025-04-07T23:05:45.642Z] Page 17 - AI Response:
+The list of quantities found in the provided document are:
+
+- 155,000
+- 52,000
+- 122,000
+- 80,000
+- 138,000
+
+These quantities appear to be associated with different items listed in the invoice.
