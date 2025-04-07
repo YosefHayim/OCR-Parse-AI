@@ -1,17 +1,7 @@
-import fs from "fs";
 import path from "path";
-import { createWorker } from "tesseract.js";
+import { createWorker, PSM } from "tesseract.js";
 import sharp from "sharp";
-
-const logFilePath = path.join(
-  process.cwd(),
-  `ocr-log-${new Date().toJSON().slice(0, 10)}.txt`
-);
-
-const logToFile = (message: string) => {
-  const timestamp = new Date().toISOString();
-  fs.appendFileSync(logFilePath, `[${timestamp}] ${message}\n`);
-};
+import { logToFile } from "./loggerFile";
 
 export const extractDataFromPngs = async (
   files: string[],
@@ -19,12 +9,16 @@ export const extractDataFromPngs = async (
 ) => {
   console.log("Extracting data from PNGs...");
 
-  const worker = await createWorker(["eng"]);
+  const worker = await createWorker("eng", 1, {
+    legacyCore: true,
+    legacyLang: true,
+  });
+
   await worker.setParameters({
     tessedit_char_whitelist:
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789€.,:-",
     preserve_interword_spaces: "1",
-    tessedit_pageseg_mode: "6",
+    tessedit_pageseg_mode: PSM.OSD_ONLY,
   });
 
   const pages = [];
@@ -35,6 +29,7 @@ export const extractDataFromPngs = async (
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)
+        .resize({ width: 3508, height: 2480 })
         .rotate()
         .grayscale()
         .normalize()
