@@ -32,8 +32,8 @@ export const convertPdfToPngs = async (
         pdfPath,
 
         // Resize to fit within A4 canvas (3420x2214 pixels)
-        "-resize",
-        "2480x3508",
+        // "-resize",
+        // "2480x3508",
 
         // Center the resized content on the canvas
         "-gravity",

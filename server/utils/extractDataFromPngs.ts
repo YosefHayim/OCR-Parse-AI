@@ -18,7 +18,6 @@ export const extractDataFromPngs = async (
     tessedit_char_whitelist:
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789€.,:-",
     preserve_interword_spaces: "1",
-    tessedit_pageseg_mode: PSM.OSD_ONLY,
   });
 
   const pages = [];
@@ -29,7 +28,6 @@ export const extractDataFromPngs = async (
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)
-        .resize({ width: 3508, height: 2480 })
         .rotate()
         .grayscale()
         .normalize()
