@@ -48,14 +48,17 @@ export const extractDataFromPngs = async (
       const isAiValidateQuantity = await sendAIImages(
         files[i],
         outputDir,
-        quantitiesFound
+        `Page ${i + 1}: ${JSON.stringify(quantitiesFound)}`
       );
+
+      logToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}`);
 
       console.log("AI Response to matching is: ", isAiValidateQuantity);
 
       pages.push({
         page: i + 1,
         quantitiesFound,
+        AIResponse: isAiValidateQuantity,
       });
     }
   } catch (error) {
