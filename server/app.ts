@@ -5,6 +5,7 @@ import aiRouter from "./routes/AiRoute";
 import { errorHandler } from "./middleware/errorHandler";
 import dotenv from "dotenv";
 import morgan from "morgan";
+import { currentDate } from "./utils/getDateWCurrentTime";
 dotenv.config();
 
 const app = express();

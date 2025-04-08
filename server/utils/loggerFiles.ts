@@ -1,22 +1,21 @@
 import fs from "fs";
 import path from "path";
+import { currentDate } from "./getDateWCurrentTime";
 
 const logFilePath = path.join(
   process.cwd(),
-  `./logs/ocr-log-${new Date().getTime()}.txt`
+  `./logs/ocr-logs/ocr-log-${currentDate().date}.txt`
 );
 
 const logAIFilePath = path.join(
   process.cwd(),
-  `./logs/AI-log-${new Date().getTime()}.txt`
+  `./logs/ai-logs/AI-log-${currentDate()}.txt`
 );
 
 export const logToFile = (message: string) => {
-  const timestamp = new Date().toISOString();
-  fs.appendFileSync(logFilePath, `[${timestamp}] ${message}\n`);
+  fs.appendFileSync(logFilePath, `[${currentDate().time}]: ${message}\n`);
 };
 
 export const logAIToFile = (message: string) => {
-  const timestamp = new Date().toISOString();
-  fs.appendFileSync(logAIFilePath, `[${timestamp}] ${message}\n`);
+  fs.appendFileSync(logAIFilePath, `[${currentDate().time}]: ${message}\n`);
 };
