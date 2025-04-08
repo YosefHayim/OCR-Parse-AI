@@ -1,7 +1,7 @@
 import path from "path";
 import { createWorker } from "tesseract.js";
 import sharp from "sharp";
-import { logToFile } from "./loggerFile";
+import { logAIToFile, logToFile } from "./loggerFiles";
 import { extractQuantitiesFromText } from "./extractQuantityFromText";
 import { sendAIImages } from "./sendAiData";
 
@@ -52,7 +52,7 @@ ${quantitiesFound}`
       );
 
       logToFile(`Page ${i + 1} - Cleane OCR Text:\n${text}\n`);
-      logToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
+      logAIToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
 
       pages.push({
         page: `מספר בקובץ: ${i + 1}`,
