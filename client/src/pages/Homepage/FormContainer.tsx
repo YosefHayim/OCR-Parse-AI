@@ -10,6 +10,11 @@ const FormContainer = ({
 }) => {
   return (
     <form className="rounded-lg border border-dotted bg-gray-200 p-4">
+      <div className="w-full text-right">
+        <label htmlFor="file" className="font-bold">
+          העלאה קובץ
+        </label>
+      </div>
       <div className="flex w-full flex-col items-center justify-center gap-2">
         <label htmlFor="file" className="cursor-pointer">
           <FaFileUpload

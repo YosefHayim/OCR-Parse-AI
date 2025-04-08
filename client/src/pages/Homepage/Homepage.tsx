@@ -1,19 +1,13 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
 import { recalculateSpecificPageInfo } from "../../../api/recalculateSpecificPageInfo";
-import { FaCopy } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { Toaster, toast } from "sonner";
-import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-} from "@radix-ui/react-tooltip";
 import LoadingEffect from "./LoadingEffect";
 import FormContainer from "./FormContainer";
+import CopyResults from "./CopyResults";
 
 interface GlobalStateProps {
   isLoading: boolean | null;
@@ -181,33 +175,17 @@ const Homepage = () => {
         ) : (
           <div className="flex w-full flex-col gap-4">
             <div className="flex w-full flex-col gap-2 bg-white p-4">
-              <div className="w-full text-right">
-                <label htmlFor="file" className="font-bold">
-                  העלאה קובץ
-                </label>
-              </div>
-
-              <FormContainer  />
-
+              <FormContainer
+                handleFileChange={handleFileChange}
+                data={globalState.data}
+                fileName={globalState.fileName}
+                fileInputRef={fileInputRef}
+                selectedFile={globalState.selectedFile}
+              />
               <div className="flex w-full flex-col gap-2">
                 <div className="flex items-center gap-2">
                   <h1 className="text-right font-bold">תוצאות</h1>
-                  {globalState.data && globalState.data.length > 0 && (
-                    <TooltipProvider>
-                      <Tooltip>
-                        <TooltipTrigger
-                          data-action="copy-results"
-                          className="cursor-pointer rounded-sm p-1 text-black shadow-none hover:bg-black hover:text-white"
-                          aria-label="העתק תוצאות"
-                        >
-                          <FaCopy />
-                        </TooltipTrigger>
-                        <TooltipContent className="shadow-1xl rounded-lg bg-white p-3 font-bold">
-                          העתק תוצאות
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  )}
+                  <CopyResults data={globalState.data} />
                 </div>
                 <div
                   ref={copyTextRef}
