@@ -13,7 +13,17 @@ export interface GlobalStateProps {
   fileName: string | null;
   selectedFile: File | null;
   replacedPageInfo: string | null;
-  data?: string | null;
+  data?: {
+    page?: string | null;
+    text?: string | null;
+    quantitiesFound?: string | null;
+  };
+}
+
+interface OCRScannedProps {
+  page?: string | null;
+  text?: string | null;
+  quantitiesFound?: string | null;
 }
 
 const Homepage = () => {
@@ -41,7 +51,9 @@ const Homepage = () => {
     mutatePdfFile,
   );
 
-  useEffect(() => {}, [globalState]);
+  useEffect(() => {
+    console.log(globalState);
+  }, [globalState]);
 
   return (
     <div>
@@ -73,6 +85,19 @@ const Homepage = () => {
                 {globalState.data?.length === 0 && (
                   <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>
                 )}
+                {globalState.data &&
+                  globalState.data.length >= 1 &&
+                  globalState.data.map(
+                    (ocrScanned: OCRScannedProps, index: number) => (
+                      <div key={index + 1}>
+                        <div className="flex w-full items-start justify-start gap-4">
+                          <h2>{ocrScanned.page}</h2>
+                          <p>{ocrScanned.text}</p>
+                          <p>{ocrScanned.quantitiesFound}</p>
+                        </div>
+                      </div>
+                    ),
+                  )}
               </div>
             </div>
           </div>

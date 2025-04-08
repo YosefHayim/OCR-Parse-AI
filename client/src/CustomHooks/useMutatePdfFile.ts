@@ -10,9 +10,10 @@ export const useMutatePdfFile = (
   return useMutation({
     mutationFn: postPdfFile,
     onSuccess: (data) => {
+      // console.log("Data received from postPdfFile: ", data);
+
       toast.success(`${globalState.fileName} נמצא בתהליך ניתוח נתונים`);
-      setGlobalState({ ...globalState, data });
-      setGlobalState({ ...globalState, isLoading: false });
+      setGlobalState({ ...globalState, data: data.pages, isLoading: false });
     },
     onError: () => {
       toast.error("שגיאה בהעלאת הקובץ");

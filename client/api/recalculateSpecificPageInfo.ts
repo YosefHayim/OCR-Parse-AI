@@ -12,7 +12,6 @@ export const recalculateSpecificPageInfo = async (data: string) => {
 
   try {
     const response = await axios.post(url, data);
-    console.log(response);
     return response.data;
   } catch (error) {
     console.error("Error uploading PDF file:", error.response.data.error);

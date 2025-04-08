@@ -76,6 +76,7 @@ export const useHandleGlobalHandler = (
         setGlobalState({
           ...globalState,
           data: null,
+          selectedFile: null,
           fileName: "",
           isLoading: true,
         });

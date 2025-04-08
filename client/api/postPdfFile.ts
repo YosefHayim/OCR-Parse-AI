@@ -19,7 +19,6 @@ export const postPdfFile = async (file: File) => {
         "Content-Type": "multipart/form-data",
       },
     });
-
     return response.data;
   } catch (error) {
     console.error("Error uploading PDF file:", error.response.data.error);

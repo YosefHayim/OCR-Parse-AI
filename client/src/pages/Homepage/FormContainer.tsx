@@ -6,7 +6,11 @@ import { GlobalStateProps } from "./Homepage";
 
 interface FormContainerProps {
   fileName: string | null;
-  data: string | null;
+  data?: {
+    page?: string | null;
+    text?: string | null;
+    quantitiesFound?: string | null;
+  };
   selectedFile: File | null;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -21,7 +25,6 @@ const FormContainer: React.FC<FormContainerProps> = ({
   handleFileChange,
   globalState,
 }) => {
-  console.log(globalState);
   return (
     <div>
       <Toaster position="top-center" dir="rtl" />

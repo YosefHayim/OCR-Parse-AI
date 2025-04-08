@@ -6,7 +6,13 @@ import {
 } from "@radix-ui/react-tooltip";
 import { FaCopy } from "react-icons/fa";
 
-const CopyResults: React.FC<{ data: string | null }> = ({ data }) => {
+const CopyResults: React.FC<{
+  data?: {
+    page?: string | null;
+    text?: string | null;
+    quantitiesFound?: string | null;
+  };
+}> = ({ data }) => {
   return (
     <div>
       {data && (

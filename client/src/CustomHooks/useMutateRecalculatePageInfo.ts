@@ -10,7 +10,7 @@ export const useRecalculatePageInfo = (
   return useMutation({
     mutationFn: recalculateSpecificPageInfo,
     onSuccess: (data) => {
-      console.log(data);
+      // console.log("Data received from recalculateSpecificPageInfo: ", data);
       toast.success(`עמוד  עודכן`);
       setGlobalState({
         ...globalState,
