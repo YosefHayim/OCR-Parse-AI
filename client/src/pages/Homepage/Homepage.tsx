@@ -18,7 +18,7 @@ import {
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
   const [fileName, setFileName] = useState<string>("");
-  const [data, setData] = useState<string>("");
+  const [data, setData] = useState<string[] | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const copyTextRef = useRef(null);
@@ -26,8 +26,8 @@ const Homepage = () => {
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
     onSuccess: (data) => {
-      console.log(data);
-      setData(data);
+      console.log(data.pages);
+      setData(data.pages);
       toast(`${fileName} נמצא בתהליך ניתוח נתונים`);
       setLoading(false);
     },
@@ -139,7 +139,7 @@ const Homepage = () => {
                       onClick={handleButtonClick}
                       className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
                     >
-                      {selectedFile ? "העלה עכשיו" : "בחר קובץ"}
+                      {selectedFile && !data ? "העלה עכשיו" : "בחר קובץ"}
                     </Button>
                   </div>
                 </div>
@@ -168,19 +168,15 @@ const Homepage = () => {
                   className={`${data && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
                 >
                   {data &&
-                    data
-                      .split(/\*\*(?:Page|עמוד|png|image|תמונה) \d+:\*\*/g)
-                      .filter((block) => block.trim() !== "")
-                      .map((block, index) => (
-                        <div key={index}>
-                          <p className="font-bold">עמוד {index + 1}</p>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: block.replace(/\n/g, "<br/>"),
-                            }}
-                          />
-                        </div>
-                      ))}
+                    data.map((pageData, index) => (
+                      <div
+                        key={index}
+                        className="flex flex-col items-start justify-start gap-2"
+                      >
+                        <h2>{pageData.page}</h2>
+                        <p>{pageData.text}</p>
+                      </div>
+                    ))}
                 </div>
               </div>
             </div>

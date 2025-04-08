@@ -48,7 +48,9 @@ export const extractDataFromPngs = async (
       const isAiValidateQuantity = await sendAIImages(
         files[i],
         outputDir,
-        `extract the total quantity from the png provide list of quantity found ${quantitiesFound}`
+        `החזר אך ורק את השורה בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
+ספק: [שם הספק] | כמות: [כמות סופית] | סכום: [סכום במטבע זר]
+${quantitiesFound}`
       );
 
       logToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}`);
@@ -56,7 +58,7 @@ export const extractDataFromPngs = async (
       console.log("AI Response to matching is: ", isAiValidateQuantity);
 
       pages.push({
-        page: i + 1,
+        page: `עמוד מספר בקובץ: ${i + 1}`,
         text: isAiValidateQuantity,
       });
     }
