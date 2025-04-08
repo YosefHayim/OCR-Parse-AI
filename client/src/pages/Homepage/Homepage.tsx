@@ -18,8 +18,8 @@ export interface GlobalStateProps {
 }
 
 const Homepage = () => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const copyTextRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const copyTextRef = useRef<HTMLDivElement | null>(null);
   const [globalState, setGlobalState] = useState<GlobalStateProps>({
     isLoading: false,
     pageNumberToRecalculateDataAgain: null,
