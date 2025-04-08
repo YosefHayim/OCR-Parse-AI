@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import pdfRouter from "./routes/pdfRoute";
+import aiRouter from "./routes/AiRoute";
 import { errorHandler } from "./middleware/errorHandler";
 import dotenv from "dotenv";
 dotenv.config();
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", pdfRouter);
+app.use("/api/ai", aiRouter);
 app.use(errorHandler);
 
 app.listen(PORT, () => {

@@ -1,5 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
+import { recalculateSpecificPageInfo } from "../../../api/recalculateSpecificPageInfo";
 import { FaCopy, FaFileUpload } from "react-icons/fa";
 import { useEffect, useRef, useState, useCallback } from "react";
 import Footer from "@/components/Footer/Footer";
@@ -18,6 +19,7 @@ type PageData = { page: number; text: string };
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
+  const [isClickedRecalculate, setClickRecalculate] = useState(false);
   const [fileName, setFileName] = useState<string>("");
   const [data, setData] = useState<PageData[] | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -34,6 +36,13 @@ const Homepage = () => {
     onError: () => {
       toast("שגיאה בהעלאת הקובץ");
       setLoading(false);
+    },
+  });
+
+  const mutateSpecificPageInfo = useMutation({
+    mutationFn: recalculateSpecificPageInfo,
+    onSuccess: (data) => {
+      console.log(data);
     },
   });
 
@@ -75,6 +84,16 @@ const Homepage = () => {
     navigator.clipboard.writeText(textToCopy).then(() => {
       toast("הטקסט הועתק");
     });
+  };
+
+  const handleRecalculateInfoPage = (
+    e: React.DOMAttributes<HTMLButtonElement>,
+  ) => {
+    const target = e.currentTarget;
+    const data = target.closest("p").includes("data-ocr-extracted");
+    console.log("Clicked and recieved data of: ", target);
+
+    // mutateSpecificPageInfo.mutate({ index, extractedText: quantities });
   };
 
   useEffect(() => {
@@ -129,29 +148,16 @@ const Homepage = () => {
                   </div>
                   <div className="flex items-center justify-center gap-4">
                     {!selectedFile ? (
-                      <Button
-                        onClick={handleFilePicker}
-                        className="rounded-full"
-                      >
-                        בחר קובץ
-                      </Button>
+                      <Button onClick={handleFilePicker}>בחר קובץ</Button>
                     ) : (
                       <Button
-                        className="cursor-pointer rounded-full"
                         onClick={handleFileUpload}
                         disabled={isLoading || mutatePdfFile.isPending}
                       >
                         העלאה קובץ
                       </Button>
                     )}
-                    {data && (
-                      <Button
-                        onClick={handleReset}
-                        className="rounded-full text-white hover:bg-white hover:text-black"
-                      >
-                        אפס תוצאות
-                      </Button>
-                    )}
+                    {data && <Button onClick={handleReset}>אפס תוצאות</Button>}
                   </div>
                 </div>
               </div>
@@ -187,8 +193,22 @@ const Homepage = () => {
                       key={index}
                       className="flex flex-col items-start justify-start gap-2"
                     >
-                      <h2>עמוד {page.page}</h2>
-                      <p>{page.quantitiesFound}</p>
+                      <div className="flex w-full items-center justify-start gap-4">
+                        <h2>עמוד {page.page}</h2>
+                        {isClickedRecalculate ? (
+                          <Loader />
+                        ) : (
+                          <Button
+                            onClick={handleRecalculateInfoPage}
+                            className="customBtn"
+                          >
+                            חשב מחדש נתונים לעמוד {index + 1}
+                          </Button>
+                        )}
+                      </div>
+                      <p className={`data-ocr-extracted-${index}`}>
+                        {page.quantitiesFound}
+                      </p>
                       <p>{page.text}</p>
                     </div>
                   ))}

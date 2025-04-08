@@ -1,6 +1,6 @@
 import multer from "multer";
-import express from "express";
 import { pdfExtractor } from "../controller/pdfController";
+import express from "express";
 const router = express.Router();
 
 const upload = multer({ dest: "./uploads" });
