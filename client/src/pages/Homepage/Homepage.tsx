@@ -1,6 +1,3 @@
-import { useMutation } from "@tanstack/react-query";
-import { postPdfFile } from "../../../api/postPdfFile";
-import { recalculateSpecificPageInfo } from "../../../api/recalculateSpecificPageInfo";
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
@@ -8,8 +5,11 @@ import { Toaster, toast } from "sonner";
 import LoadingEffect from "./LoadingEffect";
 import FormContainer from "./FormContainer";
 import CopyResults from "./CopyResults";
+import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
+import { useRecalculatePageInfo } from "@/CustomHooks/useMutateRecalculatePageInfo";
+import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
 
-interface GlobalStateProps {
+export interface GlobalStateProps {
   isLoading: boolean | null;
   pageNumberToRecalculateDataAgain: boolean | null;
   fileName: string | null;
@@ -27,117 +27,19 @@ const Homepage = () => {
     data: null,
     selectedFile: null,
   });
-
-  const mutatePdfFile = useMutation({
-    mutationFn: postPdfFile,
-    onSuccess: (data) => {
-      toast(`${globalState.fileName} נמצא בתהליך ניתוח נתונים`);
-      setGlobalState({ ...globalState, data: data.pages });
-      setGlobalState({ ...globalState, isLoading: false });
-    },
-    onError: () => {
-      toast("שגיאה בהעלאת הקובץ");
-      setGlobalState({ ...globalState, isLoading: false });
-    },
-  });
-
-  const mutateSpecificPageInfo = useMutation({
-    mutationFn: recalculateSpecificPageInfo,
-    onSuccess: (data) => {
-      console.log(data);
-      toast(`עמוד  עודכן`);
-      setGlobalState({
-        ...globalState,
-        pageNumberToRecalculateDataAgain: null,
-      });
-    },
-    onError: () => {
-      toast("שגיאה בחישוב מחדש");
-      setGlobalState({
-        ...globalState,
-        pageNumberToRecalculateDataAgain: null,
-      });
-    },
-  });
-
-  const handleGlobalClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLElement;
-    const button = target.closest("[data-action]") as HTMLElement | null;
-
-    if (!button) {
-      console.log("no button clicked");
-      return;
-    }
-
-    const action = button.getAttribute("data-action");
-
-    switch (action) {
-      case "recalculate": {
-        const divWrapper = button.closest(".father") as HTMLElement;
-        const textOfRelevantPage = divWrapper?.querySelector(
-          "p[data-ocr-extracted]",
-        )?.textContent;
-
-        if (!textOfRelevantPage) {
-          toast("אין נתונים לבצע בדיקה חוזרת");
-          return;
-        }
-
-        break;
-      }
-
-      case "reset": {
-        setGlobalState({
-          ...globalState,
-          data: null,
-          fileName: "",
-          pageNumberToRecalculateDataAgain: null,
-          selectedFile: null,
-        });
-        if (fileInputRef.current) {
-          fileInputRef.current.value = "";
-        }
-
-        break;
-      }
-
-      case "copy-results": {
-        const textToCopy = copyTextRef.current?.textContent;
-        if (!textToCopy) return;
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          toast("הטקסט הועתק");
-        });
-
-        break;
-      }
-
-      case "pick-file": {
-        fileInputRef.current?.click();
-
-        break;
-      }
-
-      case "upload": {
-        if (!globalState.selectedFile) return;
-
-        if (fileInputRef.current) {
-          fileInputRef.current.value = "";
-        }
-
-        setGlobalState({
-          ...globalState,
-          data: null,
-          fileName: "",
-        });
-        mutatePdfFile.mutate(globalState.selectedFile);
-
-        break;
-      }
-
-      default:
-        break;
-    }
-  };
+  const mutatePdfFile = useMutatePdfFile(setGlobalState, globalState);
+  const mutateRecalculatePageInfo = useRecalculatePageInfo(
+    setGlobalState,
+    globalState,
+  );
+  const handleGlobalClick = useHandleGlobalHandler(
+    setGlobalState,
+    globalState,
+    copyTextRef,
+    fileInputRef,
+    mutatePdfFile,
+    toast,
+  );
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];

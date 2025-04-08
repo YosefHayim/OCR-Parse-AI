@@ -31,5 +31,5 @@
     "src/pages/Homepage/Homepage.tsx",
     "components/ui/lib",
     "components"
-  ]
+, "postcss.config.mjs"  ]
 }

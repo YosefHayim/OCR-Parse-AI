@@ -1,7 +1,12 @@
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@radix-ui/react-tooltip";
 import { FaCopy } from "react-icons/fa";
 
-const CopyResults = ({ data }) => {
+const CopyResults: React.FC<{ data: any }> = ({ data }) => {
   return (
     <div>
       {data && data.length > 0 && (
