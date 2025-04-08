@@ -49,7 +49,7 @@ export const extractDataFromPngs = async (
         files[i],
         outputDir,
         `החזר אך ורק את השורה בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
-ספק: [שם הספק] | כמות: [כמות סופית] | סכום: [סכום במטבע זר]
+ספק: [שם הספק] | כמות סופית: [כמות סופית] |חישוב כמות סופית: [חישוב כמות סופית]| סכום: [סכום במטבע זר]
 ${quantitiesFound}`
       );
 
@@ -58,7 +58,8 @@ ${quantitiesFound}`
       console.log("AI Response to matching is: ", isAiValidateQuantity);
 
       pages.push({
-        page: `עמוד מספר בקובץ: ${i + 1}`,
+        page: `מספר בקובץ: ${i + 1}`,
+        quantitiesFound: JSON.stringify(quantitiesFound),
         text: isAiValidateQuantity,
       });
     }

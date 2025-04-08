@@ -137,7 +137,7 @@ const Homepage = () => {
                       </Button>
                     ) : (
                       <Button
-                        className="rounded-full"
+                        className="cursor-pointer rounded-full"
                         onClick={handleFileUpload}
                         disabled={isLoading || mutatePdfFile.isPending}
                       >
@@ -188,6 +188,7 @@ const Homepage = () => {
                       className="flex flex-col items-start justify-start gap-2"
                     >
                       <h2>עמוד {page.page}</h2>
+                      <p>{page.quantitiesFound}</p>
                       <p>{page.text}</p>
                     </div>
                   ))}
