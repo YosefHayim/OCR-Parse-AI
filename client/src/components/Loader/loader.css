@@ -12,6 +12,12 @@
   mask-composite: subtract;
   animation: l3 1s infinite linear;
 }
+
+.small-loader {
+  padding: 2px;
+  width: 1rem;
+}
+
 @keyframes l3 {
   to {
     transform: rotate(1turn);

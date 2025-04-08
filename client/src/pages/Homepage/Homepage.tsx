@@ -89,9 +89,10 @@ const Homepage = () => {
   const handleRecalculateInfoPage = (
     e: React.DOMAttributes<HTMLButtonElement>,
   ) => {
-    const target = e.currentTarget;
-    const data = target.closest("p").includes("data-ocr-extracted");
-    console.log("Clicked and recieved data of: ", target);
+    setClickRecalculate(true);
+    // const target = e.currentTarget;
+    // const data = target.closest("p").includes("data-ocr-extracted");
+    // console.log("Clicked and recieved data of: ", target);
 
     // mutateSpecificPageInfo.mutate({ index, extractedText: quantities });
   };
@@ -147,6 +148,8 @@ const Homepage = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-4">
+                    {data && <Button onClick={handleReset}>אפס תוצאות</Button>}
+
                     {!selectedFile ? (
                       <Button onClick={handleFilePicker}>בחר קובץ</Button>
                     ) : (
@@ -157,7 +160,6 @@ const Homepage = () => {
                         העלאה קובץ
                       </Button>
                     )}
-                    {data && <Button onClick={handleReset}>אפס תוצאות</Button>}
                   </div>
                 </div>
               </div>
@@ -196,12 +198,9 @@ const Homepage = () => {
                       <div className="flex w-full items-center justify-start gap-4">
                         <h2>עמוד {page.page}</h2>
                         {isClickedRecalculate ? (
-                          <Loader />
+                          <Loader smallLoader={true} />
                         ) : (
-                          <Button
-                            onClick={handleRecalculateInfoPage}
-                            className="customBtn"
-                          >
+                          <Button onClick={handleRecalculateInfoPage}>
                             חשב מחדש נתונים לעמוד {index + 1}
                           </Button>
                         )}
