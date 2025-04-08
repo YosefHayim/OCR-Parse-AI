@@ -6,8 +6,8 @@ export const errorHandler = (
   res: Response,
   next: NextFunction
 ) => {
-  const statusCode = err.status;
-  const message = err.message;
+  const status = typeof err.status === "number" ? err.status : 500;
+  const message = err.message || "Something went wrong";
 
-  res.status(statusCode).json({ error: message });
+  res.status(status).json({ error: message });
 };

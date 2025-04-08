@@ -10,6 +10,6 @@ export const recalculateSpecificPageInfo = async (
 
   res.status(200).json({
     status: 200,
-    response: JSON.parse(recalculateInfoByAI),
+    page: recalculateInfoByAI,
   });
 };
