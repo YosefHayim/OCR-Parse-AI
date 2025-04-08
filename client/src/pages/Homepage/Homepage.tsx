@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
-import { Toaster, toast } from "sonner";
-import LoadingEffect from "./LoadingEffect";
 import FormContainer from "./FormContainer";
 import CopyResults from "./CopyResults";
 import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
 import { useRecalculatePageInfo } from "@/CustomHooks/useMutateRecalculatePageInfo";
 import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
+import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
+import { toast } from "sonner";
 
 export interface GlobalStateProps {
   isLoading: boolean | null;
@@ -28,6 +28,7 @@ const Homepage = () => {
     selectedFile: null,
   });
   const mutatePdfFile = useMutatePdfFile(setGlobalState, globalState);
+  const handleFileChange = useHandleFileChange(setGlobalState, globalState);
   const mutateRecalculatePageInfo = useRecalculatePageInfo(
     setGlobalState,
     globalState,
@@ -41,27 +42,7 @@ const Homepage = () => {
     toast,
   );
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    if (!file.type.includes("pdf")) {
-      toast("נא לצרף קובץ PDF");
-      return;
-    }
-
-    setGlobalState({
-      ...globalState,
-      selectedFile: file,
-      fileName: file.name,
-    });
-  };
-
-  useEffect(() => {
-    if (globalState.data) {
-      copyTextRef.current?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [globalState.data]);
+  useEffect(() => {}, [globalState]);
 
   return (
     <div>
@@ -71,36 +52,32 @@ const Homepage = () => {
         className="flex w-full flex-col items-center justify-start gap-4 p-4"
         dir="rtl"
       >
-        <Toaster position="top-center" />
-        {globalState.isLoading ? (
-          <LoadingEffect fileName={globalState.fileName} />
-        ) : (
-          <div className="flex w-full flex-col gap-4">
-            <div className="flex w-full flex-col gap-2 bg-white p-4">
-              <FormContainer
-                handleFileChange={handleFileChange}
-                data={globalState.data}
-                fileName={globalState.fileName}
-                fileInputRef={fileInputRef}
-                selectedFile={globalState.selectedFile}
-              />
-              <div className="flex w-full flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <h1 className="text-right font-bold">תוצאות</h1>
-                  <CopyResults data={globalState.data} />
-                </div>
-                <div
-                  ref={copyTextRef}
-                  className={`${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
-                >
-                  {globalState.data?.length === 0 && (
-                    <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>
-                  )}
-                </div>
+        <div className="flex w-full flex-col gap-4">
+          <div className="flex w-full flex-col gap-2 bg-white p-4">
+            <FormContainer
+              globalState={globalState}
+              handleFileChange={handleFileChange}
+              data={globalState.data}
+              fileName={globalState.fileName}
+              fileInputRef={fileInputRef}
+              selectedFile={globalState.selectedFile}
+            />
+            <div className="flex w-full flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <h1 className="text-right font-bold">תוצאות</h1>
+                <CopyResults data={globalState.data} />
+              </div>
+              <div
+                ref={copyTextRef}
+                className={`${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
+              >
+                {globalState.data?.length === 0 && (
+                  <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>
+                )}
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
       <div className="absolute bottom-0 w-full">
         <Footer />
