@@ -4,15 +4,18 @@ const localUrl = import.meta.env.VITE_API_BACKEND_LOCAL;
 
 const isProduction = false;
 
-export const recalculateSpecificPageInfo = async (data) => {
+export const recalculateSpecificPageInfo = async ({ data }) => {
   if (!data) {
-    throw new Error("No file provided");
+    throw new Error("Missing data object to AI: ", data);
   }
+
+  console.log(data);
 
   const url = `${isProduction ? deployedUrl : localUrl}/api/ai/recalculate-info`;
 
   try {
     const response = await axios.post(url, data);
+    console.log(response);
 
     return response.data;
   } catch (error) {

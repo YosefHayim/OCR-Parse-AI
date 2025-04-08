@@ -19,7 +19,9 @@ type PageData = { page: number; text: string; quantitiesFound?: string };
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
-  const [isClickedRecalculate, setClickRecalculate] = useState(false);
+  const [recalculatingPage, setRecalculatingPage] = useState<number | null>(
+    null,
+  );
   const [fileName, setFileName] = useState<string>("");
   const [data, setData] = useState<PageData[] | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -49,11 +51,11 @@ const Homepage = () => {
           ) || null,
       );
       toast(`עמוד ${newPageData.page} עודכן`);
-      setClickRecalculate(false);
+      setRecalculatingPage(null);
     },
     onError: () => {
       toast("שגיאה בחישוב מחדש");
-      setClickRecalculate(false);
+      setRecalculatingPage(null);
     },
   });
 
@@ -67,31 +69,28 @@ const Homepage = () => {
 
     switch (action) {
       case "recalculate": {
-        setClickRecalculate(true);
-
         const pageWrapper = button.closest(".father") as HTMLElement;
         const textElement = pageWrapper?.querySelector("p[data-ocr-extracted]");
         const pageTitle = pageWrapper?.querySelector("h2")?.textContent;
 
         if (!textElement || !textElement.textContent || !pageTitle) {
           toast("שגיאה בנתוני העמוד");
-          setClickRecalculate(false);
           return;
         }
 
         const pageNumber = parseInt(pageTitle.replace(/\D/g, ""), 10);
-        console.log(textElement.textContent);
+        setRecalculatingPage(pageNumber);
 
-        // mutateSpecificPageInfo.mutate({
-        //   textToRecalculate: textElement.textContent,
-        //   page: pageNumber,
-        // });
+        mutateSpecificPageInfo.mutate({
+          textToRecalculate: textElement.textContent,
+          page: pageNumber,
+        });
 
         break;
       }
 
       case "reset": {
-        setClickRecalculate(false);
+        setRecalculatingPage(null);
         setData(null);
         setFileName("");
         setSelectedFile(null);
@@ -194,6 +193,7 @@ const Homepage = () => {
                   </div>
                   <div className="flex items-center justify-center gap-4">
                     {data && <Button data-action="reset">אפס תוצאות</Button>}
+                    {data && <Button data-action="upload">חשב שוב</Button>}
                     {!selectedFile ? (
                       <Button data-action="pick-file">בחר קובץ</Button>
                     ) : (
@@ -239,7 +239,7 @@ const Homepage = () => {
                     >
                       <div className="flex w-full items-center justify-start gap-4">
                         <h2>עמוד {page.page}</h2>
-                        {isClickedRecalculate && (
+                        {recalculatingPage === page.page && (
                           <div>
                             <Loader smallLoader={true} />
                           </div>
