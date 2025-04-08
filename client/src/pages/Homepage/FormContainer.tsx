@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/Components/ui/button";
 import { FaFileUpload } from "react-icons/fa";
 import { Toaster } from "sonner";
 import LoadingEffect from "./LoadingEffect";
@@ -21,6 +21,7 @@ const FormContainer: React.FC<FormContainerProps> = ({
   handleFileChange,
   globalState,
 }) => {
+  console.log(globalState);
   return (
     <div>
       <Toaster position="top-center" />

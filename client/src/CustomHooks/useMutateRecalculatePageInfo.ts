@@ -15,6 +15,7 @@ export const useRecalculatePageInfo = (
       setGlobalState({
         ...globalState,
         pageNumberToRecalculateDataAgain: null,
+        isLoading: false,
       });
     },
     onError: () => {
@@ -22,6 +23,7 @@ export const useRecalculatePageInfo = (
       setGlobalState({
         ...globalState,
         pageNumberToRecalculateDataAgain: null,
+        isLoading: false,
       });
     },
   });

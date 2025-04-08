@@ -1,4 +1,4 @@
-import Loader from "@/components/Loader/Loader";
+import Loader from "@/Components/Loader/Loader";
 
 const LoadingEffect: React.FC<{ fileName: string }> = ({ fileName }) => {
   return (

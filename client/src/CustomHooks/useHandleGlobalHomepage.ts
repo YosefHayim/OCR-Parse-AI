@@ -69,7 +69,7 @@ export const useHandleGlobalHandler = (
       case "upload": {
         if (!globalState.selectedFile) return;
 
-        if (fileInputRef.current) {
+        if (fileInputRef?.current) {
           fileInputRef.current.value = "";
         }
 
@@ -77,6 +77,7 @@ export const useHandleGlobalHandler = (
           ...globalState,
           data: null,
           fileName: "",
+          isLoading: true,
         });
         mutatePdfFile.mutate(globalState.selectedFile);
 
