@@ -24,7 +24,7 @@ const FormContainer: React.FC<FormContainerProps> = ({
   console.log(globalState);
   return (
     <div>
-      <Toaster position="top-center" />
+      <Toaster position="top-center" dir="rtl" />
       {globalState.isLoading ? (
         <LoadingEffect fileName={fileName} />
       ) : (

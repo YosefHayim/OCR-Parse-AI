@@ -55,7 +55,7 @@ export const useHandleGlobalHandler = (
         const textToCopy = copyTextRef.current?.textContent;
         if (!textToCopy) return;
         navigator.clipboard.writeText(textToCopy).then(() => {
-          toast.success("הטקסט הועתק");
+          toast.success("תוצאות הועתקו");
         });
 
         break;
@@ -80,8 +80,6 @@ export const useHandleGlobalHandler = (
           isLoading: true,
         });
         mutatePdfFile.mutate(globalState.selectedFile);
-        toast.success("קובץ נטען בהצלחה");
-
         break;
       }
 

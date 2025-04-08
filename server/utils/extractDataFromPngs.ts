@@ -54,7 +54,7 @@ ${quantitiesFound}`
       logToFile(`Page ${
         i + 1
       } - Cleane OCR Text:\n${text}\n Qunatities Found Page ${i + 1}
-        \n${quantitiesFound}\n`);
+        \n${JSON.stringify(quantitiesFound)}\n`);
       logAIToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
 
       pages.push({
