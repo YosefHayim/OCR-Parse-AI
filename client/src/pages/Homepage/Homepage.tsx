@@ -90,7 +90,7 @@ const Homepage = () => {
                   globalState.data.map(
                     (ocrScanned: OCRScannedProps, index: number) => (
                       <div key={index + 1}>
-                        <div className="flex w-full items-start justify-start gap-4">
+                        <div className="flex w-full flex-col items-start justify-start gap-4">
                           <h2>{ocrScanned.page}</h2>
                           <p>{ocrScanned.text}</p>
                           <p>{ocrScanned.quantitiesFound}</p>
