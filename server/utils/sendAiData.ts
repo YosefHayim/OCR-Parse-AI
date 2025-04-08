@@ -29,8 +29,6 @@ export const sendAIImages = async (
   baseDir,
   quantityIFound
 ) => {
-  console.log("Sending data to AI");
-
   const imagePath = path.join(baseDir, filePath);
   let base64Image;
 

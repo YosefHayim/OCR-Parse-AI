@@ -46,14 +46,13 @@ export const extractDataFromPngs = async (
       const isAiValidateQuantity = await sendAIImages(
         files[i],
         outputDir,
-        `החזר אך ורק את השורה בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
-ספק: [שם הספק] | חישוב כמות סופית: [חישוב כמות סופית] | כמות סופית: [כמות סופית] | סכום: [סכום במטבע זר]
+        `חשב ותביא לי בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
+ספק: [שם הספק] | החישוב של הכמות הסופית: [חישוב כמות סופית] | סך הכמות סופית: [כמות סופית] | סך הסכום: [סכום במטבע זר]
 ${quantitiesFound}`
       );
 
-      logToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}`);
-
-      console.log("AI Response to matching is: ", isAiValidateQuantity);
+      logToFile(`Page ${i + 1} - Cleane OCR Text:\n${text}\n`);
+      logToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
 
       pages.push({
         page: `מספר בקובץ: ${i + 1}`,

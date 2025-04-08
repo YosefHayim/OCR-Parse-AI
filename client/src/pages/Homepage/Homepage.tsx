@@ -116,9 +116,15 @@ const Homepage = () => {
 
       case "upload": {
         if (!selectedFile) return;
+
+        // Reset input so the same file can be picked again
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+
         setData(null);
         setLoading(true);
-        mutatePdfFile.mutate(selectedFile);
+        mutatePdfFile.mutate(selectedFile); // This will still not trigger if React Query sees it as cached
         break;
       }
 
@@ -197,12 +203,7 @@ const Homepage = () => {
                     {!selectedFile ? (
                       <Button data-action="pick-file">בחר קובץ</Button>
                     ) : (
-                      <Button
-                        data-action="upload"
-                        disabled={isLoading || mutatePdfFile.isPending}
-                      >
-                        העלאה קובץ
-                      </Button>
+                      <Button data-action="upload">העלאה קובץ</Button>
                     )}
                   </div>
                 </div>

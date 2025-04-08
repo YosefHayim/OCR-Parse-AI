@@ -20,7 +20,7 @@ export const pdfExtractor = async (
       return next(error);
     }
 
-    console.log("PDF file received", req.file.originalname);
+    // console.log("PDF file received", req.file.originalname);
 
     const outputDir = path.join("images", Date.now().toString());
     fs.mkdirSync(outputDir, { recursive: true });
