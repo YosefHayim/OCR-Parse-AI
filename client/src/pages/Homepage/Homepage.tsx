@@ -1,12 +1,11 @@
 import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
 import { FaCopy, FaFileUpload } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
-import { Toaster } from "@/components/ui/sonner";
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import {
   TooltipProvider,
@@ -15,24 +14,24 @@ import {
   TooltipContent,
 } from "@radix-ui/react-tooltip";
 
+type PageData = { page: number; text: string };
+
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
   const [fileName, setFileName] = useState<string>("");
-  const [data, setData] = useState<string[] | null>(null);
+  const [data, setData] = useState<PageData[] | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const copyTextRef = useRef(null);
+  const copyTextRef = useRef<HTMLDivElement>(null);
 
   const mutatePdfFile = useMutation({
     mutationFn: postPdfFile,
     onSuccess: (data) => {
-      console.log(data.pages);
       setData(data.pages);
       toast(`${fileName} נמצא בתהליך ניתוח נתונים`);
       setLoading(false);
     },
-    onError: (error) => {
-      console.log(error);
+    onError: () => {
       toast("שגיאה בהעלאת הקובץ");
       setLoading(false);
     },
@@ -42,23 +41,27 @@ const Homepage = () => {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    if (!file.type.includes("pdf")) {
+      toast("נא לצרף קובץ PDF");
+      return;
+    }
+
     setSelectedFile(file);
     setFileName(file.name);
   };
 
-  const handleButtonClick = () => {
-    if (!selectedFile) {
-      // No file selected yet – open file dialog
-      fileInputRef.current?.click();
-    } else {
-      // File already selected – start upload
-      setLoading(true);
-      mutatePdfFile.mutate(selectedFile);
-    }
+  const handleFileUpload = useCallback(() => {
+    if (!selectedFile) return;
+    setLoading(true);
+    mutatePdfFile.mutate(selectedFile);
+  }, [selectedFile]);
+
+  const handleFilePicker = () => {
+    fileInputRef.current?.click();
   };
 
   const handleReset = () => {
-    setData("");
+    setData(null);
     setFileName("");
     setSelectedFile(null);
     if (fileInputRef.current) {
@@ -68,13 +71,14 @@ const Homepage = () => {
 
   const handleCopyText = () => {
     const textToCopy = copyTextRef.current?.textContent;
+    if (!textToCopy) return;
     navigator.clipboard.writeText(textToCopy).then(() => {
       toast("הטקסט הועתק");
     });
   };
 
   useEffect(() => {
-    if (data) {
+    if (data?.length) {
       copyTextRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [data]);
@@ -111,10 +115,8 @@ const Homepage = () => {
                       className="rounded-sm p-1 hover:bg-black hover:text-white"
                     />
                   </label>
-                  <div className="relative w-full">
-                    <div className="w-full text-center">
-                      {fileName && fileName}
-                    </div>
+                  <div className="relative w-full text-center">
+                    {fileName}
                     <input
                       type="file"
                       id="file"
@@ -126,33 +128,44 @@ const Homepage = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-4">
+                    {!selectedFile ? (
+                      <Button
+                        onClick={handleFilePicker}
+                        className="rounded-full"
+                      >
+                        בחר קובץ
+                      </Button>
+                    ) : (
+                      <Button
+                        className="rounded-full"
+                        onClick={handleFileUpload}
+                        disabled={isLoading || mutatePdfFile.isPending}
+                      >
+                        העלאה קובץ
+                      </Button>
+                    )}
                     {data && (
                       <Button
-                        className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
                         onClick={handleReset}
+                        className="rounded-full text-white hover:bg-white hover:text-black"
                       >
                         אפס תוצאות
                       </Button>
                     )}
-                    <Button
-                      type="button"
-                      onClick={handleButtonClick}
-                      className="cursor-pointer rounded-full text-white hover:bg-white hover:text-black"
-                    >
-                      {selectedFile && !data ? "העלה עכשיו" : "בחר קובץ"}
-                    </Button>
                   </div>
                 </div>
               </div>
+
               <div className="flex w-full flex-col gap-2">
                 <div className="flex items-center gap-2">
                   <h1 className="text-right font-bold">תוצאות</h1>
-                  <div>
+                  {data && data?.length > 0 && (
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger
                           onClick={handleCopyText}
                           className="cursor-pointer rounded-sm p-1 text-black shadow-none hover:bg-black hover:text-white"
+                          aria-label="העתק תוצאות"
                         >
                           <FaCopy />
                         </TooltipTrigger>
@@ -161,22 +174,23 @@ const Homepage = () => {
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
-                  </div>
+                  )}
                 </div>
+
                 <div
                   ref={copyTextRef}
-                  className={`${data && "bg-gray-200"} flex flex-col gap-4 rounded-lg p-4`}
+                  className={`${data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
                 >
-                  {data &&
-                    data.map((pageData, index) => (
-                      <div
-                        key={index}
-                        className="flex flex-col items-start justify-start gap-2"
-                      >
-                        <h2>{pageData.page}</h2>
-                        <p>{pageData.text}</p>
-                      </div>
-                    ))}
+                  {data?.length === 0 && <p>לא נמצאו תוצאות בקובץ.</p>}
+                  {data?.map((page, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-start justify-start gap-2"
+                    >
+                      <h2>עמוד {page.page}</h2>
+                      <p>{page.text}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
