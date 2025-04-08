@@ -12,7 +12,7 @@ const quantityPatterns = [
     pattern: /\bnN\s+(\d{1,4}(?:[.,]\d{1,2})?)\b/gi,
   },
   {
-    name: "`qt` or `ot` in the line → extract nearby numbers",
+    name: "followed by `<qt>` or `<qt>` in the line → extract nearby numbers",
     pattern: /\b(?:qt|ot)\b.*?(\d{1,4}(?:[.,]\d{1,2})?)/gi,
   },
   {

@@ -9,7 +9,7 @@ export const recalculateSpecificPageInfo = async (data) => {
     throw new Error("No file provided");
   }
 
-  const url = `${isProduction ? deployedUrl : localUrl}/api/extract-pdf`;
+  const url = `${isProduction ? deployedUrl : localUrl}/api/ai/recalculate-info`;
 
   try {
     const response = await axios.post(url, data);

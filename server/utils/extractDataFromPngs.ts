@@ -30,7 +30,6 @@ export const extractDataFromPngs = async (
       const processedPath = path.join(outputDir, `processed-${i}.png`);
 
       await sharp(originalPath)
-        // .resize({ width: 3840, height: 2240 })
         .rotate()
         .grayscale()
         .normalize()
@@ -43,13 +42,12 @@ export const extractDataFromPngs = async (
       } = await worker.recognize(processedPath);
 
       const quantitiesFound = extractQuantitiesFromText(text);
-      // logToFile(`Page ${i + 1} - Cleaned OCR Text:\n${text}`);
 
       const isAiValidateQuantity = await sendAIImages(
         files[i],
         outputDir,
         `החזר אך ורק את השורה בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
-ספק: [שם הספק] | כמות סופית: [כמות סופית] |חישוב כמות סופית: [חישוב כמות סופית]| סכום: [סכום במטבע זר]
+ספק: [שם הספק] | חישוב כמות סופית: [חישוב כמות סופית] | כמות סופית: [כמות סופית] | סכום: [סכום במטבע זר]
 ${quantitiesFound}`
       );
 

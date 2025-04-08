@@ -2,7 +2,7 @@ import { useMutation } from "@tanstack/react-query";
 import { postPdfFile } from "../../../api/postPdfFile";
 import { recalculateSpecificPageInfo } from "../../../api/recalculateSpecificPageInfo";
 import { FaCopy, FaFileUpload } from "react-icons/fa";
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "@/components/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
 import Navbar from "@/components/Navbar/Navbar";
@@ -15,7 +15,7 @@ import {
   TooltipContent,
 } from "@radix-ui/react-tooltip";
 
-type PageData = { page: number; text: string };
+type PageData = { page: number; text: string; quantitiesFound?: string };
 
 const Homepage = () => {
   const [isLoading, setLoading] = useState(false);
@@ -41,10 +41,92 @@ const Homepage = () => {
 
   const mutateSpecificPageInfo = useMutation({
     mutationFn: recalculateSpecificPageInfo,
-    onSuccess: (data) => {
-      console.log(data);
+    onSuccess: (newPageData) => {
+      setData(
+        (prevData) =>
+          prevData?.map((page) =>
+            page.page === newPageData.page ? { ...page, ...newPageData } : page,
+          ) || null,
+      );
+      toast(`עמוד ${newPageData.page} עודכן`);
+      setClickRecalculate(false);
+    },
+    onError: () => {
+      toast("שגיאה בחישוב מחדש");
+      setClickRecalculate(false);
     },
   });
+
+  const handleGlobalClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    const button = target.closest("[data-action]") as HTMLElement | null;
+
+    if (!button) return;
+
+    const action = button.getAttribute("data-action");
+
+    switch (action) {
+      case "recalculate": {
+        setClickRecalculate(true);
+
+        const pageWrapper = button.closest(".father") as HTMLElement;
+        const textElement = pageWrapper?.querySelector("p[data-ocr-extracted]");
+        const pageTitle = pageWrapper?.querySelector("h2")?.textContent;
+
+        if (!textElement || !textElement.textContent || !pageTitle) {
+          toast("שגיאה בנתוני העמוד");
+          setClickRecalculate(false);
+          return;
+        }
+
+        const pageNumber = parseInt(pageTitle.replace(/\D/g, ""), 10);
+        console.log(textElement.textContent);
+
+        // mutateSpecificPageInfo.mutate({
+        //   textToRecalculate: textElement.textContent,
+        //   page: pageNumber,
+        // });
+
+        break;
+      }
+
+      case "reset": {
+        setClickRecalculate(false);
+        setData(null);
+        setFileName("");
+        setSelectedFile(null);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+        break;
+      }
+
+      case "copy-results": {
+        const textToCopy = copyTextRef.current?.textContent;
+        if (!textToCopy) return;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          toast("הטקסט הועתק");
+        });
+        break;
+      }
+
+      case "pick-file": {
+        fileInputRef.current?.click();
+        break;
+      }
+
+      case "upload": {
+        if (!selectedFile) return;
+        setData(null);
+        setLoading(true);
+        mutatePdfFile.mutate(selectedFile);
+        break;
+      }
+
+      default:
+        break;
+    }
+  };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -59,46 +141,8 @@ const Homepage = () => {
     setFileName(file.name);
   };
 
-  const handleFileUpload = useCallback(() => {
-    if (!selectedFile) return;
-    setLoading(true);
-    mutatePdfFile.mutate(selectedFile);
-  }, [selectedFile]);
-
-  const handleFilePicker = () => {
-    fileInputRef.current?.click();
-  };
-
-  const handleReset = () => {
-    setData(null);
-    setFileName("");
-    setSelectedFile(null);
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
-  };
-
-  const handleCopyText = () => {
-    const textToCopy = copyTextRef.current?.textContent;
-    if (!textToCopy) return;
-    navigator.clipboard.writeText(textToCopy).then(() => {
-      toast("הטקסט הועתק");
-    });
-  };
-
-  const handleRecalculateInfoPage = (
-    e: React.DOMAttributes<HTMLButtonElement>,
-  ) => {
-    setClickRecalculate(true);
-    // const target = e.currentTarget;
-    // const data = target.closest("p").includes("data-ocr-extracted");
-    // console.log("Clicked and recieved data of: ", target);
-
-    // mutateSpecificPageInfo.mutate({ index, extractedText: quantities });
-  };
-
   useEffect(() => {
-    if (data?.length) {
+    if (data) {
       copyTextRef.current?.scrollIntoView({ behavior: "smooth" });
     }
   }, [data]);
@@ -107,6 +151,7 @@ const Homepage = () => {
     <div>
       <Navbar />
       <div
+        onClick={handleGlobalClick}
         className="flex w-full flex-col items-center justify-start gap-4 p-4"
         dir="rtl"
       >
@@ -148,13 +193,12 @@ const Homepage = () => {
                     />
                   </div>
                   <div className="flex items-center justify-center gap-4">
-                    {data && <Button onClick={handleReset}>אפס תוצאות</Button>}
-
+                    {data && <Button data-action="reset">אפס תוצאות</Button>}
                     {!selectedFile ? (
-                      <Button onClick={handleFilePicker}>בחר קובץ</Button>
+                      <Button data-action="pick-file">בחר קובץ</Button>
                     ) : (
                       <Button
-                        onClick={handleFileUpload}
+                        data-action="upload"
                         disabled={isLoading || mutatePdfFile.isPending}
                       >
                         העלאה קובץ
@@ -163,7 +207,6 @@ const Homepage = () => {
                   </div>
                 </div>
               </div>
-
               <div className="flex w-full flex-col gap-2">
                 <div className="flex items-center gap-2">
                   <h1 className="text-right font-bold">תוצאות</h1>
@@ -171,7 +214,7 @@ const Homepage = () => {
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger
-                          onClick={handleCopyText}
+                          data-action="copy-results"
                           className="cursor-pointer rounded-sm p-1 text-black shadow-none hover:bg-black hover:text-white"
                           aria-label="העתק תוצאות"
                         >
@@ -184,7 +227,6 @@ const Homepage = () => {
                     </TooltipProvider>
                   )}
                 </div>
-
                 <div
                   ref={copyTextRef}
                   className={`${data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
@@ -193,19 +235,22 @@ const Homepage = () => {
                   {data?.map((page, index) => (
                     <div
                       key={index}
-                      className="flex flex-col items-start justify-start gap-2"
+                      className="father flex flex-col items-start justify-start gap-2"
                     >
                       <div className="flex w-full items-center justify-start gap-4">
                         <h2>עמוד {page.page}</h2>
-                        {isClickedRecalculate ? (
-                          <Loader smallLoader={true} />
-                        ) : (
-                          <Button onClick={handleRecalculateInfoPage}>
+                        {isClickedRecalculate && (
+                          <div>
+                            <Loader smallLoader={true} />
+                          </div>
+                        )}
+                        {!/\d/.test(page.text) && (
+                          <Button data-action="recalculate">
                             חשב מחדש נתונים לעמוד {index + 1}
                           </Button>
                         )}
                       </div>
-                      <p className={`data-ocr-extracted-${index}`}>
+                      <p data-ocr-extracted className="hidden">
                         {page.quantitiesFound}
                       </p>
                       <p>{page.text}</p>

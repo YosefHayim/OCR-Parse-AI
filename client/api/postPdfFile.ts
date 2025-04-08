@@ -8,7 +8,7 @@ export const postPdfFile = async (file: File) => {
     throw new Error("No file provided");
   }
 
-  const url = `${isProduction ? deployedUrl : localUrl}/api/extract-pdf`;
+  const url = `${isProduction ? deployedUrl : localUrl}/api/pdf/extract`;
 
   const formData = new FormData();
   formData.append("pdfFile", file);

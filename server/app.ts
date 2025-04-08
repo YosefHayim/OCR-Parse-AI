@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.send("Mom tool server is running ");
 });
 
-app.use("/api", pdfRouter);
+app.use("/api/pdf", pdfRouter);
 app.use("/api/ai", aiRouter);
 app.use(errorHandler);
 
