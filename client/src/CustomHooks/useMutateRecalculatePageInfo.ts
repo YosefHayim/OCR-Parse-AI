@@ -11,7 +11,7 @@ export const useRecalculatePageInfo = (
     mutationFn: recalculateSpecificPageInfo,
     onSuccess: (data) => {
       console.log(data);
-      toast(`עמוד  עודכן`);
+      toast.success(`עמוד  עודכן`);
       setGlobalState({
         ...globalState,
         pageNumberToRecalculateDataAgain: null,
@@ -19,7 +19,7 @@ export const useRecalculatePageInfo = (
       });
     },
     onError: () => {
-      toast("שגיאה בחישוב מחדש");
+      toast.error("שגיאה בחישוב מחדש");
       setGlobalState({
         ...globalState,
         pageNumberToRecalculateDataAgain: null,

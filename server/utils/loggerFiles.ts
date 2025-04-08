@@ -4,12 +4,12 @@ import { currentDate } from "./getDateWCurrentTime";
 
 const logFilePath = path.join(
   process.cwd(),
-  `./logs/ocr-logs/ocr-log-${currentDate().date}.txt`
+  `./logs/ocr-logs/ocr-log-${currentDate().date}-${currentDate().time}.txt`
 );
 
 const logAIFilePath = path.join(
   process.cwd(),
-  `./logs/ai-logs/AI-log-${currentDate()}.txt`
+  `./logs/ai-logs/AI-log-${currentDate().date}-${currentDate().time}.txt`
 );
 
 export const logToFile = (message: string) => {

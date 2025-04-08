@@ -10,7 +10,7 @@ export const useHandleFileChange = (
     if (!file) return;
 
     if (!file.type.includes("pdf")) {
-      toast("נא לצרף קובץ PDF");
+      toast.warning("נא לצרף קובץ PDF");
       return;
     }
 

@@ -1,5 +1,6 @@
 import { GlobalStateProps } from "@/pages/Homepage/Homepage";
 import { UseMutationResult } from "@tanstack/react-query";
+import { toast } from "sonner";
 
 export const useHandleGlobalHandler = (
   setGlobalState: React.Dispatch<React.SetStateAction<GlobalStateProps>>,
@@ -7,7 +8,6 @@ export const useHandleGlobalHandler = (
   copyTextRef: React.RefObject<HTMLDivElement | null>,
   fileInputRef: React.RefObject<HTMLInputElement | null>,
   mutatePdfFile: UseMutationResult<any, Error, File, unknown>,
-  toast,
 ) => {
   const handleGlobalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
@@ -28,7 +28,7 @@ export const useHandleGlobalHandler = (
         )?.textContent;
 
         if (!textOfRelevantPage) {
-          toast("אין נתונים לבצע בדיקה חוזרת");
+          toast.warning("אין נתונים לבצע בדיקה חוזרת");
           return;
         }
 
@@ -46,6 +46,7 @@ export const useHandleGlobalHandler = (
         if (fileInputRef.current) {
           fileInputRef.current.value = "";
         }
+        toast.success("איפוס התבצע בהצלחה");
 
         break;
       }
@@ -54,7 +55,7 @@ export const useHandleGlobalHandler = (
         const textToCopy = copyTextRef.current?.textContent;
         if (!textToCopy) return;
         navigator.clipboard.writeText(textToCopy).then(() => {
-          toast("הטקסט הועתק");
+          toast.success("הטקסט הועתק");
         });
 
         break;
@@ -62,7 +63,6 @@ export const useHandleGlobalHandler = (
 
       case "pick-file": {
         fileInputRef.current?.click();
-
         break;
       }
 
@@ -80,6 +80,7 @@ export const useHandleGlobalHandler = (
           isLoading: true,
         });
         mutatePdfFile.mutate(globalState.selectedFile);
+        toast.success("קובץ נטען בהצלחה");
 
         break;
       }

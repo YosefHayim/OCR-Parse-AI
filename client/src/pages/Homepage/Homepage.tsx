@@ -7,8 +7,6 @@ import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
 import { useRecalculatePageInfo } from "@/CustomHooks/useMutateRecalculatePageInfo";
 import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
 import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
-import { toast } from "sonner";
-
 export interface GlobalStateProps {
   isLoading: boolean | null;
   pageNumberToRecalculateDataAgain: boolean | null;
@@ -39,7 +37,6 @@ const Homepage = () => {
     copyTextRef,
     fileInputRef,
     mutatePdfFile,
-    toast,
   );
 
   useEffect(() => {}, [globalState]);
