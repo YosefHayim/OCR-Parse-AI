@@ -11,7 +11,7 @@ export const useMutatePdfFile = (
     mutationFn: postPdfFile,
     onSuccess: (data) => {
       toast.success(`${globalState.fileName} נמצא בתהליך ניתוח נתונים`);
-      setGlobalState({ ...globalState, data: data.pages });
+      setGlobalState({ ...globalState, data });
       setGlobalState({ ...globalState, isLoading: false });
     },
     onError: () => {

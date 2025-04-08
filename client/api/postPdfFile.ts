@@ -5,7 +5,7 @@ const isProduction = false;
 
 export const postPdfFile = async (file: File) => {
   if (!file) {
-    throw new Error("No file provided");
+    throw new Error("No PDF file provided");
   }
 
   const url = `${isProduction ? deployedUrl : localUrl}/api/pdf/extract`;

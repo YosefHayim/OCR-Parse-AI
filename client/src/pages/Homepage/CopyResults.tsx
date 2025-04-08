@@ -6,10 +6,10 @@ import {
 } from "@radix-ui/react-tooltip";
 import { FaCopy } from "react-icons/fa";
 
-const CopyResults: React.FC<{ data: any }> = ({ data }) => {
+const CopyResults: React.FC<{ data: string | null }> = ({ data }) => {
   return (
     <div>
-      {data && data.length > 0 && (
+      {data && (
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger

@@ -15,6 +15,7 @@ export const useRecalculatePageInfo = (
       setGlobalState({
         ...globalState,
         pageNumberToRecalculateDataAgain: null,
+        replacedPageInfo: data,
         isLoading: false,
       });
     },

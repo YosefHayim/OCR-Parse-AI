@@ -12,7 +12,8 @@ export interface GlobalStateProps {
   pageNumberToRecalculateDataAgain: boolean | null;
   fileName: string | null;
   selectedFile: File | null;
-  data?: any;
+  replacedPageInfo: string | null;
+  data?: string | null;
 }
 
 const Homepage = () => {
@@ -21,6 +22,7 @@ const Homepage = () => {
   const [globalState, setGlobalState] = useState<GlobalStateProps>({
     isLoading: false,
     pageNumberToRecalculateDataAgain: null,
+    replacedPageInfo: null,
     fileName: null,
     data: null,
     selectedFile: null,

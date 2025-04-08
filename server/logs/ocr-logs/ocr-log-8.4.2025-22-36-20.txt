@@ -1,0 +1,103 @@
+[22-47-01]: Page 1 - Cleane OCR Text:
+x                                                             X.EY.5.RL.
+SDLMOUXCR1
+viaToscana,50713-53100-PratoPO
+YatId02484810979-C.F.02484810979
+ACCOMPANYINGINVOICEno.1872025of2025-03-24
+AECIPFENT                                                                     DESTINATION
+MARCOPOLO                                                     IDEM
+1JAFO5T.
+00000TELAVIVEE                                                 REASONFORTRAMSPORT
+israel                                                                       TRASPORT
+                                                   MUMBEROFPACKAGESWEIGHT                  TRANSPORT
+4                      200KG                DESPINADARIO
+CODEDESCRIPTION                                                                           QUANTITY    UNITPRICEAMOUNT
+05M  magliaunico2221125111100COTONE   139pezzi   €6.50  :  €903.50
+05Mmagliaunico2221125111y100XCOTONE                          -                             .160pezzi      €6.20€992.00
+08TTGP251705667100XCOTONE                                                  : 198 pezzi  -€3.60€712.80
+B        O8TTOP19060251151004COTONE                                                                   198pezzi      €450€970.20
+E      NGYESMercenonpreferenzialeCEE-Mercefabbricateinltaliaconoriginecinese
+PAYMENTMETHGD                                                                                        DUEDATES
+Bonificovistafattura                                                                               .2025-03-24:€3,578.50.
+IBAN:IT75W0339921506CC0030203952                 :
+BIC:EXRRITM2                                                                                                                   :
+Intestatario:X.F.Y,5.R.L.
+VAT SUMMARY                                                       TOTALAWGUNT     TAXES
+0-Nonimponibileafsensidellart.8.comma1,letferaA        3,578.50€0.00
+                                Totalamount€3,578.50
+j         €3,578.50
+SATEANDSIGMATUREOFTHESENDER                             DATEANDSIGNATURECOURIER                           DATEAnlSIGNATUREOFTHERECIFIENT
+Accompanyinginveiceno.1872025of2025-03-24-171                                                                X.F.Y.8.R.L.salinnaBsEhotmail.com
+
+ Qunatities Found Page 1
+        
+[{"value":139,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"139pezzi","index":838},{"value":160,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"160pezzi","index":959},{"value":198,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"198 pezzi","index":1063},{"value":198,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"198pezzi","index":1190}]
+
+[22-47-05]: Page 2 - Cleane OCR Text:
+w                                                              X.F.X.S.R.L.
+                                                 SDI:MSUXCR1
+ViaTascana,50713-59100-Prato PO
+Vatid02484810979- C.F,02484810979
+ACCOMPANYINGINVOICEno. 212025of2025-03-31
+RECIPIENT                                                                     DESTINATION
+MARCOPOLO                                                  -IDEM
+1JAFOST.         or
+00000 TEL AVIV  EF                                            REASONFORTRANSP
+5                                                   TRASPORT
+israel
+NUMBEROFPACRAGESWEIGHT                   TRANSPORT
+4                      200KG                DEPINADARIO
+cone    DESCRIPTION                                                                                           QUANTITYUNITPRICE       ARQOUNT
+.         056maglia 2221125117y1005COTONE                                                              :270pezzi   €6,90  €1,863.00
+OsMmaglia 22211251161005COTONE                                                              269 pezzi€6.60  €1,775.40
+08TTOP2509825118100COTONE  250pezzi  i€6.20  €1,550.00
+E     uoTESMercenonpreferenzialeCEE-Merce fabbricateinItaliaconoriginecinese
+PAYMENTHETHOD                                                                                               BUEDATES
+Bonificovistafattura                       .                                                            2075-03-31:€5.188.40
+:         IBAN:IT75W0339921500CC0030202952                                 ,
+BIC:EXRRITM2
+Intestatario:X.F.Y.S.R.L.
+VATSUMEERY                                                          TOTALAMOUNTTAXES
+0Y-Nomimponipiieaisensidettart,8,comma1, fettera4       5,188.40€0.00
+Totalamount€5,188.40
+€5,188.40
+DATEANDSIGNATUREOFTHESENDER                              DATEANDSIGNATURECOURIER                            DATEANDSIGNATUREOFTHERECIPIENT
+Accompanyinginvoicene.2172025of2025-03-31-111                    .                               .           X.F.Y.5.R.L,salinnaBshotmail.com
+
+ Qunatities Found Page 2
+        
+[{"value":270,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"270pezzi","index":919},{"value":269,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"269 pezzi","index":1039},{"value":250,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"250pezzi","index":1092}]
+
+[22-47-10]: Page 3 - Cleane OCR Text:
+-
+VIADElFOSSI9-58100PRATO POY
+C.F.CHNFJNB7ES12210JP.lva04569540273
+-            Fattura accomep.nr.     238     del   3032025
+Destinatario                                                       Destinazione
+-YY.        -
+MARCOPOLO                                                 MARCOPOLO
+1YAFOST                                                    1YAFOST
+TEL-AVIV                                                       TEL-AVIV
+ISRAEL      ISRAEL
+odieeDeserwonequamia          PrezzoSconto       ImporteIva
+one   arr   h                                                        200pz         €10,30               €2.060,00N8a
+pantaloneda26031   oo                                                     169pz         €10,80               €1.82520N8a
+mercedioriginenonpreferenzialeitaliana
+vaTTTTTTTimpembilempesa
+N8a:Nonimp.art.8c.1lett.aDPR63372                €3.88520                      €0,00
+Pagamento:Bonificovistafattura                                                  Tot.imponibile      €0,00
+EXTRABANCA                                                        Tot.lva                                    €0,00
+IBANIT31W0339921500CC0030203580                         Tot.importinonimp.va             €3.88520
+BICEXRRITM2
+Scadenze:31032025             €3.885,20
+ Tot.documento           €3.885,20
+Incaricalodeltraspario           oT                    TT Causats del lrasporto       TT Fitmancaricato dellrasporna oO
+Nr,colli             Peso               Aspeltoeslericredeibeni           Parte                   :               Dataorainiziorasporie               Firmadestinatarig
+5                 BI
+oo      Nel rispeltodallanormativa vigente,iwinclusoDL 196703reg. UE2016f879,informiamagche vs.dali saranmaulilizzatiaisalifinkconnessiairapporticommercialiira4dingiinessera.
+Pag.  1                         ContributnCONAIassolloovedovuta-VipreghiamadfcontrollarsVs.dalianagrafici,1aP1WAaiCod.Fiscale.Moncirileniama resporisatilldigventualierror.
+
+ Qunatities Found Page 3
+        
+[{"value":200,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"200pz","index":575},{"value":169,"patternName":"Classic <number>(optional space)pz or pezzi","rawMatch":"169pz","index":697}]
+

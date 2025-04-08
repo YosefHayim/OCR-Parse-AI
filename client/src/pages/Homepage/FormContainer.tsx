@@ -6,7 +6,7 @@ import { GlobalStateProps } from "./Homepage";
 
 interface FormContainerProps {
   fileName: string | null;
-  data: any;
+  data: string | null;
   selectedFile: File | null;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

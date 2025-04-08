@@ -7,7 +7,7 @@ export const useHandleGlobalHandler = (
   globalState: GlobalStateProps,
   copyTextRef: React.RefObject<HTMLDivElement | null>,
   fileInputRef: React.RefObject<HTMLInputElement | null>,
-  mutatePdfFile: UseMutationResult<any, Error, File, unknown>,
+  mutatePdfFile: UseMutationResult<string, Error, File, unknown>,
 ) => {
   const handleGlobalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;

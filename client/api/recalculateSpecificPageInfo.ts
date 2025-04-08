@@ -4,9 +4,9 @@ const localUrl = import.meta.env.VITE_API_BACKEND_LOCAL;
 
 const isProduction = false;
 
-export const recalculateSpecificPageInfo = async (data) => {
-  if (!data?.textToRecalculate || !data?.page) {
-    throw new Error("Missing required fields: textToRecalculate and page");
+export const recalculateSpecificPageInfo = async (data: string) => {
+  if (!data) {
+    throw new Error("Missing data in order to make recalculation to page.");
   }
   const url = `${isProduction ? deployedUrl : localUrl}/api/ai/recalculate-info`;
 
