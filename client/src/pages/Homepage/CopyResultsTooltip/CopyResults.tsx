@@ -1,11 +1,7 @@
 import CreateTooltipTriggerTemplate from "./CreateTooltipTriggerTemplate/CreateTooltipTriggerTemplate";
 
 const CopyResults: React.FC<{
-  data?: {
-    page?: string | null;
-    text?: string | null;
-    quantitiesFound?: string | null;
-  };
+  data?: string | null;
 }> = ({ data }) => {
   return (
     <div>

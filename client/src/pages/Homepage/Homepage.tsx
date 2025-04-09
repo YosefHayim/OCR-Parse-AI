@@ -14,7 +14,7 @@ export interface GlobalStateProps {
   fileName: string | null;
   selectedFile: File | null;
   replacedPageInfo: string | null;
-  data?: OCRScannedProps | null;
+  data?: null;
 }
 
 export interface OCRScannedProps {
@@ -45,10 +45,10 @@ const Homepage = () => {
   });
   const mutatePdfFile = useMutatePdfFile(setGlobalState, globalState);
   const handleFileChange = useHandleFileChange(setGlobalState, globalState);
-  const mutateRecalculatePageInfo = useRecalculatePageInfo(
-    setGlobalState,
-    globalState,
-  );
+  // const mutateRecalculatePageInfo = useRecalculatePageInfo(
+  //   setGlobalState,
+  //   globalState,
+  // );
   const handleGlobalClick = useHandleGlobalHandler(
     setGlobalState,
     globalState,

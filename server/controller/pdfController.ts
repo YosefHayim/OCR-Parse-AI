@@ -33,9 +33,14 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    const foldersArrayToClean = [outputDir, pdfPath];
+    const foldersArrayToClean = [
+      "../logs/ai-logs/",
+      "../logs/ocr-logs/",
+      "../images/",
+      "../uploads/",
+    ];
 
-    cleanFolders(outputDir);
+    foldersArrayToClean.forEach((folder) => cleanFolders(folder));
 
     res.json({
       status: 200,

@@ -6,11 +6,7 @@ import LoadingEffect from "../LoadingEffect/LoadingEffect";
 
 interface FormContainerProps {
   fileName: string | null;
-  data?: {
-    page?: string | null;
-    text?: string | null;
-    quantitiesFound?: string | null;
-  };
+  data?: null;
   selectedFile: File | null;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

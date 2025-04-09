@@ -1,0 +1,194 @@
+[21-27-27]: Page 1 - Total Quantity: 9, Final Payment: 194.4
+
+[21-27-35]: Page 2 - Total Quantity: 10, Final Payment: null
+
+[21-27-40]: Page 3 - Total Quantity: 15, Final Payment: null
+
+[21-27-46]: Page 4 - Total Quantity: 19, Final Payment: null
+
+[21-27-51]: Page 5 - Total Quantity: 14, Final Payment: 21320
+
+[21-27-57]: Page 6 - Total Quantity: 38, Final Payment: null
+
+[21-28-02]: Page 7 - Total Quantity: 0, Final Payment: 2080.5
+
+[21-28-10]: Page 8 - Total Quantity: 52, Final Payment: 1402
+
+[21-28-20]: Page 9 - Total Quantity: 154, Final Payment: 1406
+
+[21-28-29]: Page 10 - Total Quantity: 68, Final Payment: 3317.1
+
+[21-28-36]: Page 11 - Total Quantity: 71, Final Payment: 3317.1
+
+[21-28-43]: Page 12 - Total Quantity: 27, Final Payment: 3317.1
+
+[21-28-49]: Page 13 - Total Quantity: 111, Final Payment: 1094
+
+[21-28-56]: Page 14 - Total Quantity: 125, Final Payment: 1930.5
+
+[21-29-00]: Page 15 - Total Quantity: 40, Final Payment: 435.7
+
+[21-29-09]: Page 16 - Total Quantity: 41, Final Payment: 983.5
+
+[21-29-32]: Page 17 - Total Quantity: 75, Final Payment: 500.6
+
+[21-29-38]: Page 18 - Total Quantity: 45, Final Payment: null
+
+[21-29-45]: Page 19 - Total Quantity: 11, Final Payment: 1539.8
+
+[21-29-52]: Page 20 - Total Quantity: 19, Final Payment: null
+
+[21-30-04]: Page 21 - Total Quantity: 20, Final Payment: null
+
+[21-30-14]: Page 22 - Total Quantity: 20, Final Payment: null
+
+[21-30-21]: Page 23 - Total Quantity: 0, Final Payment: 1356.19
+
+[21-30-44]: Page 24 - Total Quantity: 52, Final Payment: 2430.89
+
+[21-30-56]: Page 25 - Total Quantity: 57000, Final Payment: null
+
+[21-31-01]: Page 26 - Total Quantity: 18000, Final Payment: 4431.27
+
+[21-31-07]: Page 27 - Total Quantity: 0, Final Payment: null
+
+[21-31-12]: Page 28 - Total Quantity: 123, Final Payment: 4431.27
+
+[21-31-19]: Page 29 - Total Quantity: 17, Final Payment: null
+
+[21-31-26]: Page 30 - Total Quantity: 15, Final Payment: 65966
+
+[21-31-38]: Page 31 - Total Quantity: 6, Final Payment: 29396
+
+[21-31-46]: Page 32 - Total Quantity: 10, Final Payment: 17460
+
+[21-42-25]: Page 33 - Total Quantity: 14, Final Payment: null
+
+[21-42-31]: Page 34 - Total Quantity: 2, Final Payment: 2638.4
+
+[21-42-43]: Page 1 - Total Quantity: 1909, Final Payment: 11364.7
+
+[21-42-45]: Page 35 - Total Quantity: 43, Final Payment: null
+
+[21-42-56]: Page 36 - Total Quantity: 51, Final Payment: null
+
+[21-43-02]: Page 37 - Total Quantity: 31, Final Payment: null
+
+[21-43-06]: Page 38 - Total Quantity: 6, Final Payment: 34828
+
+[21-43-12]: Page 39 - Total Quantity: 7, Final Payment: 17885
+
+[21-43-18]: Page 40 - Total Quantity: 117, Final Payment: 474437
+
+[21-43-29]: Page 41 - Total Quantity: 139, Final Payment: 3025.59
+
+[21-43-37]: Page 42 - Total Quantity: 57, Final Payment: 2879.18
+
+[21-43-47]: Page 43 - Total Quantity: 103, Final Payment: 3025.59
+
+[21-43-53]: Page 44 - Total Quantity: 333, Final Payment: 1620.42
+
+[21-43-59]: Page 45 - Total Quantity: 298, Final Payment: 1911
+
+[21-44-10]: Page 46 - Total Quantity: 111, Final Payment: 986.4
+
+[21-44-50]: Page 1 - Total Quantity: 0, Final Payment: null
+
+[21-44-57]: Page 2 - Total Quantity: 10, Final Payment: null
+
+[21-45-05]: Page 3 - Total Quantity: 15, Final Payment: null
+
+[21-45-17]: Page 4 - Total Quantity: 19, Final Payment: null
+
+[21-45-25]: Page 5 - Total Quantity: 14, Final Payment: null
+
+[21-45-34]: Page 6 - Total Quantity: 38, Final Payment: null
+
+[21-45-39]: Page 7 - Total Quantity: 2, Final Payment: 2080.5
+
+[21-45-50]: Page 8 - Total Quantity: 52, Final Payment: 1402
+
+[21-45-59]: Page 9 - Total Quantity: 154, Final Payment: 1406
+
+[21-46-11]: Page 10 - Total Quantity: 68, Final Payment: 3317.1
+
+[21-46-24]: Page 11 - Total Quantity: 68, Final Payment: 3317.1
+
+[21-46-34]: Page 12 - Total Quantity: 27, Final Payment: 3317.1
+
+[21-46-41]: Page 13 - Total Quantity: 111, Final Payment: 1094
+
+[21-46-51]: Page 14 - Total Quantity: 110, Final Payment: 1930.5
+
+[21-46-59]: Page 15 - Total Quantity: 40, Final Payment: 435.7
+
+[21-47-09]: Page 16 - Total Quantity: 41, Final Payment: 983.5
+
+[21-47-20]: Page 17 - Total Quantity: 67, Final Payment: 500.6
+
+[21-47-31]: Page 18 - Total Quantity: 45, Final Payment: 98908
+
+[21-47-42]: Page 19 - Total Quantity: 13, Final Payment: 1539.8
+
+[21-47-52]: Page 20 - Total Quantity: 16, Final Payment: null
+
+[21-48-01]: Page 21 - Total Quantity: 0, Final Payment: null
+
+[21-48-09]: Page 22 - Total Quantity: 20, Final Payment: null
+
+[21-48-16]: Page 23 - Total Quantity: 17, Final Payment: 1356.19
+
+[21-48-23]: Page 24 - Total Quantity: 50, Final Payment: 2400.59
+
+[21-48-34]: Page 25 - Total Quantity: 57, Final Payment: null
+
+[21-48-45]: Page 26 - Total Quantity: 18, Final Payment: 4431.27
+
+[21-48-49]: Page 27 - Total Quantity: 0, Final Payment: null
+
+[21-48-57]: Page 28 - Total Quantity: 123, Final Payment: 4431.27
+
+[21-49-03]: Page 29 - Total Quantity: 17, Final Payment: null
+
+[21-49-10]: Page 30 - Total Quantity: 0, Final Payment: null
+
+[21-49-18]: Page 31 - Total Quantity: 6, Final Payment: 10476
+
+[21-49-35]: Page 32 - Total Quantity: 10, Final Payment: 174.6
+
+[21-49-45]: Page 33 - Total Quantity: 14, Final Payment: 408.26
+
+[21-49-52]: Page 34 - Total Quantity: 2, Final Payment: 2638.4
+
+[21-49-58]: Page 35 - Total Quantity: 39, Final Payment: null
+
+[21-50-05]: Page 36 - Total Quantity: 46, Final Payment: null
+
+[21-50-13]: Page 37 - Total Quantity: 33, Final Payment: null
+
+[21-50-18]: Page 38 - Total Quantity: 6, Final Payment: null
+
+[21-50-24]: Page 39 - Total Quantity: 7, Final Payment: null
+
+[21-50-30]: Page 40 - Total Quantity: 117, Final Payment: 4744.37
+
+[21-50-51]: Page 41 - Total Quantity: 138, Final Payment: 2879.18
+
+[21-51-05]: Page 42 - Total Quantity: 56, Final Payment: 2879.18
+
+[21-51-15]: Page 43 - Total Quantity: 99, Final Payment: 3025.59
+
+[21-51-21]: Page 44 - Total Quantity: 333, Final Payment: 1620.42
+
+[21-51-26]: Page 45 - Total Quantity: 298, Final Payment: 1911
+
+[21-51-33]: Page 46 - Total Quantity: 0, Final Payment: 986.4
+
+[22-18-25]: Page 1 - Total Quantity: 1909, Final Payment: 11364.7
+
+[22-19-14]: Page 1 - Total Quantity: 1909, Final Payment: 11364.7
+
+[22-20-14]: Page 1 - Total Quantity: 1909, Final Payment: 11364.7
+
+[22-20-53]: Page 1 - Total Quantity: 1909, Final Payment: 11364.7
+
