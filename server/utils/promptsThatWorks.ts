@@ -14,7 +14,7 @@ export const promptQuantityAndTotalAmount = `נתח את החשבונית והח
 `;
 
 // This prompt provides supplier name, total quantity and total amount of each page.
-export const promptThree = `אתה מומחה לניתוח מסמכים חשבונאיים מתוך תמונות וסריקות. קיבלת תמונה של חשבונית לקוח, והמטרה שלך היא לחלץ ממנה את המידע החשוב בלבד בצורה מדויקת, תמציתית ואחידה.
+export const promptSupplierNameAndTotalQuantityAndTotalAmount = `אתה מומחה לניתוח מסמכים חשבונאיים מתוך תמונות וסריקות. קיבלת תמונה של חשבונית לקוח, והמטרה שלך היא לחלץ ממנה את המידע החשוב בלבד בצורה מדויקת, תמציתית ואחידה.
 
 אנא החזר את המידע הבא, לפי הסדר הבא ובפורמט אחיד:
 

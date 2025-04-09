@@ -1,49 +1,43 @@
 import { logAIToFile, logToFile } from "./loggerFiles";
 import { extractQuantitiesAndTotal } from "./extractQuantityFromText";
 import { sendAIImages } from "./sendAiData";
-import { promptThree } from "./promptsThatWorks";
+import { promptSupplierNameAndTotalQuantityAndTotalAmount } from "./promptsThatWorks";
 
 export const extractDataFromPngs = async (
   files: string[],
   outputDir: string
 ) => {
-  console.log("Extracting data from PNGs...");
-
   const pages = [];
 
   try {
+    console.log("Extracting data from PNGs...");
+
     for (let i = 0; i < files.length; i++) {
+      console.log(`Extracting data for png: ${files[i]}`);
+
       const quantityFoundByAI = await sendAIImages(
         files[i],
         outputDir,
-        promptThree
+        promptSupplierNameAndTotalQuantityAndTotalAmount
       );
-
-      console.log(`AI Response to calculation: `, quantityFoundByAI);
 
       const { quantities, total, supplierName } =
         extractQuantitiesAndTotal(quantityFoundByAI);
 
-      const totalQuantity = quantities.reduce((sum, q) => sum + q, 0);
-
-      console.log(
-        `Page ${
-          i + 1
-        } — Quantities: ${quantities}, Total Quantity: ${totalQuantity}, Final Amount: ${total}`
+      const totalQuantityForCurrentPage = quantities.reduce(
+        (sum, q) => sum + q,
+        0
       );
 
-      logAIToFile(`Page ${i + 1} - AI Response:\n${quantityFoundByAI}\n`);
-      logToFile(
-        `Page ${
-          i + 1
-        } - Total Quantity: ${totalQuantity}, Final Payment: ${total}\n`
+      logAIToFile(
+        `AI Response:\nPage:\n ${i + 1}\nQuantity:\n${quantityFoundByAI}\n`
       );
 
       pages.push({
         page: `עמוד בקובץ: ${i + 1}`,
         supplierName,
         text: quantityFoundByAI,
-        totalQuantity,
+        totalQuantity: totalQuantityForCurrentPage,
         totalPayment: total,
       });
     }
