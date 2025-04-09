@@ -53,7 +53,7 @@ export const useHandleGlobalHandler = (
         break;
       }
 
-      case "copy-all-results": {
+      case "copy-all-of-results": {
         const textToCopy = copyTextRef.current?.textContent;
         if (!textToCopy) return;
         navigator.clipboard.writeText(textToCopy).then(() => {

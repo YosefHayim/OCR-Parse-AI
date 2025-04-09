@@ -11,8 +11,8 @@ const CopyResults: React.FC<{
     <div>
       {data && (
         <CreateTooltipTriggerTemplate
-          ariaLabelName="העתק תוצאות"
-          dataActionName="copy-all-results"
+          ariaLabelName="העתק את תוצאות"
+          dataActionName="copy-all-of-results"
           toolTipHoverText="העתק את כל התוצאות"
         />
       )}
