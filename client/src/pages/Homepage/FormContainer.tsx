@@ -60,10 +60,11 @@ const FormContainer: React.FC<FormContainerProps> = ({
               </div>
               <div className="flex items-center justify-center gap-4">
                 {data && <Button data-action="reset">אפס תוצאות</Button>}
-                {data && <Button data-action="upload">חשב שוב</Button>}
-                {!selectedFile ? (
+                {data && <Button data-action="upload-again">חשב שוב</Button>}
+                {!selectedFile && (
                   <Button data-action="pick-file">בחר קובץ</Button>
-                ) : (
+                )}
+                {selectedFile && (
                   <Button data-action="upload">העלאה קובץ</Button>
                 )}
               </div>

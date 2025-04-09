@@ -38,14 +38,14 @@ export const useHandleGlobalHandler = (
       case "reset": {
         setGlobalState({
           ...globalState,
-          data: null,
-          fileName: "",
+          isLoading: false,
           pageNumberToRecalculateDataAgain: null,
+          fileName: null,
           selectedFile: null,
+          data: null,
         });
-        if (fileInputRef.current) {
-          fileInputRef.current.value = "";
-        }
+        fileInputRef.current = null;
+        copyTextRef.current = null;
         toast.success("איפוס התבצע בהצלחה");
 
         break;
@@ -69,10 +69,6 @@ export const useHandleGlobalHandler = (
       case "upload": {
         if (!globalState.selectedFile) return;
 
-        if (fileInputRef?.current) {
-          fileInputRef.current.value = "";
-        }
-
         setGlobalState({
           ...globalState,
           data: null,
@@ -82,6 +78,16 @@ export const useHandleGlobalHandler = (
         });
         mutatePdfFile.mutate(globalState.selectedFile);
         break;
+      }
+
+      case "upload-again": {
+        if (!globalState.selectedFile) return;
+        setGlobalState({
+          ...globalState,
+          data: null,
+          isLoading: true,
+        });
+        mutatePdfFile.mutate(globalState.selectedFile);
       }
 
       default:
