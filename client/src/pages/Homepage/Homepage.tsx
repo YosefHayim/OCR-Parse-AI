@@ -20,9 +20,10 @@ export interface GlobalStateProps {
 export interface OCRScannedProps {
   copyTotalAmountRef: React.RefObject<HTMLDivElement | null>;
   copyTotalQuantityRef: React.RefObject<HTMLDivElement | null>;
-  ocrScanned: [
+  data: [
     {
       page?: string | null;
+      supplierName?: string | null;
       totalQuantity?: number | null;
       totalPayment?: number | null;
     },
