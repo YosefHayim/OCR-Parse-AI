@@ -43,19 +43,19 @@ export const extractDataFromPngs = async (
 
       const quantitiesFound = extractQuantitiesFromText(text);
 
-      const isAiValidateQuantity = await sendAIImages(
-        `processed-${i}.png`,
-        outputDir,
-        `חשב ותביא לי בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
-ספק: [שם הספק] | החישוב של הכמות הסופית: [חישוב כמות סופית] | סך הכמות סופית: [כמות סופית] | סך הסכום: [סכום במטבע זר]
-${quantitiesFound}`
-      );
-
       const totalQuantity = quantitiesFound.reduce(
         (sum, item) => sum + item.value,
         0
       );
       console.log("Pre-calculated quantity total:", totalQuantity);
+
+      const isAiValidateQuantity = await sendAIImages(
+        `processed-${i}.png`,
+        outputDir,
+        `הנתונים הבאים הופקו על ידי OCR מהתמונה. חישבתי מראש את סך הכמות הכוללת:
+      השווה את הכמויות לתמונה. אשר שהן מדויקות, ואם יש טעות – תקן אותה. החזר **רק** את הפלט בפורמט הבא:
+      ספק: [שם הספק] | החישוב של הכמות הסופית: [חישוב כמות סופית] | סך הכמות סופית: [כמות סופית] | סך הסכום: [סכום במטבע זר]`
+      );
 
       logToFile(`Page ${
         i + 1
