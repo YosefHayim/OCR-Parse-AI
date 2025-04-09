@@ -60,6 +60,7 @@ const Homepage = () => {
   );
 
   useEffect(() => {
+    console.log(import.meta.env);
     console.log(globalState);
   }, [globalState]);
 
