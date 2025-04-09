@@ -23,12 +23,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node_version }}
-
+          
       - name: Install dependencies
-        run: npm install
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
+        run: |
+          cd client
+          npm install
+          
+      - name: Install Playwright
+        run: |
+          cd client
+          npx playwright install --with-deps
+          
       - name: Run Playwright tests
-        run: npx playwright test
+        run: |
+          cd client
+          npx playwright test
+
