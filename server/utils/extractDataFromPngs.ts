@@ -47,24 +47,23 @@ export const extractDataFromPngs = async (
         (sum, item) => sum + item.value,
         0
       );
-      console.log("Pre-calculated quantity total:", totalQuantity);
+      logToFile(`Page ${i + 1} pattern quantity total: ${totalQuantity}`);
 
       const isAiValidateQuantity = await sendAIImages(
         `processed-${i}.png`,
         outputDir,
-        `הנתונים הבאים הופקו על ידי OCR מהתמונה. חישבתי מראש את סך הכמות הכוללת:
-      השווה את הכמויות לתמונה. אשר שהן מדויקות, ואם יש טעות – תקן אותה. החזר **רק** את הפלט בפורמט הבא:
-      ספק: [שם הספק] | החישוב של הכמות הסופית: [חישוב כמות סופית] | סך הכמות סופית: [כמות סופית] | סך הסכום: [סכום במטבע זר]`
+        `ענה רק עם המידע הבא מתוך התמונה: שם הספק, סך כל הכמויות, הסכום הכולל ששולם`
       );
 
       logToFile(`Page ${
         i + 1
       } - Cleane OCR Text:\n${text}\n Qunatities Found Page ${i + 1}
         \n${JSON.stringify(quantitiesFound)}\n`);
+
       logAIToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
 
       pages.push({
-        page: `מספר בקובץ: ${i + 1}`,
+        page: `עמוד בקובץ: ${i + 1}`,
         quantitiesFound: JSON.stringify(quantitiesFound),
         text: isAiValidateQuantity,
       });

@@ -1,6 +1,6 @@
 const quantityPatterns = [
   {
-    name: "Classic <number>(optional space)pz or pezzi",
+    name: "Classic <number>(optional space) pz or pezzi",
     pattern: /\b(\d{1,4})\s?(?:pz|pezzi)\b/gi,
   },
   {
@@ -12,7 +12,7 @@ const quantityPatterns = [
     pattern: /\bnN\s+(\d{1,4}(?:[.,]\d{1,2})?)\b/gi,
   },
   {
-    name: "followed by `<qt>` or `<qt>` in the line → extract nearby numbers",
+    name: "followed by `qt` or `ot` in the line → extract nearby numbers",
     pattern: /\b(?:qt|ot)\b.*?(\d{1,4}(?:[.,]\d{1,2})?)/gi,
   },
   {
@@ -20,23 +20,32 @@ const quantityPatterns = [
     pattern:
       /(?:\d{1,4}[.,]\d{2})\s+(\d{1,4}[.,]\d{2})\s+(?:\d{1,4}[.,]\d{2})/gi,
   },
+  // {
+  //   name: "ProductCode Description <number> i",
+  //   pattern: /\b\d{4,6}[A-Z]+\s+(\d{1,3})\s+i\b/i,
+  // },
 ];
 
 export const extractQuantitiesFromText = (text) => {
   const matches = [];
+  const lines = text.split(/\r?\n/); // process line by line for safety
 
-  for (const { name, pattern } of quantityPatterns) {
-    let match;
-    while ((match = pattern.exec(text)) !== null) {
-      const raw = match[1].replace(",", ".");
-      const quantity = parseFloat(raw);
-      if (!isNaN(quantity)) {
-        matches.push({
-          value: quantity,
-          patternName: name,
-          rawMatch: match[0],
-          index: match.index,
-        });
+  for (const line of lines) {
+    for (const { name, pattern } of quantityPatterns) {
+      const freshPattern = new RegExp(pattern.source, pattern.flags); // avoid shared state
+      let match;
+
+      while ((match = freshPattern.exec(line)) !== null) {
+        const raw = match[1].replace(",", ".");
+        const quantity = parseFloat(raw);
+        if (!isNaN(quantity)) {
+          matches.push({
+            value: quantity,
+            patternName: name,
+            rawMatch: match[0],
+            // line: line.trim(), // optionally include line info
+          });
+        }
       }
     }
   }

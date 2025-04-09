@@ -62,9 +62,11 @@ const FormContainer: React.FC<FormContainerProps> = ({
                 {data && <Button data-action="reset">אפס תוצאות</Button>}
                 {data && <Button data-action="upload-again">חשב שוב</Button>}
                 {!selectedFile && (
-                  <Button data-action="pick-file">בחר קובץ</Button>
+                  <Button data-action="pick-file" id="file">
+                    בחר קובץ
+                  </Button>
                 )}
-                {selectedFile && (
+                {selectedFile && !data && (
                   <Button data-action="upload">העלאה קובץ</Button>
                 )}
               </div>
