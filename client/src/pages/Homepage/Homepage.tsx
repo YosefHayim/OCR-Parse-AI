@@ -1,35 +1,37 @@
 import { useEffect, useRef, useState } from "react";
 import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/Navbar/Navbar";
-import FormContainer from "./FormContainer";
-import CopyResults from "./CopyResults";
+import CopyResults from "./CopyResultsTooltip/CopyResults";
 import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
 import { useRecalculatePageInfo } from "@/CustomHooks/useMutateRecalculatePageInfo";
 import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
 import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
+import FormContainer from "./FormContainer/FormContainer";
+import OcrScannedCard from "./OcrScannedCard/OcrScannedCard";
 export interface GlobalStateProps {
   isLoading: boolean | null;
   pageNumberToRecalculateDataAgain: boolean | null;
   fileName: string | null;
   selectedFile: File | null;
   replacedPageInfo: string | null;
-  data?: {
-    page?: string | null;
-    totalQuantityOfPage: number | null;
-    text?: string | null;
-    quantitiesFound?: string | null;
-  };
+  data?: OCRScannedProps | null;
 }
 
-interface OCRScannedProps {
-  page?: string | null;
-  text?: string | null;
-  quantitiesFound?: string | null;
+export interface OCRScannedProps {
+  ocrScanned: [
+    {
+      page?: string | null;
+      totalQuantity?: number | null;
+      totalPayment?: number | null;
+    },
+  ];
 }
 
 const Homepage = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const copyTextRef = useRef<HTMLDivElement | null>(null);
+  const copyTotalQuantity = useRef<HTMLDivElement | null>(null);
+  const copyTotalAmount = useRef<HTMLDivElement | null>(null);
   const [globalState, setGlobalState] = useState<GlobalStateProps>({
     isLoading: false,
     pageNumberToRecalculateDataAgain: null,
@@ -49,12 +51,12 @@ const Homepage = () => {
     globalState,
     copyTextRef,
     fileInputRef,
+    copyTotalQuantity,
+    copyTotalAmount,
     mutatePdfFile,
   );
 
-  useEffect(() => {
-    console.log(globalState);
-  }, [globalState]);
+  useEffect(() => {}, [globalState]);
 
   return (
     <div>
@@ -76,8 +78,11 @@ const Homepage = () => {
             />
             <div className="flex w-full flex-col gap-2">
               <div className="flex items-center gap-2">
-                <h1 className="text-right font-bold">תוצאות</h1>
-                <CopyResults data={globalState.data} />
+                <div className="flex w-full items-start justify-start gap-1">
+                  <h1 className="text-right font-bold">תוצאות של הקובץ</h1>
+                  <p className="font-bold underline">{globalState.fileName}</p>
+                  <CopyResults data={globalState.data} />
+                </div>
               </div>
               <div
                 ref={copyTextRef}
@@ -92,16 +97,7 @@ const Homepage = () => {
                   globalState.data.length >= 1 &&
                   globalState.data.map(
                     (ocrScanned: OCRScannedProps, index: number) => (
-                      <div key={index + 1}>
-                        <div className="flex w-full flex-col items-start justify-start gap-1">
-                          <p className="font-bold">{ocrScanned.page}</p>
-                          <p>סך כמויות פריטים: {ocrScanned.totalQuantity}</p>
-                          <p>
-                            סך הסכום שרשום בחשבונית:{ocrScanned.totalPayment}
-                          </p>
-                          <hr className="w-full " />
-                        </div>
-                      </div>
+                      <OcrScannedCard ocrScanned={ocrScanned} key={index} />
                     ),
                   )}
               </div>

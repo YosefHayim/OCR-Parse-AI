@@ -1,8 +1,8 @@
 import { Button } from "@/Components/ui/button";
 import { FaFileUpload } from "react-icons/fa";
 import { Toaster } from "sonner";
-import LoadingEffect from "./LoadingEffect";
-import { GlobalStateProps } from "./Homepage";
+import { GlobalStateProps } from "../Homepage";
+import LoadingEffect from "../LoadingEffect/LoadingEffect";
 
 interface FormContainerProps {
   fileName: string | null;

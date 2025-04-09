@@ -7,6 +7,8 @@ export const useHandleGlobalHandler = (
   globalState: GlobalStateProps,
   copyTextRef: React.RefObject<HTMLDivElement | null>,
   fileInputRef: React.RefObject<HTMLInputElement | null>,
+  copyTotalQuantity: React.RefObject<HTMLDivElement | null>,
+  copyTotalAmount: React.RefObject<HTMLDivElement | null>,
   mutatePdfFile: UseMutationResult<string, Error, File, unknown>,
 ) => {
   const handleGlobalClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -51,13 +53,30 @@ export const useHandleGlobalHandler = (
         break;
       }
 
-      case "copy-results": {
+      case "copy-all-results": {
         const textToCopy = copyTextRef.current?.textContent;
         if (!textToCopy) return;
         navigator.clipboard.writeText(textToCopy).then(() => {
-          toast.success("תוצאות הועתקו");
+          toast.success("כל התוצאות הועתקו");
         });
+        break;
+      }
 
+      case "copy-quantity": {
+        const quantityToCopy = copyTotalQuantity.current?.textContent;
+        if (!quantityToCopy) return;
+        navigator.clipboard.writeText(quantityToCopy).then(() => {
+          toast.success("כמות פריטים הועתקו");
+        });
+        break;
+      }
+
+      case "total-amount": {
+        const amountToCopy = copyTotalAmount.current?.textContent;
+        if (!amountToCopy) return;
+        navigator.clipboard.writeText(amountToCopy).then(() => {
+          toast.success("סך תשלום הועתקו");
+        });
         break;
       }
 
