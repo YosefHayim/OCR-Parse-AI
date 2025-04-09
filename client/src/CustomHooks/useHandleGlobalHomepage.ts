@@ -61,25 +61,6 @@ export const useHandleGlobalHandler = (
         break;
       }
 
-      case "pick-file": {
-        fileInputRef.current?.click();
-        break;
-      }
-
-      case "upload": {
-        if (!globalState.selectedFile) return;
-
-        setGlobalState({
-          ...globalState,
-          data: null,
-          selectedFile: null,
-          fileName: "",
-          isLoading: true,
-        });
-        mutatePdfFile.mutate(globalState.selectedFile);
-        break;
-      }
-
       case "upload-again": {
         if (!globalState.selectedFile) return;
         setGlobalState({
@@ -87,7 +68,25 @@ export const useHandleGlobalHandler = (
           data: null,
           isLoading: true,
         });
+        toast.success("מבצע חישוב מחדש לקובץ ");
         mutatePdfFile.mutate(globalState.selectedFile);
+        break;
+      }
+
+      case "pick-file": {
+        fileInputRef.current?.click();
+        break;
+      }
+
+      case "upload": {
+        if (!globalState.selectedFile) return;
+        setGlobalState({
+          ...globalState,
+          data: null,
+          isLoading: true,
+        });
+        mutatePdfFile.mutate(globalState.selectedFile);
+        break;
       }
 
       default:

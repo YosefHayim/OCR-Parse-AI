@@ -3,6 +3,7 @@ node_modules
 images
 uploads
 filesSuccessfullyPassed
+logs
 
 # Ignore common image types
 *.png

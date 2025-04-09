@@ -20,6 +20,5 @@ export const useHandleFileChange = (
       fileName: file.name,
     });
   };
-  toast.success("קובץ נטען בהצלחה");
   return handleFileChange;
 };

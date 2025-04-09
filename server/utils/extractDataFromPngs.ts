@@ -44,12 +44,18 @@ export const extractDataFromPngs = async (
       const quantitiesFound = extractQuantitiesFromText(text);
 
       const isAiValidateQuantity = await sendAIImages(
-        files[i],
+        `processed-${i}.png`,
         outputDir,
         `חשב ותביא לי בפורמט הבא, ללא הקדמות, כותרות או טקסט נוסף:
 ספק: [שם הספק] | החישוב של הכמות הסופית: [חישוב כמות סופית] | סך הכמות סופית: [כמות סופית] | סך הסכום: [סכום במטבע זר]
 ${quantitiesFound}`
       );
+
+      const totalQuantity = quantitiesFound.reduce(
+        (sum, item) => sum + item.value,
+        0
+      );
+      console.log("Pre-calculated quantity total:", totalQuantity);
 
       logToFile(`Page ${
         i + 1

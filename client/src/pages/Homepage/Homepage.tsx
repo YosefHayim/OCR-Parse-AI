@@ -82,9 +82,11 @@ const Homepage = () => {
                 ref={copyTextRef}
                 className={`${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
               >
-                {globalState.data?.length === 0 && (
-                  <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>
-                )}
+                {!globalState.data ||
+                  globalState.data === null ||
+                  (globalState.data === undefined && (
+                    <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>
+                  ))}
                 {globalState.data &&
                   globalState.data.length >= 1 &&
                   globalState.data.map(
@@ -93,7 +95,9 @@ const Homepage = () => {
                         <div className="flex w-full flex-col items-start justify-start gap-4">
                           <h2>{ocrScanned.page}</h2>
                           <p>{ocrScanned.text}</p>
-                          <p>{ocrScanned.quantitiesFound}</p>
+                          <p className={`page-${index}`}>
+                            {ocrScanned.quantitiesFound}
+                          </p>
                         </div>
                       </div>
                     ),
