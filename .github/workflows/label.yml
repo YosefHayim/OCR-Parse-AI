@@ -5,10 +5,11 @@ on:
     branches:
       - main
       - release/*
+  pull_request: # optional for PR validations
 
 jobs:
   test:
-    name: Run tests on Node ${{ matrix.node_version }} / ${{ matrix.os }}
+    name: Test on Node ${{ matrix.node_version }} / ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -18,13 +19,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node_version }}
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node_version }}
 
-      - name: Install, Build, and Test
-        run: |
-          npm ci
-          npm run build --if-present
-          npm test
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test
