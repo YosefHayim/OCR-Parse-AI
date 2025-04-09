@@ -1,5 +1,7 @@
+// This prompt provide total quantity and final amount paid but just shorter prompt.
 export const promptTotalQuantityAndTotalAmountTypeTwo = `ספק את הכמויות פריטים שאתה מוצא בחשבונית + סך התשלום שיצא`;
 
+// This prompt provide total quantity and final amount paid
 export const promptQuantityAndTotalAmount = `נתח את החשבונית והחזר את המידע הבא בלבד, בפורמט קבוע ואחיד:
 
 - שורה נפרדת עבור כל פריט עם הכמות שלו בלבד, בפורמט:
@@ -11,6 +13,7 @@ export const promptQuantityAndTotalAmount = `נתח את החשבונית והח
 אל תכלול שמות פריטים, תיאורים, מחירים ליחידה או טקסט נוסף. הפלט חייב להיות קבוע בכל הרצה על אותם נתונים.
 `;
 
+// This prompt provides supplier name, total quantity and total amount of each page.
 export const promptThree = `אתה מומחה לניתוח מסמכים חשבונאיים מתוך תמונות וסריקות. קיבלת תמונה של חשבונית לקוח, והמטרה שלך היא לחלץ ממנה את המידע החשוב בלבד בצורה מדויקת, תמציתית ואחידה.
 
 אנא החזר את המידע הבא, לפי הסדר הבא ובפורמט אחיד:
