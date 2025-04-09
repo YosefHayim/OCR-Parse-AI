@@ -1,6 +1,4 @@
 import path from "path";
-import { createWorker } from "tesseract.js";
-import sharp from "sharp";
 import { logAIToFile, logToFile } from "./loggerFiles";
 import { extractQuantitiesFromText } from "./extractQuantityFromText";
 import { sendAIImages } from "./sendAiData";
@@ -11,40 +9,14 @@ export const extractDataFromPngs = async (
 ) => {
   console.log("Extracting data from PNGs...");
 
-  // const worker = await createWorker("eng", 1, {
-  //   legacyCore: true,
-  //   legacyLang: true,
-  // });
-
-  // await worker.setParameters({
-  //   tessedit_char_whitelist:
-  //     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789€.,:-",
-  //   preserve_interword_spaces: "1",
-  // });
-
   const pages = [];
 
   try {
     for (let i = 0; i < files.length; i++) {
-      const originalPath = path.join(outputDir, files[i]);
-      // const processedPath = path.join(outputDir, `processed-${i}.png`);
-
-      // await sharp(originalPath)
-      //   .rotate()
-      //   .grayscale()
-      //   .normalize()
-      //   .threshold()
-      //   .sharpen()
-      //   .toFile(processedPath);
-
-      // const {
-      //   data: { text },
-      // } = await worker.recognize(processedPath);
-
       const isAiValidateQuantity = await sendAIImages(
         files[i],
         outputDir,
-        `ספק את כל הפריטים שאתה מוצא בחשבונית כולל כמות`
+        `ספק את הכמויות של הפריטים שאתה מוצא בחשבונית רק של כמות`
       );
 
       console.log("AI Respose with image proccess: ", isAiValidateQuantity);
@@ -56,20 +28,19 @@ export const extractDataFromPngs = async (
         0
       );
 
-      logToFile(`Page ${i + 1} pattern quantity total: ${totalQuantity}`);
+      console.log(`totalQuantity`, totalQuantity);
 
-      // logToFile(`Page ${
-      //   i + 1
-      // } - Cleane OCR Text:\n${isAiValidateQuantity}\n Qunatities Found Page ${
-      //   i + 1
-      // }
-      //   \n${JSON.stringify(quantitiesFound)}\n`);
+      logToFile(`Page ${
+        i + 1
+      } | Cleane OCR Text:\n${isAiValidateQuantity}\n | quantity total: ${totalQuantity}
+        \n${JSON.stringify(quantitiesFound)}\n`);
 
-      // logAIToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
+      logAIToFile(`Page ${i + 1} - AI Response:\n${isAiValidateQuantity}\n`);
 
       pages.push({
         page: `עמוד בקובץ: ${i + 1}`,
-        // quantitiesFound: JSON.stringify(quantitiesFound),
+        totalQuantityOfPage: totalQuantity,
+        quantitiesFound: JSON.stringify(quantitiesFound),
         text: isAiValidateQuantity,
       });
     }

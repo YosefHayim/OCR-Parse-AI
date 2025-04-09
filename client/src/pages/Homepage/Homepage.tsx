@@ -15,6 +15,7 @@ export interface GlobalStateProps {
   replacedPageInfo: string | null;
   data?: {
     page?: string | null;
+    totalQuantityOfPage: number | null;
     text?: string | null;
     quantitiesFound?: string | null;
   };
@@ -94,7 +95,7 @@ const Homepage = () => {
                       <div key={index + 1}>
                         <div className="flex w-full flex-col items-start justify-start gap-4">
                           <h2>{ocrScanned.page}</h2>
-                          <p>{ocrScanned.text}</p>
+                          <p>{ocrScanned.totalQuantityOfPage}</p>
                           <p className={`page-${index}`}>
                             {ocrScanned.quantitiesFound}
                           </p>
