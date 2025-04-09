@@ -95,10 +95,7 @@ const Homepage = () => {
                       <div key={index + 1}>
                         <div className="flex w-full flex-col items-start justify-start gap-4">
                           <h2>{ocrScanned.page}</h2>
-                          <p>{ocrScanned.totalQuantityOfPage}</p>
-                          <p className={`page-${index}`}>
-                            {ocrScanned.quantitiesFound}
-                          </p>
+                          <p>{ocrScanned.text}סך הכמות בעמוד: </p>
                         </div>
                       </div>
                     ),
