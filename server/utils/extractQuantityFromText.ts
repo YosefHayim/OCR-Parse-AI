@@ -28,24 +28,19 @@ const quantityPatterns = [
 
 export const extractQuantitiesFromText = (text) => {
   const matches = [];
-  const lines = text.split(/\r?\n/); // process line by line for safety
 
-  for (const line of lines) {
-    for (const { name, pattern } of quantityPatterns) {
-      const freshPattern = new RegExp(pattern.source, pattern.flags); // avoid shared state
-      let match;
-
-      while ((match = freshPattern.exec(line)) !== null) {
-        const raw = match[1].replace(",", ".");
-        const quantity = parseFloat(raw);
-        if (!isNaN(quantity)) {
-          matches.push({
-            value: quantity,
-            patternName: name,
-            rawMatch: match[0],
-            // line: line.trim(), // optionally include line info
-          });
-        }
+  for (const { name, pattern } of quantityPatterns) {
+    let match;
+    while ((match = pattern.exec(text)) !== null) {
+      const raw = match[1].replace(",", ".");
+      const quantity = parseFloat(raw);
+      if (!isNaN(quantity)) {
+        matches.push({
+          value: quantity,
+          patternName: name,
+          rawMatch: match[0],
+          // index: match.index,
+        });
       }
     }
   }
