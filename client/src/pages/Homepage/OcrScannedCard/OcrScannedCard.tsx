@@ -15,7 +15,7 @@ const OcrScannedCard: React.FC<OCRScannedProps> = ({
       <div className="flex w-full flex-col items-start justify-start gap-1">
         <ScannedPage pageNumber={ocrScanned.page} />
         <SupplierName supplierName={ocrScanned.supplierName} />
-        <DebugText text={ocrScanned.text} />
+        <DebugText debugText={ocrScanned.text} />
         <TotalQuantity
           copyTotalQuantityRef={copyTotalQuantityRef}
           totalQuantity={ocrScanned.totalQuantity}

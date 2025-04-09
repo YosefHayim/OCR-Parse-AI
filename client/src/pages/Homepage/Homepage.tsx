@@ -3,7 +3,6 @@ import Footer from "@/Components/Footer/Footer";
 import Navbar from "@/Components/Navbar/Navbar";
 import CopyResults from "./CopyResultsTooltip/CopyResults";
 import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
-import { useRecalculatePageInfo } from "@/CustomHooks/useMutateRecalculatePageInfo";
 import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
 import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
 import FormContainer from "./FormContainer/FormContainer";

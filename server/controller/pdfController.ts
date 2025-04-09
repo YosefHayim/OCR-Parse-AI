@@ -1,9 +1,9 @@
 import fs from "fs";
+import path from "path";
 import { NextFunction, Request, Response } from "express";
 import { convertPdfToPngs } from "../utils/convertPdfToPngs";
 import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
-import path from "path";
 import { cleanFolders } from "../utils/cleanFolders";
 import { currentDate } from "../utils/getDateWCurrentTime";
 

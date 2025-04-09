@@ -1,7 +1,7 @@
-const DebugText: React.FC<{ text: string }> = ({ text }) => {
+const DebugText: React.FC<{ debugText: string }> = ({ debugText }) => {
   return (
     <div>
-      <p className="font-bold">{text}</p>
+      <p className="font-bold">{debugText}</p>
     </div>
   );
 };
