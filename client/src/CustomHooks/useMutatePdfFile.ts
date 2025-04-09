@@ -12,7 +12,7 @@ export const useMutatePdfFile = (
     onSuccess: (data) => {
       // console.log("Data received from postPdfFile: ", data);
 
-      toast.success(`${globalState.fileName} נמצא בתהליך ניתוח נתונים`);
+      toast.success(`סיים ניתוח נתונים בהצלחה ${globalState.fileName}`);
       setGlobalState({ ...globalState, data: data.pages, isLoading: false });
     },
     onError: () => {

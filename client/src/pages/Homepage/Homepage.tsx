@@ -58,7 +58,9 @@ const Homepage = () => {
     mutatePdfFile,
   );
 
-  useEffect(() => {}, [globalState]);
+  useEffect(() => {
+    console.log(globalState);
+  }, [globalState]);
 
   return (
     <div>

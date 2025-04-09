@@ -87,7 +87,7 @@ export const useHandleGlobalHandler = (
           data: null,
           isLoading: true,
         });
-        toast.success("מבצע חישוב מחדש לקובץ ");
+        toast.success(`מבצע חישוב מחדש לקובץ ${globalState.fileName}`);
         mutatePdfFile.mutate(globalState.selectedFile);
         break;
       }

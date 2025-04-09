@@ -1,7 +1,7 @@
 import { logAIToFile, logToFile } from "./loggerFiles";
 import { extractQuantitiesAndTotal } from "./extractQuantityFromText";
 import { sendAIImages } from "./sendAiData";
-import { promptTwo } from "./promptsThatWorks";
+import { promptThree } from "./promptsThatWorks";
 
 export const extractDataFromPngs = async (
   files: string[],
@@ -16,10 +16,12 @@ export const extractDataFromPngs = async (
       const quantityFoundByAI = await sendAIImages(
         files[i],
         outputDir,
-        promptTwo
+        promptThree
       );
 
-      const { quantities, total } =
+      console.log(`AI Response to calculation: `, quantityFoundByAI);
+
+      const { quantities, total, supplierName } =
         extractQuantitiesAndTotal(quantityFoundByAI);
 
       const totalQuantity = quantities.reduce((sum, q) => sum + q, 0);
@@ -39,6 +41,7 @@ export const extractDataFromPngs = async (
 
       pages.push({
         page: `עמוד בקובץ: ${i + 1}`,
+        supplierName,
         text: quantityFoundByAI,
         totalQuantity,
         totalPayment: total,
