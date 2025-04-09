@@ -59,21 +59,18 @@ const quantityPatterns = [
     name: "Dash before Hebrew unit (item lines only)",
     pattern: /-\s*(\d{1,4})\s*(יחידות|חתיכות)\b/g,
   },
+  {
+    name: "Colon number fallback",
+    pattern: /.*:\s*(\d{1,4})\s*$/gm,
+  },
+  {
+    name: "Fallback colon-unit pattern",
+    pattern: /:\s*(\d{1,4})\s*(יחידות|חתיכות)/g,
+  },
 ];
 
 export const extractQuantitiesFromText = (text) => {
-  text = text
-    .replace(/\u200E|\u200F|\u202A-\u202E/g, "") // remove directionality marks
-    .replace(/\s+/g, " ") // normalize spaces
-    .replace(/,(?!\s)/g, "")
-    .trim()
-    .split("\n")
-    .filter(
-      (line) =>
-        !line.includes('סה"כ') &&
-        !line.includes("סה”כ") &&
-        !line.toLowerCase().includes("total")
-    );
+  text = text.replace(/\D/g, "");
 
   const matches = [];
   const usedSpans = new Set(); // Track character ranges to avoid overlap

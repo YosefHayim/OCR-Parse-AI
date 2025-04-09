@@ -4,7 +4,6 @@ import { convertPdfToPngs } from "../utils/convertPdfToPngs";
 import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import path from "path";
-import { sendAIData } from "../utils/sendAiData";
 
 export const pdfExtractor = async (
   req: Request,
@@ -20,7 +19,7 @@ export const pdfExtractor = async (
       return next(error);
     }
 
-    // console.log("PDF file received", req.file.originalname);
+    console.log("PDF file received", req.file.originalname);
 
     const outputDir = path.join("images", Date.now().toString());
     fs.mkdirSync(outputDir, { recursive: true });
@@ -29,11 +28,9 @@ export const pdfExtractor = async (
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    // console.log("Total AI Data found: ", pages);
-
     // Clean outPutDir folder
-    // fs.unlinkSync(pdfPath);
-    // fs.rmSync(outputDir, { recursive: true, force: true });
+    fs.unlinkSync(pdfPath);
+    fs.rmSync(outputDir, { recursive: true, force: true });
 
     res.json({
       status: 200,
