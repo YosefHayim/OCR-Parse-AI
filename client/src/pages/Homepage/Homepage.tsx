@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import Footer from "@/Components/Footer/Footer";
-import Navbar from "@/Components/Navbar/Navbar";
 import CopyResults from "./CopyResultsTooltip/CopyResults";
-import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
-import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
-import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
 import FormContainer from "./FormContainer/FormContainer";
 import OcrScannedCard from "./OcrScannedCard/OcrScannedCard";
+import Footer from "@/Components/Footer/Footer";
+import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
+import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
+import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
+import Navbar from "@/Components/Navbar/Navbar";
 export interface GlobalStateProps {
   isLoading: boolean | null;
   pageNumberToRecalculateDataAgain: boolean | null;

@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "Pdf-Ocr-Data-Proccessing-backend",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -76,6 +76,7 @@
     "side-channel-list": "^1.0.0",
     "side-channel-map": "^1.0.1",
     "side-channel-weakmap": "^1.0.2",
+    "socket.io": "^4.8.1",
     "statuses": "^2.0.1",
     "tesseract.js": "^6.0.0",
     "toidentifier": "^1.0.1",
