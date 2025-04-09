@@ -93,9 +93,13 @@ const Homepage = () => {
                   globalState.data.map(
                     (ocrScanned: OCRScannedProps, index: number) => (
                       <div key={index + 1}>
-                        <div className="flex w-full flex-col items-start justify-start gap-4">
-                          <h2>{ocrScanned.page}</h2>
-                          <p>{ocrScanned.text}סך הכמות בעמוד: </p>
+                        <div className="flex w-full flex-col items-start justify-start gap-1">
+                          <p className="font-bold">{ocrScanned.page}</p>
+                          <p>סך כמויות פריטים: {ocrScanned.totalQuantity}</p>
+                          <p>
+                            סך הסכום שרשום בחשבונית:{ocrScanned.totalPayment}
+                          </p>
+                          <hr className="w-full " />
                         </div>
                       </div>
                     ),
