@@ -18,6 +18,8 @@ export interface GlobalStateProps {
 }
 
 export interface OCRScannedProps {
+  copyTotalAmountRef: React.RefObject<HTMLDivElement | null>;
+  copyTotalQuantityRef: React.RefObject<HTMLDivElement | null>;
   ocrScanned: [
     {
       page?: string | null;
@@ -30,8 +32,8 @@ export interface OCRScannedProps {
 const Homepage = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const copyTextRef = useRef<HTMLDivElement | null>(null);
-  const copyTotalQuantity = useRef<HTMLDivElement | null>(null);
-  const copyTotalAmount = useRef<HTMLDivElement | null>(null);
+  const copyTotalQuantityRef = useRef<HTMLDivElement | null>(null);
+  const copyTotalAmountRef = useRef<HTMLDivElement | null>(null);
   const [globalState, setGlobalState] = useState<GlobalStateProps>({
     isLoading: false,
     pageNumberToRecalculateDataAgain: null,
@@ -51,8 +53,8 @@ const Homepage = () => {
     globalState,
     copyTextRef,
     fileInputRef,
-    copyTotalQuantity,
-    copyTotalAmount,
+    copyTotalQuantityRef,
+    copyTotalAmountRef,
     mutatePdfFile,
   );
 
@@ -97,7 +99,12 @@ const Homepage = () => {
                   globalState.data.length >= 1 &&
                   globalState.data.map(
                     (ocrScanned: OCRScannedProps, index: number) => (
-                      <OcrScannedCard ocrScanned={ocrScanned} key={index} />
+                      <OcrScannedCard
+                        ocrScanned={ocrScanned}
+                        key={index}
+                        copyTotalQuantityRef={copyTotalQuantityRef}
+                        copyTotalAmountRef={copyTotalAmountRef}
+                      />
                     ),
                   )}
               </div>
@@ -105,9 +112,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-0 w-full">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

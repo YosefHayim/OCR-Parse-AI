@@ -22,12 +22,12 @@ const CreateTooltipTriggerTemplate: React.FC<{
       <Tooltip>
         <TooltipTrigger
           data-action={dataActionName}
-          className="cursor-pointer rounded-sm p-1 text-black shadow-none hover:bg-black hover:text-white"
+          className="shadow-1xl cursor-pointer rounded-sm p-1 text-black hover:bg-black hover:text-white "
           aria-label={ariaLabelName}
         >
           <FaCopy />
         </TooltipTrigger>
-        <TooltipContent className="shadow-1xl rounded-lg bg-white p-3 font-bold">
+        <TooltipContent className="shadow-1xl rounded-lg bg-white p-3 text-sm font-bold">
           {toolTipHoverText}
         </TooltipContent>
       </Tooltip>
