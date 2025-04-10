@@ -7,6 +7,7 @@ import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
 import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
 import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
 import Navbar from "@/Components/Navbar/Navbar";
+import { useSockets } from "@/CustomHooks/useSockets";
 export interface GlobalStateProps {
   isLoading: boolean | null;
   pageNumberToRecalculateDataAgain: boolean | null;
@@ -30,6 +31,7 @@ export interface OCRScannedProps {
 }
 
 const Homepage = () => {
+  useSockets();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const copyTextRef = useRef<HTMLDivElement | null>(null);
   const copyTotalQuantityRef = useRef<HTMLDivElement | null>(null);

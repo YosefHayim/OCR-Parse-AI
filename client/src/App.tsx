@@ -1,23 +1,16 @@
+import "@/App.css";
+import { SocketContext } from "./Contexts/Socket";
 import AppRoutes from "./routes/routes";
 import { io } from "socket.io-client";
-import "@/App.css";
+
+const socket = io("http://localhost:3000");
 
 const App = () => {
-  const socket = io("http://localhost:3000");
-
-  socket.on("connected", (socket) => {
-    console.log("Client is connected to server", socket.id);
-  });
-
-  socket.on("progress-of-extraction", (data) => {
-    console.log(
-      `Page ${data.currentPage}/${data.totalPages} - ${data.percent}%`,
-    );
-  });
-
   return (
     <div className="w-full">
-      <AppRoutes />
+      <SocketContext.Provider value={socket}>
+        <AppRoutes />
+      </SocketContext.Provider>
     </div>
   );
 };

@@ -34,6 +34,7 @@ export const extractDataFromPngs = async (
       logAIToFile(
         `AI Response:\nPage:\n ${i + 1}\nQuantity:\n${quantityFoundByAI}\n`
       );
+      
       io.emit("progress-of-extraction", {
         currentPage: i + 1,
         totalPages: files.length,
