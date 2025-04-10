@@ -12,11 +12,10 @@ export const extractDataFromPngs = async (
 
   try {
     console.log("Extracting data from PNGs...");
-    const stepProgressEachIteration = 100 / files.length;
+    const stepProgressEachIteration = 100 / +files.length;
 
     for (let i = 0; i < files.length; i++) {
       console.log(`Extracting data for png: ${files[i]}`);
-      const stepProgress =+ stepProgressEachIteration;
 
       const quantityFoundByAI = await sendAIImages(
         files[i],
@@ -35,9 +34,10 @@ export const extractDataFromPngs = async (
       logAIToFile(
         `AI Response:\nPage:\n ${i + 1}\nQuantity:\n${quantityFoundByAI}\n`
       );
-
-      io.emit("progress-of-extraction", (stepProgress) => {
-        console.log(stepProgress);
+      io.emit("progress-of-extraction", {
+        currentPage: i + 1,
+        totalPages: files.length,
+        percent: Math.round(stepProgressEachIteration * (i + 1)),
       });
 
       pages.push({
