@@ -30,6 +30,12 @@ export interface OCRScannedProps {
   ];
 }
 
+export interface ProgressBarDataProps {
+  currentPage: number | null;
+  totalPages: number | null;
+  percent: number | null;
+}
+
 const Homepage = () => {
   useSockets();
   const fileInputRef = useRef<HTMLInputElement | null>(null);

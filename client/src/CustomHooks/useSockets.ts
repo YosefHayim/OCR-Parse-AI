@@ -1,18 +1,31 @@
+import { ProgressBarDataContext } from "@/Contexts/ProgressBarData";
 import { SocketContext } from "@/Contexts/Socket";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 export const useSockets = () => {
+  const [progressBarData, setProgressBar] = useContext(ProgressBarDataContext);
+
   const socket = useContext(SocketContext);
 
-  // First initalize of connection to server
-  socket.on("connected", (socket) => {
-    console.log("Client is connected to server", socket.id);
-  });
+  useEffect(() => {
+    if (!socket) return;
 
-  // Intialize and listen to event of progress of extraction data from pdfs.
-  socket.on("progress-of-extraction", (data) => {
-    console.log(
-      `Page ${data.currentPage}/${data.totalPages} - ${data.percent}%`,
-    );
-  });
+    // First initalize of connection to server
+    socket.on("connected", (socket) => {
+      console.log("Client is connected to server", socket.id);
+    });
+
+    // Intialize and listen to event of progress of extraction data from pdfs.
+    socket.on("progress-of-extraction", (data) => {
+      if (data) setProgressBar(data);
+      console.log(
+        `Page ${data.currentPage}/${data.totalPages} - ${data.percent}%`,
+      );
+    });
+
+    // turn off socket when there is no more rendering info.
+    return () => {
+      socket.off("progress-of-extraction");
+    };
+  }, [socket]);
 };
