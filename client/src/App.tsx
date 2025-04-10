@@ -3,18 +3,10 @@ import { io } from "socket.io-client";
 import "@/App.css";
 
 const App = () => {
-  const socket = io();
+  const socket = io("http://localhost:3000");
 
-  socket.on("connect", () => {
-    console.log(socket.connected);
-  });
-
-  socket.on("progress-of-extraction", () => {
-    if (socket.connected) {
-      socket.emit("progress-of-extraction", () => {
-        "Client is connected and ready to recieve progress of extraction pdf";
-      });
-    }
+  socket.on("connected", () => {
+    console.log("Client is connected to server");
   });
 
   return (
