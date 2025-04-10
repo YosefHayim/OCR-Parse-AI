@@ -58,9 +58,13 @@ const FormContainer: React.FC<FormContainerProps> = ({
                 {data && <Button data-action="reset">אפס תוצאות</Button>}
                 {data && <Button data-action="upload-again">חשב שוב</Button>}
                 {!selectedFile && (
-                  <Button data-action="pick-file" id="file">
+                  <label
+                    data-action="pick-file"
+                    id="file"
+                    className="bg-primary text-primary-foreground shadow-xs cursor-pointer rounded-full p-2 hover:bg-white hover:text-black"
+                  >
                     בחר קובץ
-                  </Button>
+                  </label>
                 )}
                 {selectedFile && !data && (
                   <Button data-action="upload">העלאה קובץ</Button>
