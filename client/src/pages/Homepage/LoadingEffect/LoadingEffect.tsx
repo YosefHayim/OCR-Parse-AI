@@ -1,4 +1,4 @@
-import Loader from "@/Components/Loader/Loader";
+import Loader from "@/Componentss/Loader/Loader";
 import { ProgressBarDataContext } from "@/Contexts/ProgressBarData";
 import { useContext, useEffect } from "react";
 

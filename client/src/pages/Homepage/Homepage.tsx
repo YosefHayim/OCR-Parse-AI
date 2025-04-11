@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import CopyResults from "./CopyResultsTooltip/CopyResults";
 import FormContainer from "./FormContainer/FormContainer";
 import OcrScannedCard from "./OcrScannedCard/OcrScannedCard";
-import Footer from "@/Components/Footer/Footer";
+import Footer from "@/Componentss/Footer/Footer";
 import { useHandleGlobalHandler } from "@/CustomHooks/useHandleGlobalHomepage";
 import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
 import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
-import Navbar from "@/Components/Navbar/Navbar";
+import Navbar from "@/Componentss/Navbar/Navbar";
 import { useSockets } from "@/CustomHooks/useSockets";
 export interface GlobalStateProps {
   isLoading: boolean | null;
