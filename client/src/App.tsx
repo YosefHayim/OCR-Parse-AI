@@ -11,11 +11,11 @@ console.log("Client mode is:", envPaths.NODE_ENV);
 
 const App = () => {
   socket.on("connect", () => {
-    console.log(" Connected to server");
+    console.log("\nConnected to server");
   });
 
   socket.on("connect_error", (err) => {
-    console.error("Socket connection failed:", err.message);
+    console.error("\nSocket connection failed:", err.message);
   });
 
   const [progressBar, setProgressBar] = useState(null);

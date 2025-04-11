@@ -7,7 +7,6 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import { Server } from "socket.io";
 import { createServer } from "node:http";
-
 dotenv.config();
 
 const app = express();
@@ -20,7 +19,6 @@ export const io = new Server(server, {
   },
 });
 
-app.use(cors());
 app.use(express.json());
 app.use(morgan("short"));
 
@@ -36,6 +34,11 @@ app.use("/api/pdf", pdfRouter);
 app.use("/api/ai", aiRouter);
 app.use(errorHandler);
 
+console.log("PORT:", PORT);
+console.log("\nDEPLOYED_URL:", process.env.DEPLOYED_URL);
+console.log("\nLOCAL_URL:", process.env.LOCAL_URL);
+console.log("\nNODE_ENV:", process.env.NODE_ENV);
+
 server.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
+  console.log(`\nServer is running on port: ${PORT}`);
 });
