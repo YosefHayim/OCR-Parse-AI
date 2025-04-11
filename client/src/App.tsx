@@ -6,7 +6,7 @@ import { ProgressBarDataContext } from "./Contexts/ProgressBarData";
 import { useState } from "react";
 import { envPaths } from "./envPaths";
 
-const socket = io("http://localhost:3000");
+const socket = io(envPaths.NODE_ENV === "production" ? envPaths.DEPLOYED_URL : envPaths.LOCAL_URL);
 console.log("Client mode is:", envPaths.NODE_ENV);
 
 const App = () => {
