@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export const sortFileswithinOutputDir = (outputDir: string) => {
+export const sortFilesWithinOutputDir = (outputDir: string) => {
   console.log(`Sorting files within ${outputDir} directory`);
 
   const files = fs

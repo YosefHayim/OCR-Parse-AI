@@ -18,7 +18,7 @@ export const io = new Server(server, {
     origin: process.env.NODE_ENV === "production" ? process.env.DEPLOYED_URL : process.env.LOCAL_URL,
   },
 });
-
+app.use(cors());
 app.use(express.json());
 app.use(morgan("short"));
 

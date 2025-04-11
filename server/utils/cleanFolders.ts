@@ -1,13 +1,9 @@
 import fs from "fs";
-import { fileURLToPath } from "url";
 import path from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 export const cleanFolders = (folderToCleanLocation) => {
   console.log("Removing files...");
-  const folderToCleanPath = path.resolve(__dirname, folderToCleanLocation);
+  const folderToCleanPath = path.resolve(folderToCleanLocation);
 
   if (!fs.existsSync(folderToCleanPath)) {
     console.warn(`Directory does not exist: ${folderToCleanPath}`);

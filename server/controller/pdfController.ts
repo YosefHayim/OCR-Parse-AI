@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { NextFunction, Request, Response } from "express";
 import { convertPdfToPngs } from "../utils/convertPdfToPngs";
-import { sortFileswithinOutputDir } from "../utils/sortFilesWithinOutputDir";
+import { sortFilesWithinOutputDir } from "../utils/sortFilesWithinOutputDir";
 import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import { cleanFolders } from "../utils/cleanFolders";
 import { currentDate } from "../utils/getDateWCurrentTime";
@@ -23,12 +23,12 @@ export const pdfExtractor = async (req: Request, res: Response, next: NextFuncti
     fs.mkdirSync(outputDir, { recursive: true });
 
     await convertPdfToPngs(pdfPath, outputDir);
-    const files = sortFileswithinOutputDir(outputDir);
+    const files = sortFilesWithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    // const foldersArrayToClean = ["../logs/ai-logs/", "../logs/ocr-logs/", "../images/", "../uploads/"];
+    const foldersArrayToClean = ["../logs/ai-logs/", "../logs/ocr-logs/", "../images/", "../uploads/"];
 
-    // foldersArrayToClean.forEach((folder) => cleanFolders(folder));
+    foldersArrayToClean.forEach((folder) => cleanFolders(folder));
 
     res.json({
       status: 200,

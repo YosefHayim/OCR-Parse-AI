@@ -19,8 +19,6 @@ export const extractDataFromPngs = async (files: string[], outputDir: string) =>
         promptSupplierNameAndTotalQuantityAndTotalAmount
       );
 
-      console.log(`page - ${files[i]} quantityFoundByAI: `, quantityFoundByAI);
-
       const { quantities, total, supplierName } = extractQuantitiesAndTotal(quantityFoundByAI);
 
       const totalQuantityForCurrentPage = quantities.reduce((sum, q) => sum + q, 0);
