@@ -6,7 +6,10 @@ import { ProgressBarDataContext } from "./Contexts/ProgressBarData";
 import { useState } from "react";
 import { envPaths } from "./envPaths";
 
-const socket = io(envPaths.NODE_ENV === "production" ? envPaths.DEPLOYED_URL : envPaths.LOCAL_URL);
+const socket = io(envPaths.NODE_ENV === "production" ? envPaths.DEPLOYED_URL : envPaths.LOCAL_URL, {
+  withCredentials: true,
+  transports: ["websocket", "polling"], // helps avoid fallback problems
+});
 console.log("Client mode is:", envPaths.NODE_ENV);
 
 const App = () => {
