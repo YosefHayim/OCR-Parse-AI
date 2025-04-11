@@ -1,46 +1,51 @@
 import { execFile } from "child_process";
-import { resolveMagickPath } from "./resolveMagicPath";
+import path from "path";
+import os from "os";
 
 export const convertPdfToPngs = async (pdfPath: string, outputDir: string): Promise<void> => {
-  console.log("Files received, converting PDFs to PNGs...");
+  console.log("🧾 Files received, converting PDFs to PNGs...");
 
-  const whichSystemBeingSet = resolveMagickPath()
-    .replace(/^cmd:\s*'(.+?)'[\n\r]*$/, "$1")
-    .trim();
+  // Use forward slashes to avoid CLI issues with backslashes
+  const normalizedPdfPath = path.resolve(pdfPath).replace(/\\/g, "/");
+  const normalizedOutputDir = path.resolve(outputDir).replace(/\\/g, "/");
 
-  await new Promise((resolve, reject) => {
-    execFile(
-      whichSystemBeingSet,
-      [
+  // Windows requires using "magick convert", Linux just "convert"
+  const isWindows = os.platform() === "win32";
+  const command = isWindows ? "magick" : "convert";
+
+  // Use magick convert on Windows (two commands), just convert on Linux
+  const args = isWindows
+    ? [
         "convert",
-
-        // Set input resolution to 300 DPI for better OCR quality
         "-density",
         "300",
-
-        // Use pixel units for accurate scaling
         "-units",
         "PixelsPerInch",
-
-        // Ensure output is in RGB color space
         "-colorspace",
         "Gray",
+        normalizedPdfPath,
+        `${normalizedOutputDir}/page-%d.png`,
+      ]
+    : [
+        "-density",
+        "300",
+        "-units",
+        "PixelsPerInch",
+        "-colorspace",
+        "Gray",
+        normalizedPdfPath,
+        `${normalizedOutputDir}/page-%d.png`,
+      ];
 
-        // Source PDF file path
-        pdfPath,
-
-        // Output PNG file pattern (one per page)
-        `${outputDir}/page-%d.png`,
-      ],
-      (error, stdout, stderr) => {
-        if (error) {
-          console.error("ImageMagick convert error:", stderr);
-          reject(error);
-        } else {
-          console.log("PDF converted to PNGs");
-          resolve(true);
-        }
-      },
-    );
+  await new Promise<void>((resolve, reject) => {
+    execFile(command, args, (error, stdout, stderr) => {
+      if (error) {
+        console.error("❌ ImageMagick convert error:", stderr || error.message);
+        reject(error);
+      } else {
+        console.log("✅ PDF converted to PNGs");
+        resolve();
+      }
+    });
   });
 };
