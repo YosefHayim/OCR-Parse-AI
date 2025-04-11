@@ -2,19 +2,12 @@ import CreateTooltipTriggerTemplate from "../../CopyResultsTooltip/CreateTooltip
 
 const TotalQuantity: React.FC<{
   totalQuantity: number;
-  copyTotalQuantityRef: React.RefObject<HTMLDivElement | null>;
-}> = ({ totalQuantity, copyTotalQuantityRef }) => {
+}> = ({ totalQuantity }) => {
   return (
     <div className="flex w-full items-start justify-start gap-2">
-      <p>
-        כמות פריטים:{" "}
-        <span data-action="copy-quantity-of-page" ref={copyTotalQuantityRef}>
-          {totalQuantity}
-        </span>
-      </p>
+      כמות פריטים: <p className="w-full">{totalQuantity}</p>
       <CreateTooltipTriggerTemplate
         ariaLabelName={`העתק כמות פריטים`}
-        dataActionName="copy-quantity-of-page"
         toolTipHoverText={`להעתיק את הכמות  ${totalQuantity}?`}
       />
     </div>

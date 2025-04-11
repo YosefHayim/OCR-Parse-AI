@@ -3,10 +3,9 @@ import { FaCopy } from "react-icons/fa";
 
 const CreateTooltipTriggerTemplate: React.FC<{
   ariaLabelName: string;
-  dataActionName: string;
   toolTipHoverText: string;
-}> = ({ ariaLabelName, dataActionName, toolTipHoverText }) => {
-  if (!ariaLabelName || !dataActionName || !toolTipHoverText) {
+}> = ({ ariaLabelName, toolTipHoverText }) => {
+  if (!ariaLabelName || !toolTipHoverText) {
     throw new Error("Please provide to the tooltip template the attributes that are missing!");
   }
 
@@ -14,7 +13,6 @@ const CreateTooltipTriggerTemplate: React.FC<{
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger
-          data-action={dataActionName}
           className="shadow-1xl cursor-pointer rounded-sm p-1 text-black hover:bg-black hover:text-white "
           aria-label={ariaLabelName}
         >

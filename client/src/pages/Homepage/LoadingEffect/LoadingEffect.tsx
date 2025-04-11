@@ -15,7 +15,7 @@ const LoadingEffect: React.FC<{ fileName: string | null }> = ({ fileName }) => {
           <p className="">{progressBarData.percent}%</p>
           <div className="relative h-[1em] w-full rounded-full bg-gray-300">
             <div
-              className="absolute left-0 top-0 h-[1em] bg-black"
+              className="absolute left-0 top-0 h-[1em] rounded-full bg-black"
               style={{ width: `${progressBarData.percent}%` }}
             ></div>
           </div>
