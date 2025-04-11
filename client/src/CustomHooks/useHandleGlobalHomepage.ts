@@ -19,8 +19,11 @@ export const useHandleGlobalHandler = (
       console.log("no button clicked");
       return;
     }
+    console.log("button: ", button);
 
     const action = button.getAttribute("data-action");
+
+    console.log("action: ", action);
 
     switch (action) {
       case "recalculate": {
