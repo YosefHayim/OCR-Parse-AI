@@ -73,11 +73,7 @@ const Homepage = () => {
   return (
     <div>
       <Navbar />
-      <div
-        onClick={handleGlobalClick}
-        className="flex w-full flex-col items-center justify-start gap-4 p-4"
-        dir="rtl"
-      >
+      <div onClick={handleGlobalClick} className="flex w-full flex-col items-center justify-start gap-4 p-4" dir="rtl">
         <div className="flex w-full flex-col gap-4">
           <div className="flex w-full flex-col gap-2 bg-white p-4">
             <FormContainer
@@ -102,21 +98,17 @@ const Homepage = () => {
               >
                 {!globalState.data ||
                   globalState.data === null ||
-                  (globalState.data === undefined && (
-                    <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>
-                  ))}
+                  (globalState.data === undefined && <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>)}
                 {globalState.data &&
                   globalState.data.length >= 1 &&
-                  globalState.data.map(
-                    (ocrScanned: OCRScannedProps, index: number) => (
-                      <OcrScannedCard
-                        ocrScanned={ocrScanned}
-                        key={index}
-                        copyTotalQuantityRef={copyTotalQuantityRef}
-                        copyTotalAmountRef={copyTotalAmountRef}
-                      />
-                    ),
-                  )}
+                  globalState.data.map((ocrScanned: OCRScannedProps, index: number) => (
+                    <OcrScannedCard
+                      ocrScanned={ocrScanned}
+                      key={index}
+                      copyTotalQuantityRef={copyTotalQuantityRef}
+                      copyTotalAmountRef={copyTotalAmountRef}
+                    />
+                  ))}
               </div>
             </div>
           </div>

@@ -3,5 +3,6 @@
   "tailwindStylesheet": "./resources/css/app.css",
   "tailwindFunctions": ["clsx"],
   "tailwindPreserveWhitespace": true,
-  "tailwindPreserveDuplicates": true
+  "tailwindPreserveDuplicates": true,
+  "printWidth": 120
 }

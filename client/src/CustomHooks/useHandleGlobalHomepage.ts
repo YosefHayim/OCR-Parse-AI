@@ -25,9 +25,7 @@ export const useHandleGlobalHandler = (
     switch (action) {
       case "recalculate": {
         const divWrapper = button.closest(".father") as HTMLElement;
-        const textOfRelevantPage = divWrapper?.querySelector(
-          "p[data-ocr-extracted]",
-        )?.textContent;
+        const textOfRelevantPage = divWrapper?.querySelector("p[data-ocr-extracted]")?.textContent;
 
         if (!textOfRelevantPage) {
           toast.warning("אין נתונים לבצע בדיקה חוזרת");

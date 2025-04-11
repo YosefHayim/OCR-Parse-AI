@@ -1,9 +1,4 @@
-import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-} from "@radix-ui/react-tooltip";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip";
 import { FaCopy } from "react-icons/fa";
 
 const CreateTooltipTriggerTemplate: React.FC<{
@@ -12,9 +7,7 @@ const CreateTooltipTriggerTemplate: React.FC<{
   toolTipHoverText: string;
 }> = ({ ariaLabelName, dataActionName, toolTipHoverText }) => {
   if (!ariaLabelName || !dataActionName || !toolTipHoverText) {
-    throw new Error(
-      "Please provide to the tooltip template the attributes that are missing!",
-    );
+    throw new Error("Please provide to the tooltip template the attributes that are missing!");
   }
 
   return (

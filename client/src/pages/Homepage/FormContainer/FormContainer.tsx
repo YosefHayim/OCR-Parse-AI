@@ -36,10 +36,7 @@ const FormContainer: React.FC<FormContainerProps> = ({
           <form className="rounded-lg border border-dotted bg-gray-200 p-4">
             <div className="flex w-full flex-col items-center justify-center gap-2">
               <label htmlFor="file" className="cursor-pointer">
-                <FaFileUpload
-                  size={40}
-                  className="rounded-sm p-1 hover:bg-black hover:text-white"
-                />
+                <FaFileUpload size={40} className="rounded-sm p-1 hover:bg-black hover:text-white" />
               </label>
               <div className="relative w-full text-center">
                 {fileName}
@@ -61,14 +58,12 @@ const FormContainer: React.FC<FormContainerProps> = ({
                   <label
                     data-action="pick-file"
                     id="file"
-                    className="bg-primary text-primary-foreground shadow-xs cursor-pointer rounded-full p-2 hover:bg-white hover:text-black"
+                    className="bg-primary text-primary-foreground shadow-xs cursor-pointer rounded-full p-2 px-4 font-bold hover:bg-white hover:text-black"
                   >
                     בחר קובץ
                   </label>
                 )}
-                {selectedFile && !data && (
-                  <Button data-action="upload">העלאה קובץ</Button>
-                )}
+                {selectedFile && !data && <Button data-action="upload">העלאה קובץ</Button>}
               </div>
             </div>
           </form>
