@@ -14,13 +14,10 @@ export const useHandleGlobalHandler = (
     const targetOfAction = target.closest("[data-action]") as HTMLElement | null;
 
     if (!targetOfAction) {
-      console.log("no targetOfAction clicked");
       return;
     }
 
     const action = targetOfAction.getAttribute("data-action");
-
-    console.log(targetOfAction);
 
     switch (action) {
       case "recalculate": {

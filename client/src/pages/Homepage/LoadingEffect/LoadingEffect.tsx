@@ -6,7 +6,6 @@ const LoadingEffect: React.FC<{ fileName: string | null }> = ({ fileName }) => {
   const [progressBarData, setProgressBar] = useContext(ProgressBarDataContext);
 
   useEffect(() => {}, [progressBarData]);
-  console.log(progressBarData);
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4 p-10">

@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 
-# Copy your custom policy.xml
+# Copy custom policy.xml
 COPY ./policy.xml /etc/ImageMagick-6/policy.xml
 
 # Set working directory

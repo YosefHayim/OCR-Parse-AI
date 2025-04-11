@@ -50,9 +50,7 @@ const Homepage = () => {
   // );
   const handleGlobalClick = useHandleGlobalHandler(setGlobalState, globalState, fileInputRef, mutatePdfFile);
 
-  useEffect(() => {
-    console.log(globalState);
-  }, [globalState]);
+  useEffect(() => {}, [globalState]);
 
   return (
     <div>
