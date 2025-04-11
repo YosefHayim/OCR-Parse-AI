@@ -6,12 +6,13 @@ const LoadingEffect: React.FC<{ fileName: string | null }> = ({ fileName }) => {
   const [progressBarData, setProgressBar] = useContext(ProgressBarDataContext);
 
   useEffect(() => {}, [progressBarData]);
+  console.log(progressBarData);
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4 p-10">
-      {progressBarData?.precent > 0 && !progressBarData.precent && (
+      {progressBarData.currentPage > 0 && (
         <div className="w-full">
-          <p className="">{progressBarData.precent}%</p>
+          <p className="">{progressBarData.percent}%</p>
           <div className="relative h-[1em] w-full bg-gray-300">
             <div
               className="absolute left-0 top-0 h-[1em] bg-black"

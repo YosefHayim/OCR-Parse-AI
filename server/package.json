@@ -1,8 +1,16 @@
 {
   "name": "Pdf-Ocr-Data-Proccessing-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec tsx app.ts",
+    "format": "npx prettier . --write",
+    "prod": "tsx app.ts"
+  },
   "dependencies": {
     "@types/express": "^5.0.1",
     "accepts": "^2.0.0",
@@ -86,13 +94,6 @@
     "vary": "^1.1.2",
     "wrappy": "^1.0.2"
   },
-  "scripts": {
-    "dev": "nodemon --exec tsx app.ts",
-    "prod": "tsx app.ts"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/multer": "^1.4.12",
     "@types/node": "^22.14.0",

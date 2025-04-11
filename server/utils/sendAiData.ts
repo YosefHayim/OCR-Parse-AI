@@ -24,11 +24,7 @@ export const sendAIData = async (data) => {
   return r.output_text;
 };
 
-export const sendAIImages = async (
-  filePath: string,
-  baseDir,
-  quantityIFound
-) => {
+export const sendAIImages = async (filePath: string, baseDir, quantityIFound) => {
   const imagePath = path.join(baseDir, filePath);
   let base64Image;
 

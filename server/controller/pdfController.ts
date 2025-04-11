@@ -7,11 +7,7 @@ import { extractDataFromPngs } from "../utils/extractDataFromPngs";
 import { cleanFolders } from "../utils/cleanFolders";
 import { currentDate } from "../utils/getDateWCurrentTime";
 
-export const pdfExtractor = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
+export const pdfExtractor = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const pdfPath = req.file?.path;
 
@@ -23,22 +19,14 @@ export const pdfExtractor = async (
 
     console.log("PDF file received", req.file.originalname);
 
-    const outputDir = path.join(
-      "images",
-      `${currentDate().date}-${currentDate().time}`
-    );
+    const outputDir = path.join("images", `${currentDate().date}-${currentDate().time}`);
     fs.mkdirSync(outputDir, { recursive: true });
 
     await convertPdfToPngs(pdfPath, outputDir);
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    const foldersArrayToClean = [
-      "../logs/ai-logs/",
-      "../logs/ocr-logs/",
-      "../images/",
-      "../uploads/",
-    ];
+    const foldersArrayToClean = ["../logs/ai-logs/", "../logs/ocr-logs/", "../images/", "../uploads/"];
 
     foldersArrayToClean.forEach((folder) => cleanFolders(folder));
 

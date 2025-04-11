@@ -16,10 +16,7 @@ const PORT = process.env.PORT;
 const server = createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin:
-      process.env.NODE_ENV === "production"
-        ? process.env.DEPLOYED_URL
-        : process.env.LOCAL_URL,
+    origin: process.env.NODE_ENV === "production" ? process.env.DEPLOYED_URL : process.env.LOCAL_URL,
   },
 });
 

@@ -4,10 +4,7 @@ import { sendAIImages } from "./sendAiData";
 import { promptSupplierNameAndTotalQuantityAndTotalAmount } from "./promptsThatWorks";
 import { io } from "../app.js";
 
-export const extractDataFromPngs = async (
-  files: string[],
-  outputDir: string
-) => {
+export const extractDataFromPngs = async (files: string[], outputDir: string) => {
   console.log("Extracting data from PNGs...");
   const pages = [];
   const totalPages = files.length;
@@ -15,32 +12,23 @@ export const extractDataFromPngs = async (
   try {
     for (let i = 0; i < files.length; i++) {
       console.log(`Extracting data for png: ${files[i]}`);
-      const dataOfProgress = {
-        currentPage: i + 1,
-        totalPages,
-        percent: Math.round(stepProgressEachIteration * (i + 1)),
-      };
 
       const quantityFoundByAI = await sendAIImages(
         files[i],
         outputDir,
-        promptSupplierNameAndTotalQuantityAndTotalAmount
+        promptSupplierNameAndTotalQuantityAndTotalAmount,
       );
 
-      const { quantities, total, supplierName } =
-        extractQuantitiesAndTotal(quantityFoundByAI);
+      const { quantities, total, supplierName } = extractQuantitiesAndTotal(quantityFoundByAI);
 
-      const totalQuantityForCurrentPage = quantities.reduce(
-        (sum, q) => sum + q,
-        0
-      );
+      const totalQuantityForCurrentPage = quantities.reduce((sum, q) => sum + q, 0);
 
-      logAIToFile(
-        `AI Response:\nPage:\n ${i + 1}\nQuantity:\n${quantityFoundByAI}\n`
-      );
-      console.log(dataOfProgress);
-      io.emit("progress-of-extraction", (dataOfProgress) => {
-        console.log(dataOfProgress);
+      logAIToFile(`AI Response:\nPage:\n ${i + 1}\nQuantity:\n${quantityFoundByAI}\n`);
+
+      io.emit("progress-of-extraction", {
+        currentPage: i + 1,
+        totalPages,
+        percent: Math.round(stepProgressEachIteration * (i + 1)),
       });
 
       pages.push({

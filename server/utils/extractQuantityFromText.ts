@@ -18,9 +18,7 @@ export const extractQuantitiesAndTotal = (text) => {
 
   // Extract total payment
   const totalMatch = text.match(patterns.total);
-  const total = totalMatch
-    ? parseFloat(totalMatch[1].replace(/,/g, "").replace("€", ""))
-    : null;
+  const total = totalMatch ? parseFloat(totalMatch[1].replace(/,/g, "").replace("€", "")) : null;
 
   // Extract supplier name
   const supplierMatch = text.match(patterns.supplierRegex);

@@ -1,10 +1,7 @@
 import { execFile } from "child_process";
 import { resolveMagickPath } from "./resolveMagicPath";
 
-export const convertPdfToPngs = async (
-  pdfPath: string,
-  outputDir: string
-): Promise<void> => {
+export const convertPdfToPngs = async (pdfPath: string, outputDir: string): Promise<void> => {
   console.log("Files received, converting PDFs to PNGs...");
 
   const whichSystemBeingSet = resolveMagickPath()
@@ -43,7 +40,7 @@ export const convertPdfToPngs = async (
           console.log("PDF converted to PNGs");
           resolve(true);
         }
-      }
+      },
     );
   });
 };
