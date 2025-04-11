@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import CopyResults from "./CopyResultsTooltip/CopyResults";
 import FormContainer from "./FormContainer/FormContainer";
 import OcrScannedCard from "./OcrScannedCard/OcrScannedCard";
 import Footer from "@/Components/Footer/Footer";
@@ -8,6 +7,8 @@ import { useHandleFileChange } from "@/CustomHooks/useHandleFileChange";
 import { useMutatePdfFile } from "@/CustomHooks/useMutatePdfFile";
 import Navbar from "@/Components/Navbar/Navbar";
 import { useSockets } from "@/CustomHooks/useSockets";
+import CreateTooltipTriggerTemplate from "./CopyResultsTooltip/CreateTooltipTriggerTemplate/CreateTooltipTriggerTemplate";
+import CopyResults from "./CopyResultsTooltip/CopyResults";
 export interface GlobalStateProps {
   isLoading: boolean | null;
   pageNumberToRecalculateDataAgain: boolean | null;
@@ -18,16 +19,10 @@ export interface GlobalStateProps {
 }
 
 export interface OCRScannedProps {
-  copyTotalAmountRef: React.RefObject<HTMLDivElement | null>;
-  copyTotalQuantityRef: React.RefObject<HTMLDivElement | null>;
-  data: [
-    {
-      page?: string | null;
-      supplierName?: string | null;
-      totalQuantity?: number | null;
-      totalPayment?: number | null;
-    },
-  ];
+  page?: string | null;
+  supplierName?: string | null;
+  totalQuantity?: number | null;
+  totalPayment?: number | null;
 }
 
 export interface ProgressBarDataProps {
@@ -39,9 +34,6 @@ export interface ProgressBarDataProps {
 const Homepage = () => {
   useSockets();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const copyTextRef = useRef<HTMLDivElement | null>(null);
-  const copyTotalQuantityRef = useRef<HTMLDivElement | null>(null);
-  const copyTotalAmountRef = useRef<HTMLDivElement | null>(null);
   const [globalState, setGlobalState] = useState<GlobalStateProps>({
     isLoading: false,
     pageNumberToRecalculateDataAgain: null,
@@ -56,15 +48,7 @@ const Homepage = () => {
   //   setGlobalState,
   //   globalState,
   // );
-  const handleGlobalClick = useHandleGlobalHandler(
-    setGlobalState,
-    globalState,
-    copyTextRef,
-    fileInputRef,
-    copyTotalQuantityRef,
-    copyTotalAmountRef,
-    mutatePdfFile,
-  );
+  const handleGlobalClick = useHandleGlobalHandler(setGlobalState, globalState, fileInputRef, mutatePdfFile);
 
   useEffect(() => {
     console.log(globalState);
@@ -97,22 +81,14 @@ const Homepage = () => {
                     <CopyResults data={globalState.data} />
                   </div>
                 </div>
-                <div
-                  ref={copyTextRef}
-                  className={`${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
-                >
+                <div className={`all-data ${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}>
                   {!globalState.data ||
                     globalState.data === null ||
                     (globalState.data === undefined && <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>)}
                   {globalState.data &&
                     globalState.data.length >= 1 &&
                     globalState.data.map((ocrScanned: OCRScannedProps, index: number) => (
-                      <OcrScannedCard
-                        ocrScanned={ocrScanned}
-                        key={index}
-                        copyTotalQuantityRef={copyTotalQuantityRef}
-                        copyTotalAmountRef={copyTotalAmountRef}
-                      />
+                      <OcrScannedCard ocrScanned={ocrScanned} key={index} />
                     ))}
                 </div>
               </div>

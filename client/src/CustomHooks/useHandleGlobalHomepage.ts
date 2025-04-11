@@ -5,29 +5,26 @@ import { toast } from "sonner";
 export const useHandleGlobalHandler = (
   setGlobalState: React.Dispatch<React.SetStateAction<GlobalStateProps>>,
   globalState: GlobalStateProps,
-  copyTextRef: React.RefObject<HTMLDivElement | null>,
   fileInputRef: React.RefObject<HTMLInputElement | null>,
-  copyTotalQuantityRef: React.RefObject<HTMLDivElement | null>,
-  copyTotalAmountRef: React.RefObject<HTMLDivElement | null>,
   mutatePdfFile: UseMutationResult<string, Error, File, unknown>,
 ) => {
   const handleGlobalClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
-    const button = target.closest("[data-action]") as HTMLElement | null;
 
-    if (!button) {
-      console.log("no button clicked");
+    const targetOfAction = target.closest("[data-action]") as HTMLElement | null;
+
+    if (!targetOfAction) {
+      console.log("no targetOfAction clicked");
       return;
     }
-    console.log("button: ", button);
 
-    const action = button.getAttribute("data-action");
+    const action = targetOfAction.getAttribute("data-action");
 
-    console.log("action: ", action);
+    console.log(targetOfAction);
 
     switch (action) {
       case "recalculate": {
-        const divWrapper = button.closest(".father") as HTMLElement;
+        const divWrapper = targetOfAction.closest(".father") as HTMLElement;
         const textOfRelevantPage = divWrapper?.querySelector("p[data-ocr-extracted]")?.textContent;
 
         if (!textOfRelevantPage) {
@@ -48,14 +45,15 @@ export const useHandleGlobalHandler = (
           data: null,
         });
         fileInputRef.current = null;
-        copyTextRef.current = null;
         toast.success("איפוס התבצע בהצלחה");
 
         break;
       }
 
       case "copy-all-of-results": {
-        const textToCopy = copyTextRef.current?.textContent;
+        const textToCopy = document.querySelectorAll(".all-data")[0].textContent;
+        console.log(`textToCopy`, textToCopy);
+
         if (!textToCopy) return;
         navigator.clipboard.writeText(textToCopy).then(() => {
           toast.success("כל התוצאות הועתקו");
@@ -64,7 +62,9 @@ export const useHandleGlobalHandler = (
       }
 
       case "copy-quantity-of-page": {
-        const quantityToCopy = copyTotalQuantityRef.current?.textContent;
+        const quantityToCopy = targetOfAction.querySelector("p")?.innerText;
+        console.log(`quantityToCopy`, quantityToCopy);
+
         if (!quantityToCopy) return;
         navigator.clipboard.writeText(quantityToCopy).then(() => {
           toast.success("כמות פריטים הועתקו");
@@ -73,7 +73,9 @@ export const useHandleGlobalHandler = (
       }
 
       case "total-amount-of-page": {
-        const amountToCopy = copyTotalAmountRef.current?.textContent;
+        const amountToCopy = targetOfAction.querySelector("p")?.innerText;
+        console.log(`amountToCopy`, amountToCopy);
+
         if (!amountToCopy) return;
         navigator.clipboard.writeText(amountToCopy).then(() => {
           toast.success("סך תשלום הועתקו");
@@ -81,6 +83,16 @@ export const useHandleGlobalHandler = (
         break;
       }
 
+      case "supplier-name-of-page": {
+        const supplierName = targetOfAction.querySelector("p")?.innerText;
+        console.log(`supplierName`, supplierName);
+
+        if (!supplierName) return;
+        navigator.clipboard.writeText(supplierName).then(() => {
+          toast.success("שם הספק הועתק");
+        });
+        break;
+      }
       case "upload-again": {
         if (!globalState.selectedFile) return;
         setGlobalState({
