@@ -7,7 +7,7 @@ const TotalQuantity: React.FC<{
   return (
     <div className="flex w-full items-start justify-start gap-2">
       <p>
-        כמות פריטים:
+        כמות פריטים:{" "}
         <span data-action="copy-quantity-of-page" ref={copyTotalQuantityRef}>
           {totalQuantity}
         </span>

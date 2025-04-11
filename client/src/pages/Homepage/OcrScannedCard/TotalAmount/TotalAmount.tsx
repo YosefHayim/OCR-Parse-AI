@@ -7,7 +7,7 @@ const TotalAmount: React.FC<{
   return (
     <div className="flex w-full items-start justify-start gap-2">
       <p>
-        סך הסכום שרשום בחשבונית:
+        סך הסכום שרשום בחשבונית:{" "}
         <span data-action="total-amount-of-page" ref={copyTotalAmountRef}>
           {totalPayment}
         </span>

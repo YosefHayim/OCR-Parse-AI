@@ -31,7 +31,9 @@ app.get("/", (req, res) => {
   res.send("Mom tool server is running ");
 });
 
-io.on("connection", () => {});
+io.on("connection", (socket) => {
+  console.log("Client origin:", socket.handshake.headers.origin);
+});
 
 app.use("/api/pdf", pdfRouter);
 app.use("/api/ai", aiRouter);
