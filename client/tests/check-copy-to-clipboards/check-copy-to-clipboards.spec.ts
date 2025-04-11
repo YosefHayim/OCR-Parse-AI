@@ -1,8 +1,19 @@
 // @ts-check
-import { test, expect } from "@playwright/test";
+import { test, expect, chromium } from "@playwright/test";
 
-test("check copy results button", async ({ page }) => {});
+let page;
 
-test("check copy single quantity button", async ({ page }) => {});
+test.beforeAll(async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext();
+  page = await context.newPage();
+  await page.goto("/");
+});
 
-test("check copy single total amount button", async ({ page }) => {});
+test("check copy results button", async () => {
+  
+});
+
+test("check copy single quantity button", async () => {});
+
+test("check copy single total amount button", async () => {});

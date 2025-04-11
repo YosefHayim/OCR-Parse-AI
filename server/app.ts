@@ -16,7 +16,10 @@ const PORT = process.env.PORT;
 const server = createServer(app);
 export const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin:
+      process.env.NODE_ENV === "production"
+        ? process.env.DEPLOYED_URL
+        : process.env.LOCAL_URL,
   },
 });
 
@@ -28,9 +31,7 @@ app.get("/", (req, res) => {
   res.send("Mom tool server is running ");
 });
 
-io.on("connection", (socket) => {
-  console.log(socket.id);
-});
+io.on("connection", () => {});
 
 app.use("/api/pdf", pdfRouter);
 app.use("/api/ai", aiRouter);
