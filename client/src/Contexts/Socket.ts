@@ -1,4 +1,5 @@
+// Contexts/Socket.ts
 import { createContext } from "react";
-import { io } from "socket.io-client";
+import { Socket } from "socket.io-client";
 
-export const SocketContext = createContext(io(""));
+export const SocketContext = createContext<Socket | null>(null);
