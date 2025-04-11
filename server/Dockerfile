@@ -8,6 +8,10 @@ RUN apt-get update && apt-get install -y \
     poppler-utils \
     && rm -rf /var/lib/apt/lists/*
 
+
+# Copy your custom policy.xml
+COPY ./imagemagick/policy.xml /etc/ImageMagick-6/policy.xml
+
 # Set working directory
 WORKDIR /app
 
