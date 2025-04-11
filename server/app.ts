@@ -13,12 +13,18 @@ const app = express();
 const PORT = process.env.PORT;
 
 const server = createServer(app);
+app.use(
+  cors({
+    origin: process.env.NODE_ENV === "production" ? process.env.DEPLOYED_URL : process.env.LOCAL_URL,
+    credentials: true,
+  })
+);
+
 export const io = new Server(server, {
   cors: {
     origin: process.env.NODE_ENV === "production" ? process.env.DEPLOYED_URL : process.env.LOCAL_URL,
   },
 });
-app.use(cors());
 app.use(express.json());
 app.use(morgan("short"));
 
@@ -27,6 +33,7 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
+  console.log("Socket connected:", socket.id);
   console.log("Client origin:", socket.handshake.headers.origin);
 });
 
