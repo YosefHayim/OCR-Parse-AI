@@ -10,7 +10,7 @@ const LoadingEffect: React.FC<{ fileName: string | null }> = ({ fileName }) => {
 
   return (
     <div className="flex w-full flex-col items-center justify-center gap-4 p-10">
-      {progressBarData.currentPage > 0 && (
+      {progressBarData !== null && progressBarData.currentPage > 0 && (
         <div className="w-full">
           <p className="">{progressBarData.percent}%</p>
           <div className="relative h-[1em] w-full bg-gray-300">

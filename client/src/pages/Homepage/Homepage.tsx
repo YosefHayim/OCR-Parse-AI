@@ -72,43 +72,49 @@ const Homepage = () => {
 
   return (
     <div>
-      <Navbar />
-      <div onClick={handleGlobalClick} className="flex w-full flex-col items-center justify-start gap-4 p-4" dir="rtl">
-        <div className="flex w-full flex-col gap-4">
-          <div className="flex w-full flex-col gap-2 bg-white p-4">
-            <FormContainer
-              globalState={globalState}
-              handleFileChange={handleFileChange}
-              data={globalState.data}
-              fileName={globalState.fileName}
-              fileInputRef={fileInputRef}
-              selectedFile={globalState.selectedFile}
-            />
-            <div className="flex w-full flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <div className="flex w-full items-start justify-start gap-1">
-                  <h1 className="text-right font-bold">תוצאות של הקובץ</h1>
-                  <p className="font-bold underline">{globalState.fileName}</p>
-                  <CopyResults data={globalState.data} />
+      <div>
+        <Navbar />
+        <div
+          onClick={handleGlobalClick}
+          className="flex w-full flex-col items-center justify-start gap-4 p-4"
+          dir="rtl"
+        >
+          <div className="flex w-full flex-col gap-4">
+            <div className="flex w-full flex-col gap-2 bg-white p-4">
+              <FormContainer
+                globalState={globalState}
+                handleFileChange={handleFileChange}
+                data={globalState.data}
+                fileName={globalState.fileName}
+                fileInputRef={fileInputRef}
+                selectedFile={globalState.selectedFile}
+              />
+              <div className="flex w-full flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <div className="flex w-full items-start justify-start gap-1">
+                    <h1 className="text-right font-bold">תוצאות של הקובץ</h1>
+                    <p className="font-bold underline">{globalState.fileName}</p>
+                    <CopyResults data={globalState.data} />
+                  </div>
                 </div>
-              </div>
-              <div
-                ref={copyTextRef}
-                className={`${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
-              >
-                {!globalState.data ||
-                  globalState.data === null ||
-                  (globalState.data === undefined && <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>)}
-                {globalState.data &&
-                  globalState.data.length >= 1 &&
-                  globalState.data.map((ocrScanned: OCRScannedProps, index: number) => (
-                    <OcrScannedCard
-                      ocrScanned={ocrScanned}
-                      key={index}
-                      copyTotalQuantityRef={copyTotalQuantityRef}
-                      copyTotalAmountRef={copyTotalAmountRef}
-                    />
-                  ))}
+                <div
+                  ref={copyTextRef}
+                  className={`${globalState.data ? "bg-gray-200" : ""} flex flex-col gap-4 rounded-lg p-4`}
+                >
+                  {!globalState.data ||
+                    globalState.data === null ||
+                    (globalState.data === undefined && <p> {globalState.fileName} לא נמצאו תוצאות בקובץ.</p>)}
+                  {globalState.data &&
+                    globalState.data.length >= 1 &&
+                    globalState.data.map((ocrScanned: OCRScannedProps, index: number) => (
+                      <OcrScannedCard
+                        ocrScanned={ocrScanned}
+                        key={index}
+                        copyTotalQuantityRef={copyTotalQuantityRef}
+                        copyTotalAmountRef={copyTotalAmountRef}
+                      />
+                    ))}
+                </div>
               </div>
             </div>
           </div>
