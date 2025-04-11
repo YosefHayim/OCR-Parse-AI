@@ -32,6 +32,7 @@ io.on("connection", (socket) => {
 
 app.use("/api/pdf", pdfRouter);
 app.use("/api/ai", aiRouter);
+app.use("/api/imagemagick", aiRouter);
 app.use(errorHandler);
 
 console.log("PORT:", PORT);

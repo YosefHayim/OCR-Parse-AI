@@ -28,4 +28,4 @@ EXPOSE 3000
 # USER appuser
 
 # Start app
-CMD ["npx", "tsx", "app.ts"]
+CMD ["npm", "run", "prod"]
