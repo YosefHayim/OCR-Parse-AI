@@ -26,9 +26,9 @@ export const pdfExtractor = async (req: Request, res: Response, next: NextFuncti
     const files = sortFileswithinOutputDir(outputDir);
     const pages = await extractDataFromPngs(files, outputDir);
 
-    const foldersArrayToClean = ["../logs/ai-logs/", "../logs/ocr-logs/", "../images/", "../uploads/"];
+    // const foldersArrayToClean = ["../logs/ai-logs/", "../logs/ocr-logs/", "../images/", "../uploads/"];
 
-    foldersArrayToClean.forEach((folder) => cleanFolders(folder));
+    // foldersArrayToClean.forEach((folder) => cleanFolders(folder));
 
     res.json({
       status: 200,

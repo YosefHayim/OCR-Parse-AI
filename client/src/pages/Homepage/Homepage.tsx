@@ -76,7 +76,7 @@ const Homepage = () => {
         <Navbar />
         <div
           onClick={handleGlobalClick}
-          className="flex w-full flex-col items-center justify-start gap-4 p-4"
+          className="flex min-h-screen w-full flex-col items-center justify-start gap-4 p-4"
           dir="rtl"
         >
           <div className="flex w-full flex-col gap-4">

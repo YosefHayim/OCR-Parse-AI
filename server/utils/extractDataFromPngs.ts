@@ -16,8 +16,10 @@ export const extractDataFromPngs = async (files: string[], outputDir: string) =>
       const quantityFoundByAI = await sendAIImages(
         files[i],
         outputDir,
-        promptSupplierNameAndTotalQuantityAndTotalAmount,
+        promptSupplierNameAndTotalQuantityAndTotalAmount
       );
+
+      console.log(`page - ${files[i]} quantityFoundByAI: `, quantityFoundByAI);
 
       const { quantities, total, supplierName } = extractQuantitiesAndTotal(quantityFoundByAI);
 

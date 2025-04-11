@@ -2,6 +2,7 @@ const patterns = {
   quantity: /כמות:\s*(\d{1,4})/g,
   total: /סך תשלום:\s*[€₪]?\s*([\d,.]+)/,
   supplierRegex: /שם הספק[:\s]+([^\n]+)/,
+  quantityWithComma: /כמות:\\s*(\\d{1,3}(?:,\\d{3})*)/g,
 };
 
 export const extractQuantitiesAndTotal = (text) => {
