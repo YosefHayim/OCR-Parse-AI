@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 
 # Copy your custom policy.xml
-COPY ./imagemagick/policy.xml /etc/ImageMagick-6/policy.xml
+COPY ./policy.xml /etc/ImageMagick-6/policy.xml
 
 # Set working directory
 WORKDIR /app

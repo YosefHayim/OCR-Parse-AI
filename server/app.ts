@@ -33,7 +33,6 @@ app.get("/", (req, res) => {
 });
 
 io.on("connection", (socket) => {
-  console.log("Socket connected:", socket.id);
   console.log("Client origin:", socket.handshake.headers.origin);
 });
 
