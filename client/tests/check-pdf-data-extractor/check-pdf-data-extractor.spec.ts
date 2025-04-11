@@ -1,17 +1,44 @@
-// @ts-check
-// @ts-check
-import { test, expect } from "@playwright/test";
+import { test, expect, chromium, Page, Browser, BrowserContext } from "@playwright/test";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 
-test("check upload button", async ({ page }) => {
-  await page.locator('input[name="file"]').setInputFiles("./single-invoce-test.pdf");
-  await expect(page.getByRole("button", { name: "העלאה קובץ" })).toBeVisible();
-  await page.getByRole("button", { name: "העלאה קובץ" }).click();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+let page: Page;
+let browser: Browser;
+let context: BrowserContext;
+
+test.beforeAll(async () => {
+  browser = await chromium.launch();
+  context = await browser.newContext();
+  page = await context.newPage();
+  await page.goto("/");
 });
 
-test("Verify loading animation and proccessing pdf file to server", async ({ page }) => {
-  await expect(page.getByText("מעבד נתונים לקובץ single invoce test.pdf")).toBeVisible();
+test("upload file", async () => {
+  await expect(page.getByText("בחר קובץ")).toBeVisible();
+  await page.locator('input[type="file"]').setInputFiles(join(__dirname, "./single-invoce-test.pdf"));
+  await page.getByText("העלאה קובץ").nth(1).click();
+  const loader = await page.locator(".loader");
+  await expect(loader).toBeVisible();
+});
 
-  await expect(page.getByText("תוצאות של הקובץ single invoce test.pdf")).toBeVisible();
+test("verify data is accurate releated to the pdf data", async () => {
+  await page.locator(".loader").waitFor({ state: "hidden" });
+  await expect(await page.getByText("1909")).toBeVisible();
+  await expect(await page.getByText("11364")).toBeVisible();
+});
 
-  await expect(page.locator(".loader")).toBeVisible();
+test("recalculate data to same file", async () => {
+  await page.getByText("חשב שוב").click();
+  const loader = await page.locator(".loader");
+  await expect(loader).toBeVisible();
+  await loader.waitFor({ state: "hidden" });
+  await expect(await page.getByText("1909")).toBeVisible();
+  await expect(await page.getByText("11364")).toBeVisible();
+});
+
+test.afterAll(async () => {
+  await browser.close();
 });

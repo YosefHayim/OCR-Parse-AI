@@ -1,7 +1,7 @@
 const SupplierName: React.FC<{ supplierName: string }> = ({ supplierName }) => {
   return (
     <div>
-      <p>{supplierName}</p>
+      <p>שם הספק: {supplierName}ש</p>
     </div>
   );
 };
