@@ -10,12 +10,9 @@ const socket = io(envPaths.NODE_ENV === "production" ? envPaths.DEPLOYED_URL : e
   withCredentials: true,
   transports: ["websocket", "polling"], // helps avoid fallback problems
 });
-console.log("Client mode is:", envPaths.NODE_ENV);
 
 const App = () => {
-  socket.on("connect", () => {
-    console.log("\nConnected to server");
-  });
+  socket.on("connect", () => {});
 
   socket.on("connect_error", (err) => {
     console.error("\nSocket connection failed:", err.message);

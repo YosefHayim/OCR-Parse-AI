@@ -14,3 +14,4 @@
 12. **React Hooks**: Created custom React hooks for shared logic across components.
 13. **React Context**: Implemented and used React's `createContext` and `useContext` for state management.
 14. **Vite Environment Variables**: Learned how to manage environment variables with Vite.
+15. **Learned slightly about docker**: Learned why docker is important once I use tools of .net and etc in order to be used on deployed clouds.

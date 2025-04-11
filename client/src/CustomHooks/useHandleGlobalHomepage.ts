@@ -49,8 +49,6 @@ export const useHandleGlobalHandler = (
 
       case "copy-all-of-results": {
         const textToCopy = document.querySelectorAll(".all-data")[0].textContent;
-        console.log(`textToCopy`, textToCopy);
-
         if (!textToCopy) return;
         navigator.clipboard.writeText(textToCopy).then(() => {
           toast.success("כל התוצאות הועתקו");
@@ -60,8 +58,6 @@ export const useHandleGlobalHandler = (
 
       case "copy-quantity-of-page": {
         const quantityToCopy = targetOfAction.querySelector("p")?.innerText;
-        console.log(`quantityToCopy`, quantityToCopy);
-
         if (!quantityToCopy) return;
         navigator.clipboard.writeText(quantityToCopy).then(() => {
           toast.success("כמות פריטים הועתקו");
@@ -71,8 +67,6 @@ export const useHandleGlobalHandler = (
 
       case "total-amount-of-page": {
         const amountToCopy = targetOfAction.querySelector("p")?.innerText;
-        console.log(`amountToCopy`, amountToCopy);
-
         if (!amountToCopy) return;
         navigator.clipboard.writeText(amountToCopy).then(() => {
           toast.success("סך תשלום הועתקו");
@@ -82,8 +76,6 @@ export const useHandleGlobalHandler = (
 
       case "supplier-name-of-page": {
         const supplierName = targetOfAction.querySelector("p")?.innerText;
-        console.log(`supplierName`, supplierName);
-
         if (!supplierName) return;
         navigator.clipboard.writeText(supplierName).then(() => {
           toast.success("שם הספק הועתק");

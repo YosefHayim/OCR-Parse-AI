@@ -18,7 +18,7 @@ export const useSockets = () => {
     // Intialize and listen to event of progress of extraction data from pdfs.
     socket.on("progress-of-extraction", (data) => {
       if (data) setProgressBar(data);
-      console.log(progressBarData);
+      // console.log(progressBarData);
     });
 
     // turn off socket when there is no more rendering info.

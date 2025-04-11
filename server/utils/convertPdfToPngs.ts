@@ -3,7 +3,7 @@ import path from "path";
 import os from "os";
 
 export const convertPdfToPngs = async (pdfPath: string, outputDir: string): Promise<void> => {
-  console.log("🧾 Files received, converting PDFs to PNGs...");
+  console.log("Files received, converting PDFs to PNGs...");
 
   // Use forward slashes to avoid CLI issues with backslashes
   const normalizedPdfPath = path.resolve(pdfPath).replace(/\\/g, "/");

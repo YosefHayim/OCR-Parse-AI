@@ -41,11 +41,6 @@ app.use("/api/ai", aiRouter);
 app.use("/api/imagemagick", aiRouter);
 app.use(errorHandler);
 
-console.log("PORT:", PORT);
-console.log("\nDEPLOYED_URL:", process.env.DEPLOYED_URL);
-console.log("\nLOCAL_URL:", process.env.LOCAL_URL);
-console.log("\nNODE_ENV:", process.env.NODE_ENV);
-
 server.listen(PORT, () => {
   console.log(`\nServer is running on port: ${PORT}`);
 });
