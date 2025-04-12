@@ -1,111 +1,115 @@
-## What I Learned from This Project
+## Project Overview
 
-This project was more than just code — it was about solving a real problem for my mom and leveling up across the stack. Here's what I took away:
+This project was built to solve a real-world problem for my mom — extracting structured data from PDF invoices.  
+She needed a faster, more accurate way to pull out:
 
-### Technical Skills Gained
+- Total Quantity
+- Total Price
+- Supplier Name
 
-1. **Code Formatting**  
-   Automated consistent formatting across the project using Prettier:  
-   ```bash
-   npx prettier . --write
-   ```
+I built an AI-powered OCR tool that:
 
-2. **Package Hygiene**  
-   Discovered `sort-package-json` to keep `package.json` organized and readable:  
-   ```bash
-   npx sort-package-json
-   ```
-
-3. **OCR Pipeline**  
-   Built an image-based OCR flow that converts PDF pages to PNG and extracts structured text.
-
-4. **OpenAI API Integration**  
-   Used hardcoded prompts and the OpenAI API to turn raw OCR text into structured invoice data.
-
-5. **Environment Configuration**  
-   Set up dynamic config handling for dev and production using environment variables with Vite and Node.js.
-
-6. **Real-Time Updates**  
-   Used Socket.IO to stream live progress updates during file uploads and processing.
-
-7. **Git Hooks with Husky**  
-   Added pre-commit checks for formatting and linting to keep the codebase clean and consistent.
-
-8. **End-to-End Testing**  
-   Integrated Playwright for testing key user flows to ensure everything runs smoothly.
-
-9. **CI/CD with GitHub Actions**  
-   Automated test runs on every push — build, test, commit, repeat.
-
-10. **Technical Docs Pro**  
-   Got better at reading and applying docs — especially for Socket.IO, Playwright, Husky, and YAML configs.
-
-11. **UI/UX Improvements**  
-   Designed and implemented dynamic tooltips and interactive UI elements for better user experience.
-
-12. **Custom React Hooks**  
-   Abstracted shared logic into reusable hooks to keep components clean.
-
-13. **React Context API**  
-   Used `createContext` and `useContext` for app-wide state management.
-
-14. **Vite Environment Variables**  
-   Learned how to define and consume env variables with Vite the right way.
-
-15. **Docker Awareness**  
-   Got introduced to Docker and understood why containerization matters — especially for multi-platform deployments and .NET tooling.
-
----
-
-## The Problem I Solved
-
-This project was built for my mom to save her time and energy.  
-She used to manually read PDF invoices to extract:
-- Total Quantity  
-- Total Price  
-- Supplier Name  
-
-It was time-consuming and error-prone.  
-So, I built her an **AI-powered OCR tool** that:
-- Converts each PDF page to an image (PNG)
-- Sends it to OpenAI with a structured prompt
-- Returns clean, structured invoice data — ready to go
-
----
-
-## Tech Stack
-
-**Frontend:**
-- React  
-- Tailwind CSS  
-- Axios  
-- TanStack Query  
-- Socket.IO (Client)  
-- Playwright (E2E Testing)  
-- Husky (Git Hooks)
-
-**Backend:**
-- Node.js with Express  
-- Axios  
-- Body Parser  
-- Multer (File Uploads)  
-- Sharp (Image Processing)  
-- Tesseract.js (OCR)  
-- OpenAI API  
-- Socket.IO (Server)  
-- Morgan (Logging)
+- Converts PDFs into PNG images
+- Extracts raw text using Tesseract.js
+- Sends the text to OpenAI for structured parsing
+- Returns clean, ready-to-use invoice data
 
 ---
 
 ## Project Timeline
 
-- **Start Date**: 04/04/2025  
-- **End Date**: 12/04/2025  
-- **Deployed on**: [Render](https://render.com)
+- Start Date: 04/04/2025
+- End Date: 12/04/2025
+- Deployed On: [Render](https://render.com)
 
 ---
 
 ## Live URLs
 
-- **Backend**: [https://pdf-ocr-data-proccessing-backend.onrender.com](https://pdf-ocr-data-proccessing-backend.onrender.com)  
-- **Frontend**: [https://pdf-extractor-data-helping-mom-fronted.onrender.com](https://pdf-extractor-data-helping-mom-fronted.onrender.com)
+- Frontend: [https://pdf-extractor-data-helping-mom-fronted.onrender.com](https://pdf-extractor-data-helping-mom-fronted.onrender.com)
+- Backend: [https://pdf-ocr-data-proccessing-backend.onrender.com](https://pdf-ocr-data-proccessing-backend.onrender.com)
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- React
+- Tailwind CSS
+- Axios
+- TanStack Query
+- Socket.IO (Client)
+- Playwright (End-to-End Testing)
+- Husky (Git Hooks)
+
+### Backend
+
+- Node.js with Express
+- Axios
+- Body Parser
+- Multer (File Uploads)
+- Sharp (Image Processing)
+- Tesseract.js (OCR)
+- OpenAI API
+- Socket.IO (Server)
+- Morgan (Logging)
+
+---
+
+## What I Learned
+
+This project helped sharpen my full-stack skills and introduced me to new tools, practices, and workflows.
+
+### Backend + Infrastructure
+
+- **OCR Pipeline**  
+  Converted PDFs to PNGs, extracted text, and cleaned it using AI.
+
+- **OpenAI Integration**  
+  Used structured prompts to turn unstructured OCR output into clean JSON data.
+
+- **Environment Configuration**  
+  Managed environment variables for both development and production using Vite and Node.js.
+
+- **Real-Time Updates with Socket.IO**  
+  Pushed live status updates to the client during file processing.
+
+- **Docker Awareness**  
+  Gained an understanding of containerization and its importance for cross-platform consistency.
+
+- **Git Hooks with Husky**  
+  Added pre-commit checks for code formatting and linting.
+
+- **CI/CD with GitHub Actions**  
+  Set up automated test runs for each push to ensure reliability.
+
+### Frontend Development
+
+- **React Context API**  
+  Used for managing global state across components.
+
+- **Custom React Hooks**  
+  Extracted shared logic for cleaner, more maintainable code.
+
+- **Interactive UI Elements**  
+  Built dynamic tooltips and feedback elements to enhance user experience.
+
+- **End-to-End Testing**  
+  Used Playwright to simulate real user flows and validate functionality.
+
+### Developer Workflow
+
+- **Code Formatting with Prettier**  
+  Ensured consistency across the codebase:
+
+  ```bash
+  npx prettier . --write
+  ```
+
+- **Sorted Dependencies with sort-package-json**  
+  Kept `package.json` organized and readable:
+
+  ```bash
+  npx sort-package-json
+  ```
