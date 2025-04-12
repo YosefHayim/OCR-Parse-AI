@@ -1,16 +1,15 @@
-name: CI - Test PDF Extractor
+name: CI - Test OCR-Parse-AI
 
 on:
   push:
     branches:
       - main
-      - release/*
   pull_request:
 
 jobs:
   test:
     name: Playwright Tests
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, windows-latest, macos-latest]
 
     steps:
       - uses: actions/checkout@v4
