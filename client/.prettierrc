@@ -4,5 +4,5 @@
   "tailwindFunctions": ["clsx"],
   "tailwindPreserveWhitespace": true,
   "tailwindPreserveDuplicates": true,
-  "printWidth": 120
+  "printWidth": 150
 }

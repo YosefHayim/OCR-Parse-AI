@@ -13,13 +13,12 @@ export const extractDataFromPngs = async (files: string[], outputDir: string) =>
     for (let i = 0; i < files.length; i++) {
       console.log(`Extracting data for png: ${files[i]}`);
 
-      const quantityFoundByAI = await sendAIImages(
-        files[i],
-        outputDir,
-        promptSupplierNameAndTotalQuantityAndTotalAmount
-      );
+      const quantityFoundByAI = await sendAIImages(files[i], outputDir, promptSupplierNameAndTotalQuantityAndTotalAmount);
 
       const { quantities, total, supplierName } = extractQuantitiesAndTotal(quantityFoundByAI);
+
+      console.log(`Qunatity of Page ${i}: ${quantities} | total in page ${i}: ${total} | Supplier name: ${supplierName}`);
+      logToFile(`Qunatity of Page ${i}: ${quantities} | total in page ${i}: ${total} | Supplier name: ${supplierName}`);
 
       const totalQuantityForCurrentPage = quantities.reduce((sum, q) => sum + q, 0);
 

@@ -10,8 +10,7 @@ She needed a faster, more accurate way to pull out:
 I built an AI-powered OCR tool that:
 
 - Converts PDFs into PNG images
-- Extracts raw text using Tesseract.js
-- Sends the text to OpenAI for structured parsing
+- Sends the images to OpenAI for structured parsing using OCR
 - Returns clean, ready-to-use invoice data
 
 ---
