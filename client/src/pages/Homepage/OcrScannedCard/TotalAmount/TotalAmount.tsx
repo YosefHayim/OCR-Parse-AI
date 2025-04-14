@@ -9,10 +9,7 @@ const TotalAmount: React.FC<{
   return (
     <div className="flex w-full items-start justify-start gap-2" data-action="total-amount-of-page">
       סך הסכום שרשום בחשבונית:<p>{totalPayment}</p>
-      <CreateTooltipTriggerTemplate
-        ariaLabelName={`העתק סכום כולל`}
-        toolTipHoverText={`להעתיק את הסכום ${totalPayment}?`}
-      />
+      <CreateTooltipTriggerTemplate ariaLabelName={`העתק סכום כולל`} toolTipHoverText={`להעתיק את הסכום ${totalPayment}?`} />
     </div>
   );
 };

@@ -3,10 +3,7 @@ import { recalculateSpecificPageInfo } from "../../api/recalculateSpecificPageIn
 import { toast } from "sonner";
 import { GlobalStateProps } from "@/pages/Homepage/Homepage";
 
-export const useRecalculatePageInfo = (
-  setGlobalState: React.Dispatch<React.SetStateAction<GlobalStateProps>>,
-  globalState: GlobalStateProps,
-) => {
+export const useRecalculatePageInfo = (setGlobalState: React.Dispatch<React.SetStateAction<GlobalStateProps>>, globalState: GlobalStateProps) => {
   return useMutation({
     mutationFn: recalculateSpecificPageInfo,
     onSuccess: (data) => {

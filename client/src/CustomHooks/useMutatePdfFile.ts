@@ -3,10 +3,7 @@ import { postPdfFile } from "../../api/postPdfFile";
 import { GlobalStateProps } from "@/pages/Homepage/Homepage";
 import { toast } from "sonner";
 
-export const useMutatePdfFile = (
-  setGlobalState: React.Dispatch<React.SetStateAction<GlobalStateProps>>,
-  globalState: GlobalStateProps,
-) => {
+export const useMutatePdfFile = (setGlobalState: React.Dispatch<React.SetStateAction<GlobalStateProps>>, globalState: GlobalStateProps) => {
   return useMutation({
     mutationFn: postPdfFile,
     onSuccess: (data) => {

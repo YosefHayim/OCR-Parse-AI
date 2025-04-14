@@ -2,50 +2,47 @@ import { execFile } from "child_process";
 import path from "path";
 import os from "os";
 
-export const convertPdfToPngs = async (pdfPath: string, outputDir: string): Promise<void> => {
-  console.log("Files received, converting PDFs to PNGs...");
-
-  // Use forward slashes to avoid CLI issues with backslashes
-  const normalizedPdfPath = path.resolve(pdfPath).replace(/\\/g, "/");
-  const normalizedOutputDir = path.resolve(outputDir).replace(/\\/g, "/");
-
-  // Windows requires using "magick convert", Linux just "convert"
-  const isWindows = os.platform() === "win32";
-  const command = isWindows ? "magick" : "convert";
-
-  // Use magick convert on Windows (two commands), just convert on Linux
-  const args = isWindows
-    ? [
-        "convert",
-        "-density",
-        "300",
-        "-units",
-        "PixelsPerInch",
-        "-colorspace",
-        "Gray",
-        normalizedPdfPath,
-        `${normalizedOutputDir}/page-%d.png`,
-      ]
-    : [
-        "-density",
-        "300",
-        "-units",
-        "PixelsPerInch",
-        "-colorspace",
-        "Gray",
-        normalizedPdfPath,
-        `${normalizedOutputDir}/page-%d.png`,
-      ];
-
-  await new Promise<void>((resolve, reject) => {
-    execFile(command, args, (error, stdout, stderr) => {
+const runCommand = (command: string, args: string[]) =>
+  new Promise<void>((resolve, reject) => {
+    execFile(command, args, { timeout: 30000 }, (error, stdout, stderr) => {
       if (error) {
-        console.error("❌ ImageMagick convert error:", stderr || error.message);
+        console.error(`Command failed: ${command} ${args.join(" ")}`);
+        console.error(stderr || error.message);
         reject(error);
       } else {
-        console.log("✅ PDF converted to PNGs");
+        console.log(`Command succeeded: ${command} ${args.join(" ")}`);
         resolve();
       }
     });
   });
+
+export const convertPdfToPngs = async (pdfPath: string, outputDir: string): Promise<void> => {
+  console.log("Files received, converting PDFs to PNGs...");
+
+  const normalizedPdfPath = path.resolve(pdfPath).replace(/\\/g, "/");
+  const normalizedOutputDir = path.resolve(outputDir).replace(/\\/g, "/");
+  const isWindows = os.platform() === "win32";
+  const command = isWindows ? "magick" : "convert";
+
+  const baseArgs = ["-units", "PixelsPerInch", "-colorspace", "Gray", normalizedPdfPath, `${normalizedOutputDir}/page-%d.png`];
+
+  const tryConvert = async (density: number) => {
+    const args = isWindows ? ["convert", "-density", String(density), ...baseArgs] : ["-density", String(density), ...baseArgs];
+    console.log(`Trying ImageMagick convert at ${density} DPI...`);
+    await runCommand(command, args);
+  };
+
+  try {
+    // First attempt with high quality
+    await tryConvert(300);
+  } catch (error) {
+    console.warn("First conversion attempt failed. Retrying with lower DPI (150)...");
+    try {
+      await tryConvert(150);
+    } catch (finalError) {
+      console.error("Both conversion attempts failed. Consider using `pdftoppm` fallback or checking file.");
+      // Optional: rethrow or handle gracefully
+      throw finalError;
+    }
+  }
 };

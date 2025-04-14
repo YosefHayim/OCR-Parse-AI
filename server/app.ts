@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: process.env.NODE_ENV === "production" ? process.env.DEPLOYED_URL : process.env.LOCAL_URL,
     credentials: true,
-  })
+  }),
 );
 
 export const io = new Server(server, {

@@ -13,14 +13,7 @@ interface FormContainerProps {
   globalState: GlobalStateProps;
 }
 
-const FormContainer: React.FC<FormContainerProps> = ({
-  fileName,
-  data,
-  selectedFile,
-  fileInputRef,
-  handleFileChange,
-  globalState,
-}) => {
+const FormContainer: React.FC<FormContainerProps> = ({ fileName, data, selectedFile, fileInputRef, handleFileChange, globalState }) => {
   return (
     <div>
       <Toaster position="top-center" dir="rtl" />
