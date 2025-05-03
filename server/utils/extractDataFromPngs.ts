@@ -40,7 +40,6 @@ export const extractDataFromPngs = async (files: string[], outputDir: string) =>
     }
   } catch (error) {
     console.error("Error during OCR:", error);
-  } finally {
-    return pages;
   }
+  return pages;
 };
