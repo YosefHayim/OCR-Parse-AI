@@ -33,16 +33,8 @@ export const convertPdfToPngs = async (pdfPath: string, outputDir: string): Prom
   };
 
   try {
-    // First attempt with high quality
     await tryConvert(300);
   } catch (error) {
-    console.warn("First conversion attempt failed. Retrying with lower DPI (150)...");
-    try {
-      await tryConvert(150);
-    } catch (finalError) {
-      console.error("Both conversion attempts failed. Consider using `pdftoppm` fallback or checking file.");
-      // Optional: rethrow or handle gracefully
-      throw finalError;
-    }
+    console.error(`Error durning convert to png: ${error}`);
   }
 };
