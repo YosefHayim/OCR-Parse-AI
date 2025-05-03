@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import pdfRouter from "./routes/pdfRoute";
 import aiRouter from "./routes/AiRoute";
+import imageMagickRouter from "./routes/imageMagick";
 import { errorHandler } from "./middleware/errorHandler";
 import dotenv from "dotenv";
 import morgan from "morgan";
@@ -17,7 +18,7 @@ app.use(
   cors({
     origin: process.env.NODE_ENV === "production" ? process.env.DEPLOYED_URL : process.env.LOCAL_URL,
     credentials: true,
-  }),
+  })
 );
 
 export const io = new Server(server, {
@@ -38,7 +39,7 @@ io.on("connection", (socket) => {
 
 app.use("/api/pdf", pdfRouter);
 app.use("/api/ai", aiRouter);
-app.use("/api/imagemagick", aiRouter);
+app.use("/api/imagemagick", imageMagickRouter);
 app.use(errorHandler);
 
 server.listen(PORT, () => {
