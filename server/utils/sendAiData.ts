@@ -1,5 +1,5 @@
 import fs from "fs";
-import OpenAI from "openai";
+import OpenAI from "openai/index.js";
 import dotenv from "dotenv";
 import path from "path";
 dotenv.config();
